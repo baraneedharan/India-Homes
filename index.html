@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>India Homes</title>
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- Important Bootstrap select -->
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <!-- Important Bootstrap select -->
+    <link rel="stylesheet" href="css/jquery-ui.css">  
+    <!-- Important Odometer -->
+    <link rel="stylesheet" href="css/odometer-theme-car.css" />  
+    <!-- Important Odometer -->
+    <link rel="stylesheet" href="css/flexslider.css" />
+
+    <!-- India homes custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../" class="navbar-brand"></a>
+            </div>
+            <nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" style="height: 1px;">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" class="has-play-icon">About Us</a></li>
+                    <li class="seperator">&nbsp;&nbsp; | &nbsp;&nbsp;</li>
+                    <li><a href="#" class="has-play-icon">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Banner Section-->
+
+
+    <section class="banner">
+      <div class="cloud-theme">
+        <div id="far-clouds" class="far-clouds stage"></div>
+        <div id="near-clouds" class="near-clouds stage"></div>
+        <div id="top-clouds" class="top-clouds stage"></div>
+        <div class="banner-top-background"></div>
+        <div class="banner-bottom-background"></div>
+      </div>
+
+      <div class="container">
+
+        <!-- Banner Text -->
+        <div class="banner-text">
+          <h1></h1>
+        </div>
+
+        <!-- Buying Phase DOM Starts here-->
+        <div class="buying-phases">
+          <!-- User selections -->
+          <div class="user-selections">
+            <h3 class="selected-option">Buy</h3>
+            <ul class="selected-items">
+              <li class="active"><span class="list-style">1</span><a href="javascript:void(0)" class="selected-location" go-to="select_where">Location</a></li>              
+              <li><span class="list-style">2</span><a href="javascript:void(0)" class="selected-from" go-to="from_where">Type of property</a></li>
+              <li><span class="list-style">3</span><a href="javascript:void(0)" class="selected-bhk" go-to="bh_preference">Bed rooms</a></li>
+              <li><span class="list-style">4</span><a href="javascript:void(0)" class="selected-budjet" go-to="select_budjet">Budget</a></li>
+              <li><span class="list-style">5</span><a href="javascript:void(0)" class="selected-more-option" go-to="more_option">More Option</a></li>
+              <li><span class="list-style">6</span><a href="javascript:void(0)" class="selected-loan" go-to="loan_requirement">Need Loan?</a></li>
+            </ul>
+          </div>
+
+          <a href="#" class="close-popup"></a>
+
+          <div class="popup">
+
+          <!-- PopUp 2.1 - Select City  -->
+          <div class="popup-content select-city" id="select_city">
+            <h2> Select the city in which you are searching a property to buy</h2>
+            <fieldset>
+              <select class="selectpicker" id="city_selection">
+                  <option>Bangalore</option>
+                  <option>Pune</option>
+                  <option>Chennai</option>
+              </select>
+            </fieldset>
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="next-link" go-to="from_where">Next</a>
+            </fieldset>
+          </div>
+
+
+
+          <!-- PopUp 2 - Select from-Whom Developers/Resale  -->
+          <div class="popup-content from-whom" id="from_where">
+            <h2>What kind of property you wish to buy? </h2>
+            <fieldset>
+              <div class="select-from-whom" id="" data-toggle="buttons">
+                  <label class="btn btn-custom developer-btn">
+                      <input type="radio" value="Developer Projects">
+                      <span class="developer-btn-icon"></span>
+                      Developer Projects                      
+                  </label>
+                  <label class="btn btn-custom developer-btn">
+                      <input type="radio" value="Resale Property">
+                      <span class="resaler-btn-icon"></span>
+                      Resale Property                      
+                  </label>
+                </div>
+                <span class="italic-desc">( Choose one )</span>
+            </fieldset>
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="select_city">Back</a>
+              <a href="javascript:void(0)" class="next-link next-proptype-select">Next</a>
+            </fieldset>
+          </div>
+
+
+         <!-- PopUp 3 - Find Best Developer   -->
+          <div class="popup-content find-developer" id="find_developer">
+            <h2> Find Best Developer Properties in Bangalore</h2>
+            <p class="italic-desc centered-text">Choose your preferred method</p>
+            <div class="talk-to-advisor">
+              <h3 class="orange-title">Talk to our professional advisor now!</h3>
+              <div class="image-desc">
+                <div class="discussion">
+                  <p>Discuss best project option</p>
+                </div>
+                <div class="free-visit">
+                  <p>Do free site visit</p>
+                </div>
+                <div class="best-deal">
+                  <p>Get best deals</p>
+                </div>
+              </div>
+              <fieldset class="mobile-form">
+                <input type="text" placeholder="Enter your mobile number here" />
+                <a href="Javascript:void(0);" class="orange-button " go-to="#">Submit</a>
+                <p class="assured-text">Callback assured in 5 min between 9AM to 10 PM</p>
+              </fieldset>
+              <div class="vr-divider"></div>
+            </div>
+            <div class="continue-brosing">
+              <h3 class="orange-title">Continue browsing online</h3>
+              <div class="buttons-cont">
+                <p class="white-text">View in </p>
+                <a href="#" class="orange-button">
+                  <span class="map-icon"></span>Map
+                </a>
+                <a href="#" class="orange-button">
+                  <span class="grid-icon"></span>Grid
+                </a>            
+
+                <div class="more-opt-cont">
+                  <a href="Javascript:void(0);" class="set-more-opt show-user-selection" go-to="select_where">Set more options </a>
+                  <p class="assured-text">like budget, bedroom count, etc</p>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <p class="italic-desc">IndiaHomes  offers free site visit, and  assistance throughout your purchase process. We don’t charge any brokerage  to buyers for our services.</p>
+          </div>
+
+
+
+         <!-- PopUp 4 - Select Location  -->
+          <div class="popup-content select-where" id="select_where">
+            <h2> Where do you want to buy property in <span class="selected-city">Bangalore</span>?</h2>
+            <fieldset>
+              <label>Locality: </label>
+              <input type="text" class="area-textbox" id="search_area" placeholder="e.g. HSR Layout, BTM Layout" />
+            </fieldset>
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="prev-link" go-to="select_city">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="select_prop_type">Next</a>
+            </fieldset>
+          </div>
+
+
+          <!-- PopUp 5 - Select Property Type  -->
+          <div class="popup-content select-prop-type" id="select_prop_type">
+            <h2> What do you want to buy ?</h2>
+            <div class="select-prop-cont">
+              <div class="select-prop" id="property_type" data-toggle="buttons">
+                <label class="btn btn-custom">
+                    <input type="radio">
+                    <span class="prop-icon apt"></span>
+                    Apartment
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio">
+                    <span class="prop-icon indep-floor"></span>
+                    Independent Floor
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio">
+                    <span class="prop-icon villa"></span>
+                    Villa
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio">
+                    <span class="prop-icon plot"></span>
+                    Plot
+                </label>                 
+              </div> 
+            </div> 
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="prev-link" go-to="select_where">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="bh_preference">Next</a>
+            </fieldset>            
+          </div>
+
+
+
+
+
+          <!-- PopUp 3 - Select bed room preference  -->
+          <div class="popup-content bh-preference" id="bh_preference"> 
+            <h2>Optionally, tell us the Bedrooms requirements</h2>  
+            <span class="italic-desc">( Choose one or more, and press next )</span>
+            <fieldset class="all-bhks">
+              <label class="br-label">Number of Bedrooms: </label>
+              <div class="select-bhk" id="bedrooms" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="checkbox" value="1 BHK">1 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox" value="2 BHK">2 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox" value="3 BHK">3 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox" value="4 BHK">4/4+ 
+                  </label>               
+              </div> 
+            </fieldset>
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="select_prop_type">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="select_budjet">Next</a>
+            </fieldset>
+          </div>
+
+
+
+          <!-- PopUp 4 - Select the Budget  -->
+          <div class="popup-content select-budjet" id="select_budjet">
+            <h2>What is your Budget? </h2>
+            <fieldset class="all-price-range">
+              <div class="budjet-pick" id="price-range" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="checkbox" value="50L - 75L">50L - 75L
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox" value="75L - 1C">75L - 1Cr
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox" value="1C - 1.5C">1Cr - 1.5Cr
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox" value="1.5C - 2C">1.5Cr - 2Cr
+                  </label> 
+                  <label class="btn btn-custom">
+                      <input type="checkbox" value="1.5C - 2C">2Cr - 3Cr
+                  </label>                                                           
+              </div> 
+              <div class="booking-description">
+                <p>With a budget of <span class="selected-bud">75L - 1Cr </span>, you only need approx <span class="amount-needed">9L</span> to book your property</p>
+              </div>
+              <a href="javascript:void(0)" class="more-filters" go-to="availibility_status">More Filters</a>
+            </fieldset>
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="bh_preference">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="loan_requirement">Next</a>
+            </fieldset>
+          </div>  
+
+
+          <!-- PopUp 5.1 - Availibility Status  -->
+          <div class="popup-content availibility-status" id="availibility_status">
+            <h2>What kind of property you need? </h2>
+            <div class="">
+                
+                <div class="select-availability" id="availability" data-toggle="buttons">
+                  <label class="br-label">Availibility Status: </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="Under Construction">Under Construction
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="Ready To move">Ready To move
+                    </label>              
+                </div> 
+
+                <div class="select-posession">
+                  <label class="br-label">Posession Timeframe</label>
+                  <div class="possesions" data-toggle="buttons">
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">1 - 6 months
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">6 - 12 months
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">12 - 18 months
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">18 - 24 months
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">24 - 30 months
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">30 months +
+                    </label>   
+                  </div>                
+                </div>
+
+                <div class="select-prop-age">
+                  <label class="br-label">Property Age</label>
+                  <div class="possesions" data-toggle="buttons">
+                    <label class="btn btn-custom">
+                        <input type="radio" value="0 - 3 months">0 - 3 months
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="3 m - 1 year">3 m - 1 year
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 2 year">1 - 2 years
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="2 - 5 year">2 - 5 years
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="5 - 10 months">5 - 10 years
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="10 years +">10 years +
+                    </label>   
+                  </div>                
+                </div>
+
+            </div>
+              <fieldset class="back-forth clearfix">
+                <a href="javascript:void(0)" class="back-link" go-to="select_budjet">Back</a>
+                <a href="javascript:void(0)" class="next-link" go-to="filter_preference">Next</a>
+              </fieldset>            
+          </div>
+
+
+          <!-- PopUp 5 - Select more filters  -->
+          <div class="popup-content filter-preference" id="filter_preference">
+            <h2>Select amenities needed</h2>
+
+            <fieldset class="all-bhks">
+              <label class="br-label">Parking:</label>
+              <div class="select-bhk" id="" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="radio" value="none">None 
+                  </label>                 
+                  <label class="btn btn-custom">
+                      <input type="radio" value="1">1 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="2">2 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="2+">2+
+                  </label>
+              
+              </div> 
+            </fieldset>
+            <fieldset class="all-bhks">
+              <label class="br-label">Power backup: </label>
+              <div class="select-bhk" id="" data-toggle="buttons">
+                <label class="btn btn-custom">
+                    <input type="radio" value="none">None
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="partial">Partial
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="Full">Full
+                </label>             
+              </div> 
+            </fieldset>
+            <fieldset class="all-bhks">
+              <label class="br-label">Security: </label>
+              <div class="select-bhk" id="" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="radio" value="yes">Yes
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="No">No
+                  </label>            
+              </div> 
+            </fieldset>
+
+            <fieldset>
+                <h5>Other amenities ( Select all applicable)</h5>
+                <div class="select-amenities" id="amenity_type" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="gym-icon">Gym</a>
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="swimpool-icon">Swimming Pool</a>
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="lift-icon">Elevator</a>
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="servent-icon">Servant room</a>
+                  </label>  
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="tennis-icon">Tennis court</a>
+                  </label>                 
+              </div> 
+            </fieldset>
+            
+
+                               
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="availibility_status">Previous Filters</a>
+              <a href="javascript:void(0)" class="next-link" go-to="pref_sqfeet_rate">Next</a>
+            </fieldset>
+          </div>
+
+
+           <!-- PopUp 5.1 - Select prefered rate per sq feet -->
+          <div class="popup-content pref-sqfeet-rate" id="pref_sqfeet_rate">
+            <h2>What is you preffered rate per sq.feet? </h2>
+
+            <fieldset class="">
+              <div class="pref-sqfeet-boxes" data-toggle="buttons">
+                <label class="btn btn-custom">
+                    <input type="radio" value="0k - 2k">0k - 2k
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="2k - 4k">2k - 4k
+                </label> 
+                <label class="btn btn-custom">
+                    <input type="radio" value="4k - 6k">4k - 6k
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="6k - 8k">6k - 8k
+                </label> 
+                <label class="btn btn-custom">
+                    <input type="radio" value="8k - 10k">8k - 10k
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="10+ k +">10k +
+                </label>   
+              </div>  
+            </fieldset>
+
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="filter_preference">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="loan_requirement">Next</a>
+            </fieldset>
+          </div>
+
+
+
+           <!-- PopUp 6 - Select the loan requirement  -->
+          <div class="popup-content loan-requirement" id="loan_requirement">
+            <h2>Do you wish to take a home loan?</h2>
+
+            <fieldset class="loan-select-btns">
+              <div class="select-loan-req" id="bedrooms" data-toggle="buttons">
+                  <label class="btn btn-custom loan-btn">
+                      <input type="radio" value="Home Loan required">Yes
+                  </label>
+                  <label class="btn btn-custom loan-btn no-loan-btn">
+                      <input type="radio" value="No Loan Requirement">No
+                  </label>
+                </div>
+            </fieldset>
+
+
+            <p class="loan-desc">87% Buyers takes Loan</p>
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="pref_sqfeet_rate">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="search_confirm">Next</a>
+            </fieldset>
+          </div>
+
+          <!-- PopUp 7 - Confirm_search   -->
+          
+          <div class="popup-content search-confirm" id="search_confirm">
+            <h2>Searching for Properties to BUY  </h2>
+            <div class="selected-pref-list">
+              <p class="selected-pref"></p>
+              <p class="selected-loan-pref"></p>
+            </div>
+
+            <a href="javascript:void(0)" class="confirm-search-btn">Confirm Search</a>
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link change-search">Change Search</a>
+            </fieldset>
+          </div>
+
+
+          <!-- PopUp 7.1 - Search loading   -->
+          
+          <div class="popup-content search-loading" id="search_loading">
+            <div class="loading"></div>
+            <p>Power Search Commenced... Searching Databases of <b>10046</b> Properties</p>
+          </div>          
+
+           <!-- PopUp 8 - Search result with count   -->
+          <div class="popup-content search-complete" id="completed_result">
+            <div class="search-results">
+              <h2> India Homes Power Search Completed !</h2>
+              <div class="validated-prop">
+                <h1>2235</h1>
+                <p>Validated Properties Found</p>
+              </div>
+              <div class="arrow"></div>
+              <div class="shortlisted-prop">
+                <h1>225</h1>
+                <p class="show-first">Properties Shortlisted</p>
+                <p class="show-last">Validated Properties in Bangalore</p>
+              </div>
+            </div>
+            <div class="search-segrigated-results">
+              <h5>Save Time !</h5>
+              <p>Talk to a registered local property expert now</p>
+              <fieldset class="mobile-form">
+                <input type="text" placeholder="Enter your mobile number here" />
+                <a href="Javascript:void(0);" class="orange-button " go-to="#">Submit</a>
+                <p class="assured-text">Callback assured in 5 min between 9AM to 10 PM</p>
+                <a href="#" class="skip-view-prop">Skip, View properties</a>
+              </fieldset>
+              
+
+              <p class="italic-desc">IndiaHomes respects your privacy. We will only call you to help you find the best matching property</p>
+
+            </div>
+          </div>
+
+
+           <!-- PopUp 9 - Final popup with QRS  -->
+          <div class="popup-content final-qrs" id="final_qrs">
+            <div class="qrs-content">
+              <h2>Indianhomes QRS <span>(Quick Response Service)</span></h2>
+              <div class="qrs-logo"></div>
+              <div class="qrs-desc">
+                <p>Get immediate attention from our property advisor by opting for IndiaHomes QRS (Quick response service)</p>
+                <ul>
+                  <li>Call back in 5 min to discuss your requirements.</li>
+                  <li>Site visit in 48 hours of your requested time.  </li>
+                  <li>48 hours call back to check your satisfaction with our service.</li>
+                </ul>
+              </div>
+            </div>
+
+            <fieldset>
+              <input type="text" class="mobile-textbox" placeholder="Enter your mobile number to activate QRS" />
+              <button class="view-button">Submit & view properties</button>
+              <a href="#" class="skip-link">Skip QRS process to Live Chat</a>
+            </fieldset>
+
+            <p class="privacy-desc">IndiaHomes respects your privacy. We will only call you only once to help you find the perfect property. 5mins callback between 9am-10pm IST.</p>
+          </div>
+
+          </div>
+        </div>
+        <!-- Buying Phase DOM Ends here-->
+
+
+
+        <!-- ***************************** Selling Phase DOM Starts Here ****************** -->
+
+        <div class="selling-phase-container">
+          <div class="selling-phases">
+
+          <div class="user-selections">
+            <h3 class="selected-option">Sell</h3>
+            <ul class="selected-items">
+              <li class=""><span class="list-style">1</span><a href="javascript:void(0)" class="property-location-li" go-to="prop_location">Location</a></li>
+              <li><span class="list-style">2</span><a href="javascript:void(0)" class="property-type-li" go-to="sellingprop_type">Property Type</a></li>
+              <li><span class="list-style">3</span><a href="javascript:void(0)" class="property-bhk-li" go-to="property_bedbath">Bed rooms</a></li>
+              <li><span class="list-style">4</span><a href="javascript:void(0)" class="property-pos-amenity" go-to="">Posession, Amenities</a></li>              
+              <li><span class="list-style">5</span><a href="javascript:void(0)" class="property-budget-li" go-to="property_budjet">Budget</a></li>
+              <li><span class="list-style">6</span><a href="javascript:void(0)" class="property-email-li" go-to="property_photo">Photos</a></li>
+
+            </ul>
+          </div>
+
+          <a href="#" class="close-popup"></a>
+
+          <div class="popup">
+
+           <!-- PopUp 0 - Start selling  -->
+          <div class="popup-content how-to-sell" id="how_to_sell">
+            <h1>How we sell your property</h1>
+            <h2>Selling a property on IndiaHomes is as simple as 1-2-3!</h2>
+            <div class="image-desc">
+              <div class="collect-prop-details">
+                <p>We collect details of your property</p>
+              </div>
+              <div class="upload-details">
+                <p>We help you upload details</p>
+              </div>
+              <div class="best-options">
+                <p>We give you options, You choose the buyers!</p>
+              </div>
+            </div>
+
+
+            <fieldset class="has-buttons">
+                <a href="#" class="continue-link">Continue my last listing</a>
+                <a href="#" class="orange-button start-button">Start New</a>
+            </fieldset>
+          </div>
+
+
+           <!-- PopUp 1 - Select the city of the property -->
+          <div class="popup-content prop-city" id="prop_city">
+            <h2> Select the city in which your property is located</h2>
+            <fieldset>
+              <select class="selectpicker" id="prop_city_selection">
+                  <option>Bangalore</option>
+                  <option>Pune</option>
+                  <option>Chennai</option>
+              </select>
+            </fieldset>
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="next-link" go-to="prop_owner">Next</a>
+            </fieldset>
+          </div>          
+
+
+           <!-- PopUp 1.1 - Select from-Whom Developers/Resale  -->
+          <div class="popup-content about-owner" id="prop_owner">
+            <h2>Enter your contact details where we should send you the 
+              buyer information.</h2>
+
+            <fieldset class="user-form clearfix">
+              <input type="text" class="big-box" placeholder="Name" />
+              <input type="text" class="big-box" placeholder="Email" />
+              <input type="text" class="medium-box" placeholder="Mobile" /> 
+              <span class="italic-desc">You will receive an automated call to 
+              verify this number</span>
+              <br />
+
+              <span>I am a </span>
+              <div class="seller-type" id="" data-toggle="buttons">
+                <label class="btn btn-custom">
+                    <input type="radio" name="seller-type" value="owner">
+                    Owner
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" name="seller-type" value="Broker">
+                    Broker
+                </label>               
+              </div> <br />
+
+              <a href="Javascript:void(0)" go-to="assisted_listing" class="blue-link left">Need help in listing, Click here</a>
+              <a href="#" class="blue-link right">Already registered, Login</a>
+            </fieldset>
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="next-link" go-to="prop_location">Next</a>
+            </fieldset>
+          </div>
+
+
+           <!-- PopUp 1 - Select the city of the property -->
+          <div class="popup-content assisted-listing" id="assisted_listing">
+            <h2> IndiaHomes Assisted Listing</h2>
+            <div class="ask-request">
+              <p>We can help you list your properties for sale. We can visit your property to collect all<br /> details and take photo</p>
+
+              <a href="Javascript:void(0)" class="orange-button request-visit">Request Visit</a>
+              <fieldset class="back-forth clearfix">
+                <a href="javascript:void(0)" class="back-link" go-to="prop_owner">Back</a>
+              </fieldset>              
+            </div>
+
+            <div class="request-accepted">
+              <p>We have registered your request. Our agent will callyou in 30 minutes to schedule<br /> details collection for your property</p>
+
+              <a href="javascript:void(0)" class="listing-requsted orange-button">Done</a>
+            </div>
+
+          </div>   
+
+
+           <!-- PopUp 2 - Select Location  -->
+          <div class="popup-content prop-location" id="prop_location">
+            <h2>  Where is your property located in <span class="selected-city">Bangalore</span>?</h2>
+            <fieldset class="area-form">
+              <label>Area </label>
+              <input type="text" id="prop_area_select" class="area-textbox" placeholder="e.g. HSR Layout, BTM Layout" />
+            </fieldset>
+           <fieldset class="location-form">
+              <label>
+              Address </label>
+              <input type="text" class="area-textbox" placeholder="e.g. #2010, 27th main" />
+            </fieldset>            
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="prop_owner">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="sellingprop_type">Next</a>
+            </fieldset>
+          </div>
+
+
+          <!-- PopUp 3 - Select type of property  -->
+          <div class="popup-content property-type" id="sellingprop_type"> 
+            <h2>What type of Property are you selling ? <span class="italic-desc">( Choose one and press next)</span></h2>
+            <div class="select-prop-type" id="" data-toggle="buttons">
+                <label class="btn btn-custom">
+                    <input type="radio" name="prop-type" value="Apartment">
+                    <span class="prop-icon apt"></span>
+                    Apartment
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" name="prop-type" value="Independent Floor">
+                    <span class="prop-icon indep-floor"></span>
+                    Independent Floor
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" name="prop-type" value="Villa">
+                    <span class="prop-icon villa"></span>
+                    Villa
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" name="prop-type" value="Plot">
+                    <span class="prop-icon plot"></span>
+                    Plot
+                </label>                 
+            </div>
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="prop_location">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="property_bedbath">Next</a>
+            </fieldset>
+          </div>
+
+
+          <!-- PopUp 4 - Select number of bed/bath rooms  -->
+          <div class="popup-content bh-preference" id="property_bedbath"> 
+            <h2>Number of  Bedrooms and Bathrooms in the property</h2>  
+            <span class="italic-desc">( Choose one or more, and press next )</span>
+            <fieldset class="all-bhks">
+              <label class="br-label">Bedrooms: </label>
+              <div class="select-bed" id="bedrooms" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="radio" value="1">1 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="2">2 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="3">3 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="4">4
+                  </label>               
+                  <label class="btn btn-custom">
+                      <input type="radio" value="5">5 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="5+">5+ 
+                  </label>                    
+              </div> 
+            </fieldset>
+
+            <fieldset class="all-bhks">
+              <label class="br-label">Bathrooms: </label>
+              <div class="select-bath" id="bathrooms" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="radio" value="1">1 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="2">2 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="3">3 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="4">4
+                  </label>               
+                  <label class="btn btn-custom">
+                      <input type="radio" value="5">5 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="5+">5+ 
+                  </label>                    
+              </div> 
+            </fieldset>
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="sellingprop_type">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="property_size">Next</a>
+            </fieldset>
+          </div>
+
+
+
+
+          <!-- PopUp 5.1 - Property size  -->
+          <div class="popup-content property-size" id="property_size">
+            <h2>What is the size of the property ?</h2>
+                  <div class="possesions" data-toggle="buttons">
+                    <label class="btn btn-custom">
+                        <input type="radio" value="<500">< 500 sqft
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="500 - 750">500 - 750
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="750 - 1000">750 - 1000
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1000 - 1250">1000 - 1250 
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1250 - 1500">1250 - 1500
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1500 - 1750">1500 - 1750
+                    </label>   
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1750 - 2000">1750 - 2000
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="2000+ sqft"> 2000+ sqft
+                    </label>                       
+                  </div>   
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="property_bedbath">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="is_developer_proj">Next</a>
+            </fieldset>
+          </div>  
+
+
+
+          <!-- PopUp 5.1 - Property size  -->
+          <div class="popup-content is-developer-proj" id="is_developer_proj">
+            <h2>Is your property in a developer projects ?</h2>
+
+            <div class="select-is-developerproj" id="" data-toggle="buttons">
+                <label class="btn btn-custom">
+                    <input type="radio" value="yes">Yes
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="no">No
+                </label>              
+            </div> 
+
+            <div class="if-developer-proj">
+              <fieldset>
+                <label>Project Name:</label>
+                <!-- <textarea></textarea> -->
+                <input type="text" class="" />
+              </fieldset>
+              <fieldset class="non-list">
+                <input type="checkbox" class="" id="not-listed" />
+                <label for="not-listed">My Project is not listed</label>
+                <!-- <textarea class="non-listed-textarea"></textarea> -->
+                <input type="text" class="non-listed-textarea" />
+              </fieldset>
+
+            </div>
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="property_size">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="sellprop_posession_status">Next</a>
+            </fieldset>
+          </div>  
+
+
+
+
+          <!-- PopUp 5.3 - Property posession  -->
+          <div class="popup-content availibility-status" id="sellprop_posession_status">
+            <h2>Posession status of the property </h2>
+            <div class="">
+                
+                <div class="select-availability" id="availability" data-toggle="buttons">
+                  <label class="br-label">Posession Status: </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="Under Construction">Under Construction
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="Ready To move">Ready To move
+                    </label>              
+                </div> 
+
+                <div class="select-posession">
+                  <label class="br-label">Posession Timeframe</label>
+                  <div class="possesions" data-toggle="buttons">
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">1 - 6 months
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">6 - 12 months
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">12 - 18 months
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">18 - 24 months
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">24 - 30 months
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">30 months +
+                    </label>   
+                  </div>                
+                </div>
+
+                <div class="select-prop-age">
+                  <label class="br-label">Property Age</label>
+                  <div class="possesions" data-toggle="buttons">
+                    <label class="btn btn-custom">
+                        <input type="radio" value="0 - 3 months">0 - 3 months
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="3 m - 1 year">3 m - 1 year
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 2 year">1 - 2 years
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="2 - 5 year">2 - 5 years
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="5 - 10 months">5 - 10 years
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="10 years +">10 years +
+                    </label>   
+                  </div>                
+                </div>
+
+            </div>
+              <fieldset class="back-forth clearfix">
+                <a href="javascript:void(0)" class="back-link" go-to="is_developer_proj">Back</a>
+                <a href="javascript:void(0)" class="next-link" go-to="property_preference">Next</a>
+              </fieldset>            
+          </div>
+
+
+          <!-- PopUp 5.2 - Amenities of the property  -->
+          <div class="popup-content filter-preference" id="property_preference">
+            <h2>Amenities of the property</h2>
+
+            <fieldset class="all-bhks">
+              <label class="br-label">Parking:</label>
+              <div class="select-bhk" id="" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="radio" value="none">None 
+                  </label>                 
+                  <label class="btn btn-custom">
+                      <input type="radio" value="1">1 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="2">2 
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="2+">2+
+                  </label>
+              
+              </div> 
+            </fieldset>
+            <fieldset class="all-bhks">
+              <label class="br-label">Power backup: </label>
+              <div class="select-bhk" id="" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="radio" value="none">None
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="partial">Partial
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="Full">Full
+                  </label>             
+              </div> 
+            </fieldset>
+            <fieldset class="all-bhks">
+              <label class="br-label">Security: </label>
+              <div class="select-bhk" id="" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="radio" value="yes">Yes
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="radio" value="No">No
+                  </label>            
+              </div> 
+            </fieldset>
+
+            <fieldset class="predefined-aminities">
+                <h5>Other amenities ( Select all applicable)</h5>
+                <div class="select-amenities" id="amenity_type" data-toggle="buttons">
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="gym-icon">Gym</a>
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="swimpool-icon">Swimming Pool</a>
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="lift-icon">Elevator</a>
+                  </label>
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="servent-icon">Servant room</a>
+                  </label>  
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="tennis-icon">Tennis court</a>
+                  </label>                 
+              </div> 
+              <a href="Javascript:void(0)" class="add-more-aminity">Add more</a>
+            </fieldset>
+
+
+            <fieldset class="custom-aminities">
+                <h5>More amenities</h5>
+                <div class="enter-amenities" id="">
+                  <textarea placeholder="Type in any other amenities or attributes of your property you wish to highlight"></textarea>              
+                </div> 
+            </fieldset>
+
+            
+
+                               
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="sellprop_posession_status">Previous Filters</a>
+              <a href="javascript:void(0)" class="next-link" go-to="property_budjet">Next</a>
+            </fieldset>
+          </div>
+
+
+          <!-- PopUp 5 - Enter the Budget  -->
+          <div class="popup-content property-budjet" id="property_budjet">
+            <h2>Price of the property</h2>
+            <fieldset class="all-price-range">
+              <input type="text" class="prop-price" placeholder="25,00,000" />
+            </fieldset>
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="property_preference">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="property_photo">Next</a>
+            </fieldset>
+          </div>  
+
+
+
+           <!-- PopUp 6 - property-photos  -->
+          <div class="popup-content prop-photos" id="property_photo">
+            <h2>Upload photos of the property</h2>
+            <fieldset>
+              <div class="select-photo-preference" id="">
+                  <a href="javascript:void(0)" go-to="upload_photo" class="orange-button email-button">
+                    <span class="upload-btn-icon"></span>
+                    Upload Now
+                  </a>
+                  <a href="javascript:void(0)" go-to="email_photo" class="orange-button email-button">
+                    <span class="email-btn-icon"></span>
+                    Email Later
+                  </a>     
+                  <a href="javascript:void(0)" go-to="request_photographer" class="orange-button  email-button">
+                    <span class="request-btn-icon"></span>
+                    Request Photographer Visit
+                  </a>  
+
+
+                </div>
+            </fieldset>
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="property_budjet">Back</a>
+              <!--a href="javascript:void(0)" class="next-link" go-to="">Next</a-->
+            </fieldset>
+          </div>
+
+         <!-- PopUp 6.0 - Upload Photos -->
+          <div class="popup-content upload-photos" id="upload_photo">
+            <h2>Upload Photos </h2>
+            <p>Please upload at least 5 photos of your property</p>
+
+            <div class="upload-button">
+              <a href="Javascript:void(0);" class="upload-click orange-button">Browse</a>
+              <input type="file" class="hidden-input" />
+            </div>
+
+            <div class="uploaded-numbers">
+              <ul>
+                <li class="">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>5+</li>
+              </ul>
+            </div>
+
+            <p class="uploaded-count-desc italic-desc">Total <span>5 </span>photos uploaded</p>
+
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="property_photo">Back</a>
+              <a href="javascript:void(0)" class="next-link open-preview">Next</a>
+            </fieldset>            
+          </div>
+
+
+
+         <!-- PopUp 6.0.1 - Uploaded Photo select what -->
+          <div class="popup-content identify-photo" id="identify_photo">
+            <div class="clearfix">
+              <div class="image-holder">
+                <img src="css/images/preview-room.jpg">
+              </div>
+
+              <div class="upload-cancel">
+                <a href="Javascript:void(0);" class="upload-btn">Upload</a>
+                <a href="Javascript:void(0);" class="cancel-btn">Cancel</a>
+              </div>
+            </div>  
+            <div class="identify-room">
+              <h2>Identity this room :</h2>
+              <div class="bed-and-bath" data-toggle="buttons">
+                <label class="btn btn-custom">
+                    <input type="radio" value="Bedroom 1">Bedroom 1
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="Bedroom 1">Bedroom 2
+                </label> 
+                <label class="btn btn-custom">
+                    <input type="radio" value="Bathroom 1">Bathroom 1
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="Bathroom 2">Bathroom 2
+                </label>  
+                <label class="btn btn-custom">
+                    <input type="radio" value="Living">Living
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="Dining">Dining
+                </label> 
+                <label class="btn btn-custom">
+                    <input type="radio" value="Kitchen">Kitchen 
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="Others">Others
+                </label>  
+              </div> 
+            </div>
+
+          </div>
+
+
+
+          <!-- PopUp 1 - Send Photographer -->
+          <div class="popup-content assisted-listing" id="request_photographer">
+            <h2> Request Photographer Visit</h2>
+            <div class="ask-request">
+              <p>We can send a photographer to your property to take photos. <br />
+                 Our agent will call you to schedule the time of photographer visit.<br />
+                
+
+                This is a free service from IndiaHomes</p>
+
+              <a href="Javascript:void(0)" class="orange-button request-visit">Request Photographer</a>
+              <fieldset class="back-forth clearfix">
+                <a href="javascript:void(0)" class="back-link" go-to="property_photo">Back</a>
+              </fieldset>              
+            </div>
+
+            <div class="request-accepted">
+              <p>We have registered your request. Our agent will call you in 30 minutes to schedule<br /> the photographer visit.</p>
+
+              <a href="javascript:void(0)" class="open-preview orange-button">Done</a>
+            </div>
+
+          </div>             
+
+
+           <!-- PopUp 6.1 - Email Photos -->
+          <div class="popup-content email-photos" id="email_photo">
+            <h2>Email photos later </h2>
+            <p>We have sent you a mail from <a href="emailto:photos@indiahomes.com" class="">photos@indiahomes.com</a> on your email address. Simply reply to that email and attach all the photos that you wish to upload. <br /><br />
+
+            You can also compose a new mail to <a href="emailto:photos@indiahomes.com" class="">photos@indiahomes.com</a> with your mobile number as the subject line<br /><br />
+
+            <a href="#" class="">View our guide on taking good photos</a>
+
+            </p>
+
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="property_photo">Back</a>
+              <a href="javascript:void(0)" class="next-link open-preview">Next</a>
+            </fieldset>            
+          </div>
+
+
+
+           <!-- PopUp 10.2 - thank you screen Screen -->
+          <div class="popup-content thank-you" id="thank_you">
+            <h1>Thank You</h1>
+            <p>Thank you for listing  your property on indiaHomes . After  validation  your property listing will be activated and visible. This process may take upto 24 hours. <br/><br/>
+
+              Notification on buyers interested in your propertywill be sent on your registered mobile number. you can buy informat`ion of buyers you like from your mobile.
+             </p>
+             <h2>Share your feedback on the listing process to help us improve</h2>
+
+             <div class="select-and-submit">
+              <div class="select-goodbad" id="" data-toggle="buttons">
+                <label class="btn btn-custom">
+                    <input type="radio" value="good">
+                    <span class="good-icon"></span>
+                    Good
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" value="bad">
+                    <span class="bad-icon"></span>
+                    Needs <br />
+                    Improvement
+                </label>
+                <a href="Javascript:void(0)" class="orange-button submit-review">Submit</a>             
+              </div> 
+             </div>
+                   
+             <div class="suggestion-box">
+              <textarea placeholder="Please share your suggestion which can improve our listing process."></textarea>
+              <a href="#" class="orange-button">Done</a>   
+             </div>
+
+             <div class="social-box">
+              <p>We are glad that you liked the experiance of listing on IndiaHomes. <br /><br />
+                Spread the good word ! Like us on
+              </p>
+              <fieldset>
+                <label>Facebook</label><a href="#"><img src="css/images/fb.png" /></a>
+                <label>Google</label><a href="#"><img src="css/images/google.png" /></a>
+              </fieldset> 
+             </div>
+
+          </div>
+
+
+           <!-- PopUp 10 - Confirmation Screen -->
+          <div class="popup-content prop-confirmation" id="prop_confirmation">
+            <h2>Get ready for customers calls </h2>
+            <p class="blog-link-desc">Visit <a href="#"> IndiaHomes Blog</a> for articles on selling a property</p>
+
+
+            <p class="things-to-ensure"> <a href="#">5 things to ensure in ‘ Agreement To Sell ’
+              Maximise the selling value of your house</a> </p>          
+          </div>
+          </div>
+
+          </div>
+
+          <div class="preview-prop">
+            <div class="normal-preview">
+              <div class="preview-content clearfix">
+                  <div class="property-photo-preview">
+                    <h2>2 BHK apartment at HSR layout, Bangalore</h2>
+                    <section class="slider">
+                      <div id="slider" class="flexslider">
+                        <ul class="slides">
+                          <li>
+                            <img src="css/images/propert-image.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image.jpg" />
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="carousel" class="flexslider">
+                        <ul class="slides">
+                          <li>
+                            <img src="css/images/propert-image-thumb.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image-thumb.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image-thumb.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image-thumb.jpg" />
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="property-details">
+
+                    <div class="panel-group" id="accordion">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                              Photos and Details
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                          <div class="panel-body property-desc">
+                            <div class="prop-details">
+                              <p> <label>Bedroom : </label> 3</p>
+                              <p> <label>Price : </label> 75Lakhs</p>
+                              <p> <label>Area: </label> 1200 Sqft</p>
+                              <p> <label>Bathroom: </label> 2</p>
+                              <p> <label>Furnished: </label> Unfurnished</p>
+                              <p> <label>Current Status: </label> Available</p>
+                            </div>
+                            <div class="prop-amenities">
+                              <h4>Amenities</h4>
+                              <ul>
+                                <li><span class="gym-icon">Gym</span></li>
+                                <li><span class="swimpool-icon">Swimming Pool</span></li>
+                                <li><span class="lift-icon">Elevator</span></li>
+                                <li><span class="servent-icon">Servent room</span></li>
+                                <li><span class="tennis-icon">Tennis court</span></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                              Neighbourhood
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                          <div class="panel-body property-desc">
+                            <div class="prop-details">
+                              <p> <label>Bedroom : </label> 3</p>
+                              <p> <label>Price : </label> 75Lakhs</p>
+                              <p> <label>Area: </label> 1200 Sqft</p>
+                              <p> <label>Bathroom: </label> 2</p>
+                              <p> <label>Furnished: </label> Unfurnished</p>
+                              <p> <label>Current Status: </label> Available</p>
+                            </div>
+                            <div class="prop-amenities">
+                              <h4>Amenities</h4>
+                              <ul>
+                                <li><span class="gym-icon">Gym</span></li>
+                                <li><span class="swimpool-icon">Swimming Pool</span></li>
+                                <li><span class="lift-icon">Elevator</span></li>
+                                <li><span class="servent-icon">Servent room</span></li>
+                                <li><span class="tennis-icon">Tennis court</span></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                  </div>
+              </div>
+              <div class="preview-header">
+                <h2>This is how your property lisiting will look </h2>
+                <div class="right-btns">
+                    <a href="javascript:void(0)" class="orange-button change-details"><span class="back-arrow"></span>Change Details</a>
+                    <a href="javascript:void(0)" class="orange-button open-map-preview">Confirm<span class="next-arrow"></span></a>
+                </div>
+              </div>
+
+            </div>
+            <div class="map-preview">
+              <div class="preview-content">
+                <div class="map-container">
+                  <img src="css/images/map.jpg" />
+                </div>
+              </div>
+              <div class="preview-header">
+                <h2>Confirm the location of your property on map <span>(Adjust by draging pin if required)</span></h2>
+                <div class="right-btns">
+                    <a href="javascript:void(0)" class="orange-button open-confirmation">Confirm<span class="next-arrow"></span></a>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+        <!-- Selling Phase DOM Starts Here-->
+
+
+          <!-- ORANGE BUTTONS -->
+          <div class="orange-buttons-holder">
+              <div class="orange-button-cont">
+                <a href="javascript:void(0)" class="orange-btn buy-btn">BUY</a>
+                <div id="odometer" class="odometer">9000</div>
+                <div class="count-cont">
+                    <span> Buyers Active</span>
+                </div>
+              </div>
+              <div class="orange-button-cont property-sell">
+                <a href="javascript:void(0)" class="orange-btn sell-btn">SELL</a>
+                <div id="odometer1" class="odometer">9000</div>
+                <div class="count-cont middle-count-cont">
+                    <span> Properties Avaliable</span>
+                </div>                
+              </div>
+              <div class="orange-button-cont">
+                <a href="#" class="orange-btn">RENT</a>
+                <div id="odometer2" class="odometer">6000</div>
+                <div class="count-cont">
+                    <span> Tenants Searching</span>
+                </div>                
+              </div>
+              <div class="orange-button-cont">
+                <a href="#" class="orange-btn">LOAN</a>
+                <div id="odometer3" class="odometer">1000</div>
+                <div class="count-cont">
+                    <span>Loans Processed</span>
+                </div>                
+              </div>              
+          </div>     
+      </div>
+    </section>
+
+    <!-- Fixed Container for India homes description Section -->
+
+    <section class="about-india-homes">
+      <div class="container">
+        <h2>IndiaHomes: India’s No 1 Property Advisor</h2>
+        <p><span>10 million</span> Customers&nbsp;&nbsp; | &nbsp;&nbsp;<span>50</span> Cities&nbsp;&nbsp; | &nbsp;&nbsp;<span>600</span> Property Specialists&nbsp;&nbsp; | &nbsp;&nbsp;<span>10,000 Cr</span>  of Property sold</p>
+      </div>
+    </section>
+
+
+
+    <!-- Why India homes -->
+
+    <section class="why-us">
+        <div class="container">
+            <h1>Why IndiaHomes ?</h1>
+            <p class="why-us-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+
+            <div class="why-us-animation ">
+                <div class="orange-circle">
+                    <div class="big-orange-cirlce">
+                        <p>Free Assisted
+                            <br />Property Purchase
+                            <br />Service
+                            <br />
+                            <br />for Primary market
+                            <br />properties</p>
+                    </div>
+                    <div class="lines">
+                      <span class="lineto-subcircleone"></span>
+                      <span class="lineto-subcircletwo"></span>
+                      <span class="lineto-subcirclethree"></span>
+                    </div>
+                    <div class="orange-sub-circle-holder sub-circle-one">
+                        <p class="stand-alone-text">300+<br/>Professional advisors</p>
+                        <div class="orange-sub-circle">
+                            <div class="free-advice-icon"></div>
+                            <p>Free Expert
+                                <br/>Advice</p>
+                        </div>
+                    </div>
+                    <div class="orange-sub-circle-holder sub-circle-two">
+                        <p class="stand-alone-text">At a time
+                            <br/>convenient
+                            <br/>to you</p>
+                        <div class="orange-sub-circle">
+                            <div class="free-sitevisit-icon"></div>
+                            <p>Free Site Visit</p>
+                        </div>
+                    </div>
+                    <div class="orange-sub-circle-holder sub-circle-three">
+                        <p class="stand-alone-text">Throughout the
+                            <br/>purchase
+                            <br/>process</p>
+                        <div class="orange-sub-circle">
+                            <div class="free-documentation-icon"></div>
+                            <p>Documentation
+                                <br/>Assistance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="green-circle">
+                    <div class="big-green-circle">
+                        <p>Most Comprehensive
+                            <br />Property Listing
+                            <br />Collection
+                            <br />
+                            <br />for Resale / Rental
+                            <br />properties</p>
+                    </div>
+                    <div class="lines">
+                      <span class="lineto-subcircleone"></span>
+                      <span class="lineto-subcircletwo"></span>
+                      <span class="lineto-subcirclethree"></span>
+                    </div>                    
+                    <div class="green-sub-circle-holder sub-circle-one">
+                        <div class="green-sub-circle">
+                            <div class="free-browse-icon"></div>
+                            <p>Browse / Post
+                                <br/>Requirement</p>
+                        </div>
+                        <p class="stand-alone-text">20000+
+                            <br/>Property listing</p>
+                    </div>
+                    
+                    <div class="green-sub-circle-holder sub-circle-two">
+                        <div class="green-sub-circle">
+                            <div class="free-connected-icon"></div>
+                            <p>Get Connected</p>
+                        </div>
+                        <p class="stand-alone-text">1000+
+                            <br />Agents on our
+                            <br />platform</p>
+                    </div>
+                    
+                    <div class="green-sub-circle-holder sub-circle-three">
+                        <div class="green-sub-circle">
+                            <div class="free-shop-icon"></div>
+                            <p>One Stop Shop</p>
+                        </div>
+                        <p class="stand-alone-text">Explore Loan, Furnishing
+                            <br/>options for your
+                            <br/>new home</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Resources -->
+
+    <section class="resources" data-800="background-position:0px -100px;" data-1700="background-position:0px -400px;">
+        <div class="container">
+            <h1>Resources at IndiaHomes</h1>
+            <p class="resource-desc">To help you in your Real Estate Quest</p>
+            <div class="col-xs-12 col-sm-4">
+              <div class="resource-holder">
+                <h2>FAQs</h2>
+                <h3>What is the difference between Saleble Area and Carpet Area?</h3>
+                <p>The saleable area is what you pay for. Besides the flat area, it includes propotionate share in the common areas like staircase, ...</p>
+
+                <a href="#" class="read-more">ReadMore</a>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="resource-holder">
+                <h2>NEWS</h2>
+                <h3>Gurgaon Dwarka Expressway completion date revised</h3>
+                <p>In a big relief to the investors and end-user who had put their faith in timely completion of the expressway, government announced....</p>
+
+                <a href="#" class="read-more">ReadMore</a>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="resource-holder">
+                <h2>BLOG</h2>
+                <h3>5 things to check before signing the Rent Agreement</h3>
+                <p>You found that perfect house that you wanted to move in next. It is close to your office, has great neighbourhood, and rental seems just right. Is that all ....</p>
+
+                <a href="#" class="read-more">ReadMore</a>
+              </div>                
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Testimonial -->
+
+    <section class="testimonial">
+      <div class="container">
+        <h1>What Our Happy Customers Say</h1>
+        <p class="testimonial-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+        <div class="testimonial-carousal">
+          <div id="owl-testimonial" class="owl-carousel">
+              <div class="item">
+                <div class="user">
+                  <img src="css/images/user1.png">
+                </div>
+                <div class="testimonial-text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                  <h6>Sanjeev Roa, Bangalore</h6>
+                </div>
+              </div>
+              <div class="item">
+                <div class="user">
+                  <img src="css/images/user2.png">
+                </div>
+                <div class="testimonial-text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                  <h6>Sanjeev Roa, Bangalore</h6>
+                </div>
+              </div>
+              <div class="item">
+                <div class="user">
+                  <img src="css/images/user1.png">
+                </div>
+                <div class="testimonial-text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                  <h6>Sanjeev Roa, Bangalore</h6>
+                </div>
+              </div>
+              <div class="item">
+                <div class="user">
+                  <img src="css/images/user2.png">
+                </div>
+                <div class="testimonial-text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                  <h6>Sanjeev Roa, Bangalore</h6>
+                </div>
+              </div>
+              <div class="item">
+                <div class="user">
+                  <img src="css/images/user1.png">
+                </div>
+                <div class="testimonial-text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                  <h6>Sanjeev Roa, Bangalore</h6>
+                </div>
+              </div>
+              <div class="item">
+                <div class="user">
+                  <img src="css/images/user2.png">
+                </div>
+                <div class="testimonial-text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                  <h6>Sanjeev Roa, Bangalore</h6>
+                </div>
+              </div>              
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="ih-footer">
+      <div class="container">
+        <ul class="footer-links muted">
+          <li><a href="#">Home</a> | </li>
+          <li><a href="#">Press </a> | </li>  
+          <li><a href="#">Room  </a> | </li>  
+          <li><a href="#">Blog  </a> | </li>  
+          <li><a href="#">Careers </a> | </li>   
+          <li><a href="#">Sitemap </a> | </li>  
+          <li><a href="#">Mobile Site </a> | </li>   
+          <li><a href="#">Disclaimer</a> | </li> 
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p class="copyright">Copyright © 2014 IndiaHomes.com | All Rights Reserved</p>
+      </div>
+    </footer>
+    
+    <!-- Odometer- for count up in homepage -->
+    <script src="js/odometer.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+
+    <script src="js/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap-select.js"></script>    
+    <!-- Include Owl Carousal js plugin -->
+    <script src="js/owl.carousel.js"></script>
+    <!-- Include Way point js plugin -->
+    <script src="js/waypoints.js"></script>
+    <!-- Skroller for parallax effect -->
+    <script src="js/skrollr.min.js"></script>
+    <!-- Skroller for Typed JS -->
+    <script src="js/typed.js"></script>
+    <!-- FlexSlider -->
+    <script src="js/jquery.flexslider.js"></script>    
+    <!-- Sky momevent Script-->
+    <script src="js/jquery.spritely-0.6.js"></script>
+
+
+    <!-- India Homes custom Scripts -->
+    <script src="js/custom.js" type="text/javascript"></script>
+</body>
+
+</html>
