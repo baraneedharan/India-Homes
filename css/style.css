@@ -86,9 +86,11 @@ a:hover {
     padding: 0 10px;
 }
 
-.has-play-icon {
+.has-play-icon, 
+.nav>li>a.has-play-icon:hover {
     background: url('images/play-ad.png') no-repeat right center transparent;
-    padding-right: 20px;
+    color: #fff;
+    padding-right: 22px;
 }
 /*about-india-homes*/
 .about-india-homes {
@@ -3033,11 +3035,12 @@ input[type=file].hidden-input {
     display: inline-block;
 }
 
-#sellprop_posession_status .select-prop-age {
+#rentprop_posession_status .select-prop-age {
     display: block;
 }
 
-#rent_furnishing_status {
+#rent_furnishing_status,
+#rent_to_or_out {
     display: none;
 }
 
@@ -3051,33 +3054,61 @@ input[type=file].hidden-input {
 }
 
 .rent-to-or-out h1 {
-    font-size: 14px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;    
+font-size: 28px;
+font-family: 'Lato', sans-serif;
+font-weight: 300;
+margin: 0 0 25px 0; 
 }
 
 .rent-to-or-out fieldset {
+    margin: 0 0 40px 0;
+}
+
+.rent-start-button {
+        font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 42px;
+    width: 140px;
 }
 
 
 .rent-to-or-out .orange-button {
-text-transform: uppercase;
-height: 57px;
-line-height: 22px;
+height: 65px;
+line-height: 42px;
 font-size: 18px;
-width: 200px;
-padding: 5px 0;
-margin-left: 24px;
+width: 218px;
+padding: 10px 18px;
+margin-left: 25px;
+font-family: 'Lato', sans-serif;
+font-weight: 500;
+}
+
+.rent-to-or-out .orange-button:hover {
+    color: #fff;
 }
 
 .rent-to-or-out .orange-button:first-child {
 margin-left: 0px;
 }
 
-/* Renting flow */
+
+#rentingprop_type .select-prop-type {
+width: 100%;
+margin: 25px auto;
+display: block;
+text-align: center;
+}
+
+#rentingprop_type .select-prop-type .btn-custom {
+width: 168px;
+padding-left: 45px;
+}
+
 
 #how_to_rent,
-#furnishing_state {
+#furnishing_state,
+#rent_search_confirm {
     display: none;
 }
 
@@ -3140,6 +3171,49 @@ height: 42px;
 line-height: 30px;
 font-size: 15px;
 }
+
+#rent_property_bedbath .more-option {
+margin-top: 18px;
+display: none;
+}
+
+
+.select-furnished .all-bhks {
+margin-top: 12px;
+}
+
+
+
+/*#rent_prop_city .next-link,*/
+#rent_prop_location .next-link,
+#rentingprop_type .next-link,
+#rent_property_bedbath .next-link,
+#rent_property_size .next-link,
+#rentprop_posession_status .next-link,
+#rent_furnishing_status .next-link,
+#prop_rent_amount .next-link {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

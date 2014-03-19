@@ -103,10 +103,10 @@
             "Sadashivnagar",
             "Ulsoor"
           ];
-          $( "#search_area, #prop_area_select" ).autocomplete({
+          $( "#search_area, .selling-phases #prop_area_select, .renting-phases #prop_area_select" ).autocomplete({
             source: availableTags,
             select: function( event, ui ) {
-              $("#select_where .next-link").fadeIn();
+              $(this).parents(".popup-content").find(".next-link").fadeIn();
             }
           });
 
@@ -145,7 +145,7 @@
 
 
       $(".close-popup, .listing-requsted").click(function(){
-         $(".buying-phases, .popup-content, .selling-phases").fadeOut();
+         $(".buying-phases, .popup-content, .selling-phases, .renting-phases").fadeOut();
          $(".banner-text, .orange-buttons-holder").fadeIn();
       });
 
@@ -176,7 +176,7 @@
       });
 
 
-      $(".change-search").click(function(){
+      $(".buying-phases .change-search").click(function(){
         $(".popup-content, .orange-buttons-holder").hide();
         $("#select_where").show();
         $(".popup").animateAuto("height", 100);
@@ -371,7 +371,7 @@
         });
 
 
-        $(".confirm-search-btn").click(function() {   
+        $(".buying-phases .confirm-search-btn").click(function() {   
           $(".popup-content").hide();
           $("#search_loading").fadeIn();
           $(".popup").animateAuto("height", 100);
@@ -385,9 +385,6 @@
             $("#completed_result").addClass("active");
             $(".popup").animateAuto("height", 100);
           },6500);
-
-
-
         });   
 
 
@@ -495,7 +492,7 @@
 
 
        $(".open-preview").click(function(){
-          $(".selling-phases").hide();
+          $(".selling-phases, .renting-phases").hide();
           $(".preview-prop").fadeIn();
           //Carousal Plugins initialization 
           $('#carousel').flexslider({
@@ -598,16 +595,16 @@
 
        $("#prop_location .next-link").click(function() {
           var selected_from = $('.selling-phases .area-textbox').val();
-          $(".property-location-li").text(selected_from);
-          $(".property-location-li").parent().addClass("completed");
-          $(".property-location-li").parent().removeClass("active").next().addClass("active");
+          $(".selling-phases .property-location-li").text(selected_from);
+          $(".selling-phases .property-location-li").parent().addClass("completed");
+          $(".selling-phases .property-location-li").parent().removeClass("active").next().addClass("active");
         });
 
        $("#sellingprop_type .next-link").click(function() {
           var selected_from = $("#sellingprop_type .select-prop-type .btn-custom.active").text();
-          $(".property-type-li").text(selected_from);
-          $(".property-type-li").parent().addClass("completed");
-          $(".property-type-li").parent().removeClass("active").next().addClass("active");
+          $(".selling-phases .property-type-li").text(selected_from);
+          $(".selling-phases .property-type-li").parent().addClass("completed");
+          $(".selling-phases .property-type-li").parent().removeClass("active").next().addClass("active");
         });
 
        $("#property_bedbath .next-link").click(function() {
@@ -615,33 +612,33 @@
           var selected_bed = $(".select-bed .btn-custom.active").text();
           var selected_bath = $(".select-bath .btn-custom.active").text();
 
-          $(".property-bhk-li").text(selected_bed + " Bed, " + selected_bath + " Bath");
-          $(".property-bhk-li").parent().addClass("completed");
-          $(".property-bhk-li").parent().removeClass("active").next().addClass("active");
+          $(".selling-phases .property-bhk-li").text(selected_bed + " Bed, " + selected_bath + " Bath");
+          $(".selling-phases .property-bhk-li").parent().addClass("completed");
+          $(".selling-phases .property-bhk-li").parent().removeClass("active").next().addClass("active");
         });
 
        $("#property_budjet .next-link").click(function() {
           var selected_from = $('.prop-price').val();
-          $(".property-budget-li").text(selected_from);
-          $(".property-budget-li").parent().addClass("completed");
-          $(".property-budget-li").parent().removeClass("active").next().addClass("active");
+          $(".selling-phases .property-budget-li").text(selected_from);
+          $(".selling-phases .property-budget-li").parent().addClass("completed");
+          $(".selling-phases .property-budget-li").parent().removeClass("active").next().addClass("active");
         });
 
        
        $("#email_photo .next-link, #upload_photo .next-link").click(function() {
-          $(".property-email-li").parent().addClass("completed");
-          $(".property-email-li").parent().removeClass("active").next().addClass("active");
+          $(".selling-phases .property-email-li").parent().addClass("completed");
+          $(".selling-phases .property-email-li").parent().removeClass("active").next().addClass("active");
         });
 
         $("#property_preference .next-link").click(function() {
-          $(".property-pos-amenity").parent().addClass("completed");
-          $(".property-pos-amenity").parent().removeClass("active").next().addClass("active");
+          $(".selling-phases .property-pos-amenity").parent().addClass("completed");
+          $(".selling-phases .property-pos-amenity").parent().removeClass("active").next().addClass("active");
         });
 
 
        $(".open-preview").click(function() {
-          $(".property-adddetails-li").parent().addClass("completed");
-          $(".property-adddetails-li").parent().removeClass("active").next().addClass("active");
+          $(".selling-phases .property-adddetails-li").parent().addClass("completed");
+          $(".selling-phases .property-adddetails-li").parent().removeClass("active").next().addClass("active");
         });
 
        $(".request-visit").click(function() {
@@ -682,10 +679,10 @@
 
         $(".rent-start-button, .change-rent-search").click(function(){
           $(".popup-content").hide();
-          $("#prop_city").show();
+          $("#rent_prop_city").show();
           $(".renting-phases .user-selections").show();
           $(".property-location-li").parent().addClass("active")
-          $(".selling-phases").fadeIn();
+          $(".renting-phases").fadeIn();
           $(".popup").animateAuto("height", 100);
         });
 
@@ -702,6 +699,178 @@
         }); 
 
 
+       //Rent Location
 
+       // $(".location-form input[type=text]").keypress(function(){
+       //    $("#rent_prop_location .next-link ").fadeIn();
+       // });
+
+       $("#rent_prop_location .next-link").click(function() {
+          var selected_from = $('.renting-phases .area-textbox').val();
+          $(".renting-phases .property-location-li").text(selected_from);
+          $(".renting-phases .property-location-li").parent().addClass("completed");
+          $(".renting-phases .property-location-li").parent().removeClass("active").next().addClass("active");
+        });
+
+       //Rent Propert Type
+
+        $("#rentingprop_type input:radio").change(
+            function(){
+                $("#rentingprop_type .next-link").fadeIn();  
+            }
+        );         
+
+       $("#rentingprop_type .next-link").click(function() {
+          var selected_from = $("#rentingprop_type .select-prop-type .btn-custom.active").text();
+          $(".renting-phases .property-type-li").text(selected_from);
+          $(".renting-phases .property-type-li").parent().addClass("completed");
+          $(".renting-phases .property-type-li").parent().removeClass("active").next().addClass("active");
+        });
+
+
+       //rent Bed and bath select 
+        $("#rent_property_bedbath .select-bath input:radio, #rent_property_bedbath .select-bed input:radio").change(
+            function(){
+              if($("#rent_property_bedbath .select-bath input:radio:checked").length > 0 && $("#rent_property_bedbath .select-bed input:radio:checked").length > 0 )
+                $("#rent_property_bedbath .next-link ").fadeIn();  
+            }
+        );     
+
+       $("#rent_property_bedbath .next-link").click(function() {
+          
+          var selected_bed = $(".renting-phases .select-bed .btn-custom.active").text();
+          var selected_bath = $(".renting-phases .select-bath .btn-custom.active").text();
+
+          $(".renting-phases .property-bhk-li").text(selected_bed + " Bed, " + selected_bath + " Bath");
+          $(".renting-phases .property-bhk-li").parent().addClass("completed");
+          $(".renting-phases .property-bhk-li").parent().removeClass("active").next().addClass("active");
+        });
+
+
+       //Rent Propert size, Rent Propert Age, Rent Propert furnishing status
+
+        $("#rent_property_size input:radio, #rentprop_posession_status input:radio,#rent_furnishing_status input:radio, #prop_rent_amount input:radio ").change(
+            function(){
+                $(this).parents(".popup-content").find(".next-link").fadeIn();  
+            }
+        );     
+
+
+        $("#rent_furnishing_status .next-link").click(function() {
+          $(".renting-phases .property-pos-amenity").parent().addClass("completed");
+          $(".renting-phases .property-pos-amenity").parent().removeClass("active").next().addClass("active");
+        });
+
+
+        $("#prop_rent_amount .next-link").click(function() {
+          
+          var selected_rent = $(".renting-phases .amount-textbox:first").val();
+          var selected_deposit = $(".renting-phases .amount-textbox:last").val();
+
+          $(".renting-phases .property-budget-li").text("Rent: " + selected_rent);
+          $(".renting-phases .property-budget-li").parent().addClass("completed");
+          $(".renting-phases .property-budget-li").parent().removeClass("active").next().addClass("active");
+        });
+
+
+       $(".rent-open-confirmation").click(function(){
+        $(".preview-prop, .user-selections").hide();
+        $(".popup-content").hide();
+        $(".renting-phases, #thank_you").fadeIn();
+        $(".popup").animateAuto("height", 100);
+      });
+
+
+       $(".rent-in-btn").click(function(){
+        $("#rent_prop_city h2").text("Select the city in which you are searching a property to rent");
+        $("#rent_prop_location h2").text("Where do you want to rent property in Bangalore?");
+        $("#rent_prop_location .location-form").hide();
+        $("#rent_property_bedbath .next-link").attr("go-to","prop_rent_amount");
+        $("#prop_rent_amount .next-link").attr("go-to","rent_search_confirm");
+
+        $("#prop_rent_amount h2").text("What is your rental budget ? what kind of lease you can furnish?");
+        $("#prop_rent_amount .amount-textbox:last-child, #rent_property_preference .add-more-aminity").hide();
+        $(".lease-type-select .btn-custom:first-child span").text("None"); 
+
+        $("#rent_property_bedbath .more-option").show();
+        $(".renting-phases .selected-items li:last-child").hide();
+        $(".renting-phases").addClass("rent-in");
+       })
+
+
+       $(".rent-out-btn").click(function(){
+        $("#rent_prop_city h2").text("Select the city in which your property is located");
+        $("#rent_prop_location h2").text("Where is your property located in Bangalore?");
+        $("#rent_prop_location .location-form").show();
+        $("#rent_property_bedbath .next-link").attr("go-to","rent_property_size");
+        $("#prop_rent_amount .next-link").attr("go-to","rent_property_photo");
+
+        $("#prop_rent_amount h2").text("What is your rental budjet ? Also specify any leasing restrictions");
+        $("#prop_rent_amount .amount-textbox:last-child, #rent_property_preference .add-more-aminity").show();
+        $(".lease-type-select .btn-custom:first-child span").text("No Restriction"); 
+
+        $("#rent_property_bedbath .more-option").hide();
+        $(".renting-phases .selected-items li:last-child").show();
+        $(".renting-phases").addClass("rent-out");
+       });
+
+
+        $(document).on("click", ".rent-in #prop_rent_amount .next-link", function(){
+          $(".user-selections").hide();
+          var selected_from = $(".renting-phases .property-location-li").text();
+          var selected_location = $(".renting-phases .property-type-li").text();
+          var selected_bhk = $(".renting-phases .property-bhk-li").text();
+          var selected_budjet = $(".renting-phases .property-budget-li").text();
+          var rent_budjet = selected_budjet.substring(selected_budjet.indexOf(':') +1);
+
+          $("#rent_search_confirm .selected-pref-list p.selected-pref").html("<b>" + selected_location + "</b> in <b>" + selected_from + "</b> with <b>" + selected_bhk + "</b> with a minimum rent of <b>" + rent_budjet + "</b>");
+          $(".popup").animateAuto("height", 100);
+       });
+
+
+       $(document).on("click", ".rent-in #rent_property_bedbath .next-link", function(){
+          $(".renting-phases .property-bhk-li").parent().addClass("completed");
+          $(".renting-phases li").removeClass("active")
+          $(".renting-phases .property-budget-li").parent().addClass("active");
+       });       
+
+       $(".rent-in-btn").click(function(){
+          $(".renting-phases .user-selections").show();
+          $(".property-location-li").parent().addClass("active");
+       });
+
+
+      $(".renting-phases .change-search").click(function(){
+        $("#rent_prop_city").show();
+        $(".popup").animateAuto("height", 100);
+        $(".user-selections").fadeIn();
+        $(".selected-items li").removeClass("active");
+        $(".property-location-li").parent().addClass("active");        
+      });  
+
+       $("#rent_property_bedbath .more-option").click(function(){
+          var selected_bed = $(".renting-phases .select-bed .btn-custom.active").text();
+          var selected_bath = $(".renting-phases .select-bath .btn-custom.active").text();
+
+          $(".renting-phases .property-bhk-li").text(selected_bed + " Bed, " + selected_bath + " Bath");
+          $(".renting-phases .property-bhk-li").parent().addClass("completed");
+          $(".renting-phases .property-bhk-li").parent().removeClass("active").next().addClass("active");
+       });
+
+        $(".renting-phases .confirm-search-btn").click(function() {   
+          $(".popup-content").hide();
+          $(".renting-phases #search_loading").fadeIn();
+          $(".popup").animateAuto("height", 100);
+          setTimeout(function() {
+            $(".popup-content").hide();
+            $(".renting-phases #completed_result").fadeIn();
+            $(".popup").animateAuto("height", 100);
+          },3500);
+
+          setTimeout(function() {
+            $(".renting-phases #completed_result").addClass("active");
+            $(".popup").animateAuto("height", 100);
+          },6500);
+        });  
 
     });
