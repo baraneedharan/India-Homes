@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>India Homes</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- Important Bootstrap select -->
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <!-- Important Bootstrap select -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <!-- Important Odometer -->
+    <link rel="stylesheet" href="css/odometer-theme-car.css" />
+    <!-- Important Odometer -->
+    <link rel="stylesheet" href="css/flexslider.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <style type="text/css">
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Header -->
+<header class="">
+    <div class="section-first">
+          <!-- Main Header -->
+          <div class="inner-main-header clearfix">
+            <div class="header-left">
+              <div class="logo">
+                <a href="#" class="logo-link">
+                  <img src="css/images/logo-main.png" class="img-responsive" alt="India Homes">
+                </a>
+              </div>
+              <div class="prop-buttons">
+                <a href="#" class="active">Buy</a>
+                <a href="#" class="">Rent</a>
+                <a href="#" class="">Sell</a>
+                <a href="#" class="">Loan</a>
+              </div>
+            </div>
+            <div class="header-right">
+              <nav>
+                <ul class="nav navbar-nav">
+                    <li><a href="#" class="">Login</a></li>
+                    <li class="seperator">&nbsp;&nbsp; | &nbsp;&nbsp;</li>
+                    <li><a href="#" class="s">About IndiaHomes</a></li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-second clearfix" id="prop_filters">
+        <div class="filters-left">
+            <div class="prop-from-select">
+                <p>Showing Properties in </p>
+                <select class="selectpicker black-select">
+                    <option>Delhi</option>
+                    <option>Gurgaon</option>
+                    <option>Bangalore</option>
+                </select>
+            </div>
+            <div class="search-prop">
+                <input type="text" class="seacrh-prop">
+            </div>
+            <div class="prop-details-select">
+                <select class="selectpicker proptype-select">
+                    <option>Developer Project</option>
+                    <option>Resaler Project</option>
+                    </select>
+                <select class="selectpicker black-select">
+                    <option>2 Bedrooms</option>
+                    <option>3 Bedrooms</option>
+                    <option>4 bedrooms</option>
+                </select>                
+                <select class="selectpicker black-select">
+                    <option>30-35 Lakhs</option>
+                    <option>35-40 Lakhs</option>
+                    <option>40-45 Lakhs</option>
+                    <option>45-50 Lakhs</option>
+                    <option>50-60 Lakhs</option>
+                </select>                
+            </div>
+
+        </div>
+        <div class="filters-right">
+            <div class="change-filter">
+                <a href="#" class="change-filter-btn">Change Filters</a>
+            </div>
+
+            <a href="#" class="clear-filter-btn">Clear All Filters</a>
+
+        </div>     
+    </div>
+
+    <div class="section-third">
+        <div class="view-buttons-holder">
+            <a href="map-view.html" class="prop-view-button active"><span class="map-icon"></span>Map View</a>
+            <a href="grid-view.html" class="prop-view-button"><span class="grid-icon"></span>Grid View</a>
+        </div>
+        <div class="sl-properties-counts">
+            <p class="total-sl-propcount"> <b>Showing 200 shortlisted properties</b> </p>
+            <p class="great-prop"> 100 Great properties</p>
+            <p class="good-prop">100 Good Properties</p>
+            <p class="avg-prop">100 Average Properties</p>
+        </div>
+        <div class="contact-ih">
+            <a href="#" class="big-contact-btn">Contact IndiaHomes for this requirement</a>
+        </div>
+    </div>
+
+    </header>
+
+    <!-- Grid/Map view panel-->
+
+
+    <section id="gridmap_panel" class="gridmap-panel">
+        <div class="row">
+            <div class="col-md-3 prop-accordian-panel">
+                <div class="panel-group" id="accordion">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                              Top Properties
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                          <div class="panel-body property-desc">
+                            <div class="prop-list">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                            </div>
+
+                            <div class="prop-list">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                            </div>
+
+                            <div class="prop-list">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                            </div>                            
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                              Recently seen
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                          <div class="panel-body property-desc">
+                            <div class="prop-list">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                            </div>
+
+                            <div class="prop-list">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                            </div>
+
+                            <div class="prop-list">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                            </div>  
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                              Short Listed
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                          <div class="panel-body property-desc">
+                            <div class="prop-list">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                            </div>
+
+                            <div class="prop-list">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                            </div>
+
+                            <div class="prop-list">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                            </div>  
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+            </div>
+            
+
+            <div class="col-md-9" id="map_view">
+                <div class="row">                                                                     
+
+                    <div id="map-canvas"></div>
+
+
+                    <div class="preview-content clearfix">
+                        <a href="#" class="close-popup"></a>
+                      <div class="property-photo-preview">
+                        <h2>2 BHK apartment at HSR layout, Bangalore</h2>
+                        <section class="slider">
+                          <div id="slider" class="flexslider">
+                            
+                          <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 800%; transition: 0s; -webkit-transition: 0s; -webkit-transform: translate3d(0px, 0px, 0px);">
+                              <li class="flex-active-slide" style="width: 656px; float: left; display: block;">
+                                <img src="css/images/sample.jpg" draggable="false">
+                              </li>
+                              <li style="width: 656px; float: left; display: block;">
+                                <img src="css/images/sample.jpg" draggable="false">
+                              </li>
+                              <li style="width: 656px; float: left; display: block;">
+                                <img src="css/images/sample.jpg" draggable="false">
+                              </li>
+                              <li style="width: 656px; float: left; display: block;">
+                                <img src="css/images/sample.jpg" draggable="false">
+                              </li>
+                            </ul></div><ul class="flex-direction-nav"><li><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
+                          <div id="carousel" class="flexslider">
+                            
+                          <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 800%; transition: 0s; -webkit-transition: 0s; -webkit-transform: translate3d(0px, 0px, 0px);">
+                              <li class="flex-active-slide" style="width: 107px; float: left; display: block;">
+                                <img src="css/images/sample.jpg" draggable="false">
+                              </li>
+                              <li style="width: 107px; float: left; display: block;">
+                                <img src="css/images/sample.jpg" draggable="false">
+                              </li>
+                              <li style="width: 107px; float: left; display: block;">
+                                <img src="css/images/sample.jpg" draggable="false">
+                              </li>
+                              <li style="width: 107px; float: left; display: block;">
+                                <img src="css/images/sample.jpg" draggable="false">
+                              </li>
+                            </ul></div><ul class="flex-direction-nav"><li><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li><a class="flex-next flex-disabled" href="#" tabindex="-1">Next</a></li></ul></div>
+                        </section>
+                      </div>
+                      <div class="property-details">
+
+                        <div class="panel-group" id="prop_accordion">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#prop_accordion" href="#photoanddetails">
+                                  Photos and Details
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="photoanddetails" class="panel-collapse collapse in">
+                              <div class="panel-body property-desc">
+                                <div class="prop-details">
+                                  <p> <label>Bedroom : </label> 3</p>
+                                  <p> <label>Price : </label> 75Lakhs</p>
+                                  <p> <label>Area: </label> 1200 Sqft</p>
+                                  <p> <label>Bathroom: </label> 2</p>
+                                  <p> <label>Furnished: </label> Unfurnished</p>
+                                  <p> <label>Current Status: </label> Available</p>
+                                </div>
+                                <div class="prop-amenities">
+                                  <h4>Amenities</h4>
+                                  <ul>
+                                    <li><span class="gym-icon">Gym</span></li>
+                                    <li><span class="swimpool-icon">Swimming Pool</span></li>
+                                    <li><span class="lift-icon">Elevator</span></li>
+                                    <li><span class="servent-icon">Servent room</span></li>
+                                    <li><span class="tennis-icon">Tennis court</span></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#prop_accordion" href="#neighbourhood">
+                                  Neighbourhood
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="neighbourhood" class="panel-collapse collapse">
+                              <div class="panel-body property-desc">
+                                <div class="prop-details">
+                                  <p> <label>Bedroom : </label> 3</p>
+                                  <p> <label>Price : </label> 75Lakhs</p>
+                                  <p> <label>Area: </label> 1200 Sqft</p>
+                                  <p> <label>Bathroom: </label> 2</p>
+                                  <p> <label>Furnished: </label> Unfurnished</p>
+                                  <p> <label>Current Status: </label> Available</p>
+                                </div>
+                                <div class="prop-amenities">
+                                  <h4>Amenities</h4>
+                                  <ul>
+                                    <li><span class="gym-icon">Gym</span></li>
+                                    <li><span class="swimpool-icon">Swimming Pool</span></li>
+                                    <li><span class="lift-icon">Elevator</span></li>
+                                    <li><span class="servent-icon">Servent room</span></li>
+                                    <li><span class="tennis-icon">Tennis court</span></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+
+                      </div>
+                  </div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="preview-overlay"></div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <!--footer class="ih-footer">
+      <div class="container">
+        <ul class="footer-links muted">
+          <li><a href="#">Home</a> | </li>
+          <li><a href="#">Press </a> | </li>  
+          <li><a href="#">Room  </a> | </li>  
+          <li><a href="#">Blog  </a> | </li>  
+          <li><a href="#">Careers </a> | </li>   
+          <li><a href="#">Sitemap </a> | </li>  
+          <li><a href="#">Mobile Site </a> | </li>   
+          <li><a href="#">Disclaimer</a> | </li> 
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p class="copyright">Copyright © 2014 IndiaHomes.com | All Rights Reserved</p>
+      </div>
+    </footer-->
+
+    <script src="http://github.hubspot.com/odometer/odometer.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+
+    <script src="js/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap-select.js"></script>
+    <!-- Include Owl Carousal js plugin -->
+    <script src="js/owl.carousel.js"></script>
+    <!-- Include count js plugin -->
+    <script src="js/countUp.js"></script>
+    <!-- Include Way point js plugin -->
+    <script src="js/waypoints.js"></script>
+    <!-- Skroller for parallax effect -->
+    <script src="js/skrollr.min.js"></script>
+    <!-- Skroller for Typed JS -->
+    <script src="js/typed.js"></script>
+    <!-- Skroller for Flip counter JS -->
+    <script src="js/flipcounter.js"></script>
+    <!-- FlexSlider -->
+    <script src="js/jquery.flexslider.js"></script>
+    <!-- Skroller for Parallax-->
+    <script src="js/jquery.parallax.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYLphhNbAOGws40T9bENM1xHZbicbhSYo&sensor=false"></script>
+    <script type="text/javascript" src="js/infobox.js"
+
+    <script src="js/custom.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        //$(".prop-accordian-panel .panel-group").css("height", $("#grid_view").height());
+
+        $(".prop-accordian-panel .panel-group").css("height", $("#map_view").height());
+        $('.selectpicker').selectpicker();
+
+
+        // This example adds a user-editable rectangle to the map.
+
+        // The following example creates complex markers to indicate beaches near
+        // Sydney, NSW, Australia. Note that the anchor is set to
+        // (0,32) to correspond to the base of the flagpole.
+
+        function initialize() {
+          var mapOptions = {
+            zoom: 10,
+            center: new google.maps.LatLng(28.9, 77.2)
+          }
+          var map = new google.maps.Map(document.getElementById('map-canvas'),
+                                        mapOptions);
+
+          setMarkers(map, beaches);
+        }
+
+        var infowindow = new google.maps.InfoWindow({
+          maxWidth: 250
+        });
+
+        /**
+         * Data for the markers consisting of a name, a LatLng and a zIndex for
+         * the order in which these markers should display on top of each
+         * other.
+         */
+
+
+        var beaches = [
+          ['Bondi Beach', 28.890542, 77.274856, 4 ,'css/images/good-prop-marker.png', '<div class="individual-prop" id="prop_click"><div class="prop-image-details"><a href="javascript:void(0)" class="image-hover view-details-link"><img src="css/images/grid-view-house1.png" /></a></div><div class="prop-bed-price-details clearfix"><p class="great-prop left-prop-detail">2 Beds, 27th main</p><p class="right-prop-price"> &#8377; 75L</p></div></div>'],
+          ['Coogee Beach', 28.923036, 77.259052, 5, 'css/images/avg-prop-marker.png', '<div class="individual-prop" id="prop_click"><div class="prop-image-details"><a href="javascript:void(0)" class="image-hover view-details-link"><img src="css/images/grid-view-house1.png" /></a></div><div class="prop-bed-price-details clearfix"><p class="great-prop left-prop-detail">2 Beds, 27th main</p><p class="right-prop-price"> &#8377; 75L</p></div></div>'],
+          ['Cronulla Beach', 28.028249, 77.157507, 3, 'css/images/great-prop-marker.png', '<div class="individual-prop" id="prop_click"><div class="prop-image-details"><a href="javascript:void(0)" class="image-hover view-details-link"><img src="css/images/grid-view-house1.png" /></a></div><div class="prop-bed-price-details clearfix"><p class="great-prop left-prop-detail">2 Beds, 27th main</p><p class="right-prop-price"> &#8377; 75L</p></div></div>'],
+          ['Manly Beach', 28.80010128657071, 77.28747820854187, 2, 'css/images/avg-prop-marker.png', '<div class="individual-prop" id="prop_click"><div class="prop-image-details"><a href="javascript:void(0)" class="image-hover view-details-link"><img src="css/images/grid-view-house1.png" /></a></div><div class="prop-bed-price-details clearfix"><p class="great-prop left-prop-detail">2 Beds, 27th main</p><p class="right-prop-price"> &#8377; 75L</p></div></div>'],
+          ['Maroubra Beach', 28.950198, 77.259302, 1, 'css/images/great-prop-marker.png', '<div class="individual-prop" id="prop_click"><div class="prop-image-details"><a href="javascript:void(0)" class="image-hover view-details-link"><img src="css/images/grid-view-house1.png" /></a></div><div class="prop-bed-price-details clearfix"><p class="great-prop left-prop-detail">2 Beds, 27th main</p><p class="right-prop-price"> &#8377; 75L</p></div></div>']
+        ];
+
+        function setMarkers(map, locations) {
+          // Add markers to the map
+
+          // Marker sizes are expressed as a Size of X,Y
+          // where the origin of the image (0,0) is located
+          // in the top left of the image.
+
+          for (var i = 0; i < locations.length; i++) {
+            var beach = locations[i];
+            var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                icon: beach[4],
+                title: beach[0],
+                zIndex: beach[3]
+            });
+
+
+            infobox = new InfoBox({
+                 content: beach[5],
+                 disableAutoPan: false,
+                 maxWidth: 150,
+                 pixelOffset: new google.maps.Size(-110, -205),
+                 zIndex: null,
+                 boxStyle: {
+                    background: "url('css/images/infobox.png') no-repeat transparent",
+                    opacity: 1,
+                    width: "244px"
+                },
+                closeBoxURL: "css/images/pop-up-close.png",
+                infoBoxClearance: new google.maps.Size(1, 1)
+            }); 
+
+
+
+            function open_preview(){
+              $(".preview-content").fadeIn();
+              $(".preview-overlay").show();
+
+              $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 107,
+                itemMargin: 15,
+                asNavFor: '#slider'
+              });
+
+              $('#slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#carousel",
+              });    
+            }
+
+            $(document).on("click", ".preview-content .close-popup", function(){
+              $(".preview-content").fadeOut();
+              $(".preview-overlay").hide();
+            });
+
+
+            google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+                return function() {
+                  infobox.open(map, this);
+                  //map.panTo(loc);
+                }
+              })(marker, i));          
+
+            google.maps.event.addListener(infobox,'domready',function(){ 
+                $('.view-details-link').click(function(){
+                    open_preview();
+                }); 
+            }); 
+
+
+          }
+        }
+
+       
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

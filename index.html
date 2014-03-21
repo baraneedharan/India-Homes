@@ -84,7 +84,7 @@
             <h3 class="selected-option">Buy</h3>
             <ul class="selected-items">
               <li class="active"><span class="list-style">1</span><a href="javascript:void(0)" class="selected-location" go-to="select_where">Location</a></li>              
-              <li><span class="list-style">2</span><a href="javascript:void(0)" class="selected-from" go-to="from_where">Type of property</a></li>
+              <li><span class="list-style">2</span><a href="javascript:void(0)" class="selected-from" go-to="select_prop_type">Type of property</a></li>
               <li><span class="list-style">3</span><a href="javascript:void(0)" class="selected-bhk" go-to="bh_preference">Bed rooms</a></li>
               <li><span class="list-style">4</span><a href="javascript:void(0)" class="selected-budjet" go-to="select_budjet">Budget</a></li>
               <li><span class="list-style">5</span><a href="javascript:void(0)" class="selected-more-option" go-to="more_option">More Option</a></li>
@@ -147,13 +147,16 @@
               <h3 class="orange-title">Talk to our professional advisor now!</h3>
               <div class="image-desc">
                 <div class="discussion">
-                  <p>Discuss best project option</p>
+                  <p>Discuss projects Get answers</p>
+                  <p class="orange-text">Save Time!</p>
                 </div>
                 <div class="free-visit">
-                  <p>Do free site visit</p>
+                  <p>Free Site visits arranged</p>
+                  <p class="orange-text">Save Effort!</p>
                 </div>
                 <div class="best-deal">
                   <p>Get best deals</p>
+                  <p class="orange-text">Save Money!</p>
                 </div>
               </div>
               <fieldset class="mobile-form">
@@ -167,10 +170,10 @@
               <h3 class="orange-title">Continue browsing online</h3>
               <div class="buttons-cont">
                 <p class="white-text">View in </p>
-                <a href="#" class="orange-button">
+                <a href="map-view.html" class="orange-button">
                   <span class="map-icon"></span>Map
                 </a>
-                <a href="#" class="orange-button">
+                <a href="grid-view.html" class="orange-button">
                   <span class="grid-icon"></span>Grid
                 </a>            
 
@@ -181,7 +184,7 @@
               </div>
             </div>
             <div class="clear"></div>
-            <p class="italic-desc">IndiaHomes  offers free site visit, and  assistance throughout your purchase process. We don’t charge any brokerage  to buyers for our services.</p>
+            <p class="italic-desc">IndiaHomes offers assistance throughout your purchase process. We don’t charge any brokerage to buyers for our services.</p>
           </div>
 
 
@@ -425,10 +428,6 @@
                 <div class="select-amenities" id="amenity_type" data-toggle="buttons">
                   <label class="btn btn-custom">
                       <input type="checkbox">
-                      <a href="" class="gym-icon">Gym</a>
-                  </label>
-                  <label class="btn btn-custom">
-                      <input type="checkbox">
                       <a href="" class="swimpool-icon">Swimming Pool</a>
                   </label>
                   <label class="btn btn-custom">
@@ -438,11 +437,19 @@
                   <label class="btn btn-custom">
                       <input type="checkbox">
                       <a href="" class="servent-icon">Servant room</a>
-                  </label>  
+                  </label> 
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="gym-icon">Gym</a>
+                  </label>
                   <label class="btn btn-custom">
                       <input type="checkbox">
                       <a href="" class="tennis-icon">Tennis court</a>
-                  </label>                 
+                  </label>  
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="pipedgas-icon">Piped Gas</a>
+                  </label>                                    
               </div> 
             </fieldset>
             
@@ -560,7 +567,7 @@
                 <input type="text" placeholder="Enter your mobile number here" />
                 <a href="Javascript:void(0);" class="orange-button ">Submit</a>
                 <p class="assured-text">Callback assured in 5 min between 9AM to 10 PM</p>
-                <a href="#" class="skip-view-prop">Skip, View properties</a>
+                <a href="grid-view.html" class="skip-view-prop">Skip, View properties</a>
               </fieldset>
               
 
@@ -711,7 +718,7 @@
             </div>
 
             <div class="request-accepted">
-              <p>We have registered your request. Our agent will callyou in 30 minutes to schedule<br /> details collection for your property</p>
+              <p>We have registered your request. Our agent will call you in 30 minutes to schedule<br /> details collection for your property</p>
 
               <a href="javascript:void(0)" class="listing-requsted orange-button">Done</a>
             </div>
@@ -1030,10 +1037,6 @@
                 <div class="select-amenities" id="amenity_type" data-toggle="buttons">
                   <label class="btn btn-custom">
                       <input type="checkbox">
-                      <a href="" class="gym-icon">Gym</a>
-                  </label>
-                  <label class="btn btn-custom">
-                      <input type="checkbox">
                       <a href="" class="swimpool-icon">Swimming Pool</a>
                   </label>
                   <label class="btn btn-custom">
@@ -1043,11 +1046,19 @@
                   <label class="btn btn-custom">
                       <input type="checkbox">
                       <a href="" class="servent-icon">Servant room</a>
-                  </label>  
+                  </label> 
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="gym-icon">Gym</a>
+                  </label>
                   <label class="btn btn-custom">
                       <input type="checkbox">
                       <a href="" class="tennis-icon">Tennis court</a>
-                  </label>                 
+                  </label>  
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="pipedgas-icon">Piped Gas</a>
+                  </label>                
               </div> 
               <a href="Javascript:void(0)" class="add-more-aminity">Add more</a>
             </fieldset>
@@ -1665,7 +1676,7 @@
 
           <!-- PopUp 5.3 - Property posession  -->
           <div class="popup-content availibility-status" id="rentprop_posession_status">
-            <h2>Posession status of the property </h2>
+            <h2>Age of your property </h2>
             <div class="">
                 
                 <div class="select-prop-age">
@@ -1753,10 +1764,6 @@
                 <div class="select-amenities" id="amenity_type" data-toggle="buttons">
                   <label class="btn btn-custom">
                       <input type="checkbox">
-                      <a href="" class="gym-icon">Gym</a>
-                  </label>
-                  <label class="btn btn-custom">
-                      <input type="checkbox">
                       <a href="" class="swimpool-icon">Swimming Pool</a>
                   </label>
                   <label class="btn btn-custom">
@@ -1766,10 +1773,18 @@
                   <label class="btn btn-custom">
                       <input type="checkbox">
                       <a href="" class="servent-icon">Servant room</a>
-                  </label>  
+                  </label> 
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="gym-icon">Gym</a>
+                  </label>
                   <label class="btn btn-custom">
                       <input type="checkbox">
                       <a href="" class="tennis-icon">Tennis court</a>
+                  </label>  
+                  <label class="btn btn-custom">
+                      <input type="checkbox">
+                      <a href="" class="pipedgas-icon">Piped Gas</a>
                   </label>                 
               </div> 
               <a href="Javascript:void(0)" class="add-more-aminity">Add more</a>
@@ -1976,7 +1991,7 @@
            <!-- PopUp 8 - Search result with count   -->
           <div class="popup-content search-complete" id="completed_result">
             <div class="search-results">
-              <h2> India Homes Power Search Completed !</h2>
+              <h2> IndiaHomes Power Search Completed !</h2>
               <div class="validated-prop">
                 <h1>2235</h1>
                 <p>Validated Properties Found</p>
@@ -2504,6 +2519,22 @@
 
     <!-- India Homes custom Scripts -->
     <script src="js/custom.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+      //Odometer Timer
+      setTimeout(function(){
+          odometer.innerHTML = 11509;
+          odometer1.innerHTML = 10346;
+          odometer2.innerHTML = 8837;
+          odometer3.innerHTML = 3636;
+      }, 1000);
+
+        $('#far-clouds').pan({fps: 30, speed: 0.7, dir: 'left', depth: 30});
+        $('#near-clouds').pan({fps: 30, speed: 1.5, dir: 'left', depth: 70});
+        $('#top-clouds').pan({fps: 30, speed: 0.3, dir: 'left', depth: 70});
+    </script>
+
 </body>
 
 </html>

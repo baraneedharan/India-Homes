@@ -1,12 +1,5 @@
  $(document).ready(function() {
 
-      //Odometer Timer
-      setTimeout(function(){
-          odometer.innerHTML = 11509;
-          odometer1.innerHTML = 10346;
-          odometer2.innerHTML = 8837;
-          odometer3.innerHTML = 3636;
-      }, 1000);
 
 
       // Banner height
@@ -63,9 +56,9 @@
 
       $(".btn.selectpicker").click(function(){
       if($(this).parent().hasClass("open")) {
-        $(".buying-phases .popup").removeClass("allow-overflow");
+        $(".buying-phases .popup, selling-phases .popup, .renting-phses .popup").removeClass("allow-overflow");
       }else {
-        $(".buying-phases .popup").addClass("allow-overflow");
+        $(".buying-phases .popup, selling-phases .popup, .renting-phses .popup").addClass("allow-overflow");
       }
       });
 
@@ -91,7 +84,55 @@
 
 
       var availableTags = [
-            "BTM Layout,",
+            "BTM Layout",
+            "Hebbal",
+            "HSR Layout",
+            "Indra Nagar",
+            "Jaya Nagar",
+            "K R PURAM",
+            "Koramangal",
+            "Marthahalli",
+            "Richmond Town",
+            "Sadashivnagar",
+            "BTM Layout",
+            "Hebbal",
+            "HSR Layout",
+            "Indra Nagar",
+            "Jaya Nagar",
+            "K R PURAM",
+            "Koramangal",
+            "Marthahalli",
+            "Richmond Town",
+            "Sadashivnagar",
+            "BTM Layout",
+            "Hebbal",
+            "HSR Layout",
+            "Indra Nagar",
+            "Jaya Nagar",
+            "K R PURAM",
+            "Koramangal",
+            "Marthahalli",
+            "Richmond Town",
+            "Sadashivnagar",
+            "Hebbal",
+            "HSR Layout",
+            "Indra Nagar",
+            "Jaya Nagar",
+            "K R PURAM",
+            "Koramangal",
+            "Marthahalli",
+            "Richmond Town",
+            "Sadashivnagar",
+            "BTM Layout",
+            "Hebbal",
+            "HSR Layout",
+            "Indra Nagar",
+            "Jaya Nagar",
+            "K R PURAM",
+            "Koramangal",
+            "Marthahalli",
+            "Richmond Town",
+            "Sadashivnagar",            
             "Hebbal",
             "HSR Layout",
             "Indra Nagar",
@@ -657,15 +698,7 @@
             $(".select-and-submit").hide();
             $(".suggestion-box").show();
            }
-       });
-
-
-
-        $('#far-clouds').pan({fps: 30, speed: 0.7, dir: 'left', depth: 30});
-        $('#near-clouds').pan({fps: 30, speed: 1.5, dir: 'left', depth: 70});
-        $('#top-clouds').pan({fps: 30, speed: 0.3, dir: 'left', depth: 70});
-                
-
+       });                
         //Renting
 
 
@@ -789,6 +822,7 @@
         $("#prop_rent_amount .next-link").attr("go-to","rent_search_confirm");
 
         $("#prop_rent_amount h2").text("What is your rental budget ? what kind of lease you can furnish?");
+        $("#rentingprop_type h2").text("What type of Property are you planning to rent-in ? ");
         $("#prop_rent_amount .amount-textbox:last-child, #rent_property_preference .add-more-aminity").hide();
         $(".lease-type-select .btn-custom:first-child span").text("None"); 
 
@@ -806,6 +840,7 @@
         $("#prop_rent_amount .next-link").attr("go-to","rent_property_photo");
 
         $("#prop_rent_amount h2").text("What is your rental budjet ? Also specify any leasing restrictions");
+        $("#rentingprop_type h2").text("What type of Property are you renting-out ? ");
         $("#prop_rent_amount .amount-textbox:last-child, #rent_property_preference .add-more-aminity").show();
         $(".lease-type-select .btn-custom:first-child span").text("No Restriction"); 
 
@@ -872,5 +907,38 @@
             $(".popup").animateAuto("height", 100);
           },6500);
         });  
+
+
+
+        //View details 
+
+        $(document).on("click", ".view-details-link", function(){
+          $(".preview-content").fadeIn();
+          $(".preview-overlay").show();
+
+          $('#carousel').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            itemWidth: 107,
+            itemMargin: 15,
+            asNavFor: '#slider'
+          });
+
+          $('#slider').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            sync: "#carousel",
+          });    
+        });
+
+        $(document).on("click", ".preview-content .close-popup", function(){
+          $(".preview-content").fadeOut();
+          $(".preview-overlay").hide();
+        });
+
 
     });
