@@ -79,12 +79,14 @@
                 </select>
             </div>
             <div class="search-prop">
-                <input type="text" class="seacrh-prop">
+                <input type="text" class="seacrh-prop" value="Sector 3" />
             </div>
             <div class="prop-details-select">
                 <select class="selectpicker proptype-select">
-                    <option>Developer Project</option>
-                    <option>Resaler Project</option>
+                    <option>Apartment</option>
+                    <option>Villa</option>
+                    <option>Independant Floor</option>
+                    <option>Plot</option>
                     </select>
                 <select class="selectpicker black-select">
                     <option>2 Bedrooms</option>
@@ -103,7 +105,148 @@
         </div>
         <div class="filters-right">
             <div class="change-filter">
-                <a href="#" class="change-filter-btn">Change Filters</a>
+                <a href="Javascript:void(0);" class="change-filter-btn">Change Filters</a>
+            </div>
+
+            <div class="additional-filters">
+                <a href="#" class="close-popup"></a>
+                <div class="all-add-fillters">
+                    <div class="select-availability" id="availability" data-toggle="buttons">
+                      <label class="br-label">Availibility Status: </label>
+                        <label class="btn btn-custom">
+                            <input type="radio" value="Under Construction">Under Construction
+                        </label>
+                        <label class="btn btn-custom active">
+                            <input type="radio" value="Ready To move">Ready To move
+                        </label>              
+                    </div> 
+
+                    <div class="select-posession">
+                      <label class="br-label">Posession Timeframe</label>
+                      <div class="possesions" data-toggle="buttons">
+                        <label class="btn btn-custom">
+                            <input type="radio" value="1 - 6 months">1 - 6 months
+                        </label>
+                        <label class="btn btn-custom">
+                            <input type="radio" value="1 - 6 months">6 - 12 months
+                        </label> 
+                        <label class="btn btn-custom">
+                            <input type="radio" value="1 - 6 months">12 - 18 months
+                        </label>
+                        <label class="btn btn-custom">
+                            <input type="radio" value="1 - 6 months">18 - 24 months
+                        </label> 
+                        <label class="btn btn-custom">
+                            <input type="radio" value="1 - 6 months">24 - 30 months
+                        </label>
+                        <label class="btn btn-custom">
+                            <input type="radio" value="1 - 6 months">30 months +
+                        </label>   
+                      </div>                
+                    </div>
+
+                    <div class="select-prop-age">
+                      <label class="br-label">Property Age</label>
+                      <div class="possesions" data-toggle="buttons">
+                        <label class="btn btn-custom">
+                            <input type="radio" value="0 - 3 months">0 - 3 months
+                        </label>
+                        <label class="btn btn-custom">
+                            <input type="radio" value="3 m - 1 year">3 m - 1 year
+                        </label> 
+                        <label class="btn btn-custom">
+                            <input type="radio" value="1 - 2 year">1 - 2 years
+                        </label>
+                        <label class="btn btn-custom">
+                            <input type="radio" value="2 - 5 year">2 - 5 years
+                        </label> 
+                        <label class="btn btn-custom">
+                            <input type="radio" value="5 - 10 months">5 - 10 years
+                        </label>
+                        <label class="btn btn-custom">
+                            <input type="radio" value="10 years +">10 years +
+                        </label>   
+                      </div>                
+                    </div>
+                    <fieldset class="all-bhks">
+                      <label class="br-label">Parking:</label>
+                      <div class="select-bhk" id="" data-toggle="buttons">
+                          <label class="btn btn-custom">
+                              <input type="radio" value="none">None 
+                          </label>                 
+                          <label class="btn btn-custom">
+                              <input type="radio" value="1">1 
+                          </label>
+                          <label class="btn btn-custom">
+                              <input type="radio" value="2">2 
+                          </label>
+                          <label class="btn btn-custom">
+                              <input type="radio" value="2+">2+
+                          </label>
+                      
+                      </div> 
+                    </fieldset>
+                    <fieldset class="all-bhks">
+                      <label class="br-label">Power backup: </label>
+                      <div class="select-bhk" id="" data-toggle="buttons">
+                          <label class="btn btn-custom">
+                              <input type="radio" value="none">None
+                          </label>
+                          <label class="btn btn-custom">
+                              <input type="radio" value="partial">Partial
+                          </label>
+                          <label class="btn btn-custom">
+                              <input type="radio" value="Full">Full
+                          </label>             
+                      </div> 
+                    </fieldset>
+                    <fieldset class="all-bhks">
+                      <label class="br-label">Security: </label>
+                      <div class="select-bhk" id="" data-toggle="buttons">
+                          <label class="btn btn-custom">
+                              <input type="radio" value="None">None
+                          </label>
+                          <label class="btn btn-custom">
+                              <input type="radio" value="yes">Yes
+                          </label>            
+                      </div> 
+                    </fieldset>
+
+                    <fieldset class="predefined-aminities">
+                         <label class="br-label">Other amenities </label>
+                        <div class="select-amenities" id="amenity_type" data-toggle="buttons">
+                          <label class="btn btn-custom small-btn">
+                              <input type="checkbox">
+                              <a href="" class="lift-icon">Lift</a>
+                          </label>                         
+                          <label class="btn btn-custom">
+                              <input type="checkbox">
+                              <a href="" class="swimpool-icon">Swimming Pool</a>
+                          </label>
+                          <label class="btn btn-custom">
+                              <input type="checkbox">
+                              <a href="" class="servent-icon">Servant room</a>
+                          </label> 
+                          <label class="btn btn-custom small-btn">
+                              <input type="checkbox">
+                              <a href="" class="gym-icon">Gym</a>
+                          </label>
+                          <label class="btn btn-custom">
+                              <input type="checkbox">
+                              <a href="" class="tennis-icon">Tennis court</a>
+                          </label>  
+                          <label class="btn btn-custom">
+                              <input type="checkbox">
+                              <a href="" class="pipedgas-icon">Piped Gas</a>
+                          </label>                
+                      </div> 
+                    </fieldset>     
+                    <div class="filter-buttons">
+                        <a href="#" class="orange-button">Apply</a>
+                        <a href="#" class="grey-button">Cancel</a>
+                    </div>
+
+                </div>
             </div>
 
             <a href="#" class="clear-filter-btn">Clear All Filters</a>
@@ -308,7 +451,7 @@
                                     <span class="tennis-icon"></span>
                                 </p>
                                 <div class="view-details-holder">
-                                    <a href="Javascript:void(0);" class="view-details-link">View full Details</a>
+                                    <a href="resale-prop-detail.html" class="view-details-link">View full Details</a>
                                     <p> <label>Price:</label> <span>1.5C - 2C</span></p>
                                 </div>
                             </div>
@@ -340,7 +483,7 @@
                                     <span class="tennis-icon"></span>
                                 </p>
                                 <div class="view-details-holder">
-                                    <a href="Javascript:void(0);" class="view-details-link">View full Details</a>
+                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
                                     <p> <label>Price:</label> <span>1.5C - 2C</span></p>
                                 </div>
                             </div>
@@ -370,7 +513,7 @@
                                     <span class="tennis-icon"></span>
                                 </p>
                                 <div class="view-details-holder">
-                                    <a href="Javascript:void(0);" class="view-details-link">View full Details</a>
+                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
                                     <p> <label>Price:</label> <span>1.5C - 2C</span></p>
                                 </div>
                             </div>
@@ -400,7 +543,7 @@
                                     <span class="tennis-icon"></span>
                                 </p>
                                 <div class="view-details-holder">
-                                    <a href="Javascript:void(0);" class="view-details-link">View full Details</a>
+                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
                                     <p> <label>Price:</label> <span>1.5C - 2C</span></p>
                                 </div>
                             </div>
@@ -430,7 +573,7 @@
                                     <span class="tennis-icon"></span>
                                 </p>
                                 <div class="view-details-holder">
-                                    <a href="Javascript:void(0);" class="view-details-link">View full Details</a>
+                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
                                     <p> <label>Price:</label> <span>1.5C - 2C</span></p>
                                 </div>
                             </div>
@@ -460,7 +603,7 @@
                                     <span class="tennis-icon"></span>
                                 </p>
                                 <div class="view-details-holder">
-                                    <a href="Javascript:void(0);" class="view-details-link">View full Details</a>
+                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
                                     <p> <label>Price:</label> <span>1.5C - 2C</span></p>
                                 </div>
                             </div>
@@ -490,7 +633,7 @@
                                     <span class="tennis-icon"></span>
                                 </p>
                                 <div class="view-details-holder">
-                                    <a href="Javascript:void(0);" class="view-details-link">View full Details</a>
+                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
                                     <p> <label>Price:</label> <span>1.5C - 2C</span></p>
                                 </div>
                             </div>
@@ -520,7 +663,7 @@
                                     <span class="tennis-icon"></span>
                                 </p>
                                 <div class="view-details-holder">
-                                    <a href="Javascript:void(0);" class="view-details-link">View full Details</a>
+                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
                                     <p> <label>Price:</label> <span>1.5C - 2C</span></p>
                                 </div>
                             </div>
@@ -551,7 +694,7 @@
                                     <span class="tennis-icon"></span>
                                 </p>
                                 <div class="view-details-holder">
-                                    <a href="Javascript:void(0);" class="view-details-link">View full Details</a>
+                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
                                     <p> <label>Price:</label> <span>1.5C - 2C</span></p>
                                 </div>
                             </div>
@@ -751,7 +894,7 @@
     <script type="text/javascript">
         //$(".prop-accordian-panel .panel-group").css("height", $("#grid_view").height());
 
-        $(".prop-accordian-panel .panel-group").css("height", $("#grid_view").height());
+        $(".prop-accordian-panel .panel-group").css("height", $(window).height() - 174);
 
     </script>
 

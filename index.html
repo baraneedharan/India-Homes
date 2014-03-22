@@ -32,11 +32,21 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
+<style type="text/css">
+/*.buying-phases,
+#buy_prop_kind {
+  display: block;
+}
+*/
+</style>
+
 </head>
 
 <body>
     <!-- Header -->
-    <header class="main-header">
+    <header class="main-header" id="home-header">
         <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -49,11 +59,59 @@
             </div>
             <nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" style="height: 1px;">
                 <ul class="nav navbar-nav">
-                    <li><a href="#" class="has-play-icon">About Us</a></li>
+                    <li><a href="Javascript:void(0);" class="has-play-icon about-nav">About Us</a></li>
                     <li class="seperator">&nbsp;&nbsp; | &nbsp;&nbsp;</li>
-                    <li><a href="#" class="has-play-icon">Login</a></li>
+                    <li><a href="Javascript:void(0);" class="has-play-icon login-btn">Login</a></li>
                 </ul>
             </nav>
+
+            <div class="abt-sub-nav">
+              <div class="first-sub-nav">
+                <ul class="sub-menu-list">
+                  <li> <a href="#">Awards</a> </li>
+                  <li class="vr-bar"> | </li>
+                  <li> <a href="#">Why customer love us </a> </li>
+                  <li class="vr-bar"> | </li>
+                  <li> <a href="#">Our world class team</a> </li>
+                  <li class="vr-bar"> | </li>
+                  <li> <a href="Javascript:void(0);">Our must watch videos</a> </li>
+                  <li class="vr-bar"> | </li>
+                  <li> <a href="#">In the media</a> </li>
+                </ul>
+              </div>
+<!--               <div class="second-sub-menu">
+                <ul class="sub-menu-list">
+                  <li> <a href="#">Customer Speak</a> </li>
+                  <li class="vr-bar"> | </li>
+                  <li> <a href="#">Emplyee speak</a> </li>
+                  <li class="vr-bar"> | </li>
+                  <li> <a href="#">Developer speak</a> </li>
+                  <li class="vr-bar"> | </li>
+                  <li> <a href="">Partner spear</a> </li>
+                </ul>
+              </div> -->
+
+
+
+            </div>
+
+            <div class="login-container">
+              <a href="#" class="close-popup"></a>
+              <div class="login-box">
+                <p>Enter Your registered mobile number and your password to login</p>
+                <fieldset>
+                  <input type="text" class="login-mobile" placeholder="Mobile Number" />
+                  <input type="password" class="login-password"  placeholder="Password"/>
+                </fieldset>
+                <div class="login-btn-holder">
+                  <a href="#" class="orange-button">Login</a>
+                </div>
+                <div class="clearfix login-options">
+                  <a href="#" class="left">Forgot your password</a>
+                  <p class="right">Don't have a login , <a href="#">Sign up here</a></p>
+                </div>
+              </div>
+            </div>            
         </div>
     </header>
 
@@ -87,7 +145,7 @@
               <li><span class="list-style">2</span><a href="javascript:void(0)" class="selected-from" go-to="select_prop_type">Type of property</a></li>
               <li><span class="list-style">3</span><a href="javascript:void(0)" class="selected-bhk" go-to="bh_preference">Bed rooms</a></li>
               <li><span class="list-style">4</span><a href="javascript:void(0)" class="selected-budjet" go-to="select_budjet">Budget</a></li>
-              <li><span class="list-style">5</span><a href="javascript:void(0)" class="selected-more-option" go-to="more_option">More Option</a></li>
+              <li><span class="list-style">5</span><a href="javascript:void(0)" class="selected-more-option" go-to="availibility_status">More Option</a></li>
               <li><span class="list-style">6</span><a href="javascript:void(0)" class="selected-loan" go-to="loan_requirement">Need Loan?</a></li>
             </ul>
           </div>
@@ -122,12 +180,12 @@
                   <label class="btn btn-custom developer-btn">
                       <input type="radio" value="Developer Projects">
                       <span class="developer-btn-icon"></span>
-                      Developer Projects                      
+                      New from Developer                      
                   </label>
                   <label class="btn btn-custom developer-btn">
                       <input type="radio" value="Resale Property">
                       <span class="resaler-btn-icon"></span>
-                      Resale Property                      
+                      Existing From Resale                      
                   </label>
                 </div>
                 <span class="italic-desc">( Choose one )</span>
@@ -184,7 +242,7 @@
               </div>
             </div>
             <div class="clear"></div>
-            <p class="italic-desc">IndiaHomes offers assistance throughout your purchase process. We don’t charge any brokerage to buyers for our services.</p>
+            <p class="italic-desc assistance-text">IndiaHomes offers assistance throughout your purchase process. We don’t charge any brokerage to buyers for our services.</p>
           </div>
 
 
@@ -242,8 +300,7 @@
 
           <!-- PopUp 3 - Select bed room preference  -->
           <div class="popup-content bh-preference" id="bh_preference"> 
-            <h2>Optionally, tell us the Bedrooms requirements</h2>  
-            <span class="italic-desc">( Choose one or more, and press next )</span>
+            <h2>How Many Bedrooms you require? </h2> 
             <fieldset class="all-bhks">
               <label class="br-label">Number of Bedrooms: </label>
               <div class="select-bhk" id="bedrooms" data-toggle="buttons">
@@ -261,7 +318,7 @@
                   </label>               
               </div> 
             </fieldset>
-
+            <span class="italic-desc">( Choose one or more, and press next )</span>
             <fieldset class="back-forth clearfix">
               <a href="javascript:void(0)" class="back-link" go-to="select_prop_type">Back</a>
               <a href="javascript:void(0)" class="next-link" go-to="select_budjet">Next</a>
@@ -302,6 +359,52 @@
               <a href="javascript:void(0)" class="next-link" go-to="loan_requirement">Next</a>
             </fieldset>
           </div>  
+
+
+
+          <!-- New Pop up for buy property kind-->
+
+          <div class="popup-content availibility-status" id="buy_prop_kind">
+            <h2>What kind of property you need? </h2>
+            <div class="">
+                
+
+                <div class="select-prop-status">
+                  <label class="br-label">Property Status</label>
+                  <div class="prop-kind" data-toggle="buttons">
+                    <label class="btn btn-custom has-top-margin">
+                        <input type="radio" value="1 - 6 months">Pre - Launch
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">Under Construction
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 6 months">Ready to <br />Move - In
+                    </label>  
+                  </div>                
+                </div>
+
+                <div class="select-prop-rakedin">
+                  <label class="br-label">Ranked In</label>
+                  <div class="prop-kind" data-toggle="buttons">
+                    <label class="btn btn-custom">
+                        <input type="radio" value="0 - 3 months">Premium Properties
+                    </label>
+                    <label class="btn btn-custom">
+                        <input type="radio" value="3 m - 1 year">Best Properties to Live - In
+                    </label> 
+                    <label class="btn btn-custom">
+                        <input type="radio" value="1 - 2 year">Best Investment Properties
+                    </label>
+                  </div>                
+                </div>
+
+            </div>
+              <fieldset class="back-forth clearfix">
+                <a href="javascript:void(0)" class="back-link" go-to="select_budjet">Back</a>
+                <a href="javascript:void(0)" class="next-link" go-to="loan_requirement">Next</a>
+              </fieldset>            
+          </div>          
 
 
           <!-- PopUp 5.1 - Availibility Status  -->
@@ -456,7 +559,7 @@
 
                                
             <fieldset class="back-forth clearfix">
-              <a href="javascript:void(0)" class="back-link" go-to="availibility_status">Previous Filters</a>
+              <a href="javascript:void(0)" class="back-link no-nav-highlight" go-to="availibility_status">Previous Filters</a>
               <a href="javascript:void(0)" class="next-link" go-to="pref_sqfeet_rate">Next</a>
             </fieldset>
           </div>
@@ -491,7 +594,7 @@
 
 
             <fieldset class="back-forth clearfix">
-              <a href="javascript:void(0)" class="back-link" go-to="filter_preference">Back</a>
+              <a href="javascript:void(0)" class="back-link no-nav-highlight" go-to="filter_preference">Back</a>
               <a href="javascript:void(0)" class="next-link" go-to="loan_requirement">Next</a>
             </fieldset>
           </div>
@@ -905,7 +1008,7 @@
             </div>
 
             <fieldset class="back-forth clearfix">
-              <a href="javascript:void(0)" class="back-link" go-to="property_size">Back</a>
+              <a href="javascript:void(0)" class="no-nav-highlight back-link" go-to="property_size">Back</a>
               <a href="javascript:void(0)" class="next-link" go-to="sellprop_posession_status">Next</a>
             </fieldset>
           </div>  
@@ -978,7 +1081,7 @@
 
             </div>
               <fieldset class="back-forth clearfix">
-                <a href="javascript:void(0)" class="back-link" go-to="is_developer_proj">Back</a>
+                <a href="javascript:void(0)" class="back-link no-nav-highlight" go-to="is_developer_proj">Back</a>
                 <a href="javascript:void(0)" class="next-link" go-to="property_preference">Next</a>
               </fieldset>            
           </div>
@@ -1075,7 +1178,7 @@
 
                                
             <fieldset class="back-forth clearfix">
-              <a href="javascript:void(0)" class="back-link" go-to="sellprop_posession_status">Previous Filters</a>
+              <a href="javascript:void(0)" class="back-link no-nav-highlight" go-to="sellprop_posession_status">Previous Filters</a>
               <a href="javascript:void(0)" class="next-link" go-to="property_budjet">Next</a>
             </fieldset>
           </div>
@@ -1427,7 +1530,7 @@
             <div class="map-preview">
               <div class="preview-content">
                 <div class="map-container">
-                  <img src="css/images/map.jpg" />
+                  <img src="css/images/map-preview.jpg" />
                 </div>
               </div>
               <div class="preview-header">
@@ -1705,7 +1808,7 @@
 
             </div>
               <fieldset class="back-forth clearfix">
-                <a href="javascript:void(0)" class="back-link" go-to="rent_property_size">Back</a>
+                <a href="javascript:void(0)" class="back-link no-nav-highlight" go-to="rent_property_size">Back</a>
                 <a href="javascript:void(0)" class="next-link" go-to="rent_property_preference">Next</a>
               </fieldset>            
           </div>
@@ -1802,7 +1905,7 @@
 
                                
             <fieldset class="back-forth clearfix">
-              <a href="javascript:void(0)" class="back-link" go-to="rentprop_posession_status">Previous Filters</a>
+              <a href="javascript:void(0)" class="back-link no-nav-highlight" go-to="rentprop_posession_status">Previous Filters</a>
               <a href="javascript:void(0)" class="next-link" go-to="rent_furnishing_status">Next</a>
             </fieldset>
           </div>
@@ -1901,7 +2004,7 @@
                 </div>
             </div>
               <fieldset class="back-forth clearfix">
-                <a href="javascript:void(0)" class="back-link" go-to="rent_property_preference">Back</a>
+                <a href="javascript:void(0)" class="back-link no-nav-highlight" go-to="rent_property_preference">Back</a>
                 <a href="javascript:void(0)" class="next-link" go-to="prop_rent_amount">Next</a>
               </fieldset>            
           </div>
