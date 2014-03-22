@@ -2795,7 +2795,7 @@ padding: 6px 8px;
 
 .property-details .panel-group .panel-heading+.panel-collapse .panel-body {
     border-bottom: 1px solid #b1b2b7;
-    height: 318px;
+    min-height: 318px;
     padding: 0px;
 }
 
@@ -4287,7 +4287,8 @@ background-position: 0px -14px;
 float: right;
 }
 
-.prop-brief-details {
+.prop-brief-details,
+.dev-prop-brief-details {
 position: absolute;
 bottom: -100%;
 padding: 12px;
@@ -4304,7 +4305,58 @@ background: rgba(27, 32, 37, .9);
 
 }
 
-.prop-image-details:hover .prop-brief-details {
+.dev-prop-details {
+background: #ffffff;
+padding: 4px 5px;
+}
+
+
+.dev-prop-details p {
+color: #2c2c2c;
+font-family: 'Lato', sans-serif;
+font-weight: 500;
+font-size: 16px;
+margin-left: 5px;
+margin-bottom: 0;
+padding: 2px 0 5px 0px;
+position: relative;
+display: inline-block;
+margin-top: 5px;
+}
+
+.dev-prop-details .left-prop-detail {
+width: 158px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.dev-prop-brief-details .icon-star {
+    background: url("images/dev-prop-ration.png") no-repeat 0 0 transparent;
+    width: 21px;
+}
+
+.dev-prop-brief-details .star-on {
+background-position: 0px -2px;
+}
+
+.dev-prop-brief-details .star-off {
+background-position: -24px -1px;
+}
+
+
+.dev-prop-details p span {
+font-weight: 500;
+font-size: 14px;
+}
+
+.dev-prop-details  .right-prop-price {
+    float: right;
+    margin-left: 0;
+}
+
+.prop-image-details:hover .prop-brief-details,
+.prop-image-details:hover .dev-prop-brief-details {
 bottom: 0%;
 }
 
@@ -4321,7 +4373,7 @@ bottom: 0%;
 .prop-bed-price-details p {
 color: #2c2c2c;
 font-family: 'Lato', sans-serif;
-font-weight: 600;
+font-weight: 500;
 font-size: 16px;
 margin-left: 5px;
 margin-bottom: 0;
@@ -4344,7 +4396,8 @@ margin-top: 5px;
 }
 
 
-.prop-brief-details h3 {
+.prop-brief-details h3,
+.dev-prop-brief-details h3 {
 color: #fff;
 font-family: 'Lato', sans-serif;
 font-weight: 600;
@@ -4352,7 +4405,8 @@ font-size: 16px;
 margin-top: 0;
 }
 
-.prop-brief-details p {
+.prop-brief-details p,
+.dev-prop-brief-details p {
 color: #fff;
 font-family: 'Lato', sans-serif;
 font-weight: 500;
@@ -4360,12 +4414,18 @@ font-size: 16px;
 margin-bottom: 0px;
 }
 
-.prop-brief-details p label {
+.prop-brief-details p label,
+.dev-prop-brief-details p label {
 color: #fff;
 font-family: 'Lato', sans-serif;
 font-weight: 300;
 font-size: 16px;
 vertical-align: top;
+}
+
+.dev-prop-brief-details .rating {
+    display: inline-block;
+    margin: 2px 0 0 10px;
 }
 
 .view-details-holder {
@@ -4698,7 +4758,7 @@ display: none;
 
 .abt-sub-nav {
     position: absolute;
-    right: 68px;
+    right: 0px;
 }
 
 .sub-menu-list {
@@ -4719,7 +4779,7 @@ position: relative;
     height: 8px;
     width: 18px;
     top: -8px;
-    right: 62px;
+    right: 111px;
     z-index: 9999;
 }
 
@@ -4752,6 +4812,24 @@ right: 200px;
     display: none;
 }
 
+#map_view .property-details .prop-amenities ul li {
+    min-width: 98px;
+}
+
+#map_view .preview-content .property-details .panel-group .panel-heading+.panel-collapse .panel-body {
+min-height: 219px;
+height: 305px;
+}
+
+#map_view .property-desc p {
+margin: 0 0 6px 0px;
+font-family: 'Lato', sans-serif;
+font-size: 15px;
+font-weight: bold;
+margin-bottom: 2px;
+height: 24px;
+}
+
 
 .resale-preview .preview-content {
     display: block;
@@ -4760,7 +4838,8 @@ background: #f1f7ff;
 z-index: 1000;
 top: 0;
 left: 0;
-width: 101.5%;
+width: 100%;
+min-height: 485px;
 }
 
 .resale-preview .property-details .panel-group .panel {
@@ -4988,6 +5067,8 @@ vertical-align: middle;
     position: relative;
     padding: 0px 0;
     margin-right: 30px;
+    width: 260px;
+display: inline-block;
 }
 
 .groupname-prop-loc:after {
@@ -5015,11 +5096,43 @@ vertical-align: middle;
 
 .prop-other-detail {
     position: relative;
+    display: inline-block;
     padding: 0px 0;
 }
 
 .prop-other-line {
-    margin-right: 24px;
+margin-right: 15px;
+display: inline-block;
+width: 160px;
+}
+
+.small-logo {
+display: inline-block;
+vertical-align: top;
+margin-right: 15px;
+width: 0px;
+overflow: hidden;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+
+}
+
+.prop-brief.stuck .small-logo {
+width: 55px;
+}
+
+.prop-detail-header-left {
+    width: 60%;
+    display: inline-block;
+    float: left;
+}
+
+.prop-detail-header-right {
+    width: 40%;
+    display: inline-block;
+    float: right;
 }
 
 .prop-other-line:after {
@@ -5401,6 +5514,7 @@ vertical-align: middle;
 .rating {
     display: table-cell;
     vertical-align: middle;
+    min-width: 102px;
 }
 
 .table-bordered>tbody>tr>td {
@@ -5675,23 +5789,92 @@ padding-left: 38px;
 }
 
 
+.resale-prop-breadcrum {
+    border-bottom: 1px dotted #ddd;
+}
+
+.resale-prop-breadcrum .breadcrumb {
+margin-bottom: 5px;
+margin-top: 5px;
+background: #f1f7ff;
+}
+
+
+.resale-prop-breadcrum .breadcrumb a {
+color: #4f4f4f;
+font-weight: 500;
+}
+
+.resale-prop-breadcrum .breadcrumb .active {
+color: #383838;
+font-weight: 500;
+}
+
+.preview-content .panel-body h2 {
+font-size: 16px;
+font-weight: 600;
+margin: 10px 0;
+line-height: 25px;
+}
+
+.preview-content .property-details .panel-group .panel-heading+.panel-collapse .panel-body {
+min-height: 219px;
+}
 
 
 
 
+.prop-rank-but {
+background: #f7f7f7;
+background: -moz-linear-gradient(top, #f7f7f7 0%, #d6d6d6 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#d6d6d6));
+background: -webkit-linear-gradient(top, #f7f7f7 0%,#d6d6d6 100%);
+background: -o-linear-gradient(top, #f7f7f7 0%,#d6d6d6 100%);
+background: -ms-linear-gradient(top, #f7f7f7 0%,#d6d6d6 100%);
+background: linear-gradient(to bottom, #f7f7f7 0%,#d6d6d6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#d6d6d6',GradientType=0 );
+height: 56px;
+width: 31%;
+border: 1px solid #b5b5b7;
+display: inline-block;
+border-radius: 4px;
+vertical-align: top;
+margin-right: 2%;
+margin-top: 4px;
+}
 
 
+.prop-rank-but:last-child {
+    margin-right: 0;
+}
 
 
+.prop-rank-but p {
+text-align: center;
+font-size: 13px;
+font-weight: 400;
+color: #333333;
+margin-top: 4px;
+margin-bottom: 2px;
+}
 
+.first-gold,
+.first-silver,
+.first-bronze {
+background: url("images/gold-silver-bronze-cup.png") no-repeat 0 0 transparent;
+height: 26px;
+width: 60px;
+margin: 0 auto;
+}
 
-
-
-
-
-
-
-
+.first-silver {
+background: url("images/gold-silver-bronze-cup.png") no-repeat 0 -79px transparent;
+width: 62px;
+}
+.first-bronze {
+    background-position: 0 -169px;
+    width: 62px;
+}
 
 
 /*****************************

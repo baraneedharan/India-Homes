@@ -424,9 +424,17 @@
             <div class="col-md-9" id="grid_view">
 
                 <div class="row resale-preview">
+
+                    <div class="resale-prop-breadcrum">
+                      <ol class="breadcrumb">
+                        <li><a href="#">Property listing</a></li>
+                        <li class="active">The Heartsong Experion, Sector 108, Gurgaon</li>
+                      </ol>
+                    </div>
+
                     <div class="preview-content clearfix">
                       <div class="property-photo-preview">
-                        <h2>2 BHK apartment at HSR layout, Bangalore</h2>
+                        <!-- <h2>2 BHK apartment at HSR layout, Bangalore</h2> -->
                         <section class="slider">
                           <div id="slider" class="flexslider">
                             
@@ -469,11 +477,34 @@
                             <div class="panel-heading">
                               <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#prop_accordion" href="#photoanddetails">
-                                  Photos and Details
+                                  Property Details
                                 </a>
                               </h4>
                             </div>
                             <div id="photoanddetails" class="panel-collapse collapse in">
+                              <div class="panel-body property-desc">
+                                <div class="prop-details">
+                                  <h2>2 BHK apartment at HSR layout, Bangalore</h2>
+                                  <p> <label>Bedroom : </label> 3</p>
+                                  <p> <label>Price : </label> 75Lakhs</p>
+                                  <p> <label>Area: </label> 1200 Sqft</p>
+                                  <p> <label>Bathroom: </label> 2</p>
+                                  <p> <label>Furnished: </label> Unfurnished</p>
+                                  <p> <label>Current Status: </label> Available</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#prop_accordion" href="#keyfeatures">
+                                  Key Features
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="keyfeatures" class="panel-collapse collapse">
                               <div class="panel-body property-desc">
                                 <div class="prop-details">
                                   <p> <label>Bedroom : </label> 3</p>
@@ -483,20 +514,10 @@
                                   <p> <label>Furnished: </label> Unfurnished</p>
                                   <p> <label>Current Status: </label> Available</p>
                                 </div>
-                                <div class="prop-amenities">
-                                  <h4>Amenities</h4>
-                                  <ul>
-                                    <li><span class="gym-icon">Gym</span></li>
-                                    <li><span class="swimpool-icon">Swimming Pool</span></li>
-                                    <li><span class="lift-icon">Elevator</span></li>
-                                    <li><span class="servent-icon">Servent room</span></li>
-                                    <li><span class="tennis-icon">Tennis court</span></li>
-                                  </ul>
-                                </div>
                               </div>
                             </div>
                           </div>
-                          
+
                           <div class="panel panel-default">
                             <div class="panel-heading">
                               <h4 class="panel-title">
@@ -515,6 +536,22 @@
                                   <p> <label>Furnished: </label> Unfurnished</p>
                                   <p> <label>Current Status: </label> Available</p>
                                 </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#prop_accordion" href="#amenitiesacc">
+                                  Amenities
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="amenitiesacc" class="panel-collapse collapse">
+                              <div class="panel-body property-desc">
+                                
                                 <div class="prop-amenities">
                                   <h4>Amenities</h4>
                                   <ul>
@@ -528,6 +565,8 @@
                               </div>
                             </div>
                           </div>
+
+
                           
                         </div>
 
@@ -597,7 +636,9 @@
     <script type="text/javascript">
         //$(".prop-accordian-panel .panel-group").css("height", $("#grid_view").height());
 
-        $(".prop-accordian-panel .panel-group").css("height", $(window).height() - 174);
+          setTimeout(function() {
+            $(".prop-accordian-panel .panel-group").css("height", $(window).height() - 100);
+          },500);
 
 
           $('#carousel').flexslider({
