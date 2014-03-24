@@ -753,8 +753,8 @@
 
 
             <fieldset class="has-buttons">
-                <a href="#" class="continue-link">Continue my last listing</a>
-                <a href="#" class="orange-button start-button">Start New</a>
+                <a href="javascript:void(0)" go-to="sell_login_user" class="continue-link">Continue my last listing</a>
+                <a href="javascript:void(0)" class="orange-button start-button">Start New</a>
             </fieldset>
           </div>
 
@@ -776,7 +776,7 @@
           </div>          
 
 
-           <!-- PopUp 1.1 - Select from-Whom Developers/Resale  -->
+          <!-- PopUp 1.1 - Select from-Whom Developers/Resale  -->
           <div class="popup-content about-owner" id="prop_owner">
             <h2>Enter your contact details where we should send you the 
               buyer information.</h2>
@@ -802,7 +802,7 @@
               </div> <br />
 
               <a href="Javascript:void(0)" go-to="assisted_listing" class="blue-link left">Need help in listing, Click here</a>
-              <a href="#" class="blue-link right">Already registered, Login</a>
+              <a href="Javascript:void(0)" class="blue-link right open_login_popup">Already registered, Login</a>
             </fieldset>
 
             <fieldset class="back-forth clearfix">
@@ -810,6 +810,27 @@
             </fieldset>
           </div>
 
+
+          <!-- Pop up - Login box -->
+
+          <div class="popup-content login-cont" id="sell_login_user">
+            <div class="login-container">
+              <div class="login-box">
+                <p>Enter Your registered mobile number and your password to login</p>
+                <fieldset>
+                  <input type="text" class="login-mobile" placeholder="Mobile Number" />
+                  <input type="password" class="login-password"  placeholder="Password"/>
+                </fieldset>
+                <div class="login-btn-holder">
+                  <a href="#" class="orange-button">Login</a>
+                </div>
+                <div class="clearfix login-options">
+                  <a href="#" class="left">Forgot your password</a>
+                  <!--p class="right">Don't have a login , <a href="#">Sign up here</a></p-->
+                </div>
+              </div>
+            </div>            
+          </div>
 
            <!-- PopUp 1 - Select the city of the property -->
           <div class="popup-content assisted-listing" id="assisted_listing">
@@ -1609,8 +1630,8 @@
 
 
             <fieldset class="has-buttons">
-                <a href="#" class="continue-link">Continue my last listing</a>
-                <a href="#" class="orange-button rent-start-button">Start New</a>
+                <a href="javascript:void(0)" go-to="rent_login_user" class="continue-link">Continue my last listing</a>
+                <a href="javascript:void(0)" class="orange-button rent-start-button">Start New</a>
             </fieldset>
           </div>
 
@@ -1629,7 +1650,86 @@
             <fieldset class="back-forth clearfix">
               <a href="javascript:void(0)" class="next-link" go-to="rent_prop_location">Next</a>
             </fieldset>
+          </div> 
+
+
+
+          <!-- PopUp 1.1 - Select from-Whom Developers/Resale  -->
+          <div class="popup-content about-owner" id="rent_prop_owner">
+            <h2>Enter your contact details where we should send you the 
+              tenant information.</h2>
+
+            <fieldset class="user-form clearfix">
+              <input type="text" class="big-box" placeholder="Name" />
+              <input type="text" class="big-box" placeholder="Email" />
+              <input type="text" class="medium-box" placeholder="Mobile" /> 
+              <span class="italic-desc">You will receive an automated call to 
+              verify this number</span>
+              <br />
+
+              <span>I am a </span>
+              <div class="seller-type" id="" data-toggle="buttons">
+                <label class="btn btn-custom">
+                    <input type="radio" name="seller-type" value="owner">
+                    Owner
+                </label>
+                <label class="btn btn-custom">
+                    <input type="radio" name="seller-type" value="Broker">
+                    Broker
+                </label>               
+              </div> <br />
+
+              <a href="Javascript:void(0)" go-to="rent_assisted_listing" class="blue-link left">Need help in listing, Click here</a>
+              <a href="Javascript:void(0)"  class="blue-link open_login_popup right">Already registered, Login</a>
+            </fieldset>
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="next-link" go-to="rent_prop_location">Next</a>
+            </fieldset>
+          </div>    
+
+
+          <!-- Pop up - Login box -->
+
+          <div class="popup-content login-cont" id="rent_login_user">
+            <div class="login-container">
+              <div class="login-box">
+                <p>Enter Your registered mobile number and your password to login</p>
+                <fieldset>
+                  <input type="text" class="login-mobile" placeholder="Mobile Number" />
+                  <input type="password" class="login-password"  placeholder="Password"/>
+                </fieldset>
+                <div class="login-btn-holder">
+                  <a href="#" class="orange-button">Login</a>
+                </div>
+                <div class="clearfix login-options">
+                  <a href="#" class="left">Forgot your password</a>
+                  <!--p class="right">Don't have a login , <a href="#">Sign up here</a></p-->
+                </div>
+              </div>
+            </div>            
           </div>          
+
+
+          <!-- PopUp 1 - Select the city of the property -->
+          <div class="popup-content assisted-listing" id="rent_assisted_listing">
+            <h2> IndiaHomes Assisted Listing</h2>
+            <div class="ask-request">
+              <p>We can help you list your properties for sale. We can visit your property to collect all<br /> details and take photo</p>
+
+              <a href="Javascript:void(0)" class="orange-button request-visit">Request Visit</a>
+              <fieldset class="back-forth clearfix">
+                <a href="javascript:void(0)" class="back-link" go-to="prop_owner">Back</a>
+              </fieldset>              
+            </div>
+
+            <div class="request-accepted">
+              <p>We have registered your request. Our agent will call you in 30 minutes to schedule<br /> details collection for your property</p>
+
+              <a href="javascript:void(0)" class="listing-requsted orange-button">Done</a>
+            </div>
+
+          </div>                            
 
 
            <!-- PopUp 2 - Select Location  -->

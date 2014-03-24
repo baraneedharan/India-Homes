@@ -1993,6 +1993,10 @@ fieldset.mobile-form {
     display: none;
 }
 
+#rent_prop_owner {
+    display: none;
+}
+
 .orange-sq-btn {
     background: #ff9301;
  /* Old browsers */
@@ -2249,7 +2253,8 @@ fieldset.mobile-form {
     font-weight: 400;
 }
 
-#assisted_listing {
+#assisted_listing,
+#rent_assisted_listing {
     display: none;
 }
 
@@ -6020,9 +6025,25 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
 }
 
 
+#sell_login_user {
+    display: none;
+}
 
 
+#sell_login_user .login-container,
+#rent_login_user .login-container {
+display: block;
+background: transparent;
+border: transparent;
+position: relative;
+width: auto;
+padding: 0;
+}
 
+#sell_login_user .login-container:before,
+#rent_login_user .login-container:before {
+display: none;
+}
 
 
 

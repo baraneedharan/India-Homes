@@ -2,7 +2,8 @@
 
       //Login Script
 
-      $(".login-btn").click(function(){
+      $(".login-btn, .open_login_popup").click(function(){
+        $(".buying-phases, .selling-phases, .renting-phases").hide();
         $(".login-container").fadeIn("slow");
       });
 
@@ -941,6 +942,9 @@
 
 
        $(".rent-out-btn").click(function(){
+
+        $("#rent_prop_city .next-link").attr("go-to","rent_prop_owner");
+
         $("#rent_prop_city h2").text("Select the city in which your property is located");
         $("#rent_prop_location h2").text("Where is your property located in Bangalore?");
         $("#rent_prop_location .location-form").show();
