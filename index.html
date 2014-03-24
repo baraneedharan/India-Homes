@@ -713,6 +713,41 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- ***************************** Selling Phase DOM Starts Here ****************** -->
 
         <div class="selling-phase-container">
@@ -753,7 +788,7 @@
 
 
             <fieldset class="has-buttons">
-                <a href="javascript:void(0)" go-to="sell_login_user" class="continue-link">Continue my last listing</a>
+                <a href="javascript:void(0)" class="open_login_popup continue-link">Continue my last listing</a>
                 <a href="javascript:void(0)" class="orange-button start-button">Start New</a>
             </fieldset>
           </div>
@@ -802,7 +837,7 @@
               </div> <br />
 
               <a href="Javascript:void(0)" go-to="assisted_listing" class="blue-link left">Need help in listing, Click here</a>
-              <a href="Javascript:void(0)" class="blue-link right open_login_popup">Already registered, Login</a>
+              <a href="Javascript:void(0)"  go-to="sell_login_user" class="blue-link right">Already registered, Login</a>
             </fieldset>
 
             <fieldset class="back-forth clearfix">
@@ -822,7 +857,7 @@
                   <input type="password" class="login-password"  placeholder="Password"/>
                 </fieldset>
                 <div class="login-btn-holder">
-                  <a href="#" class="orange-button">Login</a>
+                   <a href="Javascript:void(0)" go-to="prop_location" class="orange-button">Login</a>
                 </div>
                 <div class="clearfix login-options">
                   <a href="#" class="left">Forgot your password</a>
@@ -1375,7 +1410,7 @@
 
 
            <!-- PopUp 10.2 - thank you screen Screen -->
-          <div class="popup-content thank-you" id="thank_you">
+          <div class="popup-content thank-you" id="sell_thank_you">
             <h1>Thank You</h1>
             <p>Thank you for listing  your property on indiaHomes . After  validation  your property listing will be activated and visible. This process may take upto 24 hours. <br/><br/>
 
@@ -1431,7 +1466,7 @@
 
           </div>
 
-          <div class="preview-prop">
+          <div class="preview-prop" id="sell_preview">
             <div class="normal-preview">
               <div class="preview-content clearfix">
                   <div class="property-photo-preview">
@@ -1580,7 +1615,7 @@
 
 
 
-<!-- ***************************** Renting Phase DOM Starts Here ****************** -->
+        <!-- ***************************** Renting Phase DOM Starts Here ****************** -->
 
         <div class="renting-phase-container">
           <div class="renting-phases">
@@ -1630,7 +1665,7 @@
 
 
             <fieldset class="has-buttons">
-                <a href="javascript:void(0)" go-to="rent_login_user" class="continue-link">Continue my last listing</a>
+                <a href="javascript:void(0)" class="continue-link open_login_popup">Continue my last listing</a>
                 <a href="javascript:void(0)" class="orange-button rent-start-button">Start New</a>
             </fieldset>
           </div>
@@ -1680,7 +1715,7 @@
               </div> <br />
 
               <a href="Javascript:void(0)" go-to="rent_assisted_listing" class="blue-link left">Need help in listing, Click here</a>
-              <a href="Javascript:void(0)"  class="blue-link open_login_popup right">Already registered, Login</a>
+              <a href="Javascript:void(0)" go-to="rent_login_user" class="blue-link right">Already registered, Login</a>
             </fieldset>
 
             <fieldset class="back-forth clearfix">
@@ -1700,7 +1735,7 @@
                   <input type="password" class="login-password"  placeholder="Password"/>
                 </fieldset>
                 <div class="login-btn-holder">
-                  <a href="#" class="orange-button">Login</a>
+                  <a href="Javascript:void(0)" go-to="rent_prop_location" class="orange-button">Login</a>
                 </div>
                 <div class="clearfix login-options">
                   <a href="#" class="left">Forgot your password</a>
@@ -2349,7 +2384,7 @@
 
 
            <!-- PopUp 10.2 - thank you screen Screen -->
-          <div class="popup-content thank-you" id="thank_you">
+          <div class="popup-content thank-you" id="rent_thank_you">
             <h1>Thank You</h1>
             <p>Thank you for listing  your property on indiaHomes . After  validation  your property listing will be activated and visible. This process may take upto 24 hours. <br/><br/>
 
@@ -2404,6 +2439,143 @@
           </div>
 
           </div>
+
+
+          <div class="preview-prop" id="rent_preview">
+            <div class="normal-preview">
+              <div class="preview-content clearfix">
+                  <div class="property-photo-preview">
+                    <h2>2 BHK apartment at HSR layout, Bangalore</h2>
+                    <section class="slider">
+                      <div id="rent-slider" class="flexslider">
+                        <ul class="slides">
+                          <li>
+                            <img src="css/images/propert-image.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image.jpg" />
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="rent-carousel" class="flexslider">
+                        <ul class="slides">
+                          <li>
+                            <img src="css/images/propert-image-thumb.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image-thumb.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image-thumb.jpg" />
+                          </li>
+                          <li>
+                            <img src="css/images/propert-image-thumb.jpg" />
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="property-details">
+
+                    <div class="panel-group" id="accordion">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                              Photos and Details
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                          <div class="panel-body property-desc">
+                            <div class="prop-details">
+                              <p> <label>Bedroom : </label> 3</p>
+                              <p> <label>Price : </label> 75Lakhs</p>
+                              <p> <label>Area: </label> 1200 Sqft</p>
+                              <p> <label>Bathroom: </label> 2</p>
+                              <p> <label>Furnished: </label> Unfurnished</p>
+                              <p> <label>Current Status: </label> Available</p>
+                            </div>
+                            <div class="prop-amenities">
+                              <h4>Amenities</h4>
+                              <ul>
+                                <li><span class="gym-icon">Gym</span></li>
+                                <li><span class="swimpool-icon">Swimming Pool</span></li>
+                                <li><span class="lift-icon">Elevator</span></li>
+                                <li><span class="servent-icon">Servent room</span></li>
+                                <li><span class="tennis-icon">Tennis court</span></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                              Neighbourhood
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                          <div class="panel-body property-desc">
+                            <div class="prop-details">
+                              <p> <label>Bedroom : </label> 3</p>
+                              <p> <label>Price : </label> 75Lakhs</p>
+                              <p> <label>Area: </label> 1200 Sqft</p>
+                              <p> <label>Bathroom: </label> 2</p>
+                              <p> <label>Furnished: </label> Unfurnished</p>
+                              <p> <label>Current Status: </label> Available</p>
+                            </div>
+                            <div class="prop-amenities">
+                              <h4>Amenities</h4>
+                              <ul>
+                                <li><span class="gym-icon">Gym</span></li>
+                                <li><span class="swimpool-icon">Swimming Pool</span></li>
+                                <li><span class="lift-icon">Elevator</span></li>
+                                <li><span class="servent-icon">Servent room</span></li>
+                                <li><span class="tennis-icon">Tennis court</span></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                  </div>
+              </div>
+              <div class="preview-header">
+                <h2>This is how your property lisiting will look </h2>
+                <div class="right-btns">
+                    <a href="javascript:void(0)" class="orange-button change-details"><span class="back-arrow"></span>Change Details</a>
+                    <a href="javascript:void(0)" class="orange-button open-map-preview">Confirm<span class="next-arrow"></span></a>
+                </div>
+              </div>
+
+            </div>
+            <div class="map-preview">
+              <div class="preview-content">
+                <div class="map-container">
+                  <img src="css/images/map-preview.jpg" />
+                </div>
+              </div>
+              <div class="preview-header">
+                <h2>Confirm the location of your property on map <span>(Adjust by draging pin if required)</span></h2>
+                <div class="right-btns">
+                    <a href="javascript:void(0)" class="orange-button open-confirmation">Confirm<span class="next-arrow"></span></a>
+                </div>
+              </div>              
+            </div>
+          </div>
+
 
         </div>
         <!-- ***************************** Renting Phase DOM ends Here ****************** -->

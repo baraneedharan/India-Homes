@@ -4,6 +4,7 @@
 
       $(".login-btn, .open_login_popup").click(function(){
         $(".buying-phases, .selling-phases, .renting-phases").hide();
+        $(".banner-text, .orange-buttons-holder").fadeIn();
         $(".login-container").fadeIn("slow");
       });
 
@@ -18,6 +19,15 @@
       $(".login-container .close-popup").click(function(){
         $(".login-container").fadeOut();
       });
+
+
+      $("#sell_login_user .orange-button").click(function(){
+        $(".selling-phases .user-selections").fadeIn();
+      });
+
+      $("#rent_login_user .orange-button").click(function(){
+        $(".renting-phases .user-selections").fadeIn();
+      });      
 
 
       // Banner height
@@ -205,6 +215,7 @@
 
       $(".close-popup, .listing-requsted").click(function(){
          $(".buying-phases, .popup-content, .selling-phases, .renting-phases").fadeOut();
+         $(".user-selections").hide();
          $(".banner-text, .orange-buttons-holder").fadeIn();
       });
 
@@ -619,9 +630,9 @@
 
 
 
-       $(".open-preview").click(function(){
-          $(".selling-phases, .renting-phases").hide();
-          $(".preview-prop").fadeIn();
+       $(".selling-phases .open-preview").click(function(){
+          $(".selling-phases").hide();
+          $("#sell_preview").fadeIn();
           //Carousal Plugins initialization 
           $('#carousel').flexslider({
             animation: "slide",
@@ -642,8 +653,37 @@
           });    
 
         //$(".preview-prop").animateAuto("height", 100);
-
        });
+
+
+       $(".renting-phases .open-preview").click(function(){
+          $(".renting-phases").hide();
+          $("#rent_preview").fadeIn();
+          //Carousal Plugins initialization 
+          $('#rent-carousel').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            itemWidth: 107,
+            itemMargin: 15,
+            asNavFor: '#slider'
+          });
+
+          $('#rent-slider').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            sync: "#carousel",
+          });    
+
+        //$(".preview-prop").animateAuto("height", 100);
+       });
+
+
+
+
 
 
 
@@ -658,12 +698,21 @@
       });
 
 
-       $(".open-confirmation").click(function(){
-        $(".preview-prop, .user-selections").hide();
+       $("#sell_preview .open-confirmation").click(function(){
+        $("#sell_preview, .user-selections").hide();
         $(".popup-content").hide();
-        $(".selling-phases, #thank_you").fadeIn();
+        $(".selling-phases, #sell_thank_you").fadeIn();
         $(".popup").animateAuto("height", 100);
       });
+
+
+       $("#rent_preview .open-confirmation").click(function(){
+        $("#rent_preview, .user-selections").hide();
+        $(".popup-content").hide();
+        $(".renting-phases, #rent_thank_you").fadeIn();
+        $(".popup").animateAuto("height", 100);
+      });
+
 
 
        $(".add-more-aminity").click(function(){

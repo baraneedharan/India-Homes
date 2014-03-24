@@ -2753,7 +2753,8 @@ padding: 6px 8px;
     position: relative;
 }
 
-.property-photo-preview #carousel {
+.property-photo-preview #carousel,
+.property-photo-preview #rent-carousel {
     position: absolute;
     width: 73%;
     bottom: 6px;
@@ -2763,7 +2764,8 @@ padding: 6px 8px;
     margin: auto;
 }
 
-.property-photo-preview #carousel li img {
+.property-photo-preview #carousel li img,
+.property-photo-preview #rent-carousel li img {
     border: 1px solid #fff;
 }
 
@@ -7379,11 +7381,13 @@ margin-right: 20px;
     left: 6px;
 }
 
-#carousel {
+#carousel,
+#rent-carousel {
     margin-top: 10px;
 }
 
-#carousel li {
+#carousel li,
+#rent-carousel li {
     margin-right: 15px;
     cursor: pointer;
 }
