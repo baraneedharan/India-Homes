@@ -1138,6 +1138,19 @@
         });
 
 
+
+//Loan Popup
+
+
+       $(".homeloan-btn").click(function(){
+          $(".banner-text").fadeOut();
+          $(".popup-content, .orange-buttons-holder, .preview-prop").hide();
+          $("#home_loan").show();
+          $(".loan-phases").fadeIn();
+          $(".popup").animateAuto("height", 100);
+        });
+
+
         //Filters Additionsl
 
 

@@ -40,15 +40,15 @@
           <div class="inner-main-header clearfix">
             <div class="header-left">
               <div class="logo">
-                <a href="#" class="logo-link">
+                <a href="index.html" class="logo-link">
                   <img src="css/images/logo-main.png" class="img-responsive" alt="India Homes">
                 </a>
               </div>
               <div class="prop-buttons">
-                <a href="#" class="active">Buy</a>
-                <a href="#" class="">Rent</a>
-                <a href="#" class="">Sell</a>
-                <a href="#" class="">Loan</a>
+                <a href="index.html#buy" class="active">Buy</a>
+                <a href="index.html#rent" class="">Rent</a>
+                <a href="index.html#sell" class="">Sell</a>
+                <a href="index.html#loan" class="">Loan</a>
               </div>
             </div>
             <div class="header-right">
@@ -61,6 +61,26 @@
 
                 </ul>
               </nav>
+
+            <div class="login-container">
+                <a href="#" class="close-popup"></a>
+                <div class="login-box">
+                  <p>Enter Your registered mobile number and your password to login</p>
+                  <fieldset>
+                    <input type="text" class="login-mobile" placeholder="Mobile Number">
+                    <p class="error-msg">Please enter a valid moile number</p>
+                    <input type="password" class="login-password" placeholder="Password">
+                  </fieldset>
+                  <div class="login-btn-holder">
+                    <a href="#" class="orange-button">Login</a>
+                  </div>
+                  <div class="clearfix login-options">
+                    <a href="#" class="left">Forgot your password</a>
+                    <p class="right">Don't have a login , <a href="#">Sign up here</a></p>
+                  </div>
+                </div>
+              </div>
+              
             </div>
         </div>
 
@@ -128,8 +148,15 @@
 
             <div class="prop-detail-header-right">
                   <div class="col-xs-12 col-sm-6 col-md-8 btn-wrap">
-                    <a href="Javascript:void(0)" class="read-more-btn contact-ih-btn active">Contact IndiaHomes</a>
+                    <a href="Javascript:void(0)" class="read-more-btn contact-ih-btn">Contact IndiaHomes</a>
                     <a href="#" class="read-more-btn">Shortlist</a>
+
+
+                    <div class="receive-callback">
+                      <p class="callback">You should receive a callback
+                      in max <b>5:00 mins</b></p>
+                    </div>
+
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-4 prop-social">
                     <label>Share this on</label>
@@ -142,16 +169,53 @@
 
                   <div class="contact-popup">
                     <a href="javascript:void(0)" class="close-popup"></a>
-                    <div class="cont-popup-content ih-contact-form">
+                    <div class="cont-popup-content ih-contact-form" id="ih_contact_form">
                       <h2>We can call you right now to discuss Experion Heartsong</h2>
                       <fieldset>
                         <input type="text" class="contatc-box" placeholder="Name" />
                         <input type="text" class="contatc-box" placeholder="Mobile" />
-                        <a href="Javascript:void(0)" class="read-more-btn">Call Me</a>
+                        <a href="Javascript:void(0)" class="read-more-btn call-me-btn">Call Me</a>
                       </fieldset>
+                      <p class="error-msg">Please enter a valid mobile number</p>
                       <p class="italic-desc">callback in 5  mins between 9AM - 10 PM IST</p>
                       <p class="italic-desc">IndiaHomes does not share your number with 3rd party without your consent. You agree to  IndiaHomes  calling you for its services</p>
                     </div>
+
+                    <div class="cont-popup-content thanks-initialize" id="thanks_initialize">
+                      <p class="thank-you-p">Thank you for contacting IndiaHomes. Our property advisor will be calling 
+                          you shortly</p>
+
+                       <div class="initialize-loader">
+                        <p>Initiating call back protocal<span class="initialize-loader-img"></span></p>
+                       </div>   
+                    </div>
+
+                    <div class="cont-popup-content calling-div" id="calling_div">
+                      <div class="view-similar-prop">
+                        <h2>View  more properties similar to Experion Heartsong</h2>
+                        <div class="prop-img">
+                          <img src="css/images/about-img1.jpg">
+                        </div>
+                        <div class="prop-detai clearfix">
+                          <p class="prop-addr-left">Spaze Privy, The Address</p>
+                          <p class="prop-addr-right">Sector 93</p>
+                        </div>
+
+                        <a href="Javascript:void(0)" class="see-more-opt">See more option</a>
+
+                      </div>
+                      <div class="register-for-ih">
+                        <h2>Want the latest updates and news on your favourite properties or areas?</h2>
+
+                        <a href="#" class="read-more-btn">Register for IndiaHomes Analytics</a>
+
+                        <a href="Javascript:void(0)" class="see-more-opt">Know More</a>
+
+                      </div>
+                    </div>
+
+
+
                   </div>
 
             </div>
@@ -1129,29 +1193,65 @@
               }
             }); 
 
-    $(window).scroll(function() {
-          //Highlight menus
-          var scroll_top=$(window).scrollTop();
-          var secpos=new Array();
-          var secheight=new Array();
-          var arr = $('a.prop-solo-details-links').map(function() {
-                   var sechref=this.href;
-                   var secname=sechref.split("#");
-                   return secname[1];
-              }).toArray();
 
-          for(var i=0;i<arr.length;i++){
-              secpos[i]=$("#"+arr[i]).offset().top-180;
-              secheight[i]=$("#"+arr[i]).outerHeight();
-          }
-          for(var i=0;i<secpos.length;i++){
-              if(scroll_top>=secpos[i] && scroll_top<(secpos[i]+secheight[i])){
-                  $(".prop-navigation li.active").removeClass("active");
-                  $("a[href*="+arr[i]+"]").parent().addClass("active");
-              }
-            }
+
+            //Scripts for call back initialization
+
+            $(".contact-ih-btn").click(function(){
+              $(".contact-popup").fadeIn();
+              $(this).addClass("active");
+            });
             
-      });
+            $(".call-me-btn").click(function(){
+              $(".cont-popup-content").hide();
+              $("#thanks_initialize").fadeIn("slow");
+              //$(".contact-popup").animateAuto("height", 100);
+              setTimeout(function() {
+                $(".initialize-loader").css("visibility","visible");
+                //$(".contact-popup").animateAuto("height", 100);
+              },3500);
+
+              setTimeout(function() {
+                $("#thanks_initialize").hide();
+                $("#calling_div, .receive-callback").show();
+                //$(".contact-popup").animateAuto("height", 100);
+              },8500);
+
+
+            });
+
+            $(".contact-popup .close-popup").click(function(){
+              $(".contact-popup").fadeOut();
+              $(".contact-ih-btn").removeClass("active");
+              $("#ih_contact_form").show();
+              $("#thanks_initialize, #calling_div, .receive-callback").hide();
+            });
+
+
+
+            $(window).scroll(function() {
+                  //Highlight menus
+                  var scroll_top=$(window).scrollTop();
+                  var secpos=new Array();
+                  var secheight=new Array();
+                  var arr = $('a.prop-solo-details-links').map(function() {
+                           var sechref=this.href;
+                           var secname=sechref.split("#");
+                           return secname[1];
+                      }).toArray();
+
+                  for(var i=0;i<arr.length;i++){
+                      secpos[i]=$("#"+arr[i]).offset().top-180;
+                      secheight[i]=$("#"+arr[i]).outerHeight();
+                  }
+                  for(var i=0;i<secpos.length;i++){
+                      if(scroll_top>=secpos[i] && scroll_top<(secpos[i]+secheight[i])){
+                          $(".prop-navigation li.active").removeClass("active");
+                          $("a[href*="+arr[i]+"]").parent().addClass("active");
+                      }
+                    }
+                    
+              });
 
     </script>
 

@@ -2593,14 +2593,33 @@
 
 
 
+        <!--- ************************* Loan phase ***************** -->
+
+
+          <div class="loan-phase-container">
+            <div class="loan-phases">
+
+            <a href="#" class="close-popup"></a>
+
+            <div class="popup">
+
+
+                     <!-- PopUp 0 - rent in or rent out   -->
+            <div class="popup-content rent-to-or-out" id="home_loan">
+              <h1>Simplify your property purchase by taking a home loan via IndiaHomes</h1>
+              <fieldset class="">
+                <a href="loan.html" class="calculate-emi orange-button">Calculate Your EMI</a>
+                <a href="loan-offers.html" class="loan-offer orange-button">Check loan offers</a>
+              </fieldset>
+            </div>    
+
+          </div> 
+         </div>  
 
 
 
 
-
-
-
-
+          <!-- ***************************** Loan Phase DOM ends Here ****************** -->
 
 
 
@@ -2624,14 +2643,14 @@
                 </div>                
               </div>
               <div class="orange-button-cont">
-                <a href="#" class="orange-btn rent-btn">RENT</a>
+                <a href="javascript:void(0)" class="orange-btn rent-btn">RENT</a>
                 <div id="odometer2" class="odometer">6000</div>
                 <div class="count-cont">
                     <span> Tenants Searching</span>
                 </div>                
               </div>
               <div class="orange-button-cont">
-                <a href="#" class="orange-btn">LOAN</a>
+                <a href="javascript:void(0)" class="orange-btn homeloan-btn">LOAN</a>
                 <div id="odometer3" class="odometer">1000</div>
                 <div class="count-cont">
                     <span>Loans Processed</span>
@@ -2918,6 +2937,32 @@
         $('#far-clouds').pan({fps: 30, speed: 0.7, dir: 'left', depth: 30});
         $('#near-clouds').pan({fps: 30, speed: 1.5, dir: 'left', depth: 70});
         $('#top-clouds').pan({fps: 30, speed: 0.3, dir: 'left', depth: 70});
+
+
+      $(document).ready(function(){
+          if(window.location.hash) {
+              var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+              //alert (hash);
+              setTimeout(function() {
+                if(hash == "buy") {
+                  $(".buy-btn").trigger("click");
+                }
+                else if(hash == "sell") {
+                  $(".sell-btn").trigger("click");
+                }
+                else if(hash == "rent") {
+                  $(".rent-btn").trigger("click");
+                }
+                else if(hash == "loan") {
+                  $(".homeloan-btn").trigger("click");
+                }
+              },3500);
+                            
+          } else {
+                // No hash found
+          }
+      });
+
     </script>
 
 </body>

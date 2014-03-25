@@ -485,7 +485,8 @@ margin-right: 6px;
 
 .buying-phases,
  .selling-phases,
- .renting-phases {
+ .renting-phases,
+  .loan-phases {
     min-width: 622px;
     min-height: 183px;
     left: 50%;
@@ -1345,7 +1346,8 @@ p.assured-text {
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     border-radius: 4px;
-    background: rgba(18, 40, 57, .5);
+    /*background: rgba(18, 40, 57, .5);*/
+    background: transparent;
     box-shadow: none;
     border: none;
 }
@@ -4336,6 +4338,7 @@ width: 158px;
 overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
+float: left;
 }
 
 .dev-prop-brief-details .icon-star {
@@ -5140,6 +5143,7 @@ width: 55px;
     width: 40%;
     display: inline-block;
     float: right;
+    position: relative;
 }
 
 .prop-other-line:after {
@@ -7443,21 +7447,23 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
 border-radius: 4px;
 border: 1px solid rgba(121, 141, 154, 0.51);
 border-bottom: 0;
-width: 542px;
-min-height: 183px;
+width: 632px;
+min-height: 83px;
 -webkit-transition: all .5s ease;
 -moz-transition: all .5s ease;
 transition: all .5s ease;
 position: absolute;
 right: 50px;
-top: 72px;
+top: 65px;
 z-index: 9999;
 padding: 20px;
 display: none;
 }
 
-.ih-contact-form {
-
+/*#ih_contact_form,*/
+#thanks_initialize,
+#calling_div {
+    display: none;
 }
 
 .ih-contact-form h2 {
@@ -7467,9 +7473,16 @@ display: none;
     margin-top: 12px;
 }
 
+.thank-you-p {
+    margin: 10px 42px;
+}
+
+.initialize-loader {
+    visibility: hidden;
+}
 
 .ih-contact-form input[type=text] {
-width: 172px;
+width: 210px;
 height: 36px;
 margin-bottom: 15px;
 line-height: 32px;
@@ -7482,10 +7495,17 @@ padding-left: 8px;
 margin-right: 10px;
 }
 
+#ih_contact_form fieldset {
+    margin-top: 20px;
+}
+
 .ih-contact-form .read-more-btn {
 height: 36px;
 line-height: 15px;
+}
 
+#ih_contact_form .italic-desc {
+    font-size: 13px;
 }
 
 
@@ -7531,12 +7551,133 @@ width: 148px;
 width: 208px;
 }
 
+.initialize-loader-img {
+    background: url("images/initialize-loader.gif") no-repeat 0 0 transparent;
+    height: 15px;
+    width: 128px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.thanks-initialize p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.thanks-initialize .initialize-loader p {
+display: block;
+width: 345px;
+margin: 15px auto;
+}
+
+.calling-div h2 {
+    color: #ff8a09;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 22px;
+    margin-top: 8px;
+}
 
 
+.view-similar-prop {
+width: 44%;
+margin-right: 4%;
+margin-left: 2%;
+}
+
+.register-for-ih {
+width: 38%;
+margin-left: 6%;
+}
+
+.view-similar-prop,
+.register-for-ih {
+position: relative;
+display: inline-block;
+vertical-align: top;
+}
 
 
+.prop-img img {
+max-width: 98%;
+border: 2px solid #fff;
+}
+
+.prop-addr-left,
+.prop-addr-right {
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+    margin: 10px 0;
+
+}
+
+.prop-addr-left {
+    font-size: 14px;
+    float: left;
+}
+
+.prop-addr-right {
+    font-size: 12px;
+    float: right;
+    margin-right: 8px;
+}
+
+.see-more-opt {
+float: right;
+color: #489ac0;
+font-weight: 300;
+font-size: 16px;
+padding-right: 12px;
+position: relative;
+background: url("images/more-arrow.png") no-repeat right 7px transparent;
+}
 
 
+.register-for-ih .read-more-btn {
+font-size: 19px;
+text-align: center;
+line-height: 24px;
+margin: 15px 0;
+}
 
+.view-similar-prop:after {
+width: 1px;
+height: 200px;
+background: #fff;
+position: absolute;
+right: -30px;
+content: "";
+top: 54px;
+}
+.receive-callback {
+position: absolute;
+top: -20px;
+background: rgba(0,0,0,.8);
+height: 85px;
+left: -8px;
+width: 300px;
+padding: 9px 12px;
+display: none;
+}
 
+.callback {
+padding-left: 45px;
+position: relative;
+background: url("images/callback.png") no-repeat left 0px transparent;   
+font-size: 16px;
+color: #fff;
+height: 70px;
+padding-top: 8px;
+}
+
+.inner-main-header .login-container {
+top: 48px;
+right: 81px;
+z-index: 9999;
+background: rgba(22, 28, 33, 0.9);
+}
 

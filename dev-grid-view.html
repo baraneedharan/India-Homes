@@ -45,25 +45,45 @@
           <div class="inner-main-header clearfix">
             <div class="header-left">
               <div class="logo">
-                <a href="#" class="logo-link">
+                <a href="index.html" class="logo-link">
                   <img src="css/images/logo-main.png" class="img-responsive" alt="India Homes">
                 </a>
               </div>
               <div class="prop-buttons">
-                <a href="#" class="active">Buy</a>
-                <a href="#" class="">Rent</a>
-                <a href="#" class="">Sell</a>
-                <a href="#" class="">Loan</a>
+                <a href="index.html#buy" class="active">Buy</a>
+                <a href="index.html#rent" class="">Rent</a>
+                <a href="index.html#sell" class="">Sell</a>
+                <a href="index.html#loan" class="">Loan</a>
               </div>
             </div>
             <div class="header-right">
               <nav>
                 <ul class="nav navbar-nav">
-                    <li><a href="#" class="">Login</a></li>
+                    <li><a href="#" class="login-btn">Login</a></li>
                     <li class="seperator">&nbsp;&nbsp; | &nbsp;&nbsp;</li>
                     <li><a href="#" class="s">About IndiaHomes</a></li>
                 </ul>
               </nav>
+
+              <div class="login-container">
+                <a href="#" class="close-popup"></a>
+                <div class="login-box">
+                  <p>Enter Your registered mobile number and your password to login</p>
+                  <fieldset>
+                    <input type="text" class="login-mobile" placeholder="Mobile Number">
+                    <p class="error-msg">Please enter a valid moile number</p>
+                    <input type="password" class="login-password" placeholder="Password">
+                  </fieldset>
+                  <div class="login-btn-holder">
+                    <a href="#" class="orange-button">Login</a>
+                  </div>
+                  <div class="clearfix login-options">
+                    <a href="#" class="left">Forgot your password</a>
+                    <p class="right">Don't have a login , <a href="#">Sign up here</a></p>
+                  </div>
+                </div>
+              </div>
+
             </div>
         </div>
     </div>
@@ -88,30 +108,36 @@
                     <option>Independant Floor</option>
                     <option>Plot</option>
                     </select-->
-                <select class="selectpicker black-select">
-                    <option>2 Bedrooms</option>
+                <select class="selectpicker black-select" title='Select Bedroom'>
+                    <option>Any</option>
+                    <option selected>2 Bedrooms</option>
                     <option>3 Bedrooms</option>
                     <option>4 bedrooms</option>
                 </select>                
                 <select class="selectpicker black-select">
-                    <option>30-35 Lakhs</option>
+                    <option>Any</option>
+                    <option selected>30-35 Lakhs</option>
                     <option>35-40 Lakhs</option>
                     <option>40-45 Lakhs</option>
                     <option>45-50 Lakhs</option>
                     <option>50-60 Lakhs</option>
                 </select>    
                 <select class="selectpicker black-select med-select">
-                    <option>Posession status</option>
-                    <option>1-6 months</option>
+                  <optgroup label="Posession status">
+                    <option>Any</option>
+                    <option selected>1-6 months</option>
                     <option>6-12 months</option>
                     <option>12-18 months</option>
                     <option>18-24 months</option>
+                </optgroup>
                 </select>   
                 <select class="selectpicker black-select  big-select">
-                    <option>Ranking</option>
-                    <option>Premium Properties</option>
+                    <optgroup label="Ranking">
+                    <option>Any</option>
+                    <option selected>Premium Properties</option>
                     <option>Best Properties to Live-In</option>
                     <option>Best Investment Properties</option>
+                    </optgroup>
                 </select>       
             </div>
 
@@ -124,12 +150,12 @@
             <a href="map-view.html" class="prop-view-button"><span class="map-icon"></span>Map View</a>
             <a href="grid-view.html" class="prop-view-button active"><span class="grid-icon"></span>Grid View</a>
         </div>
-        <!--div class="sl-properties-counts">
+        <div class="sl-properties-counts">
             <p class="total-sl-propcount"> <b>Showing 200 shortlisted properties</b> </p>
-            <p class="great-prop"> 100 Great properties</p>
+            <!--p class="great-prop"> 100 Great properties</p>
             <p class="good-prop">100 Good Properties</p>
-            <p class="avg-prop">100 Average Properties</p>
-        </div-->
+            <p class="avg-prop">100 Average Properties</p-->
+        </div>
         <div class="contact-ih">
             <a href="#" class="big-contact-btn">Contact IndiaHomes for this requirement</a>
         </div>
@@ -287,7 +313,7 @@
 
             </div>
             <div class="col-md-9" id="grid_view">
-                <div class="sort-by-cont">
+                <!--div class="sort-by-cont">
                     <label>Sort By</label>
                     <a href="#" class="grey-button relevance-sort-btn">Relevance</a>
                     <div class="grey-button price-sort-btn">
@@ -295,9 +321,9 @@
                         <a href="#" class="up-arrow"></a>
                         <a href="#" class="down-arrow"></a>
                     </div>
-                </div>
+                </div-->
 
-                <div class="row new-row">
+                <div class="row new-row has-top-margin">
                     <div class="col-md-4 individual-prop">
                         <div class="prop-image-details">
                             <a href="Javascript:void(0);" class="image-hover">
@@ -333,9 +359,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, <span>Sector 108</span></p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
                         </div>
                     </div>
 
@@ -419,9 +445,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, <span>Sector 108</span></p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
                         </div>
                     </div>
 
@@ -461,9 +487,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, <span>Sector 108</span></p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
                         </div>
                     </div>
 
@@ -503,9 +529,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, <span>Sector 108</span></p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
                         </div>
                     </div>
 
@@ -545,9 +571,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, <span>Sector 108</span></p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
                         </div>
                     </div>
 
@@ -587,9 +613,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, <span>Sector 108</span></p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
                         </div>
                     </div>
 
@@ -629,9 +655,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, <span>Sector 108</span></p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
                         </div>
                     </div>
 
@@ -672,9 +698,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, <span>Sector 108</span></p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
                         </div>
                     </div>                                                                                
 
