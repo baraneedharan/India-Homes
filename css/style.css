@@ -2061,7 +2061,7 @@ fieldset.mobile-form {
     right: 8px;
     color: #fff;
     font-size: 12px;
-    bottom: 82px;
+    top: 107px;
     width: 178px;
 }
 
@@ -4179,7 +4179,7 @@ padding-bottom: 0px;
 
 .img-holder {
  display: inline-block;
-width: 47%;
+width: 45%;
 margin-right: 1%;
 vertical-align: top;
 }
@@ -5410,7 +5410,7 @@ width: 55px;
 .neighbour-list li > a.active {
     background: #ffa84c;
     color: #fff;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
     background: -moz-linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa84c), color-stop(100%,#ff7b0d));
     background: -webkit-linear-gradient(top, #ffa84c 0%,#ff7b0d 100%);
@@ -7424,6 +7424,119 @@ margin-right: 20px;
 #select_city .bootstrap-select {
     width: 65%;
 }
+
+
+
+
+.active.contact-ih-btn:after {
+content: url('images/contact-btn-arrow.png');
+position: absolute;
+top: 6px;
+left: 83px;
+font-size: 44px;
+}
+
+
+.contact-popup {
+background: rgba(22, 28, 33, 0.8);
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000', endColorstr='#99000000');
+border-radius: 4px;
+border: 1px solid rgba(121, 141, 154, 0.51);
+border-bottom: 0;
+width: 542px;
+min-height: 183px;
+-webkit-transition: all .5s ease;
+-moz-transition: all .5s ease;
+transition: all .5s ease;
+position: absolute;
+right: 50px;
+top: 72px;
+z-index: 9999;
+padding: 20px;
+display: none;
+}
+
+.ih-contact-form {
+
+}
+
+.ih-contact-form h2 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+
+.ih-contact-form input[type=text] {
+width: 172px;
+height: 36px;
+margin-bottom: 15px;
+line-height: 32px;
+font-size: 16px;
+font-weight: 500;
+font-family: 'Lato', sans-serif;
+border-radius: 4px;
+border: none;
+padding-left: 8px;
+margin-right: 10px;
+}
+
+.ih-contact-form .read-more-btn {
+height: 36px;
+line-height: 15px;
+
+}
+
+
+
+.error-msg {
+    color: red;
+    font-size: 14px;
+}
+
+
+#find_developer .error-msg {
+position: relative;
+top: -10px;
+left: 12px;
+}
+
+#prop_owner .error-msg,
+#rent_prop_owner .error-msg {
+color: red;
+font-size: 14px;
+margin: 0;
+position: relative;
+top: -8px;
+}
+
+#sell_login_user .error-msg,
+#rent_login_user .error-msg,
+.login-container p.error-msg {
+color: red;
+position: relative;
+bottom: 0;
+top: -4px;
+margin: 0;
+font-size: 14px;
+left: 2px;
+}
+
+#prop_filters .bootstrap-select.med-select {
+width: 148px;
+}
+
+#prop_filters .bootstrap-select.big-select {
+width: 208px;
+}
+
+
+
+
+
+
+
 
 
 
