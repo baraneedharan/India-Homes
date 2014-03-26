@@ -924,6 +924,32 @@ p.assured-text {
 
 /* PopUp 4 - Select City */
 
+/*#developer_budjet,
+#resale_budjet {
+    display: none;
+    min-height: 140px;
+}*/
+
+/*#select_budjet {
+    max-height: 280px;
+}
+
+.buy-as-developer #developer_budjet {
+    display: block; 
+}
+
+.buy-as-developer #resale_budjet {
+    display: none; 
+}
+
+.buy-from-resale #resale_budjet {
+    display: block;
+}
+
+.buy-from-resale #developer_budjet {
+    display: none;
+}
+*/
 #select_city {
     display: none;
 }
@@ -1053,6 +1079,7 @@ p.assured-text {
 .budjet-pick {
 /*width: 440px;*/
     display: inline-block;
+    text-align: center;
 }
 
 .budjet-pick .btn-custom {
@@ -1896,6 +1923,39 @@ fieldset.mobile-form {
 }
 
 
+#buy_prop_kind,
+#buy_thanks_initialize,
+#rent_thanks_initialize,
+#sell_thank_you {
+    display: none;
+}
+
+.after-initalize .thank-you-p {
+    margin: 20px 0 20px;
+}
+
+.after-initalize {
+    display: none;
+    text-align: center;
+}
+
+
+#buy_thanks_initialize .close-popup.orange-button,
+#rent_thanks_initialize .close-popup.orange-button {
+position: relative;
+margin-top: 15px;
+width: 122px;
+}
+
+
+.identify-room input[type=text] {
+height: 40px;
+line-height: 41px;
+width: 350px;
+margin-right: 15px;
+}
+
+
 /* Sell Pop ups */
 
 
@@ -2340,6 +2400,12 @@ fieldset.mobile-form {
 .uploaded-numbers ul li.active {
     background: #ffb818;
     box-shadow: 0px 0px 15px #ffb818;
+
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(360deg);
+    position: relative;
+    
 }
 
 .uploaded-numbers ul li.active.animate {
@@ -2374,7 +2440,18 @@ input[type=file].hidden-input {
 }
 
 .image-holder {
-    float: left;
+    text-align: center;
+    height: 216px;
+}
+
+.image-holder p {
+    color: #fff;
+    font-style: 16px;
+    padding-top: 100px;
+}
+
+.image-holder img {
+    display: none;
 }
 
 .upload-cancel {
@@ -2406,6 +2483,10 @@ input[type=file].hidden-input {
     font-size: 16px;
 }
 
+.upload-photos .uploaded-count-desc {
+    display: none;
+}
+
 .upload-btn {
     background: #ff9301;
  /* Old browsers */
@@ -2434,6 +2515,7 @@ input[type=file].hidden-input {
 #request_photographer, #identify_photo {
     display: none;
 }
+
 
 
 /* popup 5.1 Propery size*/
@@ -3175,7 +3257,7 @@ margin: 10px 0px;
 }
 
 .lease-type {
-    margin-top: 20px;
+    margin-top: 8px;
 }
 
 .lease-type .lease-type-select {
@@ -3203,19 +3285,72 @@ display: none;
 margin-top: 12px;
 }
 
+.submit-review {
+    visibility: hidden;
+}
+
+.suggestion-box .orange-button {
+    display: none;
+}
 
 
 
+.floor_plan_box ul li a img {
+border: 1px solid #CCCCCC;
+height: 60px;
+margin: 5px;
+padding: 5px;
+width: 80px;
+}
 
+.floor_plan_box ul li {
+float: left;
+}
 
+.floor_plan_box h4 {
+    font-size: 14px;
+    margin: 0;
+}
 
+.floor_plan_box ul {
+float: left;
+margin: 0 0 10px 0;
+list-style: none;
+padding: 0;
+}
 
+.floor_plan_box {
+width: 476px;
+padding: 5px;
+float: left;
+margin: 10px 0 0 0;
+}
 
+.developer-grid-view .col-md-4 {
+    width: 235px !important;
+    margin: 0 2% 2% 0!important;
+}
 
+.developer-grid-view .image-hover {
+    min-height: 174px;
+}
 
+.developer-grid-view .dev-prop-details .left-prop-detail {
+width: 118px;
+}
 
+.developer-grid-view .dev-prop-details p {
+font-size: 13px;
+}
 
+.developer-grid-view .dev-prop-details p span {
+font-weight: 500;
+font-size: 12px;
+}
 
+.developer-grid-view .prop-rank-but p {
+    font-size: 10px;
+}
 
 
 
@@ -4339,6 +4474,7 @@ overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
 float: left;
+margin-left: 0;
 }
 
 .dev-prop-brief-details .icon-star {
@@ -4374,10 +4510,11 @@ bottom: 0%;
 .image-hover {
     display: inline-block;
     max-height: 162px;
+    width: 100%;
 }
 
 .image-hover img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .prop-bed-price-details p {
@@ -5479,9 +5616,10 @@ width: 55px;
 /* Project Features */
 
 .proj-feature-desc {
-    padding: 15px;
+/*    padding: 15px;
     background: #f0f4f8;
-    border: 1px solid #DDDEDF;
+    border: 1px solid #DDDEDF;*/
+margin-bottom: 15px;    
 }
 
 .proj-feature-desc fieldset {
@@ -5633,13 +5771,52 @@ width: 55px;
 
 /* Vastu Ratings */
 
-.vastu-table .table {
+table>thead>tr>th, 
+table>tbody>tr>th, 
+table>tfoot>tr>th, 
+table>thead>tr>td, 
+table>tbody>tr>td, 
+table>tfoot>tr>td {
+padding: 8px;
+line-height: 1.428571429;
+vertical-align: top;
+border-top: 1px solid #ddd;
+}
+
+table {
     text-align: center;
     background: #edf2f8;
+    width: 100%;
     margin-bottom: 15px;
 }
 
-.vastu-table .table tr th {
+.collapse-block p,
+.collapse-block span  {
+    font-weight: 400 !important;  
+    font-size: 13px !important;
+    font-family: 'Lato', sans-serif !important;  
+    line-height: 18px;
+}
+
+.collapse-block table p,
+.collapse-block table span {
+        font-size: 14px!important;
+    font-weight: 400 !important;  
+    font-family: 'Lato', sans-serif !important;  
+}
+
+.collapse-block table p {
+    margin-bottom: 0; 
+}
+
+table>tbody>tr>td:first-child,
+table>tbody>tr>td:first-child p span,
+table>tbody>tr>td:first-child span {
+  font-weight: 600 !important;   
+}
+
+
+table .bgtop td {
     background-color: #dadee2;
     border: solid 1px #9f9f9f;
     color: #fff;
@@ -5651,11 +5828,11 @@ width: 55px;
     padding: 15px 0;
 }
 
-.vastu-table .table-bordered>tbody>tr>td {
+tbody>tr>td {
     border: 1px solid #A3A1A1;
 }
 
-.vastu-table .table-bordered>tbody>tr>td:first-child {
+table>tr>td:first-child {
     font-weight: bold;
 }
 
@@ -6066,11 +6243,31 @@ display: none;
 
 /*#select_where .next-link,#bh_preference .next-link,#select_budjet .next-link,#select_prop_type .next-link,*/
 #from_where-whom,
+#rent_email_photo,
+#rent_request_photographer,
+#rent_identify_photo,
+#rent_upload_photo,
+#rent_property_photo,
+#prop_rent_amount,
+#prop_rentout_amount,
+#rentprop_posession_status,
+#rent_property_size,
+#rentingprop_type,
+#rent_prop_location,
+#rent_assisted_listing,
+#rent_login_user,
+#rent_prop_owner,
+#rent_prop_city,
+#rent_thank_you,
 #loan_requirement .next-link,
 #prop_location .next-link,
 #sellingprop_type .next-link,
 #property_bedbath .next-link,
-#property_budjet .next-link {
+#property_budjet .next-link,
+#property_size .next-link,
+#is_developer_proj .next-link,
+#sellprop_posession_status .next-link,
+#property_preference .next-link {
     display: none;
 }
 
@@ -6091,10 +6288,23 @@ display: none;
 }
 
 
+#prop_rent_amount .all-bhk {
+    width: 450px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#prop_rent_amount .all-bhk .btn {
+    width: 77px;
+
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 6px 6px;
+}
 
 .additional-filters {
 position: absolute;
-right: 45px;
+right: 4px;
 background: rgba(130, 129, 129, 0.9);
 z-index: 9999;
 width: 572px;
@@ -6111,7 +6321,7 @@ position: absolute;
 height: 10px;
 width: 24px;
 content: "";
-right: 105px;
+right: 50px;
 top: -8px;
 }
 
@@ -7680,4 +7890,73 @@ right: 81px;
 z-index: 9999;
 background: rgba(22, 28, 33, 0.9);
 }
+
+
+
+
+.site-plan-desc,
+.floor-plan-desc {
+
+}
+
+.site-plan-desc h3,
+.floor-plan-desc h3 {
+margin: 0 0 10px 0;
+font-size: 17px;
+font-family: 'Lato', sans-serif;
+font-weight: 600;
+}
+
+
+.site-plan-desc ul,
+.floor-plan-desc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.site-plan-desc ul li {
+    width: 58%;
+}
+
+.floor-plan-desc ul li {
+    width: 48%;
+    display: inline-block;
+}
+
+.proj-feature-image {
+    margin-top: 55px;
+}
+
+
+.proj-feature-image img {
+    margin: 0 auto;
+}
+
+
+#propert_details .owl-buttons  {
+position: absolute;
+width: 100%;
+top: -26px;
+}
+
+#propert_details .owl-pagination  {
+position: absolute;
+width: 100%;
+top: 172px;
+}
+
+#propert_details .owl-buttons .owl-prev {
+left: 0;
+position: absolute;
+}
+/*
+.about-prop-wrapper .dev-prop-details {
+    background: transparent;
+}*/
+
+.grid-prop-wrapper {
+box-shadow: 2px 2px 10px #000;
+}
+
+
 
