@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <!-- Header -->
+  <!-- Header -->
 <header class="">
     <div class="section-first">
           <!-- Main Header -->
@@ -64,26 +64,6 @@
                     <li><a href="#" class="s">About IndiaHomes</a></li>
                 </ul>
               </nav>
-
-            <div class="login-container">
-                <a href="#" class="close-popup"></a>
-                <div class="login-box">
-                  <p>Enter Your registered mobile number and your password to login</p>
-                  <fieldset>
-                    <input type="text" class="login-mobile" placeholder="Mobile Number">
-                    <p class="error-msg">Please enter a valid moile number</p>
-                    <input type="password" class="login-password" placeholder="Password">
-                  </fieldset>
-                  <div class="login-btn-holder">
-                    <a href="#" class="orange-button">Login</a>
-                  </div>
-                  <div class="clearfix login-options">
-                    <a href="#" class="left">Forgot your password</a>
-                    <p class="right">Don't have a login , <a href="#">Sign up here</a></p>
-                  </div>
-                </div>
-              </div>
-              
             </div>
         </div>
     </div>
@@ -93,13 +73,32 @@
             <div class="prop-from-select">
                 <p>Showing Properties in </p>
                 <select class="selectpicker black-select">
-                    <option>Delhi</option>
-                    <option>Gurgaon</option>
+                    <option>NCR</option>
+                    <option>Mumbai</option>
                     <option>Bangalore</option>
+                    <option>Kolkata</option>
+                    <option>Pune</option>
+                    <option>Ahmedabad</option>
+                    <option>Chennai</option>
+                    <option>Hyderabad</option>
+                    <option>Goa</option> 
+                    <option>Coimbatore</option>  
+                    <option>Cochin</option>  
+                    <option>Chandigarh</option>  
+                    <option>Lucknow</option>  
+                    <option>Nagpur</option>  
+                    <option>Indore</option>  
+                    <option>Patna</option>  
+                    <option>Mysore</option> 
+                    <option>Mangalore</option> 
+                    <option>Nasik</option> 
+                    <option>Jaipur</option> 
+                    <option>Surat</option> 
+                    <option>Vizag</option>                                                                               
                 </select>
             </div>
             <div class="search-prop">
-                <input type="text" class="seacrh-prop" value="Sector 3" />
+                <input type="text" class="seacrh-prop">
             </div>
             <div class="prop-details-select">
                 <select class="selectpicker proptype-select">
@@ -107,18 +106,25 @@
                     <option>Villa</option>
                     <option>Independant Floor</option>
                     <option>Plot</option>
+                    <option>All property types</option>
                     </select>
                 <select class="selectpicker black-select">
+                    <option>1 Bedrooms</option>
                     <option>2 Bedrooms</option>
                     <option>3 Bedrooms</option>
-                    <option>4 bedrooms</option>
+                    <option>4/4+ bedrooms</option>
+                    <option>All bedrooms</option>
                 </select>                
                 <select class="selectpicker black-select">
-                    <option>30-35 Lakhs</option>
-                    <option>35-40 Lakhs</option>
-                    <option>40-45 Lakhs</option>
-                    <option>45-50 Lakhs</option>
-                    <option>50-60 Lakhs</option>
+                    <option>0 – 25 Lac</option>
+                    <option>25 Lac – 50 Lac </option>
+                    <option>50 Lac – 75 Lac</option>
+                    <option>75 Lac – 1 Cr</option>
+                    <option>1 Cr – 1.5 Cr</option>
+                    <option>1.5 Cr – 2 Cr</option>
+                    <option>2 Cr – 3 Cr</option>
+                    <option>3 Cr +</option>
+                    <option>All Budget ranges</option>
                 </select>                
             </div>
 
@@ -129,7 +135,6 @@
             </div>
 
             <div class="additional-filters">
-                <a href="#" class="close-popup"></a>
                 <div class="all-add-fillters">
                     <div class="select-availability" id="availability" data-toggle="buttons">
                       <label class="br-label">Availibility Status: </label>
@@ -269,15 +274,15 @@
                 </div>
             </div>
 
-            <!--a href="#" class="clear-filter-btn">Clear All Filters</a-->
+            <!-- <a href="#" class="clear-filter-btn">Clear All Filters</a> -->
 
         </div>     
     </div>
 
     <div class="section-third">
         <div class="view-buttons-holder">
-            <a href="map-view.html" class="prop-view-button"><span class="map-icon"></span>Map View</a>
-            <a href="grid-view.html" class="prop-view-button active"><span class="grid-icon"></span>Grid View</a>
+            <a href="map-view.html" class="prop-view-button active"><span class="map-icon"></span>Map View</a>
+            <a href="grid-view.html" class="prop-view-button"><span class="grid-icon"></span>Grid View</a>
         </div>
         <div class="sl-properties-counts">
             <p class="total-sl-propcount"> <b>Showing 200 shortlisted properties</b> </p>
@@ -286,11 +291,50 @@
             <p class="avg-prop">100 Average Properties</p>
         </div>
         <div class="contact-ih">
-            <a href="#" class="big-contact-btn">Contact IndiaHomes for this requirement</a>
+            <a href="Javascript:void(0)" class="big-contact-btn contact-ih-btn">Contact IndiaHomes for this requirement</a>
         </div>
+
+
+        <div class="receive-callback">
+          <p class="callback">
+            <span class="timer-2d"></span>
+            You should receive a callback
+          in max 
+          <b class="timer">
+              <span class="minute">00</span>:<span class="second">00</span>mins
+          </b></p>
+        </div>
+
+
+        <div class="contact-popup">
+          <a href="javascript:void(0)" class="close-popup"></a>
+          <div class="cont-popup-content ih-contact-form" id="ih_contact_form">
+            <h2>We can call you right now to discuss Experion Heartsong</h2>
+            <fieldset>
+              <input type="text" class="contatc-box" placeholder="Name" />
+              <input type="text" class="contatc-box" placeholder="Mobile" />
+              <a href="Javascript:void(0)" class="read-more-btn call-me-btn">Call Me</a>
+            </fieldset>
+            <p class="error-msg">Please enter a valid mobile number</p>
+            <p class="italic-desc">callback in 5  mins between 9AM - 10 PM IST</p>
+            <p class="italic-desc">IndiaHomes does not share your number with 3rd party without your consent. You agree to  IndiaHomes  calling you for its services</p>
+          </div>
+
+          <div class="cont-popup-content thanks-initialize" id="thanks_initialize">
+            <p class="thank-you-p">Thank you for contacting IndiaHomes. Our property advisor will be calling 
+                you shortly</p>
+
+             <div class="initialize-loader">
+              <p>Initiating call back protocol<span class="initialize-loader-img"></span></p>
+             </div>   
+          </div>
+        </div>
+
+
     </div>
 
     </header>
+
 
     <!-- Grid/Map view panel-->
 
@@ -442,6 +486,37 @@
 
             </div>
             <div class="col-md-9" id="grid_view">
+
+
+
+              <!-- Popup -->
+                <section class="contact-finished">
+                    <a href="#" class="close-popup"></a>
+                    <div class="calling-div" id="calling_div">
+                      <div class="view-similar-prop">
+                        <h2>View  more properties similar to Experion Heartsong</h2>
+                        <div class="prop-img">
+                          <img src="css/images/about-img1.jpg">
+                        </div>
+                        <div class="prop-detai clearfix">
+                          <p class="prop-addr-left">Spaze Privy, The Address</p>
+                          <p class="prop-addr-right">Sector 93</p>
+                        </div>
+
+                        <a href="Javascript:void(0)" class="see-more-opt">See more option</a>
+
+                      </div>
+                      <div class="register-for-ih">
+                        <h2>Want the latest updates and news on your favourite properties or areas?</h2>
+
+                        <a href="#" class="read-more-btn">Register for IndiaHomes Analytics</a>
+
+                        <a href="Javascript:void(0)" class="see-more-opt">Know More</a>
+
+                      </div>
+                    </div>
+                </section>  
+
                 <div class="sort-by-cont">
                     <label>Sort By</label>
                     <a href="#" class="grey-button relevance-sort-btn">Relevance</a>
@@ -452,7 +527,8 @@
                     </div>
                 </div>
 
-                <div class="row new-row">
+                <div class="row new-row">             
+
                     <div class="col-md-4 individual-prop">
                         <div class="prop-image-details">
                             <a href="Javascript:void(0);" class="image-hover">
@@ -898,6 +974,10 @@
     <script src="js/skrollr.min.js"></script>
     <!-- Skroller for Typed JS -->
     <script src="js/typed.js"></script>
+    <!-- Cookies -->
+    <script src="js/jquery.cookie.js"></script>
+
+    <script src="js/timer.js"></script>       
     <!-- Skroller for Flip counter JS -->
     <script src="js/flipcounter.js"></script>
     <!-- FlexSlider -->
@@ -914,6 +994,51 @@
           setTimeout(function() {
             $(".prop-accordian-panel .panel-group").css("height", $(window).height() - 100);
           },500);
+
+
+        //Scripts for call back initialization
+
+          $(".contact-ih-btn").click(function(){
+            $(".contact-popup, #ih_contact_form").fadeIn();
+            $(this).addClass("active");
+          });
+          
+          $(".call-me-btn").click(function(){
+            $(".cont-popup-content").hide();
+            $("#thanks_initialize").fadeIn("slow");
+            //$(".contact-popup").animateAuto("height", 100);
+            setTimeout(function() {
+              $(".initialize-loader").css("visibility","visible");
+              //$(".contact-popup").animateAuto("height", 100);
+            },3500);
+
+            setTimeout(function() {
+              $("#thanks_initialize, .contact-popup").hide();
+              $(".contact-ih-btn").removeClass("active");
+              $(".contact-finished , .receive-callback").show();
+
+              timer.reset(300);
+              timer.start();
+
+              //$(".contact-popup").animateAuto("height", 100);
+            },8500);
+          });
+
+          $(".contact-popup .close-popup").click(function(){
+            $(".contact-popup").fadeOut();
+            $(".contact-ih-btn").removeClass("active");
+            setTimeout(function() {
+              $("#ih_contact_form").show();
+              $("#thanks_initialize, #calling_div, .receive-callback").hide();
+            },1500);
+          });
+
+
+        $(".contact-finished .close-popup").click(function(){
+          $(this).parent().fadeOut();
+        });  
+
+
     </script>
 
 </body>

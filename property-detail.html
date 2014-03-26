@@ -154,8 +154,13 @@
 
 
                     <div class="receive-callback">
-                      <p class="callback">You should receive a callback
-                      in max <b>5:00 mins</b></p>
+                      <p class="callback">
+                        <span class="timer-2d"></span>
+                        You should receive a callback
+                      in max 
+                      <b class="timer">
+                          <span class="minute">00</span>:<span class="second">00</span>mins
+                      </b></p>
                     </div>
 
                   </div>
@@ -190,33 +195,6 @@
                         <p>Initiating call back protocol<span class="initialize-loader-img"></span></p>
                        </div>   
                     </div>
-
-                    <div class="cont-popup-content calling-div" id="calling_div">
-                      <div class="view-similar-prop">
-                        <h2>View  more properties similar to Experion Heartsong</h2>
-                        <div class="prop-img">
-                          <img src="css/images/about-img1.jpg">
-                        </div>
-                        <div class="prop-detai clearfix">
-                          <p class="prop-addr-left">Spaze Privy, The Address</p>
-                          <p class="prop-addr-right">Sector 93</p>
-                        </div>
-
-                        <a href="Javascript:void(0)" class="see-more-opt">See more option</a>
-
-                      </div>
-                      <div class="register-for-ih">
-                        <h2>Want the latest updates and news on your favourite properties or areas?</h2>
-
-                        <a href="#" class="read-more-btn">Register for IndiaHomes Analytics</a>
-
-                        <a href="Javascript:void(0)" class="see-more-opt">Know More</a>
-
-                      </div>
-                    </div>
-
-
-
                   </div>
 
             </div>
@@ -226,6 +204,9 @@
         </div>
 
     </section>
+
+
+
 
     <!-- Propert Complete details -->
     <section class="prop-full-details" id="prop_full_details">
@@ -255,9 +236,41 @@
               <!-- Property Details Container-->
               <div class="col-xs-12 col-sm-12 col-md-9 prop-wrapper">
 
+
+                <!-- popup -->
+
+                <section class="contact-finished">
+                    <a href="#" class="close-popup"></a>
+                    <div class="calling-div" id="calling_div">
+                      <div class="view-similar-prop">
+                        <h2>View  more properties similar to Experion Heartsong</h2>
+                        <div class="prop-img">
+                          <img src="css/images/about-img1.jpg">
+                        </div>
+                        <div class="prop-detai clearfix">
+                          <p class="prop-addr-left">Spaze Privy, The Address</p>
+                          <p class="prop-addr-right">Sector 93</p>
+                        </div>
+
+                        <a href="Javascript:void(0)" class="see-more-opt">See more option</a>
+
+                      </div>
+                      <div class="register-for-ih">
+                        <h2>Want the latest updates and news on your favourite properties or areas?</h2>
+
+                        <a href="#" class="read-more-btn">Register for IndiaHomes Analytics</a>
+
+                        <a href="Javascript:void(0)" class="see-more-opt">Know More</a>
+
+                      </div>
+                    </div>
+                </section>
+
+
+
                 <div class="prop-details prop-detail-content" id="propert_details">
 
-                  <h3 class="section-headers"><i class="glyphicon glyphicon-chevron-down"></i>Property Detail</h3>
+                  <h3 class="section-headers"><i class="glyphicon glyphicon-chevron-down"></i>Project Detail</h3>
 
                   <div class="collapse-block row">
 
@@ -265,7 +278,7 @@
 
                         <div id="owl-demo" class="owl-carousel owl-theme"> 
                           <div class="item"><img src="css/images/prop-image1.png" class="img-responsive" /></div>
-                          <div class="item"><img src="css/images/prop-image1.png" class="img-responsive" /></div>
+                          <div class="item"><img src="css/images/detail_The-Heartsong.jpg" class="img-responsive banner-img" /></div>
                           <div class="item"><img src="css/images/prop-image1.png" class="img-responsive" /></div> 
                           <div class="item"><img src="css/images/prop-image1.png" class="img-responsive" /></div>
                           <div class="item"><img src="css/images/prop-image1.png" class="img-responsive" /></div>
@@ -1382,22 +1395,22 @@
 
             <!-- Footer -->
 
-            <!-- <footer class="footer">
-              <div class="container">
-                <ul class="footer-links muted">
-                  <li><a href="#">Home</a> | </li>
-                  <li><a href="#">Press </a> | </li>  
-                  <li><a href="#">Room  </a> | </li>  
-                  <li><a href="#">Blog  </a> | </li>  
-                  <li><a href="#">Careers </a> | </li>   
-                  <li><a href="#">Sitemap </a> | </li>  
-                  <li><a href="#">Mobile Site </a> | </li>   
-                  <li><a href="#">Disclaimer</a> | </li> 
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-                <p class="copyright">Copyright © 2014 IndiaHomes.com | All Rights Reserved</p>
-              </div>
-            </footer> -->
+<footer class="ih-footer">
+      <div class="container">
+        <ul class="footer-links muted">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Press </a></li>  
+          <li><a href="#">Room  </a></li>  
+          <li><a href="#">Blog  </a></li>  
+          <li><a href="#">Careers </a></li>   
+          <li><a href="#">Sitemap </a></li>  
+          <li><a href="#">Mobile Site </a></li>   
+          <li><a href="#">Disclaimer</a></li> 
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p class="copyright">Copyright © 2014 IndiaHomes.com | All Rights Reserved</p>
+      </div>
+    </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.js"></script>
@@ -1416,6 +1429,10 @@
     <script src="js/skrollr.min.js"></script>
     <!-- Skroller for Typed JS -->
     <script src="js/typed.js"></script>
+    <!-- Cookies -->
+    <script src="js/jquery.cookie.js"></script>
+
+    <script src="js/timer.js"></script>
     <!-- FlexSlider -->
     <script src="js/jquery.flexslider.js"></script>    
     <!-- Sky momevent Script-->
@@ -1426,6 +1443,8 @@
     <script src="js/custom.js"></script>
 
     <script type="text/javascript">
+
+
 
     //Property details page scripts
         var windoWidth = $(window).width();
@@ -1442,6 +1461,10 @@
               $(this).parent().find('.collapse-block').slideToggle();
           });
         };
+
+
+
+
 
         $("#owl-demo").owlCarousel({
             navigation : true, // Show next and prev buttons
@@ -1509,10 +1532,10 @@
 
             //Scripts for call back initialization
 
-            $(".contact-ih-btn").click(function(){
-              $(".contact-popup").fadeIn();
-              $(this).addClass("active");
-            });
+          $(".contact-ih-btn").click(function(){
+            $(".contact-popup, #ih_contact_form").fadeIn();
+            $(this).addClass("active");
+          });
             
             $(".call-me-btn").click(function(){
               $(".cont-popup-content").hide();
@@ -1524,8 +1547,13 @@
               },3500);
 
               setTimeout(function() {
-                $("#thanks_initialize").hide();
-                $("#calling_div, .receive-callback").show();
+                $("#thanks_initialize, .contact-popup").hide();
+                $(".contact-ih-btn").removeClass("active");
+                $(".contact-finished , .receive-callback").show();
+
+                timer.reset(300);
+                timer.start();
+
                 //$(".contact-popup").animateAuto("height", 100);
               },8500);
 
@@ -1535,9 +1563,16 @@
             $(".contact-popup .close-popup").click(function(){
               $(".contact-popup").fadeOut();
               $(".contact-ih-btn").removeClass("active");
-              $("#ih_contact_form").show();
-              $("#thanks_initialize, #calling_div, .receive-callback").hide();
+              setTimeout(function() {
+                $("#ih_contact_form").show();
+                $("#thanks_initialize, #calling_div, .receive-callback").hide();
+              },1500);
             });
+
+          $(".contact-finished .close-popup").click(function(){
+            $(this).parent().fadeOut();
+          });
+
 
 
             $(".plan-img").click(function(){
