@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>India Homes</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- Important Bootstrap select -->
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <!-- Important Bootstrap select -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <!-- Important Odometer -->
+    <link rel="stylesheet" href="css/odometer-theme-car.css" />
+    <!-- Important Odometer -->
+    <link rel="stylesheet" href="css/flexslider.css" />
+
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <style type="text/css">
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Header -->
+<header class="">
+    <div class="section-first">
+          <!-- Main Header -->
+          <div class="inner-main-header clearfix">
+            <div class="header-left">
+              <div class="logo">
+                <a href="index.html" class="logo-link">
+                  <img src="css/images/logo-main.png" class="img-responsive" alt="India Homes">
+                </a>
+              </div>
+              <div class="prop-buttons">
+                <a href="index.html#buy" class="active">Buy</a>
+                <a href="index.html#rent" class="">Rent</a>
+                <a href="index.html#sell" class="">Sell</a>
+                <a href="index.html#loan" class="">Loan</a>
+              </div>
+            </div>
+            <div class="header-right">
+              <nav>
+                <ul class="nav navbar-nav">
+                    <li><a href="#" class="login-btn">Login</a></li>
+                    <li class="seperator">&nbsp;&nbsp; | &nbsp;&nbsp;</li>
+                    <li><a href="#" class="s">About IndiaHomes</a></li>
+                </ul>
+              </nav>
+
+              <div class="login-container">
+                <a href="#" class="close-popup"></a>
+                <div class="login-box">
+                  <p>Enter Your registered mobile number and your password to login</p>
+                  <fieldset>
+                    <input type="text" class="login-mobile" placeholder="Mobile Number">
+                    <p class="error-msg">Please enter a valid moile number</p>
+                    <input type="password" class="login-password" placeholder="Password">
+                  </fieldset>
+                  <div class="login-btn-holder">
+                    <a href="#" class="orange-button">Login</a>
+                  </div>
+                  <div class="clearfix login-options">
+                    <a href="#" class="left">Forgot your password</a>
+                    <p class="right">Don't have a login , <a href="#">Sign up here</a></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section-second clearfix" id="prop_filters">
+        <div class="filters-left">
+            <div class="prop-from-select">
+                <p>Showing Properties in </p>
+                <select class="selectpicker black-select">
+                    <option>NCR</option>
+                    <option>Mumbai</option>
+                    <option>Bangalore</option>
+                    <option>Kolkata</option>
+                    <option>Gurgaon</option>
+                    <option>Noida</option>      
+                </select>
+            </div>
+            <div class="search-prop">
+                <input type="text" class="seacrh-prop" value="Sector 3" />
+            </div>
+            <div class="prop-details-select">
+                <!--select class="selectpicker proptype-select">
+                    <option>Apartment</option>
+                    <option>Villa</option>
+                    <option>Independant Floor</option>
+                    <option>Plot</option>
+                    </select-->
+                <select class="selectpicker black-select" title='Select Bedroom'>
+                    <option>1 Bedrooms</option>
+                    <option selected>2 Bedrooms</option>
+                    <option>3 Bedrooms</option>
+                    <option>4/4+ bedrooms</option>
+                    <option>All Bedrooms</option>
+                </select>                
+                <select class="selectpicker black-select">
+                    <option selected>0 - 25L</option>
+                    <option>25L - 60L</option>
+                    <option>60L - 1.2 Cr</option>
+                    <option> 1.2 Cr - 2 Cr</option>
+                    <option>2 Cr +</option>
+                    <option>All budgets</option>
+                </select>    
+                <select class="selectpicker black-select med-select">
+                  <optgroup label="Posession status">
+                    <option>Any</option>
+                    <option selected>Upcoming properties</option>
+                    <option>Ready to move-in</option>
+                </optgroup>
+                </select>   
+                <select class="selectpicker black-select  big-select">
+                    <optgroup label="Ranking">
+                    <option>No constraint</option>
+                    <option selected>Premium Properties</option>
+                    <option>Best Properties to Live-In</option>
+                    <option>Best Investment Properties</option>
+                    </optgroup>
+                </select>       
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="section-third">
+        <div class="view-buttons-holder">
+            <a href="dev-map-view.html" class="prop-view-button"><span class="map-icon"></span>Map View</a>
+            <a href="dev-grid-view.html" class="prop-view-button active"><span class="grid-icon"></span>Grid View</a>
+        </div>
+        <div class="sl-properties-counts">
+            <p class="total-sl-propcount"> <b>Showing 200 shortlisted properties</b> </p>
+<!--             <p class="great-prop"> 100 Great properties</p>
+            <p class="good-prop">100 Good Properties</p>
+            <p class="avg-prop">100 Average Properties</p> -->
+        </div>
+        <div class="contact-ih">
+            <a href="Javascript:void(0)" class="big-contact-btn contact-ih-btn">Contact IndiaHomes for this requirement</a>
+        </div>
+
+
+        <div class="receive-callback">
+          <p class="callback">
+            <span class="timer-2d"></span>
+            You should receive a callback
+          in max 
+          <b class="timer">
+              <span class="minute">00</span>:<span class="second">00</span>mins
+          </b></p>
+        </div>
+
+
+        <div class="contact-popup">
+          <a href="javascript:void(0)" class="close-popup"></a>
+          <div class="cont-popup-content ih-contact-form" id="ih_contact_form">
+            <h2>We can call you right now to discuss Experion Heartsong</h2>
+            <fieldset>
+              <input type="text" class="contatc-box" placeholder="Name" />
+              <input type="text" class="contatc-box" placeholder="Mobile" />
+              <a href="Javascript:void(0)" class="read-more-btn call-me-btn">Call Me</a>
+            </fieldset>
+            <p class="error-msg">Please enter a valid mobile number</p>
+            <p class="italic-desc">callback in 5  mins between 9AM - 10 PM IST</p>
+            <p class="italic-desc">IndiaHomes does not share your number with 3rd party without your consent. You agree to  IndiaHomes  calling you for its services</p>
+          </div>
+
+          <div class="cont-popup-content thanks-initialize" id="thanks_initialize">
+            <p class="thank-you-p">Thank you for contacting IndiaHomes. Our property advisor will be calling 
+                you shortly</p>
+
+             <div class="initialize-loader">
+              <p>Initiating call back protocol<span class="initialize-loader-img"></span></p>
+             </div>   
+          </div>
+        </div>
+
+
+    </div>
+
+    </header>
+
+    <!-- Grid/Map view panel-->
+
+
+    <section id="gridmap_panel" class="gridmap-panel dev-grid-view">
+        <div class="row">
+            <div class="col-md-3 prop-accordian-panel">
+                <div class="panel-group" id="accordion">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                              Top Properties
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                          <div class="panel-body property-desc">
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+
+                                </div>
+                              </a>  
+                            </div>                            
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>                                                     
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                              Recently seen
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                          <div class="panel-body property-desc">
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>                             
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>     
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                              Short Listed
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                          <div class="panel-body property-desc">
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>                             
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>
+                            <div class="prop-list">
+                              <a href="property-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>      
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+            </div>
+            <div class="col-md-9 developer-grid-view" id="grid_view">
+                <!--div class="sort-by-cont">
+                    <label>Sort By</label>
+                    <a href="#" class="grey-button relevance-sort-btn">Relevance</a>
+                    <div class="grey-button price-sort-btn">
+                        Price
+                        <a href="#" class="up-arrow"></a>
+                        <a href="#" class="down-arrow"></a>
+                    </div>
+                </div-->
+
+                <div class="row new-row has-top-margin">
+
+
+                    <div class="col-md-4 individual-prop">
+                        <div class="prop-image-details">
+                            <a href="Javascript:void(0);" class="image-hover">
+                                <img src="http://www.indiahomes.com/images/UpComMumbai1.jpg" />
+                            </a>
+                            <div class="dev-prop-brief-details">
+                                <a href="dev-property-detail.html">
+                                    <h3>The Heartsong, Experion</h3>
+                                    <p> <label>Units</label> <span>2/3 BHK</span></p>
+                                    <p> <label>Rating</label> 
+                                        <span class="rating">
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-off"></i>
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <div class="prop-rank-but">
+                                            <p>Top Rank</p>
+                                            <div class="first-gold"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Gold Mine</p>
+                                            <div class="first-silver"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Dream Home</p>
+                                            <div class="first-bronze"></div>
+                                        </div>                                                                                
+                                    </div>
+                                    <a href="dev-property-detail.html" class="view-all-dev-detail">view all details</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, by Experion</p>
+                            <p class="left-prop-location">Sector 108, Gurgaon</p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 individual-prop">
+                        <div class="prop-image-details">
+                            <a href="Javascript:void(0);" class="image-hover">
+                                <img src="http://www.indiahomes.com/images/UpComMumbai1.jpg" />
+                            </a>
+                            <div class="dev-prop-brief-details">
+                                <a href="dev-property-detail.html">
+                                    <h3>The Heartsong, Experion</h3>
+                                    <p> <label>Units</label> <span>2/3 BHK</span></p>
+                                    <p> <label>Rating</label> 
+                                        <span class="rating">
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-off"></i>
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <div class="prop-rank-but">
+                                            <p>Top Rank</p>
+                                            <div class="first-gold"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Gold Mine</p>
+                                            <div class="first-silver"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Dream Home</p>
+                                            <div class="first-bronze"></div>
+                                        </div>                                                                                
+                                    </div>
+                                    <a href="dev-property-detail.html" class="view-all-dev-detail">view all details</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, by Experion</p>
+                            <p class="left-prop-location">Sector 108, Gurgaon</p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 individual-prop">
+                        <div class="prop-image-details">
+                            <a href="Javascript:void(0);" class="image-hover">
+                                <img src="http://www.indiahomes.com/images/UpComMumbai1.jpg" />
+                            </a>
+                            <div class="dev-prop-brief-details">
+                                <a href="dev-property-detail.html">
+                                    <h3>The Heartsong, Experion</h3>
+                                    <p> <label>Units</label> <span>2/3 BHK</span></p>
+                                    <p> <label>Rating</label> 
+                                        <span class="rating">
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-off"></i>
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <div class="prop-rank-but">
+                                            <p>Top Rank</p>
+                                            <div class="first-gold"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Gold Mine</p>
+                                            <div class="first-silver"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Dream Home</p>
+                                            <div class="first-bronze"></div>
+                                        </div>                                                                                
+                                    </div>
+                                    <a href="dev-property-detail.html" class="view-all-dev-detail">view all details</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, by Experion</p>
+                            <p class="left-prop-location">Sector 108, Gurgaon</p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 individual-prop">
+                        <div class="prop-image-details">
+                            <a href="Javascript:void(0);" class="image-hover">
+                                <img src="http://www.indiahomes.com/images/UpComMumbai1.jpg" />
+                            </a>
+                            <div class="dev-prop-brief-details">
+                                <a href="dev-property-detail.html">
+                                    <h3>The Heartsong, Experion</h3>
+                                    <p> <label>Units</label> <span>2/3 BHK</span></p>
+                                    <p> <label>Rating</label> 
+                                        <span class="rating">
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-off"></i>
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <div class="prop-rank-but">
+                                            <p>Top Rank</p>
+                                            <div class="first-gold"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Gold Mine</p>
+                                            <div class="first-silver"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Dream Home</p>
+                                            <div class="first-bronze"></div>
+                                        </div>                                                                                
+                                    </div>
+                                    <a href="dev-property-detail.html" class="view-all-dev-detail">view all details</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, by Experion</p>
+                            <p class="left-prop-location">Sector 108, Gurgaon</p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 individual-prop">
+                        <div class="prop-image-details">
+                            <a href="Javascript:void(0);" class="image-hover">
+                                <img src="http://www.indiahomes.com/images/UpComMumbai1.jpg" />
+                            </a>
+                            <div class="dev-prop-brief-details">
+                                <a href="dev-property-detail.html">
+                                    <h3>The Heartsong, Experion</h3>
+                                    <p> <label>Units</label> <span>2/3 BHK</span></p>
+                                    <p> <label>Rating</label> 
+                                        <span class="rating">
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-off"></i>
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <div class="prop-rank-but">
+                                            <p>Top Rank</p>
+                                            <div class="first-gold"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Gold Mine</p>
+                                            <div class="first-silver"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Dream Home</p>
+                                            <div class="first-bronze"></div>
+                                        </div>                                                                                
+                                    </div>
+                                    <a href="dev-property-detail.html" class="view-all-dev-detail">view all details</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, by Experion</p>
+                            <p class="left-prop-location">Sector 108, Gurgaon</p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 individual-prop">
+                        <div class="prop-image-details">
+                            <a href="Javascript:void(0);" class="image-hover">
+                                <img src="http://www.indiahomes.com/images/UpComMumbai1.jpg" />
+                            </a>
+                            <div class="dev-prop-brief-details">
+                                <a href="dev-property-detail.html">
+                                    <h3>The Heartsong, Experion</h3>
+                                    <p> <label>Units</label> <span>2/3 BHK</span></p>
+                                    <p> <label>Rating</label> 
+                                        <span class="rating">
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-off"></i>
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <div class="prop-rank-but">
+                                            <p>Top Rank</p>
+                                            <div class="first-gold"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Gold Mine</p>
+                                            <div class="first-silver"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Dream Home</p>
+                                            <div class="first-bronze"></div>
+                                        </div>                                                                                
+                                    </div>
+                                    <a href="dev-property-detail.html" class="view-all-dev-detail">view all details</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, by Experion</p>
+                            <p class="left-prop-location">Sector 108, Gurgaon</p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 individual-prop">
+                        <div class="prop-image-details">
+                            <a href="Javascript:void(0);" class="image-hover">
+                                <img src="http://www.indiahomes.com/images/UpComMumbai1.jpg" />
+                            </a>
+                            <div class="dev-prop-brief-details">
+                                <a href="dev-property-detail.html">
+                                    <h3>The Heartsong, Experion</h3>
+                                    <p> <label>Units</label> <span>2/3 BHK</span></p>
+                                    <p> <label>Rating</label> 
+                                        <span class="rating">
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-off"></i>
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <div class="prop-rank-but">
+                                            <p>Top Rank</p>
+                                            <div class="first-gold"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Gold Mine</p>
+                                            <div class="first-silver"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Dream Home</p>
+                                            <div class="first-bronze"></div>
+                                        </div>                                                                                
+                                    </div>
+                                    <a href="dev-property-detail.html" class="view-all-dev-detail">view all details</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, by Experion</p>
+                            <p class="left-prop-location">Sector 108, Gurgaon</p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 individual-prop">
+                        <div class="prop-image-details">
+                            <a href="Javascript:void(0);" class="image-hover">
+                                <img src="http://www.indiahomes.com/images/UpComMumbai1.jpg" />
+                            </a>
+                            <div class="dev-prop-brief-details">
+                                <a href="dev-property-detail.html">
+                                    <h3>The Heartsong, Experion</h3>
+                                    <p> <label>Units</label> <span>2/3 BHK</span></p>
+                                    <p> <label>Rating</label> 
+                                        <span class="rating">
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-off"></i>
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <div class="prop-rank-but">
+                                            <p>Top Rank</p>
+                                            <div class="first-gold"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Gold Mine</p>
+                                            <div class="first-silver"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Dream Home</p>
+                                            <div class="first-bronze"></div>
+                                        </div>                                                                                
+                                    </div>
+                                    <a href="dev-property-detail.html" class="view-all-dev-detail">view all details</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, by Experion</p>
+                            <p class="left-prop-location">Sector 108, Gurgaon</p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 individual-prop">
+                        <div class="prop-image-details">
+                            <a href="Javascript:void(0);" class="image-hover">
+                                <img src="http://www.indiahomes.com/images/UpComMumbai1.jpg" />
+                            </a>
+                            <div class="dev-prop-brief-details">
+                                <a href="dev-property-detail.html">
+                                    <h3>The Heartsong, Experion</h3>
+                                    <p> <label>Units</label> <span>2/3 BHK</span></p>
+                                    <p> <label>Rating</label> 
+                                        <span class="rating">
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-on"></i>
+                                          <i class="icon-star star-off"></i>
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <div class="prop-rank-but">
+                                            <p>Top Rank</p>
+                                            <div class="first-gold"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Gold Mine</p>
+                                            <div class="first-silver"></div>
+                                        </div>
+                                        <div class="prop-rank-but">
+                                            <p>Dream Home</p>
+                                            <div class="first-bronze"></div>
+                                        </div>                                                                                
+                                    </div>
+                                    <a href="dev-property-detail.html" class="view-all-dev-detail">view all details</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dev-prop-details clearfix">
+                            <p class="left-prop-detail">The Heartsong, by Experion</p>
+                            <p class="left-prop-location">Sector 108, Gurgaon</p>
+                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
+                        </div>
+                    </div>
+                                                                                                                                            
+                    
+                </div>
+
+
+                <div class="pagination-right">
+                    <ul class="clearfix">
+                        <li> <a href="#" class="prev-page"> <  </a> </li>
+                        <li> <a href="#" class="">1</a> </li>
+                        <li> <a href="#" class="">2</a> </li>
+                        <li> <a href="#" class="">3</a> </li>
+                        <li> <a href="#" class="active">4</a> </li>
+                        <li> <a href="#" class="">5</a> </li>
+                        <li> <a href="#" class="next-page"> > </a> </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            
+        </div>
+        <div class="preview-overlay"></div>
+    </section>
+
+
+
+    <!-- Footer -->
+
+<footer class="ih-footer">
+      <div class="container">
+        <ul class="footer-links muted">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Press </a></li>  
+          <li><a href="#">Room  </a></li>  
+          <li><a href="#">Blog  </a></li>  
+          <li><a href="#">Careers </a></li>   
+          <li><a href="#">Sitemap </a></li>  
+          <li><a href="#">Mobile Site </a></li>   
+          <li><a href="#">Disclaimer</a></li> 
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p class="copyright">Copyright © 2014 IndiaHomes.com | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="http://github.hubspot.com/odometer/odometer.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+
+    <script src="js/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap-select.js"></script>
+    <!-- Include Owl Carousal js plugin -->
+    <script src="js/owl.carousel.js"></script>
+    <!-- Include count js plugin -->
+    <script src="js/countUp.js"></script>
+    <!-- Include Way point js plugin -->
+    <script src="js/waypoints.js"></script>
+    <!-- Skroller for parallax effect -->
+    <script src="js/skrollr.min.js"></script>
+    <!-- Skroller for Typed JS -->
+    <script src="js/typed.js"></script>
+    <!-- Cookies -->
+    <script src="js/jquery.cookie.js"></script>
+
+    <script src="js/timer.js"></script> 
+
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+    <!-- Skroller for Flip counter JS -->
+    <script src="js/flipcounter.js"></script>
+    <!-- FlexSlider -->
+    <script src="js/jquery.flexslider.js"></script>
+    <!-- Skroller for Parallax-->
+    <script src="js/jquery.parallax.js"></script>
+
+    
+    <script src="js/custom.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        //$(".prop-accordian-panel .panel-group").css("height", $("#grid_view").height());
+
+          setTimeout(function() {
+            $(".prop-accordian-panel .panel-group").css("height", $(document).height() - 210);
+          },500);
+
+
+          $(".property-desc").mCustomScrollbar();
+
+        //Scripts for call back initialization
+
+          $(".contact-ih-btn").click(function(){
+            $(".contact-popup, #ih_contact_form").fadeIn();
+            $(this).addClass("active");
+          });
+          
+          $(".call-me-btn").click(function(){
+            $(".cont-popup-content").hide();
+            $("#thanks_initialize").fadeIn("slow");
+            //$(".contact-popup").animateAuto("height", 100);
+            setTimeout(function() {
+              $(".initialize-loader").css("visibility","visible");
+              //$(".contact-popup").animateAuto("height", 100);
+            },3500);
+
+            setTimeout(function() {
+              $("#thanks_initialize, .contact-popup").hide();
+              $(".contact-ih-btn").removeClass("active");
+              $(".contact-finished , .receive-callback").show();
+
+              timer.reset(300);
+              timer.start();
+
+              //$(".contact-popup").animateAuto("height", 100);
+            },8500);
+          });
+
+          $(".contact-popup .close-popup").click(function(){
+            $(".contact-popup").fadeOut();
+            $(".contact-ih-btn").removeClass("active");
+            setTimeout(function() {
+              $("#ih_contact_form").show();
+              $("#thanks_initialize, #calling_div, .receive-callback").hide();
+            },1500);
+          });
+
+
+        $(".contact-finished .close-popup").click(function(){
+          $(this).parent().fadeOut();
+        });  
+
+
+
+        $('#accordion').on('shown.bs.collapse', function () {
+          // do something…
+          $(".collapse.in .property-desc").mCustomScrollbar("update");
+        });
+
+    </script>
+
+</body>
+
+</html>

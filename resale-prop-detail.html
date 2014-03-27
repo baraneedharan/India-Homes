@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>India Homes</title>
+    <title>Property Details</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,20 +15,10 @@
 
     <!-- Important Owl stylesheet -->
     <link rel="stylesheet" href="css/owl.carousel.css">
-    <!-- Important Bootstrap select -->
-    <link rel="stylesheet" href="css/bootstrap-select.css">
-    <!-- Important Bootstrap select -->
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <!-- Important Odometer -->
-    <link rel="stylesheet" href="css/odometer-theme-car.css" />
-    <!-- Important Odometer -->
-    <link rel="stylesheet" href="css/flexslider.css" />
-
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-
-    <style type="text/css">
-    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,575 +26,685 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
-    <!-- Header -->
-<header class="">
+  
+  <!-- Header -->    
+  <header class="header">
+
     <div class="section-first">
+
+      <div class="container">
           <!-- Main Header -->
           <div class="inner-main-header clearfix">
             <div class="header-left">
               <div class="logo">
-                <a href="#" class="logo-link">
+                <a href="index.html" class="logo-link">
                   <img src="css/images/logo-main.png" class="img-responsive" alt="India Homes">
                 </a>
               </div>
               <div class="prop-buttons">
-                <a href="#" class="active">Buy</a>
-                <a href="#" class="">Rent</a>
-                <a href="#" class="">Sell</a>
-                <a href="#" class="">Loan</a>
+                <a href="index.html#buy" class="active">Buy</a>
+                <a href="index.html#rent" class="">Rent</a>
+                <a href="index.html#sell" class="">Sell</a>
+                <a href="index.html#loan" class="">Loan</a>
               </div>
             </div>
             <div class="header-right">
               <nav>
                 <ul class="nav navbar-nav">
-                    <li><a href="#" class="">Login</a></li>
+                    
+                    <li><a href="#" class="s">About IndiaHomes</a></li> 
                     <li class="seperator">&nbsp;&nbsp; | &nbsp;&nbsp;</li>
-                    <li><a href="#" class="s">About IndiaHomes</a></li>
+                    <li><a href="#" class="">Login</a></li>
+
                 </ul>
               </nav>
-            </div>
-        </div>
-    </div>
 
-    <div class="section-second clearfix" id="prop_filters">
-        <div class="filters-left">
-            <div class="prop-from-select">
-                <p>Showing Properties in </p>
-                <select class="selectpicker black-select">
-                    <option>Delhi</option>
-                    <option>Gurgaon</option>
-                    <option>Bangalore</option>
-                </select>
-            </div>
-            <div class="search-prop">
-                <input type="text" class="seacrh-prop" value="Sector 3" />
-            </div>
-            <div class="prop-details-select">
-                <select class="selectpicker proptype-select">
-                    <option>Apartment</option>
-                    <option>Villa</option>
-                    <option>Independant Floor</option>
-                    <option>Plot</option>
-                    </select>
-                <select class="selectpicker black-select">
-                    <option>2 Bedrooms</option>
-                    <option>3 Bedrooms</option>
-                    <option>4 bedrooms</option>
-                </select>                
-                <select class="selectpicker black-select">
-                    <option>30-35 Lakhs</option>
-                    <option>35-40 Lakhs</option>
-                    <option>40-45 Lakhs</option>
-                    <option>45-50 Lakhs</option>
-                    <option>50-60 Lakhs</option>
-                </select>                
-            </div>
-
-        </div>
-        <div class="filters-right">
-            <div class="change-filter">
-                <a href="#" class="change-filter-btn">Change Filters</a>
-            </div>
-
-            <div class="additional-filters">
+            <div class="login-container">
                 <a href="#" class="close-popup"></a>
-                <div class="all-add-fillters">
-                    <div class="select-availability" id="availability" data-toggle="buttons">
-                      <label class="br-label">Availibility Status: </label>
-                        <label class="btn btn-custom">
-                            <input type="radio" value="Under Construction">Under Construction
-                        </label>
-                        <label class="btn btn-custom active">
-                            <input type="radio" value="Ready To move">Ready To move
-                        </label>              
-                    </div> 
-
-                    <div class="select-posession">
-                      <label class="br-label">Posession Timeframe</label>
-                      <div class="possesions" data-toggle="buttons">
-                        <label class="btn btn-custom">
-                            <input type="radio" value="1 - 6 months">1 - 6 months
-                        </label>
-                        <label class="btn btn-custom">
-                            <input type="radio" value="1 - 6 months">6 - 12 months
-                        </label> 
-                        <label class="btn btn-custom">
-                            <input type="radio" value="1 - 6 months">12 - 18 months
-                        </label>
-                        <label class="btn btn-custom">
-                            <input type="radio" value="1 - 6 months">18 - 24 months
-                        </label> 
-                        <label class="btn btn-custom">
-                            <input type="radio" value="1 - 6 months">24 - 30 months
-                        </label>
-                        <label class="btn btn-custom">
-                            <input type="radio" value="1 - 6 months">30 months +
-                        </label>   
-                      </div>                
-                    </div>
-
-                    <div class="select-prop-age">
-                      <label class="br-label">Property Age</label>
-                      <div class="possesions" data-toggle="buttons">
-                        <label class="btn btn-custom">
-                            <input type="radio" value="0 - 3 months">0 - 3 months
-                        </label>
-                        <label class="btn btn-custom">
-                            <input type="radio" value="3 m - 1 year">3 m - 1 year
-                        </label> 
-                        <label class="btn btn-custom">
-                            <input type="radio" value="1 - 2 year">1 - 2 years
-                        </label>
-                        <label class="btn btn-custom">
-                            <input type="radio" value="2 - 5 year">2 - 5 years
-                        </label> 
-                        <label class="btn btn-custom">
-                            <input type="radio" value="5 - 10 months">5 - 10 years
-                        </label>
-                        <label class="btn btn-custom">
-                            <input type="radio" value="10 years +">10 years +
-                        </label>   
-                      </div>                
-                    </div>
-                    <fieldset class="all-bhks">
-                      <label class="br-label">Parking:</label>
-                      <div class="select-bhk" id="" data-toggle="buttons">
-                          <label class="btn btn-custom">
-                              <input type="radio" value="none">None 
-                          </label>                 
-                          <label class="btn btn-custom">
-                              <input type="radio" value="1">1 
-                          </label>
-                          <label class="btn btn-custom">
-                              <input type="radio" value="2">2 
-                          </label>
-                          <label class="btn btn-custom">
-                              <input type="radio" value="2+">2+
-                          </label>
-                      
-                      </div> 
-                    </fieldset>
-                    <fieldset class="all-bhks">
-                      <label class="br-label">Power backup: </label>
-                      <div class="select-bhk" id="" data-toggle="buttons">
-                          <label class="btn btn-custom">
-                              <input type="radio" value="none">None
-                          </label>
-                          <label class="btn btn-custom">
-                              <input type="radio" value="partial">Partial
-                          </label>
-                          <label class="btn btn-custom">
-                              <input type="radio" value="Full">Full
-                          </label>             
-                      </div> 
-                    </fieldset>
-                    <fieldset class="all-bhks">
-                      <label class="br-label">Security: </label>
-                      <div class="select-bhk" id="" data-toggle="buttons">
-                          <label class="btn btn-custom">
-                              <input type="radio" value="None">None
-                          </label>
-                          <label class="btn btn-custom">
-                              <input type="radio" value="yes">Yes
-                          </label>            
-                      </div> 
-                    </fieldset>
-
-                    <fieldset class="predefined-aminities">
-                         <label class="br-label">Other amenities </label>
-                        <div class="select-amenities" id="amenity_type" data-toggle="buttons">
-                          <label class="btn btn-custom small-btn">
-                              <input type="checkbox">
-                              <a href="" class="lift-icon">Lift</a>
-                          </label>                         
-                          <label class="btn btn-custom">
-                              <input type="checkbox">
-                              <a href="" class="swimpool-icon">Swimming Pool</a>
-                          </label>
-                          <label class="btn btn-custom">
-                              <input type="checkbox">
-                              <a href="" class="servent-icon">Servant room</a>
-                          </label> 
-                          <label class="btn btn-custom small-btn">
-                              <input type="checkbox">
-                              <a href="" class="gym-icon">Gym</a>
-                          </label>
-                          <label class="btn btn-custom">
-                              <input type="checkbox">
-                              <a href="" class="tennis-icon">Tennis court</a>
-                          </label>  
-                          <label class="btn btn-custom">
-                              <input type="checkbox">
-                              <a href="" class="pipedgas-icon">Piped Gas</a>
-                          </label>                
-                      </div> 
-                    </fieldset>     
-                    <div class="filter-buttons">
-                        <a href="#" class="orange-button">Apply</a>
-                        <a href="#" class="grey-button">Cancel</a>
-                    </div>
-
+                <div class="login-box">
+                  <p>Enter Your registered mobile number and your password to login</p>
+                  <fieldset>
+                    <input type="text" class="login-mobile" placeholder="Mobile Number">
+                    <p class="error-msg">Please enter a valid moile number</p>
+                    <input type="password" class="login-password" placeholder="Password">
+                  </fieldset>
+                  <div class="login-btn-holder">
+                    <a href="#" class="orange-button">Login</a>
+                  </div>
+                  <div class="clearfix login-options">
+                    <a href="#" class="left">Forgot your password</a>
+                    <p class="right">Don't have a login , <a href="#">Sign up here</a></p>
+                  </div>
                 </div>
-            </div>            
+              </div>
 
-            <a href="#" class="clear-filter-btn">Clear All Filters</a>
+            </div>
+        </div>
 
-        </div>     
+      </div>
+
     </div>
 
-    <div class="section-third">
-        <div class="view-buttons-holder">
-            <a href="map-view.html" class="prop-view-button"><span class="map-icon"></span>Map View</a>
-            <a href="grid-view.html" class="prop-view-button active"><span class="grid-icon"></span>Grid View</a>
+    <div class="section-breadcrumb">
+
+      <div class="container">
+
+            <div class="row">
+                <!-- sub Header -->
+                <div class="sub-header clearfix">
+                  <div class="breadcrumb-cont">
+                    <ol class="breadcrumb">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Gurgaon</a></li>
+                      <li><a href="#">Sector 108</a></li>
+                      <li class="active">2 Bedroom, Apartment</li>
+                    </ol>
+                  </div>
+                  <!--div class="search-prop-block">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for a Project or Developer or a Locality" id="query" name="query" value="">
+                          <div class="input-group-btn">
+                        <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </div>
+                  </div-->
+                </div>
+
+            </div>
+
         </div>
-        <div class="sl-properties-counts">
-            <p class="total-sl-propcount"> <b>Showing 200 shortlisted properties</b> </p>
-            <p class="great-prop"> 100 Great properties</p>
-            <p class="good-prop">100 Good Properties</p>
-            <p class="avg-prop">100 Average Properties</p>
-        </div>
-        <div class="contact-ih">
-            <a href="#" class="big-contact-btn">Contact IndiaHomes for this requirement</a>
-        </div>
-    </div>
+
+      </div>
 
     </header>
 
-    <!-- Grid/Map view panel-->
+    <!-- Propert brief -->
+    <section class="prop-brief" id="prop_brief">
 
+      <div class="container">
 
-    <section id="gridmap_panel" class="gridmap-panel">
-        <div class="row">
-            <div class="col-md-3 prop-accordian-panel">
-                <div class="panel-group" id="accordion">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                              Top Properties
-                            </a>
-                          </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse in">
-                          <div class="panel-body property-desc">
-                            <div class="prop-list">
-                                <div class="img-holder">
-                                    <img src="css/images/prop-list-img.png" />
-                                </div>
-                                <div class="prop-det">
-                                    <h3>Experion, Sector 108, Gurgaon</h3>
-                                    <p class="no-of-bed">3 Bed</p>
-                                    <p class="prop-price">75 L</p>
-                                </div>
-                            </div>
+          <div class="row">
 
-                            <div class="prop-list">
-                                <div class="img-holder">
-                                    <img src="css/images/prop-list-img.png" />
-                                </div>
-                                <div class="prop-det">
-                                    <h3>Experion, Sector 108, Gurgaon</h3>
-                                    <p class="no-of-bed">3 Bed</p>
-                                    <p class="prop-price">75 L</p>
-                                </div>
-                            </div>
-
-                            <div class="prop-list">
-                                <div class="img-holder">
-                                    <img src="css/images/prop-list-img.png" />
-                                </div>
-                                <div class="prop-det">
-                                    <h3>Experion, Sector 108, Gurgaon</h3>
-                                    <p class="no-of-bed">3 Bed</p>
-                                    <p class="prop-price">75 L</p>
-                                </div>
-                            </div>                            
-
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                              Recently seen
-                            </a>
-                          </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse">
-                          <div class="panel-body property-desc">
-                            <div class="prop-list">
-                                <div class="img-holder">
-                                    <img src="css/images/prop-list-img.png" />
-                                </div>
-                                <div class="prop-det">
-                                    <h3>Experion, Sector 108, Gurgaon</h3>
-                                    <p class="no-of-bed">3 Bed</p>
-                                    <p class="prop-price">75 L</p>
-                                </div>
-                            </div>
-
-                            <div class="prop-list">
-                                <div class="img-holder">
-                                    <img src="css/images/prop-list-img.png" />
-                                </div>
-                                <div class="prop-det">
-                                    <h3>Experion, Sector 108, Gurgaon</h3>
-                                    <p class="no-of-bed">3 Bed</p>
-                                    <p class="prop-price">75 L</p>
-                                </div>
-                            </div>
-
-                            <div class="prop-list">
-                                <div class="img-holder">
-                                    <img src="css/images/prop-list-img.png" />
-                                </div>
-                                <div class="prop-det">
-                                    <h3>Experion, Sector 108, Gurgaon</h3>
-                                    <p class="no-of-bed">3 Bed</p>
-                                    <p class="prop-price">75 L</p>
-                                </div>
-                            </div>  
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                              Short Listed
-                            </a>
-                          </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse">
-                          <div class="panel-body property-desc">
-                            <div class="prop-list">
-                                <div class="img-holder">
-                                    <img src="css/images/prop-list-img.png" />
-                                </div>
-                                <div class="prop-det">
-                                    <h3>Experion, Sector 108, Gurgaon</h3>
-                                    <p class="no-of-bed">3 Bed</p>
-                                    <p class="prop-price">75 L</p>
-                                </div>
-                            </div>
-
-                            <div class="prop-list">
-                                <div class="img-holder">
-                                    <img src="css/images/prop-list-img.png" />
-                                </div>
-                                <div class="prop-det">
-                                    <h3>Experion, Sector 108, Gurgaon</h3>
-                                    <p class="no-of-bed">3 Bed</p>
-                                    <p class="prop-price">75 L</p>
-                                </div>
-                            </div>
-
-                            <div class="prop-list">
-                                <div class="img-holder">
-                                    <img src="css/images/prop-list-img.png" />
-                                </div>
-                                <div class="prop-det">
-                                    <h3>Experion, Sector 108, Gurgaon</h3>
-                                    <p class="no-of-bed">3 Bed</p>
-                                    <p class="prop-price">75 L</p>
-                                </div>
-                            </div>  
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-
+            <div class="prop-detail-header-left">
+                <div class="small-logo">
+                  <a href="#"><img src="css/images/indiahomes-small-logo.png"></a>
+                </div>
+                <div class="groupname-prop-loc">
+                  <h2>2 Bedroom, Apartment</h2>
+                  <h4>Sector 108, Gurgaon</h4>
+                </div>
+                <div class="prop-other-detail">
+                  <h4>Price :</h4>
+                  <h3>&#x20B9; 1.5 Cr </h3>
+                </div>
+                <!--div class="prop-other-detail">
+                  <h4>Booking Amount </h4>
+                  <h3>5 lakhs onwards</h3>
+                </div-->
             </div>
-            <div class="col-md-9" id="grid_view">
 
-                <div class="row resale-preview">
+            <div class="prop-detail-header-right">
+                  <div class="col-xs-12 col-sm-6 col-md-8 btn-wrap">
+                    <a href="Javascript:void(0)" class="read-more-btn contact-ih-btn">Contact IndiaHomes</a>
+                    <a href="#" class="read-more-btn">Shortlist</a>
 
-                    <div class="resale-prop-breadcrum">
-                      <ol class="breadcrumb">
-                        <li><a href="#">Property listing</a></li>
-                        <li class="active">The Heartsong Experion, Sector 108, Gurgaon</li>
-                      </ol>
+
+                    <div class="receive-callback">
+                      <p class="callback">
+                        <span class="timer-2d"></span>
+                        You should receive a callback
+                      in max 
+                      <b class="timer">
+                          <span class="minute">00</span>:<span class="second">00</span>mins
+                      </b></p>
                     </div>
 
-                    <div class="preview-content clearfix">
-                      <div class="property-photo-preview">
-                        <!-- <h2>2 BHK apartment at HSR layout, Bangalore</h2> -->
-                        <section class="slider">
-                          <div id="slider" class="flexslider">
-                            
-                          <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 800%; transition: 0s; -webkit-transition: 0s; -webkit-transform: translate3d(0px, 0px, 0px);">
-                              <li class="flex-active-slide" style="width: 656px; float: left; display: block;">
-                                <img src="css/images/sample.jpg" draggable="false">
-                              </li>
-                              <li style="width: 656px; float: left; display: block;">
-                                <img src="css/images/sample.jpg" draggable="false">
-                              </li>
-                              <li style="width: 656px; float: left; display: block;">
-                                <img src="css/images/sample.jpg" draggable="false">
-                              </li>
-                              <li style="width: 656px; float: left; display: block;">
-                                <img src="css/images/sample.jpg" draggable="false">
-                              </li>
-                            </ul></div><ul class="flex-direction-nav"><li><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
-                          <div id="carousel" class="flexslider">
-                            
-                          <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 800%; transition: 0s; -webkit-transition: 0s; -webkit-transform: translate3d(0px, 0px, 0px);">
-                              <li class="flex-active-slide" style="width: 107px; float: left; display: block;">
-                                <img src="css/images/sample.jpg" draggable="false">
-                              </li>
-                              <li style="width: 107px; float: left; display: block;">
-                                <img src="css/images/sample.jpg" draggable="false">
-                              </li>
-                              <li style="width: 107px; float: left; display: block;">
-                                <img src="css/images/sample.jpg" draggable="false">
-                              </li>
-                              <li style="width: 107px; float: left; display: block;">
-                                <img src="css/images/sample.jpg" draggable="false">
-                              </li>
-                            </ul></div><ul class="flex-direction-nav"><li><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li><a class="flex-next flex-disabled" href="#" tabindex="-1">Next</a></li></ul></div>
-                        </section>
-                      </div>
-                      <div class="property-details">
-
-                        <div class="panel-group" id="prop_accordion">
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#prop_accordion" href="#photoanddetails">
-                                  Property Details
-                                </a>
-                              </h4>
-                            </div>
-                            <div id="photoanddetails" class="panel-collapse collapse in">
-                              <div class="panel-body property-desc">
-                                <div class="prop-details">
-                                  <h2>2 BHK apartment at HSR layout, Bangalore</h2>
-                                  <p> <label>Bedroom : </label> 3</p>
-                                  <p> <label>Price : </label> 75Lakhs</p>
-                                  <p> <label>Area: </label> 1200 Sqft</p>
-                                  <p> <label>Bathroom: </label> 2</p>
-                                  <p> <label>Furnished: </label> Unfurnished</p>
-                                  <p> <label>Current Status: </label> Available</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#prop_accordion" href="#keyfeatures">
-                                  Key Features
-                                </a>
-                              </h4>
-                            </div>
-                            <div id="keyfeatures" class="panel-collapse collapse">
-                              <div class="panel-body property-desc">
-                                <div class="prop-details">
-                                  <p> <label>Bedroom : </label> 3</p>
-                                  <p> <label>Price : </label> 75Lakhs</p>
-                                  <p> <label>Area: </label> 1200 Sqft</p>
-                                  <p> <label>Bathroom: </label> 2</p>
-                                  <p> <label>Furnished: </label> Unfurnished</p>
-                                  <p> <label>Current Status: </label> Available</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#prop_accordion" href="#neighbourhood">
-                                  Neighbourhood
-                                </a>
-                              </h4>
-                            </div>
-                            <div id="neighbourhood" class="panel-collapse collapse">
-                              <div class="panel-body property-desc">
-                                <div class="prop-details">
-                                  <p> <label>Bedroom : </label> 3</p>
-                                  <p> <label>Price : </label> 75Lakhs</p>
-                                  <p> <label>Area: </label> 1200 Sqft</p>
-                                  <p> <label>Bathroom: </label> 2</p>
-                                  <p> <label>Furnished: </label> Unfurnished</p>
-                                  <p> <label>Current Status: </label> Available</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#prop_accordion" href="#amenitiesacc">
-                                  Amenities
-                                </a>
-                              </h4>
-                            </div>
-                            <div id="amenitiesacc" class="panel-collapse collapse">
-                              <div class="panel-body property-desc">
-                                
-                                <div class="prop-amenities">
-                                  <h4>Amenities</h4>
-                                  <ul>
-                                    <li><span class="gym-icon">Gym</span></li>
-                                    <li><span class="swimpool-icon">Swimming Pool</span></li>
-                                    <li><span class="lift-icon">Elevator</span></li>
-                                    <li><span class="servent-icon">Servent room</span></li>
-                                    <li><span class="tennis-icon">Tennis court</span></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-                          
-                        </div>
-
-                      </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4 prop-social">
+                    <label>Share this on</label>
+                    <a href="#" class="social-icon fb"></a>
+                    <a href="#" class="social-icon tw"></a>
+                    <a href="#" class="social-icon gplus"></a>
+                    <a href="#" class="social-icon mail"></a>
                   </div>
 
 
-                </div>
+                  <div class="contact-popup">
+                    <a href="javascript:void(0)" class="close-popup"></a>
+                    <div class="cont-popup-content ih-contact-form" id="ih_contact_form">
+                      <h2>We can call you right now to discuss Experion Heartsong</h2>
+                      <fieldset>
+                        <input type="text" class="contatc-box" placeholder="Name" />
+                        <input type="text" class="contatc-box" placeholder="Mobile" />
+                        <a href="Javascript:void(0)" class="read-more-btn call-me-btn">Call Me</a>
+                      </fieldset>
+                      <p class="error-msg">Please enter a valid mobile number</p>
+                      <p class="italic-desc">callback in 5  mins between 9AM - 10 PM IST</p>
+                      <p class="italic-desc">IndiaHomes does not share your number with 3rd party without your consent. You agree to  IndiaHomes  calling you for its services</p>
+                    </div>
+
+                    <div class="cont-popup-content thanks-initialize" id="thanks_initialize">
+                      <p class="thank-you-p">Thank you for contacting IndiaHomes. Our property advisor will be calling 
+                          you shortly</p>
+
+                       <div class="initialize-loader">
+                        <p>Initiating call back protocol<span class="initialize-loader-img"></span></p>
+                       </div>   
+                    </div>
+                  </div>
 
             </div>
-            
+
+          </div>
+
         </div>
-        <div class="preview-overlay"></div>
+
     </section>
 
 
 
-    <!-- Footer -->
 
-    <!--footer class="ih-footer">
+    <!-- Propert Complete details -->
+    <section class="prop-full-details" id="prop_full_details">
+
+      <div class="container">
+
+          <div class="row">
+
+              <div class="col-md-3 prop-details-wrapper">
+                  <div class="prop-details-nav">
+                    <ul class="prop-navigation">
+                      <li class="active"><a href="#propert_details" class="prop-solo-details-links">Property Detail</a></li>
+                      <li><a class="prop-solo-details-links" href="#neighbourhood">Neighbourhood</a></li>
+                      <li><a class="prop-solo-details-links" href="#prop_amenities">Amenities</a></li>
+
+                      <li><a class="prop-solo-details-links prop-other-aminities" href="#prop_other_amenities">Other Amenities</a></li>
+
+                      <li><a class="prop-solo-details-links" href="#prop_features">Floor Plan</a></li>
+                      <li><a class="prop-solo-details-links" href="#contact_indiahomes">Contact IndiaHomes</a></li>
+                    </ul>
+                  </div>
+              </div>
+
+              <!-- Property Details Container-->
+              <div class="col-xs-12 col-sm-12 col-md-9 prop-wrapper">
+
+
+                <!-- popup -->
+
+                <section class="contact-finished">
+                    <a href="#" class="close-popup"></a>
+                    <div class="calling-div" id="calling_div">
+                      <div class="view-similar-prop">
+                        <h2>View  more properties similar to Experion Heartsong</h2>
+                        <div class="prop-img">
+                          <img src="css/images/about-img1.jpg">
+                        </div>
+                        <div class="prop-detai clearfix">
+                          <p class="prop-addr-left">Spaze Privy, The Address</p>
+                          <p class="prop-addr-right">Sector 93</p>
+                        </div>
+
+                        <a href="Javascript:void(0)" class="see-more-opt">See more option</a>
+
+                      </div>
+                      <div class="register-for-ih">
+                        <h2>Want the latest updates and news on your favourite properties or areas?</h2>
+
+                        <a href="#" class="read-more-btn">Register for IndiaHomes Analytics</a>
+
+                        <a href="Javascript:void(0)" class="see-more-opt">Know More</a>
+
+                      </div>
+                    </div>
+                </section>
+
+
+
+                <div class="prop-details prop-detail-content" id="propert_details">
+
+                  <h3 class="section-headers"><i class="glyphicon glyphicon-chevron-down"></i>Project Detail</h3>
+
+                  <div class="collapse-block row">
+
+                      <div class="col-xs-12 col-sm-8 col-md-8">
+
+                        <div id="owl-demo" class="owl-carousel owl-theme"> 
+                          <div class="item"><img src="css/images/sample.jpg" class="img-responsive" /></div>
+                          <div class="item"><img src="css/images/sample.jpg" class="img-responsive" /></div>
+                          <div class="item"><img src="css/images/sample.jpg" class="img-responsive" /></div> 
+                          <div class="item"><img src="css/images/sample.jpg" class="img-responsive" /></div>
+                          <div class="item"><img src="css/images/sample.jpg" class="img-responsive" /></div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-4 col-md-4 ropert-desc">
+                        <div class="proj-feature-desc">
+
+                          <p> <label>Property Type: </label> Apartment</p>
+                          <p> <label>Bedrooms: </label> 3</p>
+                          <p> <label>Bathrooms: </label> 3</p>
+                          <p> <label>Size :</label> 1200 Sq.ft</p>
+                          <p> <label>Possession Status :</label> 6 - 12 months </p>
+                          <p> <label>Rate per sq ft:</label> 2k - 4k </p>
+
+                         
+                        </div>                        
+    
+                      </div>
+
+                  </div>
+
+                </div>
+
+                <!-- Neighbourhood Container-->
+                <div class="neighbourhood-details prop-detail-content" id="neighbourhood">
+
+                  <h3 class="section-headers"><i class="glyphicon glyphicon-chevron-down"></i>Location and Neighbourhood</h3>
+
+                  <div class="collapse-block row">
+
+                    <div class="col-xs-12 col-sm-8  col-md-8">
+
+                      <div class="neighbourhoodprop-map-container">
+
+                        <img src="css/images/map.jpg" class="img-responsive"/>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4  col-md-4">
+
+                        <div class="search-commute">
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Where do you commute?" id="query" name="query" value="">
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="neighborhood-accordian">
+
+                          <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title neigh-arrow open-arrow">
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="icon-neighbour">Restaurants</a>
+                                </h4>
+                              </div>
+                              <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                  <ul class="neighbour-list">
+                                    <li> <a href="#">Kaushik Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#" class="active">Blue Petal Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#">Krishna Sagar <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#">Mughal Treat <span class="neigh-distance">3.7 Km</span></a> </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title neigh-arrow close-arrow">
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"  class="icon-neighbour icon-coffee">
+                                    Coffee
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <ul class="neighbour-list">
+                                    <li> <a href="#">Kaushik Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#">Blue Petal Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#">Krishna Sagar <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#">Mughal Treat <span class="neigh-distance">3.7 Km</span></a> </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title neigh-arrow close-arrow">
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"  class="icon-neighbour icon-bars">Bars</a>
+                                </h4>
+                              </div>
+                              <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <ul class="neighbour-list">
+                                    <li> <a href="#">Kaushik Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#">Blue Petal Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title neigh-arrow close-arrow">
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"  class="icon-neighbour icon-groceries">
+                                    Groceries
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseFour" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <ul class="neighbour-list">
+                                    <li> <a href="#">Kaushik Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#">Blue Petal Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title neigh-arrow close-arrow">
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"  class="icon-neighbour icon-parks">
+                                    Parks
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseFive" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <ul class="neighbour-list">
+                                    <li> <a href="#">Kaushik Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#">Blue Petal Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title neigh-arrow close-arrow">
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix"  class="icon-neighbour icon-shopping">
+                                    Shopping
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseSix" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <ul class="neighbour-list">
+                                    <li> <a href="#">Kaushik Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#">Blue Petal Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title neigh-arrow close-arrow">
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven"  class="icon-neighbour icon-entertainment">
+                                    Entertainment
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseSeven" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <ul class="neighbour-list">
+                                    <li> <a href="#">Kaushik Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                    <li> <a href="#">Blue Petal Restaurant <span class="neigh-distance">3.7 Km</span></a> </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>  
+                          </div>
+                          
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Amenities Container-->
+                  <div class="prop-amenities" id="prop_amenities">
+
+                    <h3 class="section-headers"><i class="glyphicon glyphicon-chevron-down"></i>Amenities</h3>
+
+                    <div class="collapse-block row">
+
+                      <div class="col-xs-6 col-sm-3 col-md-3 amenities-name">
+
+                          <img src="css/images/amenity-2.jpg" class="img-responsive">
+
+                          <span class="amenities-info">Basketball Court</span>
+                        
+                      </div> 
+
+                      <div class="col-xs-6 col-sm-3 col-md-3 amenities-name">
+
+                          <img src="css/images/amenity-3.jpg" class="img-responsive">
+
+                          <span class="amenities-info">Tennis Court</span>
+                        
+                      </div> 
+
+                      <div class="col-xs-6 col-sm-3 col-md-3 amenities-name">
+
+                          <img src="css/images/amenity-4.jpg" class="img-responsive">
+
+                          <span class="amenities-info">Childrens Play Area</span>
+                        
+                      </div> 
+
+                      <div class="col-xs-6 col-sm-3 col-md-3 amenities-name">
+                          
+                          <img src="css/images/amenity-5.jpg" class="img-responsive">
+
+                          <span class="amenities-info">Gym</span>
+                        
+                      </div> 
+
+                      <div class="col-xs-6 col-sm-3 col-md-3 amenities-name">
+
+                          <img src="css/images/amenity-6.jpg" class="img-responsive">
+
+                          <span class="amenities-info">Club House</span>
+                        
+                      </div> 
+
+                      <div class="col-xs-6 col-sm-3 col-md-3 amenities-name">
+
+                          <img src="css/images/amenity-7.jpg" class="img-responsive">
+
+                          <span class="amenities-info">Swimming Pool</span>
+                        
+                      </div> 
+
+                      <div class="col-xs-6 col-sm-3 col-md-3 amenities-name">
+
+                          <img src="css/images/amenity-8.jpg" class="img-responsive">
+
+                          <span class="amenities-info">Elevators</span>
+                        
+                      </div> 
+
+                      <div class="col-xs-6 col-sm-3 col-md-3 amenities-name">
+                          
+                          <img src="css/images/amenity-1.jpg" class="img-responsive">
+
+                          <span class="amenities-info">Parking Area</span>
+                        
+                      </div> 
+
+                    </div>
+
+                  </div>  
+
+
+
+                  <!--Property other amenities Container-->
+                  <div class="indiahomes-review prop-detail-content" id="prop_other_amenities">
+
+                    <h3 class="section-headers"><i class="glyphicon glyphicon-chevron-down"></i>Other Amenities</h3>
+
+                      <div class="collapse-block row">  
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 review-content">                      
+                        
+
+                          <p><b>Amenities:-</b> The Heartsong by Experion offers excellent and exclusively designed world-class specifications equipped with all sorts of modern amenities such as 24x7 manned securities, grand clubhouse and massive green area. Your lifestyle is adorned with an upmarket specification like the imported marble flooring, wooden flooring in bedrooms, kitchens with granite counters &amp; top of the line washroom fittings, exclusive club house and health club. Moving forward, you can avail umpteen greenery, landscaped gardens with traced jogging tracks, skating rink, cricket nets, pool tables, card area, health club sauna, Jacuzzi, swimming pool, skating rink, lawn tennis court, pool tables and coffee shops, kids play area &amp; and traffic free podium.</p>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+                  <!-- Features Container-->
+                  <div class="prop-features prop-detail-content" id="prop_features">
+                    <h3 class="section-headers"><i class="glyphicon glyphicon-chevron-down"></i>Floor plan</h3>
+                    <div class="collapse-block row">
+                      <div class="col-xs-12 col-sm-12  col-md-12">
+                        
+                      <div class="floor_plan_box">
+                          <h4>Master Plan</h4>
+                          <ul>
+                              <li>
+                                <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137628_Site-Plan-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                    <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137630_Site-Plan-logo.jpg" alt="Panchsheel Greens 2 Noida" height="" width="" title="Master Plan">
+                                </a>
+                              </li>
+                          </ul>
+                      </div>
+
+
+                    <div class="floor_plan_box">
+                        <h4>Location Map</h4>
+                        <ul>
+                            <li>
+                                <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137613_Location-Map-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                        <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137615_Location-Map-logo.jpg" alt="Panchsheel Greens 2 Greater Noida West" height="" width="" title="Location Map">
+                                </a>    
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="floor_plan_box">
+                        <h4>Elevation</h4>
+                        <ul>
+                            <li>
+                              <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137814_3-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                    <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137816_3-logo.jpg" alt="Panchsheel Greens 2 Noida" height="" width="" title="Panchsheel Greens 2 by Panchsheel Group">
+                                </a>
+                                <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137817_2-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                    <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137819_2-logo.jpg" alt="Panchsheel Greens 2 Greater Noida West, Location Map, Price, Review" height="" width="" title="Panchsheel Greens 2 Noida">
+                                </a>
+                                <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137820_1-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                    <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137822_1-logo.jpg" alt="Panchsheel Greens 2 Noida, Panchsheel Greens 2 Sector 16 Noida Extension" height="" width="" title="Panchsheel Greens 2 Noida">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="floor_plan_box">
+                        <h4>Floor Plan </h4>
+                        <ul>
+                            <li>
+                              <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137576_Fp-1-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                  <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137579_Fp-1-logo.jpg" alt="2 BHK Floor Plan" height="" width="" title="Floor Plan">
+                              </a>
+                          
+                              <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137580_Fp-2-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                  <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137582_Fp-2-logo.jpg" alt="2 BHK + 2T Floor Plan" height="" width="" title="Floor Plan">
+                              </a>
+                          
+                              <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137583_Fp-3-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                  <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137585_Fp-3-logo.jpg" alt="2 BHK + Study Floor Plan" height="" width="" title="Floor Plan">
+                              </a>
+                          
+                              <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137586_Fp-4-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                  <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137588_Fp-4-logo.jpg" alt="3 BHK + 2T Floor Plan" height="" width="" title="Floor Plan">
+                              </a>
+                          
+                              <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137589_Fp-5-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                  <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137591_Fp-5-logo.jpg" alt="3 BHK + 2T Floor Plan" height="" width="" title="Floor Plan">
+                              </a>
+                          
+                              <a href="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_381233272029137592_Fp-6-logo.jpg" rel="prettyPhoto[gallery]" onclick="clearInterval(sliderTimer);">
+                                  <img src="http://dme3s8ew7zdci.cloudfront.net/projectimages/upld_thumb_381233272029137594_Fp-6-logo.jpg" alt="3 BHK + 3T Floor Plan" height="" width="" title="Floor Plan">
+                              </a>
+                            </li>
+                        </ul>
+                    </div>                    
+
+
+                      </div>
+                    </div>
+                  </div>    
+
+                  
+
+
+                  
+
+                </div>
+
+              </div>
+
+            </div>
+
+              <!-- Contact IndiaHomes Container-->
+              <div class="contact-indiahomes" id="contact_indiahomes">
+
+                <div class="container">
+
+                    <div class="collapse-block">
+
+                      <div class="col-md-8 col-md-offset-2">
+
+                          <h3 class="contact-heading">Contact IndiaHomes now for Experion Heartsong</h3>
+
+                          <p>Good things don't last forever, and Experion The Heartsong may also be sold out soon or not available at this price point.</p>
+               
+                          <p>Talk to one of our Professional Advisor now to understand the project, developer or the area potential better. Our advisors will also assist you to explore other options if they are a better fit for your need. We offer free site visits at a time convinient to you, and will support you in all documentation and processing activities with not just the developer, but also a Home Loan if you need one.</p>
+                           
+                          <p>Take advantage of all these and more by getting a callback from IndiaHomes now!</p>
+
+                          <div class="contact-form">
+                            <input type="text" class="form-control contact-input" id="mobilenum" placeholder="Enter you mobile No. here">
+                            <a href="#" class="contact-button">Call me now</a>
+                          </div>
+
+                      </div>
+
+                    </div>
+
+                </div>
+
+              </div>
+
+              
+
+              </div>
+          
+           </section>
+
+            <!-- Footer -->
+
+<footer class="ih-footer">
       <div class="container">
         <ul class="footer-links muted">
-          <li><a href="#">Home</a> | </li>
-          <li><a href="#">Press </a> | </li>  
-          <li><a href="#">Room  </a> | </li>  
-          <li><a href="#">Blog  </a> | </li>  
-          <li><a href="#">Careers </a> | </li>   
-          <li><a href="#">Sitemap </a> | </li>  
-          <li><a href="#">Mobile Site </a> | </li>   
-          <li><a href="#">Disclaimer</a> | </li> 
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Press </a></li>  
+          <li><a href="#">Room  </a></li>  
+          <li><a href="#">Blog  </a></li>  
+          <li><a href="#">Careers </a></li>   
+          <li><a href="#">Sitemap </a></li>  
+          <li><a href="#">Mobile Site </a></li>   
+          <li><a href="#">Disclaimer</a></li> 
           <li><a href="#">Contact Us</a></li>
         </ul>
         <p class="copyright">Copyright © 2014 IndiaHomes.com | All Rights Reserved</p>
       </div>
-    </footer-->
-
-    <script src="http://github.hubspot.com/odometer/odometer.js"></script>
+    </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.js"></script>
@@ -612,53 +713,192 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-select.js"></script>    
     <!-- Include Owl Carousal js plugin -->
     <script src="js/owl.carousel.js"></script>
-    <!-- Include count js plugin -->
-    <script src="js/countUp.js"></script>
     <!-- Include Way point js plugin -->
     <script src="js/waypoints.js"></script>
+    <script src="js/waypoints-sticky.js"></script>
     <!-- Skroller for parallax effect -->
     <script src="js/skrollr.min.js"></script>
     <!-- Skroller for Typed JS -->
     <script src="js/typed.js"></script>
-    <!-- Skroller for Flip counter JS -->
-    <script src="js/flipcounter.js"></script>
-    <!-- FlexSlider -->
-    <script src="js/jquery.flexslider.js"></script>
-    <!-- Skroller for Parallax-->
-    <script src="js/jquery.parallax.js"></script>
+    <!-- Cookies -->
+    <script src="js/jquery.cookie.js"></script>
 
-    
-    <script src="js/custom.js" type="text/javascript"></script>
+    <script src="js/timer.js"></script>
+    <!-- FlexSlider -->
+    <script src="js/jquery.flexslider.js"></script>    
+    <!-- Sky momevent Script-->
+    <script src="js/jquery.spritely-0.6.js"></script>
+
+    <script src="js/jquery.prettyPhoto.js"></script>    
+
+    <script src="js/custom.js"></script>
 
     <script type="text/javascript">
-        //$(".prop-accordian-panel .panel-group").css("height", $("#grid_view").height());
-
-          setTimeout(function() {
-            $(".prop-accordian-panel .panel-group").css("height", $(window).height() - 100);
-          },500);
 
 
-          $('#carousel').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            itemWidth: 107,
-            itemMargin: 15,
-            asNavFor: '#slider'
+
+    //Property details page scripts
+        var windoWidth = $(window).width();
+
+        if(windoWidth >= 1024) {
+          $('.prop-brief').waypoint('sticky');
+        };
+
+        $("a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+
+        if(windoWidth < 1024) {    
+          $('.section-headers').click(function() {
+              $(this).find('i').toggleClass('glyphicon-chevron-up');
+              $(this).parent().find('.collapse-block').slideToggle();
+          });
+        };
+
+
+
+
+
+        $("#owl-demo").owlCarousel({
+            navigation : true, // Show next and prev buttons
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem:true 
           });
 
-          $('#slider').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            sync: "#carousel",
-          });    
+          $('.icon-neighbour').on('click', function() {
+            if($(this).parent().hasClass('open-arrow')) {
+              $(this).parent().removeClass('open-arrow');
+              $(this).parent().addClass('close-arrow');
+            } else if($(this).parent().hasClass('close-arrow')) {
+              $(this).parent().removeClass('close-arrow');
+              $(this).parent().addClass('open-arrow');
+            } else {
+              //do nothing
+            }
+          });
 
+            var win_width=$(window).width();
+            var foo_off=$("#contact_indiahomes").offset().top;
+            var fil_wid=$(".prop-details-nav").width();
+            var fm_off=$(".prop-details-nav").offset().top - 105;
+            var fil_hei=$(".prop-details-nav").outerHeight(true);
+
+            $(window).resize(function(){
+                fil_wid=$(".prop-details-nav").width();
+                fixFil();
+            });
+            fixFil();
+            function fixFil() {
+              $(window).scroll(function(){
+                  var foo_off = $("#contact_indiahomes").offset().top - 120;
+                  var m_off = $(".prop-details-nav").offset().top - 105;
+                  var win_scroll = $(window).scrollTop();
+                  if(win_scroll < foo_off-fil_hei) {        
+                    $(".prop-details-nav").css({"position":"fixed","top":"105px","width":fil_wid});
+                  };
+                  if(win_scroll < fm_off) {
+                     $(".prop-details-nav").css({"position":"relative","top":"0"});
+                  };
+                  if(win_scroll > foo_off-fil_hei) {              
+                    $(".prop-details-nav").css({"position":"relative","top":foo_off-fil_hei-fm_off});
+                  };
+              });
+            };
+
+            $('.prop-navigation li > a[href*=#]:not([href=#])').click(function() {
+              if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                  $('html,body').animate({
+                    scrollTop: target.offset().top - 105
+                  }, 500);
+                  $('.prop-navigation li').removeClass('active');
+                  $(this).parent().addClass('active');
+                  return false;
+                }
+              }
+            }); 
+
+
+
+            //Scripts for call back initialization
+
+          $(".contact-ih-btn").click(function(){
+            $(".contact-popup, #ih_contact_form").fadeIn();
+            $(this).addClass("active");
+          });
+            
+            $(".call-me-btn").click(function(){
+              $(".cont-popup-content").hide();
+              $("#thanks_initialize").fadeIn("slow");
+              //$(".contact-popup").animateAuto("height", 100);
+              setTimeout(function() {
+                $(".initialize-loader").css("visibility","visible");
+                //$(".contact-popup").animateAuto("height", 100);
+              },3500);
+
+              setTimeout(function() {
+                $("#thanks_initialize, .contact-popup").hide();
+                $(".contact-ih-btn").removeClass("active");
+                $(".contact-finished , .receive-callback").show();
+
+                timer.reset(300);
+                timer.start();
+
+                //$(".contact-popup").animateAuto("height", 100);
+              },8500);
+
+
+            });
+
+            $(".contact-popup .close-popup").click(function(){
+              $(".contact-popup").fadeOut();
+              $(".contact-ih-btn").removeClass("active");
+              setTimeout(function() {
+                $("#ih_contact_form").show();
+                $("#thanks_initialize, #calling_div, .receive-callback").hide();
+              },1500);
+            });
+
+          $(".contact-finished .close-popup").click(function(){
+            $(this).parent().fadeOut();
+          });
+
+
+
+            $(".plan-img").click(function(){
+              var selected_img = $(this).find("img").attr("src");
+              $(".proj-feature-image img").attr("src", selected_img);
+            });
+
+
+
+            $(window).scroll(function() {
+                  //Highlight menus
+                  var scroll_top=$(window).scrollTop();
+                  var secpos=new Array();
+                  var secheight=new Array();
+                  var arr = $('a.prop-solo-details-links').map(function() {
+                           var sechref=this.href;
+                           var secname=sechref.split("#");
+                           return secname[1];
+                      }).toArray();
+
+                  for(var i=0;i<arr.length;i++){
+                      secpos[i]=$("#"+arr[i]).offset().top-180;
+                      secheight[i]=$("#"+arr[i]).outerHeight();
+                  }
+                  for(var i=0;i<secpos.length;i++){
+                      if(scroll_top>=secpos[i] && scroll_top<(secpos[i]+secheight[i])){
+                          $(".prop-navigation li.active").removeClass("active");
+                          $("a[href*="+arr[i]+"]").parent().addClass("active");
+                      }
+                    }
+                    
+              });
 
     </script>
 

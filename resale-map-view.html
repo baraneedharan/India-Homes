@@ -23,6 +23,8 @@
     <!-- Important Odometer -->
     <link rel="stylesheet" href="css/flexslider.css" />
 
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
@@ -38,22 +40,22 @@
 </head>
 
 <body>
-    <!-- Header -->
+<!-- Header -->
 <header class="">
     <div class="section-first">
           <!-- Main Header -->
           <div class="inner-main-header clearfix">
             <div class="header-left">
               <div class="logo">
-                <a href="#" class="logo-link">
+                <a href="index.html" class="logo-link">
                   <img src="css/images/logo-main.png" class="img-responsive" alt="India Homes">
                 </a>
               </div>
               <div class="prop-buttons">
-                <a href="#" class="active">Buy</a>
-                <a href="#" class="">Rent</a>
-                <a href="#" class="">Sell</a>
-                <a href="#" class="">Loan</a>
+                <a href="index.html#buy" class="active">Buy</a>
+                <a href="index.html#rent" class="">Rent</a>
+                <a href="index.html#sell" class="">Sell</a>
+                <a href="index.html#loan" class="">Loan</a>
               </div>
             </div>
             <div class="header-right">
@@ -73,13 +75,32 @@
             <div class="prop-from-select">
                 <p>Showing Properties in </p>
                 <select class="selectpicker black-select">
-                    <option>Delhi</option>
-                    <option>Gurgaon</option>
+                    <option>NCR</option>
+                    <option>Mumbai</option>
                     <option>Bangalore</option>
+                    <option>Kolkata</option>
+                    <option>Pune</option>
+                    <option>Ahmedabad</option>
+                    <option>Chennai</option>
+                    <option>Hyderabad</option>
+                    <option>Goa</option> 
+                    <option>Coimbatore</option>  
+                    <option>Cochin</option>  
+                    <option>Chandigarh</option>  
+                    <option>Lucknow</option>  
+                    <option>Nagpur</option>  
+                    <option>Indore</option>  
+                    <option>Patna</option>  
+                    <option>Mysore</option> 
+                    <option>Mangalore</option> 
+                    <option>Nasik</option> 
+                    <option>Jaipur</option> 
+                    <option>Surat</option> 
+                    <option>Vizag</option>                                                                               
                 </select>
             </div>
             <div class="search-prop">
-                <input type="text" class="seacrh-prop" value="Sector 3" />
+                <input type="text" class="seacrh-prop">
             </div>
             <div class="prop-details-select">
                 <select class="selectpicker proptype-select">
@@ -87,18 +108,25 @@
                     <option>Villa</option>
                     <option>Independant Floor</option>
                     <option>Plot</option>
+                    <option>All property types</option>
                     </select>
                 <select class="selectpicker black-select">
+                    <option>1 Bedrooms</option>
                     <option>2 Bedrooms</option>
                     <option>3 Bedrooms</option>
-                    <option>4 bedrooms</option>
+                    <option>4/4+ bedrooms</option>
+                    <option>All bedrooms</option>
                 </select>                
                 <select class="selectpicker black-select">
-                    <option>30-35 Lakhs</option>
-                    <option>35-40 Lakhs</option>
-                    <option>40-45 Lakhs</option>
-                    <option>45-50 Lakhs</option>
-                    <option>50-60 Lakhs</option>
+                    <option>0 – 25 Lac</option>
+                    <option>25 Lac – 50 Lac </option>
+                    <option>50 Lac – 75 Lac</option>
+                    <option>75 Lac – 1 Cr</option>
+                    <option>1 Cr – 1.5 Cr</option>
+                    <option>1.5 Cr – 2 Cr</option>
+                    <option>2 Cr – 3 Cr</option>
+                    <option>3 Cr +</option>
+                    <option>All Budget ranges</option>
                 </select>                
             </div>
 
@@ -109,7 +137,6 @@
             </div>
 
             <div class="additional-filters">
-                <a href="#" class="close-popup"></a>
                 <div class="all-add-fillters">
                     <div class="select-availability" id="availability" data-toggle="buttons">
                       <label class="br-label">Availibility Status: </label>
@@ -249,15 +276,15 @@
                 </div>
             </div>
 
-            <a href="#" class="clear-filter-btn">Clear All Filters</a>
+            <!-- <a href="#" class="clear-filter-btn">Clear All Filters</a> -->
 
         </div>     
     </div>
 
     <div class="section-third">
         <div class="view-buttons-holder">
-            <a href="map-view.html" class="prop-view-button"><span class="map-icon"></span>Map View</a>
-            <a href="grid-view.html" class="prop-view-button active"><span class="grid-icon"></span>Grid View</a>
+            <a href="resale-map-view.html" class="prop-view-button active"><span class="map-icon"></span>Map View</a>
+            <a href="resale-grid-view.html" class="prop-view-button"><span class="grid-icon"></span>Grid View</a>
         </div>
         <div class="sl-properties-counts">
             <p class="total-sl-propcount"> <b>Showing 200 shortlisted properties</b> </p>
@@ -266,8 +293,46 @@
             <p class="avg-prop">100 Average Properties</p>
         </div>
         <div class="contact-ih">
-            <a href="#" class="big-contact-btn">Contact IndiaHomes for this requirement</a>
+            <a href="Javascript:void(0)" class="big-contact-btn contact-ih-btn">Contact IndiaHomes for this requirement</a>
         </div>
+
+
+        <div class="receive-callback">
+          <p class="callback">
+            <span class="timer-2d"></span>
+            You should receive a callback
+          in max 
+          <b class="timer">
+              <span class="minute">00</span>:<span class="second">00</span>mins
+          </b></p>
+        </div>
+
+
+        <div class="contact-popup">
+          <a href="javascript:void(0)" class="close-popup"></a>
+          <div class="cont-popup-content ih-contact-form" id="ih_contact_form">
+            <h2>We can call you right now to discuss Experion Heartsong</h2>
+            <fieldset>
+              <input type="text" class="contatc-box" placeholder="Name" />
+              <input type="text" class="contatc-box" placeholder="Mobile" />
+              <a href="Javascript:void(0)" class="read-more-btn call-me-btn">Call Me</a>
+            </fieldset>
+            <p class="error-msg">Please enter a valid mobile number</p>
+            <p class="italic-desc">callback in 5  mins between 9AM - 10 PM IST</p>
+            <p class="italic-desc">IndiaHomes does not share your number with 3rd party without your consent. You agree to  IndiaHomes  calling you for its services</p>
+          </div>
+
+          <div class="cont-popup-content thanks-initialize" id="thanks_initialize">
+            <p class="thank-you-p">Thank you for contacting IndiaHomes. Our property advisor will be calling 
+                you shortly</p>
+
+             <div class="initialize-loader">
+              <p>Initiating call back protocol<span class="initialize-loader-img"></span></p>
+             </div>   
+          </div>
+        </div>
+
+
     </div>
 
     </header>
@@ -290,6 +355,7 @@
                         <div id="collapseOne" class="panel-collapse collapse in">
                           <div class="panel-body property-desc">
                             <div class="prop-list">
+                              <a href="resale-prop-detail.html">
                                 <div class="img-holder">
                                     <img src="css/images/prop-list-img.png" />
                                 </div>
@@ -298,9 +364,10 @@
                                     <p class="no-of-bed">3 Bed</p>
                                     <p class="prop-price">75 L</p>
                                 </div>
+                              </a>  
                             </div>
-
                             <div class="prop-list">
+                              <a href="resale-prop-detail.html">
                                 <div class="img-holder">
                                     <img src="css/images/prop-list-img.png" />
                                 </div>
@@ -309,18 +376,32 @@
                                     <p class="no-of-bed">3 Bed</p>
                                     <p class="prop-price">75 L</p>
                                 </div>
-                            </div>
-
-                            <div class="prop-list">
-                                <div class="img-holder">
-                                    <img src="css/images/prop-list-img.png" />
-                                </div>
-                                <div class="prop-det">
-                                    <h3>Experion, Sector 108, Gurgaon</h3>
-                                    <p class="no-of-bed">3 Bed</p>
-                                    <p class="prop-price">75 L</p>
-                                </div>
+                              </a>  
                             </div>                            
+                            <div class="prop-list">
+                              <a href="resale-prop-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>
+                            <div class="prop-list">
+                              <a href="resale-prop-detail.html">
+                                <div class="img-holder">
+                                    <img src="css/images/prop-list-img.png" />
+                                </div>
+                                <div class="prop-det">
+                                    <h3>Experion, Sector 108, Gurgaon</h3>
+                                    <p class="no-of-bed">3 Bed</p>
+                                    <p class="prop-price">75 L</p>
+                                </div>
+                              </a>  
+                            </div>                                                     
 
                           </div>
                         </div>
@@ -337,6 +418,7 @@
                         <div id="collapseTwo" class="panel-collapse collapse">
                           <div class="panel-body property-desc">
                             <div class="prop-list">
+                              <a href="resale-prop-detail.html">
                                 <div class="img-holder">
                                     <img src="css/images/prop-list-img.png" />
                                 </div>
@@ -345,9 +427,10 @@
                                     <p class="no-of-bed">3 Bed</p>
                                     <p class="prop-price">75 L</p>
                                 </div>
+                              </a>  
                             </div>
-
                             <div class="prop-list">
+                              <a href="resale-prop-detail.html">
                                 <div class="img-holder">
                                     <img src="css/images/prop-list-img.png" />
                                 </div>
@@ -356,9 +439,10 @@
                                     <p class="no-of-bed">3 Bed</p>
                                     <p class="prop-price">75 L</p>
                                 </div>
+                              </a>  
                             </div>
-
                             <div class="prop-list">
+                              <a href="resale-prop-detail.html">
                                 <div class="img-holder">
                                     <img src="css/images/prop-list-img.png" />
                                 </div>
@@ -367,7 +451,8 @@
                                     <p class="no-of-bed">3 Bed</p>
                                     <p class="prop-price">75 L</p>
                                 </div>
-                            </div>  
+                              </a>  
+                            </div>     
                           </div>
                         </div>
                       </div>
@@ -383,6 +468,7 @@
                         <div id="collapseThree" class="panel-collapse collapse">
                           <div class="panel-body property-desc">
                             <div class="prop-list">
+                              <a href="resale-prop-detail.html">
                                 <div class="img-holder">
                                     <img src="css/images/prop-list-img.png" />
                                 </div>
@@ -391,9 +477,10 @@
                                     <p class="no-of-bed">3 Bed</p>
                                     <p class="prop-price">75 L</p>
                                 </div>
+                              </a>  
                             </div>
-
                             <div class="prop-list">
+                              <a href="resale-prop-detail.html">
                                 <div class="img-holder">
                                     <img src="css/images/prop-list-img.png" />
                                 </div>
@@ -402,9 +489,10 @@
                                     <p class="no-of-bed">3 Bed</p>
                                     <p class="prop-price">75 L</p>
                                 </div>
+                              </a>  
                             </div>
-
                             <div class="prop-list">
+                              <a href="resale-prop-detail.html">
                                 <div class="img-holder">
                                     <img src="css/images/prop-list-img.png" />
                                 </div>
@@ -413,7 +501,8 @@
                                     <p class="no-of-bed">3 Bed</p>
                                     <p class="prop-price">75 L</p>
                                 </div>
-                            </div>  
+                              </a>  
+                            </div>      
                           </div>
                         </div>
                       </div>
@@ -421,304 +510,47 @@
                     </div>
 
             </div>
-            <div class="col-md-9" id="grid_view">
-                <div class="sort-by-cont">
-                    <label>Sort By</label>
-                    <a href="#" class="grey-button relevance-sort-btn">Relevance</a>
-                    <div class="grey-button price-sort-btn">
-                        Price
-                        <a href="#" class="up-arrow"></a>
-                        <a href="#" class="down-arrow"></a>
-                    </div>
-                </div>
+            
 
-                <div class="row new-row">
-                    <div class="col-md-4 individual-prop">
-                        <div class="prop-image-details">
-                            <a href="Javascript:void(0);" class="image-hover">
-                                <img src="css/images/grid-view-house1.png" />
-                            </a>
-                            <div class="prop-brief-details">
-                                <h3>2 BHK, Sector 32</h3>
-                                <p> <label>Size</label> <span>1200 Sqft</span></p>
-                                <p> <label>Type</label> <span>Apartment</span></p>
-                                <p> <label>Possession State:</label> <span>Ready to Move</span></p>
-                                <p> <label>Amenities</label> 
-                                    <span class="gym-icon"></span>
-                                    <span class="swimpool-icon"></span>
-                                    <span class="lift-icon"></span>
-                                    <span class="servent-icon"></span>
-                                    <span class="tennis-icon"></span>
-                                </p>
-                                <div class="view-details-holder">
-                                    <a href="resale-prop-detail.html" class="view-details-link">View full Details</a>
-                                </div>
+            <div class="col-md-9" id="map_view">
+                <div class="row"> 
+
+
+                      <!-- Popup -->
+                      <section class="contact-finished">
+                          <a href="#" class="close-popup"></a>
+                          <div class="calling-div" id="calling_div">
+                            <div class="view-similar-prop">
+                              <h2>View  more properties similar to Experion Heartsong</h2>
+                              <div class="prop-img">
+                                <img src="css/images/about-img1.jpg">
+                              </div>
+                              <div class="prop-detai clearfix">
+                                <p class="prop-addr-left">Spaze Privy, The Address</p>
+                                <p class="prop-addr-right">Sector 93</p>
+                              </div>
+
+                              <a href="Javascript:void(0)" class="see-more-opt">See more option</a>
+
                             </div>
-                        </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
-                        </div>
-                    </div>
+                            <div class="register-for-ih">
+                              <h2>Want the latest updates and news on your favourite properties or areas?</h2>
 
+                              <a href="#" class="read-more-btn">Register for IndiaHomes Analytics</a>
 
+                              <a href="Javascript:void(0)" class="see-more-opt">Know More</a>
 
-
-                    <div class="col-md-4 individual-prop">
-                        <div class="prop-image-details">
-                            <a href="#" class="image-hover">
-                                <img src="css/images/grid-view-house1.png" />
-                            </a>
-                            <div class="dev-prop-brief-details">
-                                <a href="property-detail.html">
-                                    <h3>The Heartsong, Experion</h3>
-                                    <p> <label>Units</label> <span>2/3 BHK</span></p>
-                                    <p> <label>Rating</label> 
-                                        <span class="rating">
-                                          <i class="icon-star star-on"></i>
-                                          <i class="icon-star star-on"></i>
-                                          <i class="icon-star star-on"></i>
-                                          <i class="icon-star star-on"></i>
-                                          <i class="icon-star star-off"></i>
-                                        </span>
-                                    </p>
-                                    <div>
-                                        <div class="prop-rank-but">
-                                            <p>Top Rank</p>
-                                            <div class="first-gold"></div>
-                                        </div>
-                                        <div class="prop-rank-but">
-                                            <p>Gold Mine</p>
-                                            <div class="first-silver"></div>
-                                        </div>
-                                        <div class="prop-rank-but">
-                                            <p>Dream Home</p>
-                                            <div class="first-bronze"></div>
-                                        </div>                                                                                
-                                    </div>
-                                </a>
                             </div>
-                        </div>
-                        <div class="dev-prop-details clearfix">
-                            <p class="left-prop-detail">The Heartsong, <span>Sector 108</span></p>
-                            <p class="right-prop-price"> &#8377; 1.04Cr - 1.89 Cr</p>
-                        </div>
-                    </div>
+                          </div>
+                      </section>                                                                    
 
-
-                    <div class="col-md-4 individual-prop">
-                        <div class="prop-image-details">
-                            <a href="#" class="image-hover">
-                                <img src="css/images/grid-view-house1.png" />
-                            </a>
-                            <div class="prop-brief-details">
-                                <h3>2 BHK, Sector 32</h3>
-                                <p> <label>Size</label> <span>1200 Sqft</span></p>
-                                <p> <label>Type</label> <span>Apartment</span></p>
-                                <p> <label>Possession State:</label> <span>Ready to Move</span></p>
-                                <p> <label>Amenities</label> 
-                                    <span class="gym-icon"></span>
-                                    <span class="swimpool-icon"></span>
-                                    <span class="lift-icon"></span>
-                                    <span class="servent-icon"></span>
-                                    <span class="tennis-icon"></span>
-                                </p>
-                                <div class="view-details-holder">
-                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4 individual-prop">
-                        <div class="prop-image-details">
-                            <a href="#" class="image-hover">
-                                <img src="css/images/grid-view-house1.png" />
-                            </a>
-                            <div class="prop-brief-details">
-                                <h3>2 BHK, Sector 32</h3>
-                                <p> <label>Size</label> <span>1200 Sqft</span></p>
-                                <p> <label>Type</label> <span>Apartment</span></p>
-                                <p> <label>Possession State:</label> <span>Ready to Move</span></p>
-                                <p> <label>Amenities</label> 
-                                    <span class="gym-icon"></span>
-                                    <span class="swimpool-icon"></span>
-                                    <span class="lift-icon"></span>
-                                    <span class="servent-icon"></span>
-                                    <span class="tennis-icon"></span>
-                                </p>
-                                <div class="view-details-holder">
-                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4 individual-prop">
-                        <div class="prop-image-details">
-                            <a href="#" class="image-hover">
-                                <img src="css/images/grid-view-house1.png" />
-                            </a>
-                            <div class="prop-brief-details">
-                                <h3>2 BHK, Sector 32</h3>
-                                <p> <label>Size</label> <span>1200 Sqft</span></p>
-                                <p> <label>Type</label> <span>Apartment</span></p>
-                                <p> <label>Possession State:</label> <span>Ready to Move</span></p>
-                                <p> <label>Amenities</label> 
-                                    <span class="gym-icon"></span>
-                                    <span class="swimpool-icon"></span>
-                                    <span class="lift-icon"></span>
-                                    <span class="servent-icon"></span>
-                                    <span class="tennis-icon"></span>
-                                </p>
-                                <div class="view-details-holder">
-                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4 individual-prop">
-                        <div class="prop-image-details">
-                            <a href="#" class="image-hover">
-                                <img src="css/images/grid-view-house1.png" />
-                            </a>
-                            <div class="prop-brief-details">
-                                <h3>2 BHK, Sector 32</h3>
-                                <p> <label>Size</label> <span>1200 Sqft</span></p>
-                                <p> <label>Type</label> <span>Apartment</span></p>
-                                <p> <label>Possession State:</label> <span>Ready to Move</span></p>
-                                <p> <label>Amenities</label> 
-                                    <span class="gym-icon"></span>
-                                    <span class="swimpool-icon"></span>
-                                    <span class="lift-icon"></span>
-                                    <span class="servent-icon"></span>
-                                    <span class="tennis-icon"></span>
-                                </p>
-                                <div class="view-details-holder">
-                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4 individual-prop">
-                        <div class="prop-image-details">
-                            <a href="#" class="image-hover">
-                                <img src="css/images/grid-view-house1.png" />
-                            </a>
-                            <div class="prop-brief-details">
-                                <h3>2 BHK, Sector 32</h3>
-                                <p> <label>Size</label> <span>1200 Sqft</span></p>
-                                <p> <label>Type</label> <span>Apartment</span></p>
-                                <p> <label>Possession State:</label> <span>Ready to Move</span></p>
-                                <p> <label>Amenities</label> 
-                                    <span class="gym-icon"></span>
-                                    <span class="swimpool-icon"></span>
-                                    <span class="lift-icon"></span>
-                                    <span class="servent-icon"></span>
-                                    <span class="tennis-icon"></span>
-                                </p>
-                                <div class="view-details-holder">
-                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4 individual-prop">
-                        <div class="prop-image-details">
-                            <a href="#" class="image-hover">
-                                <img src="css/images/grid-view-house1.png" />
-                            </a>
-                            <div class="prop-brief-details">
-                                <h3>2 BHK, Sector 32</h3>
-                                <p> <label>Size</label> <span>1200 Sqft</span></p>
-                                <p> <label>Type</label> <span>Apartment</span></p>
-                                <p> <label>Possession State:</label> <span>Ready to Move</span></p>
-                                <p> <label>Amenities</label> 
-                                    <span class="gym-icon"></span>
-                                    <span class="swimpool-icon"></span>
-                                    <span class="lift-icon"></span>
-                                    <span class="servent-icon"></span>
-                                    <span class="tennis-icon"></span>
-                                </p>
-                                <div class="view-details-holder">
-                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-md-4 individual-prop">
-                        <div class="prop-image-details">
-                            <a href="#" class="image-hover">
-                                <img src="css/images/grid-view-house1.png" />
-                            </a>
-                            <div class="prop-brief-details">
-                                <h3>2 BHK, Sector 32</h3>
-                                <p> <label>Size</label> <span>1200 Sqft</span></p>
-                                <p> <label>Type</label> <span>Apartment</span></p>
-                                <p> <label>Possession State:</label> <span>Ready to Move</span></p>
-                                <p> <label>Amenities</label> 
-                                    <span class="gym-icon"></span>
-                                    <span class="swimpool-icon"></span>
-                                    <span class="lift-icon"></span>
-                                    <span class="servent-icon"></span>
-                                    <span class="tennis-icon"></span>
-                                </p>
-                                <div class="view-details-holder">
-                                    <a href="property-detail.html" class="view-details-link">View full Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prop-bed-price-details clearfix">
-                            <p class="great-prop left-prop-detail">2 Beds, 27th main</p>
-                            <p class="right-prop-price"> &#8377; 75L</p>
-                        </div>
-                    </div>                                                                                
+                    <div id="map-canvas"></div>
 
 
                     <div class="preview-content clearfix">
                         <a href="#" class="close-popup"></a>
                       <div class="property-photo-preview">
-                        <h2>2 BHK apartment at HSR layout, Bangalore</h2>
+                        <h2> <a href="resale-prop-detail.html"> 2 BHK apartment at HSR layout, Bangalore</a></h2>
                         <section class="slider">
                           <div id="slider" class="flexslider">
                             
@@ -768,15 +600,22 @@
                             <div id="photoanddetails" class="panel-collapse collapse in">
                               <div class="panel-body property-desc">
                                 <div class="prop-details">
-                                  <p> <label>Bedroom : </label> 3</p>
-                                  <p> <label>Price : </label> 75Lakhs</p>
-                                  <p> <label>Area: </label> 1200 Sqft</p>
-                                  <p> <label>Bathroom: </label> 2</p>
-                                  <p> <label>Furnished: </label> Unfurnished</p>
-                                  <p> <label>Current Status: </label> Available</p>
+
+                                     <p> <label>Price: </label> 35 Lakhs</p>
+                                     <p> <label>Property Type:</label> Apartment</p>
+                                     <p> <label>Bedrooms: </label> 3</p>
+                                     <p> <label>Bathrooms: </label> 3</p>
+                                     <p> <label>Size</label> 1400 Sq.Ft</p>
+
+
                                 </div>
                                 <div class="prop-amenities">
                                   <h4>Amenities</h4>
+
+                                  <p> <label>Parking: </label> 2 </p>
+                                  <p> <label>Power backup: </label> Partial</p>
+                                  <p> <label>Security: </label> Yes</p>
+
                                   <ul>
                                     <li><span class="gym-icon">Gym</span></li>
                                     <li><span class="swimpool-icon">Swimming Pool</span></li>
@@ -784,42 +623,13 @@
                                     <li><span class="servent-icon">Servent room</span></li>
                                     <li><span class="tennis-icon">Tennis court</span></li>
                                   </ul>
+                                  <a href="resale-prop-detail.html" class="resale-view-all">view all details</a>
                                 </div>
                               </div>
                             </div>
                           </div>
                           
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#prop_accordion" href="#neighbourhood">
-                                  Neighbourhood
-                                </a>
-                              </h4>
-                            </div>
-                            <div id="neighbourhood" class="panel-collapse collapse">
-                              <div class="panel-body property-desc">
-                                <div class="prop-details">
-                                  <p> <label>Bedroom : </label> 3</p>
-                                  <p> <label>Price : </label> 75Lakhs</p>
-                                  <p> <label>Area: </label> 1200 Sqft</p>
-                                  <p> <label>Bathroom: </label> 2</p>
-                                  <p> <label>Furnished: </label> Unfurnished</p>
-                                  <p> <label>Current Status: </label> Available</p>
-                                </div>
-                                <div class="prop-amenities">
-                                  <h4>Amenities</h4>
-                                  <ul>
-                                    <li><span class="gym-icon">Gym</span></li>
-                                    <li><span class="swimpool-icon">Swimming Pool</span></li>
-                                    <li><span class="lift-icon">Elevator</span></li>
-                                    <li><span class="servent-icon">Servent room</span></li>
-                                    <li><span class="tennis-icon">Tennis court</span></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          
                           
                         </div>
 
@@ -829,26 +639,13 @@
 
                 </div>
 
-
-                <div class="pagination-right">
-                    <ul class="clearfix">
-                        <li> <a href="#" class="prev-page"> <  </a> </li>
-                        <li> <a href="#" class="">1</a> </li>
-                        <li> <a href="#" class="">2</a> </li>
-                        <li> <a href="#" class="">3</a> </li>
-                        <li> <a href="#" class="active">4</a> </li>
-                        <li> <a href="#" class="">5</a> </li>
-                        <li> <a href="#" class="next-page"> > </a> </li>
-                    </ul>
-                </div>
-
-
             </div>
-            
+
+
+
         </div>
         <div class="preview-overlay"></div>
     </section>
-
 
 
     <!-- Footer -->
@@ -890,6 +687,12 @@
     <script src="js/skrollr.min.js"></script>
     <!-- Skroller for Typed JS -->
     <script src="js/typed.js"></script>
+    <!-- Cookies -->
+    <script src="js/jquery.cookie.js"></script>
+
+    <script src="js/timer.js"></script>    
+
+    <script src="js/jquery.mCustomScrollbar.js"></script>
     <!-- Skroller for Flip counter JS -->
     <script src="js/flipcounter.js"></script>
     <!-- FlexSlider -->
@@ -897,15 +700,228 @@
     <!-- Skroller for Parallax-->
     <script src="js/jquery.parallax.js"></script>
 
-    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYLphhNbAOGws40T9bENM1xHZbicbhSYo&sensor=false"></script>
+    <script type="text/javascript" src="js/infobox.js"
+
     <script src="js/custom.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         //$(".prop-accordian-panel .panel-group").css("height", $("#grid_view").height());
 
-          setTimeout(function() {
-            $(".prop-accordian-panel .panel-group").css("height", $(window).height() - 100);
-          },500);
+       $(".prop-accordian-panel .panel-group").css("height", $(window).height() - 174);
+       $("#map-canvas").css("height", $(window).height() - 174);       
+        $('.selectpicker').selectpicker();
+
+        $(".change-filter-btn").click(function(){
+          $(".additional-filters").fadeIn();
+        });
+
+        $(".additional-filters .close-popup").click(function(){
+          $(".additional-filters").fadeOut();
+        });  
+
+
+        $('.select-availability :radio').change(function() {
+          var category = $(this).filter(':checked').val();
+          if(category == "Ready To move") {
+            $(".select-posession").hide();
+            $(".select-prop-age").show();
+          } else {
+            $(".select-posession").show();
+            $(".select-prop-age").hide();
+          } 
+        });  
+
+        $(".additional-filters .filter-buttons a").click(function(){
+          $(".additional-filters").fadeOut();
+        });
+
+
+        //Scripts for call back initialization
+
+          $(".contact-ih-btn").click(function(){
+            $(".contact-popup, #ih_contact_form").fadeIn();
+            $(this).addClass("active");
+          });
+          
+          $(".call-me-btn").click(function(){
+            $(".cont-popup-content").hide();
+            $("#thanks_initialize").fadeIn("slow");
+            //$(".contact-popup").animateAuto("height", 100);
+            setTimeout(function() {
+              $(".initialize-loader").css("visibility","visible");
+              //$(".contact-popup").animateAuto("height", 100);
+            },3500);
+
+            setTimeout(function() {
+              $("#thanks_initialize, .contact-popup").hide();
+              $(".contact-ih-btn").removeClass("active");
+              $(".contact-finished , .receive-callback").show();
+
+              timer.reset(300);
+              timer.start();
+
+              //$(".contact-popup").animateAuto("height", 100);
+            },8500);
+          });
+
+          $(".contact-popup .close-popup").click(function(){
+            $(".contact-popup").fadeOut();
+            $(".contact-ih-btn").removeClass("active");
+            setTimeout(function() {
+              $("#ih_contact_form").show();
+              $("#thanks_initialize, #calling_div, .receive-callback").hide();
+            },1500);
+          });
+
+
+        $(".contact-finished .close-popup").click(function(){
+          $(this).parent().fadeOut();
+        });            
+
+        $(".prop-accordian-panel .property-desc").mCustomScrollbar();
+
+        $('#accordion').on('shown.bs.collapse', function () {
+          // do something…
+          $(".collapse.in .property-desc").mCustomScrollbar("update");
+        });
+
+
+        // This example adds a user-editable rectangle to the map.
+
+        // The following example creates complex markers to indicate beaches near
+        // Sydney, NSW, Australia. Note that the anchor is set to
+        // (0,32) to correspond to the base of the flagpole.
+
+        function initialize() {
+          var mapOptions = {
+            zoom: 10,
+            center: new google.maps.LatLng(28.9, 77.2)
+          }
+          var map = new google.maps.Map(document.getElementById('map-canvas'),
+                                        mapOptions);
+
+          setMarkers(map, beaches);
+        }
+
+        var infowindow = new google.maps.InfoWindow({
+          maxWidth: 250
+        });
+
+        /**
+         * Data for the markers consisting of a name, a LatLng and a zIndex for
+         * the order in which these markers should display on top of each
+         * other.
+         */
+
+
+        var beaches = [
+          ['Bondi Beach', 28.890542, 77.274856, 4 ,'css/images/good-prop-marker.png', '<div class="individual-prop" id="prop_click"><div class="prop-image-details"><a href="javascript:void(0)" class="image-hover view-details-link"><img src="css/images/grid-view-house1.png" /></a></div><div class="prop-bed-price-details clearfix"><p class="great-prop left-prop-detail">2 Beds, 27th main</p><p class="right-prop-price"> &#8377; 75L</p></div></div>'],
+          ['Coogee Beach', 28.923036, 77.259052, 5, 'css/images/avg-prop-marker.png', '<div class="individual-prop" id="prop_click"><div class="prop-image-details"><a href="javascript:void(0)" class="image-hover view-details-link"><img src="css/images/grid-view-house1.png" /></a></div><div class="prop-bed-price-details clearfix"><p class="great-prop left-prop-detail">2 Beds, 27th main</p><p class="right-prop-price"> &#8377; 75L</p></div></div>'],
+          ['Cronulla Beach', 28.028249, 77.157507, 3, 'css/images/great-prop-marker.png', '<div class="individual-prop" id="prop_click"><div class="prop-image-details"><a href="javascript:void(0)" class="image-hover view-details-link"><img src="css/images/grid-view-house1.png" /></a></div><div class="prop-bed-price-details clearfix"><p class="great-prop left-prop-detail">2 Beds, 27th main</p><p class="right-prop-price"> &#8377; 75L</p></div></div>'],
+          ['Manly Beach', 28.80010128657071, 77.28747820854187, 2, 'css/images/avg-prop-marker.png', '<div class="individual-prop" id="prop_click"><div class="prop-image-details"><a href="javascript:void(0)" class="image-hover view-details-link"><img src="css/images/grid-view-house1.png" /></a></div><div class="prop-bed-price-details clearfix"><p class="great-prop left-prop-detail">2 Beds, 27th main</p><p class="right-prop-price"> &#8377; 75L</p></div></div>'],
+          ['Maroubra Beach', 28.950198, 77.259302, 1, 'css/images/great-prop-marker.png', '<div class="individual-prop" id="prop_click"><div class="prop-image-details"><a href="javascript:void(0)" class="image-hover view-details-link"><img src="css/images/grid-view-house1.png" /></a></div><div class="prop-bed-price-details clearfix"><p class="great-prop left-prop-detail">2 Beds, 27th main</p><p class="right-prop-price"> &#8377; 75L</p></div></div>']
+        ];
+
+        function setMarkers(map, locations) {
+          // Add markers to the map
+
+          // Marker sizes are expressed as a Size of X,Y
+          // where the origin of the image (0,0) is located
+          // in the top left of the image.
+
+          for (var i = 0; i < locations.length; i++) {
+            var beach = locations[i];
+            var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                icon: beach[4],
+                title: beach[0],
+                zIndex: beach[3]
+            });
+
+
+            infobox = new InfoBox({
+                 content: beach[5],
+                 disableAutoPan: false,
+                 maxWidth: 150,
+                 pixelOffset: new google.maps.Size(-110, -205),
+                 zIndex: null,
+                 boxStyle: {
+                    background: "url('css/images/infobox.png') no-repeat transparent",
+                    opacity: 1,
+                    width: "244px"
+                },
+                closeBoxURL: "css/images/pop-up-close.png",
+                infoBoxClearance: new google.maps.Size(1, 1)
+            }); 
+
+
+
+            function open_preview(){
+              $(".preview-content").fadeIn();
+              $(".preview-overlay").show();
+
+              $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 107,
+                itemMargin: 15,
+                asNavFor: '#slider'
+              });
+
+              $('#slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#carousel",
+              });    
+            }
+
+            $(document).on("click", ".preview-content .close-popup", function(){
+              $(".preview-content").fadeOut();
+              $(".preview-overlay").hide();
+            });
+
+
+            google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+                return function() {
+                  infobox.open(map, this);
+                  //map.panTo(loc);
+                }
+              })(marker, i));          
+
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                  open_preview();
+                }
+              })(marker, i)); 
+
+            google.maps.event.addListener(infobox,'domready',function(){ 
+                $('.view-details-link').click(function(){
+                    open_preview();
+                }); 
+            }); 
+
+
+          }
+        }
+
+       
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+
+
+
+
     </script>
 
 </body>

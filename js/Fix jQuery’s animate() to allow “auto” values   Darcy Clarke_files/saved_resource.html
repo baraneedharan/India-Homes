@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0058)http://fiddle.jshell.net/darcyclarke/JNRpK/28/show/light/# -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title> - jsFiddle demo by darcyclarke</title>
+  
+  <script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="normalize(1).css">
+  <link rel="stylesheet" type="text/css" href="result-light.css">
+  
+  <style type="text/css">
+    .test {
+     width: 200px;
+     height: 20px;
+     background: red; 
+     display: block;
+     float: left; 
+}
+
+.test .inner {
+    width: 300px;
+    height: 200px;  
+    float: left;
+    border: 1px solid #000;
+}
+
+.clearBoth {
+   clear: both;
+   width: 100%;
+   height: 0;
+   display: block; 
+}
+  </style>
+  
+
+
+<script type="text/javascript">//<![CDATA[ 
+$(window).load(function(){
+$(".animateHeight").bind("click", function(e){
+    $(".test").animateAuto("height", 1000); 
+});
+
+$(".animateWidth").bind("click", function(e){
+    $(".test").animateAuto("width", 1000); 
+});
+
+$(".animateBoth").bind("click", function(e){
+    $(".test").animateAuto("both", 1000); 
+});
+
+$(".reset").bind("click", function(e){
+    $(".test").animate({"width":"200px","height":"20px"}, 1000);    
+});
+
+jQuery.fn.animateAuto = function(prop, speed, callback){
+    var elem, height, width;
+    return this.each(function(i, el){
+        el = jQuery(el), elem = el.clone().css({"height":"auto","width":"auto"}).appendTo("body");
+        height = elem.css("height"),
+        width = elem.css("width"),
+        elem.remove();
+        
+        if(prop === "height")
+            el.animate({"height":height}, speed, callback);
+        else if(prop === "width")
+            el.animate({"width":width}, speed, callback);  
+        else if(prop === "both")
+            el.animate({"width":width,"height":height}, speed, callback);
+    });  
+}
+
+
+});//]]>  
+
+</script>
+
+
+</head>
+<body style="">
+  <div class="test" style="height: 202px; width: 302px;">
+       <div class="inner">A bunch of text</div>
+</div>
+
+<div class="clearBoth"></div>
+
+<a href="saved_resource.html" class="animateHeight">Animate Height</a> |
+
+<a href="saved_resource.html" class="animateWidth">Animate Width</a> |
+
+<a href="saved_resource.html" class="animateBoth">Animate Both</a> |
+
+<a href="saved_resource.html" class="reset">Reset</a>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="chrome-extension://plklmneddckmpnnkjldofmaegchjmoea/css/atd.css"></body></html>

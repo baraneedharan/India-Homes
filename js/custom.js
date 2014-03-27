@@ -84,9 +84,9 @@
 
       $(".btn.selectpicker").click(function(){
       if($(this).parent().hasClass("open")) {
-        $(".buying-phases .popup, selling-phases .popup, .renting-phses .popup").removeClass("allow-overflow");
+        $(".buying-phases .popup, .selling-phases .popup, .renting-phases .popup").removeClass("allow-overflow");
       }else {
-        $(".buying-phases .popup, selling-phases .popup, .renting-phses .popup").addClass("allow-overflow");
+        $(".buying-phases .popup, .selling-phases .popup, .renting-phases .popup").addClass("allow-overflow");
       }
       });
 
@@ -220,7 +220,7 @@
       });
 
       $(".upload-click").click(function(){
-         $(".hidden-input").trigger("click");
+         $(this).parent().find(".hidden-input").trigger("click");
       });
 
 
@@ -327,8 +327,14 @@
             var selected_place = $("#property_type .active").text();
             $(".selected-from").text(selected_place);
           }
-          $(".selected-from").parent().addClass("completed");
-          $(".selected-from").parent().removeClass("active").next().addClass("active");
+          var selected_prop_type = $("#select_prop_type .btn-custom.active").find('input[type=radio]').val();
+          if(selected_prop_type == "plot") {
+            $(".selected-from").parent().addClass("completed").removeClass("active");
+            $(".selected-budjet").parent().addClass("active");
+          } else {
+            $(".selected-from").parent().addClass("completed");
+            $(".selected-from").parent().removeClass("active").next().addClass("active");
+          }
         });
 
         $("#bh_preference .next-link").click(function() {
@@ -379,6 +385,8 @@
         });
 
 
+
+
         $(document).on("click", "#loan_requirement.from-budjet .back-link", function() {
           if($(".buying-phases").hasClass("buy-as-developer")) {
             //Default action
@@ -412,6 +420,50 @@
 
 
 
+        $("#rent_thank_you input:radio").change(
+            function(){
+                $("#rent_thank_you .submit-review").css("visibility","visible");  
+            }
+        );
+
+        $("#rent_thank_you .submit-review").click(function(){
+          var selected_gb = $("#rent_thank_you .select-goodbad .btn.active input:radio").val();
+          if(selected_gb == "good") {
+            $(".select-and-submit").hide();
+            $(".social-box").show();            
+           } 
+           else {
+            $(".select-and-submit").hide();
+            $(".suggestion-box").show();
+          }
+        });
+
+
+
+        $("#sell_thank_you input:radio").change(
+            function(){
+                $("#sell_thank_you .submit-review").css("visibility","visible");  
+            }
+        );
+
+        $("#sell_thank_you .submit-review").click(function(){
+          var selected_gb = $("#sell_thank_you .select-goodbad .btn.active input:radio").val();
+          if(selected_gb == "good") {
+            $(".select-and-submit").hide();
+            $(".social-box").show();            
+           } 
+           else {
+            $(".select-and-submit").hide();
+            $(".suggestion-box").show();
+          }
+        });
+
+
+
+       $(".suggestion-box textarea").keypress(function(){
+          $(".suggestion-box .orange-button").css("display","inline-block");
+       });
+
         $("#bh_preference input:checkbox").change(
             function(){
                 $("#bh_preference .next-link").fadeIn();  
@@ -420,16 +472,70 @@
 
         $("#select_budjet input:checkbox").change(function(){
           $("#select_budjet .next-link").fadeIn();  
-          if($('#select_budjet input[type=checkbox]:checked').length < 1) {
+        });
+
+        $("#property_size input:radio").change(function(){
+          $("#property_size .next-link").fadeIn();  
+        });
+
+        $("#is_developer_proj input:radio").change(function(){
+          $("#is_developer_proj .next-link").fadeIn();  
+        });        
+
+        $("#sellprop_posession_status .select-posession input:radio, #sellprop_posession_status .select-prop-age input:radio").change(function(){
+          $("#sellprop_posession_status .next-link").fadeIn();  
+        });   
+
+
+        $("#property_preference .btn").click(function(){
+          setTimeout(function() {
+            if($("#parking_status .btn.active").length && $("#power_backup_status .btn.active").length && $("#security_status .btn.active").length == 1) {
+              $("#property_preference .next-link").fadeIn();  
+              console.log("true");
+            } else {
+              console.log("false");
+            }
+          },50);
+
+
+
+        });
+        
+
+
+        $("#select_developer_budjet input:checkbox").change(function(){
+          $("#select_developer_budjet .next-link").fadeIn();  
+          if($('#select_developer_budjet input[type=checkbox]:checked').length < 1) {
             $(".booking-description p").css("visibility","hidden");
           } else {
             $(".booking-description p").css("visibility","visible");
           }
         });
 
-        $("#select_prop_type input:radio").change(
+
+        $("#developer_budjet .btn").click(function(){
+          setTimeout(function() {
+            var selected_range = $("#developer_budjet .btn.active:first input").attr("selected-budjet");
+            var needed_amount = $("#developer_budjet .btn.active:first input").attr("amount-needed");
+
+            $("#developer_budjet .booking-description .selected-bud").text(selected_range);
+            $("#developer_budjet .booking-description .amount-needed").text(needed_amount);
+          },50);
+        });
+
+
+
+        $("#select_prop_type .btn-custom").click(
             function(){
                 $("#select_prop_type .next-link").fadeIn();  
+                var selected_prop_type = $(this).find('input[type=radio]').val();
+                if(selected_prop_type == "plot") {
+                  $("#select_prop_type .next-link").attr("go-to","select_budjet"); 
+                  $("#select_budjet .back-link").attr("go-to","select_prop_type"); 
+                } else {
+                  $("#select_prop_type .next-link").attr("go-to","bh_preference");
+                  $("#select_budjet .back-link").attr("go-to","bh_preference"); 
+                }
             }
         );        
 
@@ -720,22 +826,57 @@
         $(".custom-aminities").fadeIn();
       });
 
-       $('.hidden-input').change(function(){
+
+
+       $('#upload_photo .hidden-input').change(function(){
             $("#upload_photo").hide();
             $("#identify_photo").show();
+
+            setTimeout(function() {
+              $(".image-holder p").hide();
+              $(".image-holder img").fadeIn();
+            },3500);
+
             $(".popup").removeAttr("style");
         });
 
 
-       $(".upload-btn").click(function(){
+       $('#rent_upload_photo .hidden-input').change(function(){
+            $("#rent_upload_photo").hide();
+            $("#rent_identify_photo").show();
+
+            setTimeout(function() {
+              $(".image-holder p").hide();
+              $(".image-holder img").fadeIn();
+            },3500);
+
+            $(".popup").removeAttr("style");
+        });
+
+
+
+       $("#identify_photo .upload-btn").click(function(){
             $("#upload_photo").fadeIn();
             $("#identify_photo").hide();
+            $(".uploaded-count-desc").show();
             $(".popup").animateAuto("height", 100);
             $(".uploaded-numbers li:first-child").addClass("active animate");
             setTimeout(function() {
               $(".uploaded-numbers li:first-child").removeClass("animate");
             },500);
        });
+
+       $("#rent_identify_photo .upload-btn").click(function(){
+            $("#rent_upload_photo").fadeIn();
+            $("#rent_identify_photo").hide();
+            $(".uploaded-count-desc").show();
+            $(".popup").animateAuto("height", 100);
+            $(".uploaded-numbers li:first-child").addClass("active animate");
+            setTimeout(function() {
+              $(".uploaded-numbers li:first-child").removeClass("animate");
+            },500);
+       });
+
 
 
        //Sell Next link enabling
@@ -754,6 +895,20 @@
                 $("#sellingprop_type .next-link ").fadeIn();  
             }
         );
+
+
+        $("#sellingprop_type .btn-custom").click(
+            function(){  
+                var selected_prop_type = $(this).find('input[type=radio]').val();
+                if(selected_prop_type == "plot") {
+                  $("#sellingprop_type .next-link").attr("go-to","property_size"); 
+                  $("#property_size .back-link").attr("go-to","sellingprop_type"); 
+                } else {
+                  $("#select_prop_type .next-link").attr("go-to","property_bedbath");
+                  $("#property_size .back-link").attr("go-to","property_bedbath"); 
+                }
+            }
+        );  
 
         $("#property_bedbath .select-bath input:radio, #property_bedbath .select-bed input:radio").change(
             function(){
@@ -780,8 +935,18 @@
        $("#sellingprop_type .next-link").click(function() {
           var selected_from = $("#sellingprop_type .select-prop-type .btn-custom.active").text();
           $(".selling-phases .property-type-li").text(selected_from);
-          $(".selling-phases .property-type-li").parent().addClass("completed");
-          $(".selling-phases .property-type-li").parent().removeClass("active").next().addClass("active");
+
+          var selected_prop_type = $("#sellingprop_type .btn-custom.active").find('input[type=radio]').val();
+          if(selected_prop_type == "plot") {
+            $(".selling-phases .property-type-li").parent().addClass("completed").removeClass("active");
+            $(".selling-phases .property-pos-amenity").parent().addClass("active");
+          } else {
+            $(".selling-phases .property-type-li").parent().addClass("completed");
+            $(".selling-phases .property-type-li").parent().removeClass("active").next().addClass("active");
+          }
+
+
+          
         });
 
        $("#property_bedbath .next-link").click(function() {
@@ -824,17 +989,17 @@
         });
 
 
-       $(".submit-review").click(function() {
-           var selected_review = $("#thank_you .btn-custom.active input").val()
-           if(selected_review == "good") {
-            $(".select-and-submit").hide();
-            $(".social-box").show();            
-           } 
-           else {
-            $(".select-and-submit").hide();
-            $(".suggestion-box").show();
-           }
-       });                
+       // $(".submit-review").click(function() {
+       //     var selected_review = $("#thank_you .btn-custom.active input").val()
+       //     if(selected_review == "good") {
+       //      $(".select-and-submit").hide();
+       //      $(".social-box").show();            
+       //     } 
+       //     else {
+       //      $(".select-and-submit").hide();
+       //      $(".suggestion-box").show();
+       //     }
+       // });                
         //Renting
 
 
@@ -986,6 +1151,9 @@
 
         $("#rent_property_bedbath .more-option").show();
         $(".renting-phases .selected-items li:last-child").hide();
+
+        $("#rent_furnishing_status .next-link").attr("go-to","prop_rent_amount");
+
         $(".renting-phases").addClass("rent-in");
        })
 
@@ -1007,6 +1175,10 @@
 
         $("#rent_property_bedbath .more-option").hide();
         $(".renting-phases .selected-items li:last-child").show();
+
+
+        $("#rent_furnishing_status .next-link").attr("go-to","prop_rentout_amount");
+
         $(".renting-phases").addClass("rent-out");
        });
 
@@ -1088,6 +1260,8 @@
             $("#select_where .next-link").attr("go-to", "select_prop_type");
             $("#select_budjet .next-link").attr("go-to", "loan_requirement");
 
+            $("#bh_preference .next-link").attr("go-to", "select_resale_budjet");
+
             //$("#loan_requirement .back-link").attr("go-to", "buy_prop_kind");
 
             $("#bh_preference .back-link").attr("go-to", "select_prop_type");
@@ -1099,6 +1273,12 @@
             $(".selected-budjet").parent().find(".list-style").text("4");
             $(".selected-more-option").parent().find(".list-style").text("5");
             $(".selected-loan").parent().find(".list-style").text("6");
+
+            $("#buy_prop_kind .back-link").attr("go-to","select_resale_budjet");
+
+            $(".buying-phases .selected-budjet").attr("go-to","select_resale_budjet");
+
+            $(".availibility_status .back-link").attr("go-to","select_resale_budjet")
           }
         });
 
@@ -1112,6 +1292,11 @@
           $("#bh_preference .back-link").attr("go-to", "select_where");
           $(".selected-more-option").text("Property Type");
           $(".selected-more-option").attr("go-to", "buy_prop_kind");
+
+
+          $("#buy_prop_kind .back-link").attr("go-to","select_developer_budjet");
+          $(".buying-phases .selected-budjet").attr("go-to","select_developer_budjet");
+
           $(".booking-description p").show();
           $(".selected-from").parent().hide();
           $(".selected-bhk").parent().find(".list-style").text("2");
@@ -1120,11 +1305,34 @@
           $(".selected-loan").parent().find(".list-style").text("5");
         });
                
-        $(document).on("click",".buy-as-developer #select_budjet .next-link", function(){
+        $(document).on("click","#select_developer_budjet .next-link", function(){
           $(".selected-items li").removeClass("active");
           $(".selected-budjet").parent().addClass("completed");
           $(".selected-more-option").parent().addClass("active");
         });
+
+
+
+        $(document).on("click","#select_resale_budjet .next-link", function(){
+          $(".selected-items li").removeClass("active");
+          $(".selected-budjet").parent().addClass("completed");
+          $(".selected-loan").parent().addClass("active");
+
+
+          $("#loan_requirement .back-link").attr("go-to","select_resale_budjet");
+          $("#loan_requirement").addClass("user-sel-skip-step");
+        });
+
+
+
+        $(document).on("click","#loan_requirement.user-sel-skip-step .back-link", function(){
+          $(".selected-items li").removeClass("active");
+          $(".selected-budjet").parent().addClass("active");
+        });
+
+
+
+
 
         $(document).on("click",".buy-as-developer #select_where .next-link", function(){
           $(".selected-items li").removeClass("active");
@@ -1138,6 +1346,74 @@
         });
 
 
+
+        //Loan Popup
+
+
+       $(".homeloan-btn").click(function(){
+          $(".banner-text").fadeOut();
+          $(".popup-content, .orange-buttons-holder, .preview-prop").hide();
+          $("#home_loan").show();
+          $(".loan-phases").fadeIn();
+          $(".popup").animateAuto("height", 100);
+        });
+
+
+       //Buy call initialize gearing
+
+       $(".open-buy-gearing").click(function(){
+              $(".popup-content").hide();
+              $("#buy_thanks_initialize").fadeIn("slow");
+              $(".popup").animateAuto("height", 100);
+              setTimeout(function() {
+                $("#buy_thanks_initialize .initialize-loader").css("visibility","visible");
+                $(".popup").animateAuto("height", 100);
+              },3500);
+
+              setTimeout(function() {
+                $(".before-initalize").hide();
+                $(".after-initalize").show();
+                $(".popup").animateAuto("height", 100);
+              },8500);
+       });
+
+
+       $(".thanks-initialize .close-popup").click(function(){
+            $(".initialize-loader").css("visibility","hidden");
+            $(".before-initalize").show();
+            $(".after-initalize").hide();
+       });
+
+
+       //Rent call initialize gearing
+
+       $(".open-rent-gearing").click(function(){
+              $(".popup-content").hide();
+              $("#rent_thanks_initialize").fadeIn("slow");
+              $(".popup").animateAuto("height", 100);
+              setTimeout(function() {
+                $("#rent_thanks_initialize .initialize-loader").css("visibility","visible");
+                $(".popup").animateAuto("height", 100);
+              },3500);
+
+              setTimeout(function() {
+                $(".before-initalize").hide();
+                $(".after-initalize").show();
+                $(".popup").animateAuto("height", 100);
+              },8500);
+       });
+
+
+       $(".thanks-initialize .close-popup").click(function(){
+            $(".initialize-loader").css("visibility","hidden");
+            $(".before-initalize").show();
+            $(".after-initalize").hide();
+       });
+
+
+       
+
+
         //Filters Additionsl
 
 
@@ -1145,7 +1421,7 @@
           $(".additional-filters").fadeIn();
         });
 
-        $(".additional-filters .close-popup").click(function(){
+        $(".additional-filters .filter-buttons a").click(function(){
           $(".additional-filters").fadeOut();
         });
 
