@@ -104,6 +104,7 @@
                 <p>Enter Your registered mobile number and your password to login</p>
                 <fieldset>
                   <input type="text" class="login-mobile" placeholder="Mobile Number" />
+                  <p class="error-msg">Please enter a valid moile number</p>
                   <input type="password" class="login-password"  placeholder="Password"/>
                 </fieldset>
                 <div class="login-btn-holder">
@@ -163,8 +164,11 @@
             <fieldset>
               <select class="selectpicker" id="city_selection">
                   <option>Bangalore</option>
-                  <option>Pune</option>
-                  <option>Chennai</option>
+                  <option>Delhi NCR</option>
+                  <option>Gurgaon</option>
+                  <option>Kolkata</option>
+                  <option>Mumbai</option>
+                  <option>Noida</option>
               </select>
             </fieldset>
 
@@ -222,7 +226,10 @@
               </div>
               <fieldset class="mobile-form">
                 <input type="text" placeholder="Enter your mobile number here" />
-                <a href="Javascript:void(0);" class="orange-button ">Submit</a>
+
+                <a href="Javascript:void(0);" class="orange-button open-buy-gearing">Submit</a>
+
+                <p class="error-msg">Please enter a valid mobile number</p>
                 <p class="assured-text">Callback assured in 5 min between 9AM to 10 PM</p>
               </fieldset>
               <div class="vr-divider"></div>
@@ -245,7 +252,7 @@
               </div>
             </div>
             <div class="clear"></div>
-            <p class="italic-desc assistance-text">IndiaHomes offers assistance throughout your purchase process. We don’t charge any brokerage to buyers for our services.</p>
+            <p class="italic-desc assistance-text">IndiaHomes offers assistance throughout your purchase process. We don't charge any brokerage to buyers for our services.</p>
           </div>
 
 
@@ -270,22 +277,22 @@
             <div class="select-prop-cont">
               <div class="select-prop" id="property_type" data-toggle="buttons">
                 <label class="btn btn-custom">
-                    <input type="radio">
+                    <input type="radio" value="apartment">
                     <span class="prop-icon apt"></span>
                     Apartment
                 </label>
                 <label class="btn btn-custom">
-                    <input type="radio">
+                    <input type="radio" value="independant floor">
                     <span class="prop-icon indep-floor"></span>
                     Independent Floor
                 </label>
                 <label class="btn btn-custom">
-                    <input type="radio">
+                    <input type="radio" value="villa">
                     <span class="prop-icon villa"></span>
                     Villa
                 </label>
                 <label class="btn btn-custom">
-                    <input type="radio">
+                    <input type="radio" value="plot">
                     <span class="prop-icon plot"></span>
                     Plot
                 </label>                 
@@ -324,32 +331,82 @@
             <span class="italic-desc">( Choose one or more, and press next )</span>
             <fieldset class="back-forth clearfix">
               <a href="javascript:void(0)" class="back-link" go-to="select_prop_type">Back</a>
-              <a href="javascript:void(0)" class="next-link" go-to="select_budjet">Next</a>
+              <a href="javascript:void(0)" class="next-link" go-to="select_developer_budjet">Next</a>
             </fieldset>
           </div>
 
 
 
-          <!-- PopUp 4 - Select the Budget  -->
-          <div class="popup-content select-budjet" id="select_budjet">
+          <!-- PopUp 4 - Select Developer the Budget  -->
+          <div class="popup-content select-budjet" id="select_developer_budjet">
             <h2>What is your Budget? </h2>
-            <fieldset class="all-price-range">
+
+            <fieldset class="all-price-range" id="developer_budjet">
               <div class="budjet-pick" id="price-range" data-toggle="buttons">
-                  <label class="btn btn-custom">
-                      <input type="checkbox" value="50L - 75L">50L - 75L
-                  </label>
-                  <label class="btn btn-custom">
-                      <input type="checkbox" value="75L - 1C">75L - 1Cr
-                  </label>
-                  <label class="btn btn-custom">
-                      <input type="checkbox" value="1C - 1.5C">1Cr - 1.5Cr
-                  </label>
-                  <label class="btn btn-custom">
-                      <input type="checkbox" value="1.5C - 2C">1.5Cr - 2Cr
-                  </label> 
-                  <label class="btn btn-custom">
-                      <input type="checkbox" value="1.5C - 2C">2Cr - 3Cr
-                  </label>                                                           
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="Upto 25L" selected-budjet="upto 25 Lac" amount-needed="1.5L">Upto 25L
+                </label>    
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="25 Lac - 60 Lac" selected-budjet="25 Lac - 60 Lac" amount-needed="5L">25L - 60L
+                </label>                              
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="60 Lac - 1.2 Cr" selected-budjet="60 Lac - 1.2 Cr" amount-needed="10L">60L - 1.2Cr
+                </label>
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="1.2 Cr - 2 Cr" selected-budjet="1.2 Cr - 2 Cr" amount-needed="15L">1.2Cr - 2Cr
+                </label>
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="2 Cr+" selected-budjet="2 Cr+" amount-needed="20L">2Cr +
+                </label>                                                                             
+              </div> 
+              <div class="booking-description">
+                <p>With a budget of <span class="selected-bud">75L - 1Cr </span>, you only need approx <span class="amount-needed">9L</span> to book your property</p>
+
+              </div>
+            </fieldset>
+
+
+
+
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="bh_preference">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="buy_prop_kind">Next</a>
+            </fieldset>
+          </div>  
+
+
+
+
+
+          <!-- PopUp 4 - Select Resale the Budget  -->
+          <div class="popup-content select-budjet" id="select_resale_budjet">
+            <h2>What is your Budget? </h2>
+            <fieldset class="all-price-range" id="resale_budjet">
+              <div class="budjet-pick" id="price-range" data-toggle="buttons">
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="50L - 75L">0L - 25L
+                </label>    
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="50L - 75L">25L - 50L
+                </label>                              
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="50L - 75L">50L - 75L
+                </label>
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="75L - 1C">75L - 1Cr
+                </label>
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="1C - 1.5C">1Cr - 1.5Cr
+                </label>
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="1.5C - 2C">1.5Cr - 2Cr
+                </label> 
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="1.5C - 2C">2Cr - 3Cr
+                </label>    
+                <label class="btn btn-custom">
+                  <input type="checkbox" value="1.5C - 2C">3+ Cr
+                </label>                                                                             
               </div> 
               <div class="booking-description">
                 <p>With a budget of <span class="selected-bud">75L - 1Cr </span>, you only need approx <span class="amount-needed">9L</span> to book your property</p>
@@ -404,7 +461,7 @@
 
             </div>
               <fieldset class="back-forth clearfix">
-                <a href="javascript:void(0)" class="back-link" go-to="select_budjet">Back</a>
+                <a href="javascript:void(0)" class="back-link" go-to="select_resale_budjet">Back</a>
                 <a href="javascript:void(0)" class="next-link" go-to="loan_requirement">Next</a>
               </fieldset>            
           </div>          
@@ -489,7 +546,7 @@
               <label class="br-label">Parking:</label>
               <div class="select-bhk" id="" data-toggle="buttons">
                   <label class="btn btn-custom">
-                      <input type="radio" value="none">None 
+                      <input type="radio" value="none">Any 
                   </label>                 
                   <label class="btn btn-custom">
                       <input type="radio" value="1">1 
@@ -507,7 +564,7 @@
               <label class="br-label">Power backup: </label>
               <div class="select-bhk" id="" data-toggle="buttons">
                 <label class="btn btn-custom">
-                    <input type="radio" value="none">None
+                    <input type="radio" value="none">Any
                 </label>
                 <label class="btn btn-custom">
                     <input type="radio" value="partial">Partial
@@ -671,7 +728,8 @@
               <p>Talk to a registered local property expert now</p>
               <fieldset class="mobile-form">
                 <input type="text" placeholder="Enter your mobile number here" />
-                <a href="Javascript:void(0);" class="orange-button ">Submit</a>
+                <a href="Javascript:void(0);" class="orange-button open-buy-gearing">Submit</a>
+                 <p class="error-msg">Please enter a valid mobile number</p>
                 <p class="assured-text">Callback assured in 5 min between 9AM to 10 PM</p>
                 <a href="grid-view.html" class="skip-view-prop">Skip, View properties</a>
               </fieldset>
@@ -681,6 +739,24 @@
 
             </div>
           </div>
+
+
+          <!-- Initializing call -->
+          <div class="popup-content thanks-initialize" id="buy_thanks_initialize">
+            <div class="before-initalize">
+              <p class="thank-you-p">Thank you for contacting IndiaHomes. Our property advisor will be calling 
+                  you shortly</p>
+
+               <div class="initialize-loader">
+                <p>Initiating call back protocol<span class="initialize-loader-img"></span></p>
+               </div>  
+            </div>
+            <div class="after-initalize">
+                <p class="thank-you-p">Your request has been registered, and you shall receive a call shortly</p>
+                <a href="javascript:void(0)" class="close-popup orange-button">Done</a>
+            </div>                   
+          </div>
+
 
 
            <!-- PopUp 9 - Final popup with QRS  -->
@@ -800,8 +876,11 @@
             <fieldset>
               <select class="selectpicker" id="prop_city_selection">
                   <option>Bangalore</option>
-                  <option>Pune</option>
-                  <option>Chennai</option>
+                  <option>Delhi NCR</option>
+                  <option>Gurgaon</option>
+                  <option>Kolkata</option>
+                  <option>Mumbai</option>
+                  <option>Noida</option>
               </select>
             </fieldset>
 
@@ -822,7 +901,7 @@
               <input type="text" class="medium-box" placeholder="Mobile" /> 
               <span class="italic-desc">You will receive an automated call to 
               verify this number</span>
-              <br />
+              <p class="error-msg">Please enter a valid mobile number</p>
 
               <span>I am a </span>
               <div class="seller-type" id="" data-toggle="buttons">
@@ -854,6 +933,7 @@
                 <p>Enter Your registered mobile number and your password to login</p>
                 <fieldset>
                   <input type="text" class="login-mobile" placeholder="Mobile Number" />
+                  <p class="error-msg">Please enter a valid mobile number</p>
                   <input type="password" class="login-password"  placeholder="Password"/>
                 </fieldset>
                 <div class="login-btn-holder">
@@ -928,7 +1008,7 @@
                     Villa
                 </label>
                 <label class="btn btn-custom">
-                    <input type="radio" name="prop-type" value="Plot">
+                    <input type="radio" name="prop-type" value="plot">
                     <span class="prop-icon plot"></span>
                     Plot
                 </label>                 
@@ -1150,11 +1230,11 @@
           <div class="popup-content filter-preference" id="property_preference">
             <h2>Amenities of the property</h2>
 
-            <fieldset class="all-bhks">
+            <fieldset class="all-bhks" id="parking_status">
               <label class="br-label">Parking:</label>
               <div class="select-bhk" id="" data-toggle="buttons">
                   <label class="btn btn-custom">
-                      <input type="radio" value="none">None 
+                      <input type="radio" value="none">Any 
                   </label>                 
                   <label class="btn btn-custom">
                       <input type="radio" value="1">1 
@@ -1168,11 +1248,11 @@
               
               </div> 
             </fieldset>
-            <fieldset class="all-bhks">
+            <fieldset class="all-bhks" id="power_backup_status">
               <label class="br-label">Power backup: </label>
               <div class="select-bhk" id="" data-toggle="buttons">
                   <label class="btn btn-custom">
-                      <input type="radio" value="none">None
+                      <input type="radio" value="none">Any
                   </label>
                   <label class="btn btn-custom">
                       <input type="radio" value="partial">Partial
@@ -1182,7 +1262,7 @@
                   </label>             
               </div> 
             </fieldset>
-            <fieldset class="all-bhks">
+            <fieldset class="all-bhks" id="security_status">
               <label class="br-label">Security: </label>
               <div class="select-bhk" id="" data-toggle="buttons">
                   <label class="btn btn-custom">
@@ -1307,7 +1387,7 @@
               </ul>
             </div>
 
-            <p class="uploaded-count-desc italic-desc">Total <span>5 </span>photos uploaded</p>
+            <p class="uploaded-count-desc italic-desc">Total <span>1 </span>photos uploaded</p>
 
 
             <fieldset class="back-forth clearfix">
@@ -1322,42 +1402,16 @@
           <div class="popup-content identify-photo" id="identify_photo">
             <div class="clearfix">
               <div class="image-holder">
-                <img src="css/images/preview-room.jpg">
-              </div>
-
-              <div class="upload-cancel">
-                <a href="Javascript:void(0);" class="upload-btn">Upload</a>
-                <a href="Javascript:void(0);" class="cancel-btn">Cancel</a>
+                <p>Your photo is being uploaded<span class="initialize-loader-img"></span></p>
+                <img src="css/images/preview-room.jpg" class="actual-uploaded-img" />
               </div>
             </div>  
             <div class="identify-room">
-              <h2>Identity this room :</h2>
-              <div class="bed-and-bath" data-toggle="buttons">
-                <label class="btn btn-custom">
-                    <input type="radio" value="Bedroom 1">Bedroom 1
-                </label>
-                <label class="btn btn-custom">
-                    <input type="radio" value="Bedroom 1">Bedroom 2
-                </label> 
-                <label class="btn btn-custom">
-                    <input type="radio" value="Bathroom 1">Bathroom 1
-                </label>
-                <label class="btn btn-custom">
-                    <input type="radio" value="Bathroom 2">Bathroom 2
-                </label>  
-                <label class="btn btn-custom">
-                    <input type="radio" value="Living">Living
-                </label>
-                <label class="btn btn-custom">
-                    <input type="radio" value="Dining">Dining
-                </label> 
-                <label class="btn btn-custom">
-                    <input type="radio" value="Kitchen">Kitchen 
-                </label>
-                <label class="btn btn-custom">
-                    <input type="radio" value="Others">Others
-                </label>  
-              </div> 
+              <h2>Label this photograph :</h2>
+              <fieldset class="photo-label">
+                <input type="text" class="" placeholder="Bedroom1 or Bathroom1 or Hall" />
+                <a href="#" class="upload-btn orange-btn">Done</a>
+              </fieldset>    
             </div>
 
           </div>
@@ -1437,7 +1491,7 @@
                    
              <div class="suggestion-box">
               <textarea placeholder="Please share your suggestion which can improve our listing process."></textarea>
-              <a href="#" class="orange-button">Done</a>   
+              <a href="index.html" class="orange-button">Done</a>   
              </div>
 
              <div class="social-box">
@@ -1459,7 +1513,7 @@
             <p class="blog-link-desc">Visit <a href="#"> IndiaHomes Blog</a> for articles on selling a property</p>
 
 
-            <p class="things-to-ensure"> <a href="#">5 things to ensure in ‘ Agreement To Sell ’
+            <p class="things-to-ensure"> <a href="#">5 things to ensure in Agreement To Sell
               Maximise the selling value of your house</a> </p>          
           </div>
           </div>
@@ -1677,8 +1731,11 @@
             <fieldset>
               <select class="selectpicker" id="prop_city_selection">
                   <option>Bangalore</option>
-                  <option>Pune</option>
-                  <option>Chennai</option>
+                  <option>Delhi NCR</option>
+                  <option>Gurgaon</option>
+                  <option>Kolkata</option>
+                  <option>Mumbai</option>
+                  <option>Noida</option>
               </select>
             </fieldset>
 
@@ -1700,7 +1757,7 @@
               <input type="text" class="medium-box" placeholder="Mobile" /> 
               <span class="italic-desc">You will receive an automated call to 
               verify this number</span>
-              <br />
+              <p class="error-msg">Please enter a valid mobile number</p>
 
               <span>I am a </span>
               <div class="seller-type" id="" data-toggle="buttons">
@@ -1732,6 +1789,7 @@
                 <p>Enter Your registered mobile number and your password to login</p>
                 <fieldset>
                   <input type="text" class="login-mobile" placeholder="Mobile Number" />
+                  <p class="error-msg">Please enter a valid mobile number</p>
                   <input type="password" class="login-password"  placeholder="Password"/>
                 </fieldset>
                 <div class="login-btn-holder">
@@ -2151,6 +2209,66 @@
           <div class="popup-content prop-rent-amount" id="prop_rent_amount">
             <h2>What is your minimum asking rent ? Also specify any leasing restrictions </h2>
             <fieldset>
+              <div class="all-bhk" data-toggle="buttons">
+                <label class="btn btn-custom">
+                  <input type="radio" value="0 - 3 months">0-10 K
+                </label>
+                <label class="btn btn-custom">
+                  <input type="radio" value="3 m - 1 year">10-15 K
+                </label> 
+                <label class="btn btn-custom">
+                  <input type="radio" value="1 - 2 year">15-20 K
+                </label>
+                <label class="btn btn-custom">
+                  <input type="radio" value="2 - 5 year">20-30 K
+                </label> 
+                <label class="btn btn-custom">
+                  <input type="radio" value="5 - 10 months">30-40 K
+                </label>
+                <label class="btn btn-custom">
+                  <input type="radio" value="10 years +">40-60 K
+                </label> 
+                <label class="btn btn-custom">
+                  <input type="radio" value="10 years +">60 K - 1 L
+                </label>                         
+                <label class="btn btn-custom">
+                  <input type="radio" value="10 years +">1+ L
+                </label>                       
+              </div>                                
+              <input type="text" class="amount-textbox" placeholder="Minimum security deposit" />
+            </fieldset>
+            <fieldset class="lease-type">
+              <label class="br-label">Lease Type: </label>
+              <div class="lease-type-select" id="" data-toggle="buttons">
+                <label class="btn btn-custom">
+                  <input type="radio" value="No Restrictions"><span>No Restrictions </span>
+                </label>                 
+                <label class="btn btn-custom">
+                  <input type="radio" value="Company Lease"><span>Company Lease </span>
+                </label>
+                <label class="btn btn-custom">
+                  <input type="radio" value="Family only"><span>Family only  </span>
+                </label>                 
+                <label class="btn btn-custom">
+                  <input type="radio" value="Family or Company Lease"><span>Family or Company Lease </span>
+                </label>                  
+              </div> 
+            </fieldset>
+            <fieldset class="back-forth clearfix">
+              <a href="javascript:void(0)" class="back-link" go-to="rent_furnishing_status">Back</a>
+              <a href="javascript:void(0)" class="next-link" go-to="rent_property_photo">Next</a>
+            </fieldset>                
+          </div>
+
+
+
+
+
+
+          <!-- PopUp 6 - prop_rentout_amount  -->
+          <div class="popup-content prop-rent-amount" id="prop_rentout_amount">
+            <h2>What is your minimum asking rent ? Also specify any leasing restrictions </h2>
+            <fieldset>              
               <input type="text" class="amount-textbox" placeholder="Minimum Rent" />
               <input type="text" class="amount-textbox" placeholder="Minimum security deposit" />
             </fieldset>
@@ -2249,7 +2367,7 @@
               <p>Talk to a registered local property expert now</p>
               <fieldset class="mobile-form">
                 <input type="text" placeholder="Enter your mobile number here" />
-                <a href="Javascript:void(0);" class="orange-button ">Submit</a>
+                <a href="Javascript:void(0);" class="orange-button open-rent-gearing">Submit</a>
                 <p class="assured-text">Callback assured in 5 min between 9AM to 10 PM</p>
                 <a href="#" class="skip-view-prop">Skip, View properties</a>
               </fieldset>
@@ -2258,7 +2376,25 @@
               <p class="italic-desc">IndiaHomes respects your privacy. We will only call you to help you find the best matching property</p>
 
             </div>
-          </div>          
+          </div>  
+
+
+          <!-- Initializing call -->
+          <div class="popup-content thanks-initialize" id="rent_thanks_initialize">
+            <div class="before-initalize">
+              <p class="thank-you-p">Thank you for contacting IndiaHomes. Our property advisor will be calling 
+                  you shortly</p>
+
+               <div class="initialize-loader">
+                <p>Initiating call back protocol<span class="initialize-loader-img"></span></p>
+               </div>  
+            </div>
+            <div class="after-initalize">
+                <p class="thank-you-p">Your request has been registered, and you shall receive a call shortly</p>
+                <a href="javascript:void(0)" class="close-popup orange-button">Done</a>
+            </div>                   
+          </div>
+
 
          <!-- PopUp 6.0 - Upload Photos -->
           <div class="popup-content upload-photos" id="rent_upload_photo">
@@ -2281,7 +2417,7 @@
               </ul>
             </div>
 
-            <p class="uploaded-count-desc italic-desc">Total <span>5 </span>photos uploaded</p>
+            <p class="uploaded-count-desc italic-desc">Total <span>1 </span>photos uploaded</p>
 
 
             <fieldset class="back-forth clearfix">
@@ -2296,42 +2432,16 @@
           <div class="popup-content identify-photo" id="rent_identify_photo">
             <div class="clearfix">
               <div class="image-holder">
-                <img src="css/images/preview-room.jpg">
-              </div>
-
-              <div class="upload-cancel">
-                <a href="Javascript:void(0);" class="upload-btn">Upload</a>
-                <a href="Javascript:void(0);" class="cancel-btn">Cancel</a>
+                <p>Your photo is being uploaded<span class="initialize-loader-img"></span></p>
+                <img src="css/images/preview-room.jpg" class="actual-uploaded-img" />
               </div>
             </div>  
             <div class="identify-room">
-              <h2>Identity this room :</h2>
-              <div class="bed-and-bath" data-toggle="buttons">
-                <label class="btn btn-custom">
-                    <input type="radio" value="Bedroom 1">Bedroom 1
-                </label>
-                <label class="btn btn-custom">
-                    <input type="radio" value="Bedroom 1">Bedroom 2
-                </label> 
-                <label class="btn btn-custom">
-                    <input type="radio" value="Bathroom 1">Bathroom 1
-                </label>
-                <label class="btn btn-custom">
-                    <input type="radio" value="Bathroom 2">Bathroom 2
-                </label>  
-                <label class="btn btn-custom">
-                    <input type="radio" value="Living">Living
-                </label>
-                <label class="btn btn-custom">
-                    <input type="radio" value="Dining">Dining
-                </label> 
-                <label class="btn btn-custom">
-                    <input type="radio" value="Kitchen">Kitchen 
-                </label>
-                <label class="btn btn-custom">
-                    <input type="radio" value="Others">Others
-                </label>  
-              </div> 
+              <h2>Label this photograph :</h2>
+              <fieldset class="phot0-label">
+                <input type="text" class="" placeholder="Bedroom1 or Bathroom1 or Hall" />
+                <a href="#" class="upload-btn orange-btn">Done</a>
+              </fieldset>      
             </div>
 
           </div>
@@ -2411,7 +2521,7 @@
                    
              <div class="suggestion-box">
               <textarea placeholder="Please share your suggestion which can improve our listing process."></textarea>
-              <a href="#" class="orange-button">Done</a>   
+              <a href="index.html" class="orange-button">Done</a>   
              </div>
 
              <div class="social-box">
@@ -2433,7 +2543,7 @@
             <p class="blog-link-desc">Visit <a href="#"> IndiaHomes Blog</a> for articles on selling a property</p>
 
 
-            <p class="things-to-ensure"> <a href="#">5 things to ensure in ‘ Agreement To Sell ’
+            <p class="things-to-ensure"> <a href="#">5 things to ensure in Agreement To Sell 
               Maximise the selling value of your house</a> </p>          
           </div>
           </div>
@@ -2586,14 +2696,33 @@
 
 
 
+        <!--- ************************* Loan phase ***************** -->
+
+
+          <div class="loan-phase-container">
+            <div class="loan-phases">
+
+            <a href="#" class="close-popup"></a>
+
+            <div class="popup">
+
+
+                     <!-- PopUp 0 - rent in or rent out   -->
+            <div class="popup-content rent-to-or-out" id="home_loan">
+              <h1>Simplify your property purchase by taking a home loan via IndiaHomes</h1>
+              <fieldset class="">
+                <a href="loan.html" class="calculate-emi orange-button">Calculate Your EMI</a>
+                <a href="loan-offers.html" class="loan-offer orange-button">Check loan offers</a>
+              </fieldset>
+            </div>    
+
+          </div> 
+         </div>  
 
 
 
 
-
-
-
-
+          <!-- ***************************** Loan Phase DOM ends Here ****************** -->
 
 
 
@@ -2617,14 +2746,14 @@
                 </div>                
               </div>
               <div class="orange-button-cont">
-                <a href="#" class="orange-btn rent-btn">RENT</a>
+                <a href="javascript:void(0)" class="orange-btn rent-btn">RENT</a>
                 <div id="odometer2" class="odometer">6000</div>
                 <div class="count-cont">
                     <span> Tenants Searching</span>
                 </div>                
               </div>
               <div class="orange-button-cont">
-                <a href="#" class="orange-btn">LOAN</a>
+                <a href="javascript:void(0)" class="orange-btn homeloan-btn">LOAN</a>
                 <div id="odometer3" class="odometer">1000</div>
                 <div class="count-cont">
                     <span>Loans Processed</span>
@@ -2638,7 +2767,7 @@
 
     <section class="about-india-homes">
       <div class="container">
-        <h2>IndiaHomes: India’s No 1 Property Advisor</h2>
+        <h2>IndiaHomes: India's No 1 Property Advisor</h2>
         <p><span>10 million</span> Customers&nbsp;&nbsp; | &nbsp;&nbsp;<span>50</span> Cities&nbsp;&nbsp; | &nbsp;&nbsp;<span>600</span> Property Specialists&nbsp;&nbsp; | &nbsp;&nbsp;<span>10,000 Cr</span>  of Property sold</p>
       </div>
     </section>
@@ -2866,7 +2995,7 @@
           <li><a href="#">Disclaimer</a> | </li> 
           <li><a href="#">Contact Us</a></li>
         </ul>
-        <p class="copyright">Copyright © 2014 IndiaHomes.com | All Rights Reserved</p>
+        <p class="copyright">Copyright Â© 2014 IndiaHomes.com | All Rights Reserved</p>
       </div>
     </footer>
     
@@ -2911,6 +3040,32 @@
         $('#far-clouds').pan({fps: 30, speed: 0.7, dir: 'left', depth: 30});
         $('#near-clouds').pan({fps: 30, speed: 1.5, dir: 'left', depth: 70});
         $('#top-clouds').pan({fps: 30, speed: 0.3, dir: 'left', depth: 70});
+
+
+      $(document).ready(function(){
+          if(window.location.hash) {
+              var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+              //alert (hash);
+              setTimeout(function() {
+                if(hash == "buy") {
+                  $(".buy-btn").trigger("click");
+                }
+                else if(hash == "sell") {
+                  $(".sell-btn").trigger("click");
+                }
+                else if(hash == "rent") {
+                  $(".rent-btn").trigger("click");
+                }
+                else if(hash == "loan") {
+                  $(".homeloan-btn").trigger("click");
+                }
+              },3500);
+                            
+          } else {
+                // No hash found
+          }
+      });
+
     </script>
 
 </body>

@@ -3336,6 +3336,7 @@ padding: 5px;
 float: left;
 margin: 10px 0 0 0;
 }
+<<<<<<< HEAD
 
 .developer-grid-view .col-md-4 {
     width: 235px !important;
@@ -3343,6 +3344,15 @@ margin: 10px 0 0 0;
     display: inline-block;
 }
 
+=======
+
+.developer-grid-view .col-md-4 {
+    width: 235px !important;
+    margin: 0 2% 2% 0!important;
+    display: inline-block;
+}
+
+>>>>>>> FETCH_HEAD
 .developer-grid-view .image-hover {
     min-height: 174px;
 }
@@ -8091,6 +8101,7 @@ display: none;
 }
 
 
+<<<<<<< HEAD
 
 .view-all-dev-detail {
     position: absolute;
@@ -8113,6 +8124,8 @@ text-decoration: underline;
 
 
 
+=======
+>>>>>>> FETCH_HEAD
 @media (min-width: 992px) {
 .dev-grid-view .col-md-3 {
 max-width: 22%;
