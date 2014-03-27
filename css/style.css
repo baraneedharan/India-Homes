@@ -3335,8 +3335,21 @@ margin: 10px 0 0 0;
     min-height: 174px;
 }
 
-.developer-grid-view .dev-prop-details .left-prop-detail {
-width: 118px;
+.developer-grid-view .dev-prop-details .left-prop-detail { 
+width: 100%;
+font-size: 14px;
+font-weight: 600;
+padding-bottom: 0px;
+
+}
+
+.developer-grid-view .dev-prop-details .left-prop-location {
+width: 124px;
+font-size: 12px;
+}
+
+.developer-grid-view .dev-prop-details .right-prop-price {
+    font-size: 12px;
 }
 
 .developer-grid-view .dev-prop-details p {
@@ -3354,7 +3367,9 @@ font-size: 12px;
 
 
 
-
+.panel-body.property-desc {
+    max-height: 305px;
+}
 
 
 
@@ -7787,7 +7802,7 @@ left: 2px;
 }
 
 #prop_filters .bootstrap-select.med-select {
-width: 148px;
+width: 172px;
 }
 
 #prop_filters .bootstrap-select.big-select {
@@ -7917,6 +7932,12 @@ color: #fff;
 height: 51px;
 padding: 14px 0px 14px 55px;
 margin: 0;
+font-weight: 300;
+}
+
+.callback b {
+    font-style: 18px;
+    font-weight: 500;
 }
 
 .timer-2d {
@@ -8041,8 +8062,17 @@ display: none;
     padding-top: 42px;
 }
 
+.project-ranking {
+    margin-top: 50px;
+}
 
 
+.project-ranking .first-gold, 
+.project-ranking .first-silver, 
+.project-ranking .first-bronze {
+    display: inline-block;
+    margin-right: 25px;
+}
 
 
 
