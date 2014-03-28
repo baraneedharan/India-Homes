@@ -2525,6 +2525,19 @@ input[type=file].hidden-input {
     display: none;
 }
 
+.builup-area input, .plot-area input {
+    background: red;
+    height: 35px;
+    width: 70%;
+}
+.builup-area, .plot-area {
+    margin: 14px 0;
+}
+.builup-area label, .plot-area label {
+    width: 100px;
+    color: #e4e4e4;
+}
+
 .property-size .possesions {
     display: block;
     width: 515px;
@@ -6211,6 +6224,7 @@ line-height: 25px;
 
 .preview-content .property-details .panel-group .panel-heading+.panel-collapse .panel-body {
 min-height: 219px;
+position: relative;
 }
 
 

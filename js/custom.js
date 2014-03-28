@@ -904,11 +904,39 @@
                   $("#sellingprop_type .next-link").attr("go-to","property_size"); 
                   $("#property_size .back-link").attr("go-to","sellingprop_type"); 
                 } else {
-                  $("#select_prop_type .next-link").attr("go-to","property_bedbath");
+                  $("#sellingprop_type .next-link").attr("go-to","property_bedbath");
                   $("#property_size .back-link").attr("go-to","property_bedbath"); 
+                }
+
+                if(selected_prop_type == "plot") {
+                  $(".builup-area").hide();
+                  $(".plot-area").show();
+                } else if(selected_prop_type == "Apartment") {
+                  $(".builup-area").show();
+                  $(".plot-area").hide();
+                } else {
+                  $(".builup-area, .plot-area").show();            
                 }
             }
         );  
+
+
+        $("#rentingprop_type .btn-custom").click(
+            function(){  
+                var selected_prop_type = $(this).find('input[type=radio]').val();
+
+                if(selected_prop_type == "Apartment") {
+                  $(".builup-area").show();
+                  $(".plot-area").hide();
+                } else {
+                  $(".builup-area, .plot-area").show();            
+                }
+            }
+        );  
+
+
+
+
 
         $("#property_bedbath .select-bath input:radio, #property_bedbath .select-bed input:radio").change(
             function(){
@@ -943,11 +971,14 @@
           } else {
             $(".selling-phases .property-type-li").parent().addClass("completed");
             $(".selling-phases .property-type-li").parent().removeClass("active").next().addClass("active");
-          }
-
-
-          
+          }          
         });
+
+       $(".builup-area input[type=text], .plot-area  input[type=text]").keypress(function(){
+          $("#property_size .next-link ").fadeIn();
+       });
+
+
 
        $("#property_bedbath .next-link").click(function() {
           
