@@ -2528,7 +2528,7 @@ input[type=file].hidden-input {
 .builup-area input, .plot-area input {
     margin-right: 10px;
     height: 35px;
-    width: 70%;
+    width: 50%;
 }
 
 .builup-area span, .plot-area span {
