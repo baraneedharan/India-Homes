@@ -2827,6 +2827,8 @@ padding: 6px 8px;
 .property-photo-preview h2 {
     margin: 0;
     margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
 }
 
 .property-photo-preview h2 a {
@@ -2847,6 +2849,87 @@ text-decoration: underline;
 .property-photo-preview .slider {
     position: relative;
 }
+
+
+.previous-prop,
+.next-prop {
+    position: absolute;
+}
+
+.previous-prop {
+background: url('images/prev-prop.png') no-repeat 0 12px;
+padding-left: 18px;
+}
+
+.next-prop {
+background: url('images/next-prop.png') no-repeat right 12px;
+padding-right: 18px;
+    right: 10px;
+}
+
+.previous-prop a,
+.next-prop a {
+    display: inline-block;
+}
+
+.previous-prop img,
+.next-prop img {
+    float: left;
+}
+
+.previous-prop .np-prop-briefs ,
+.next-prop .np-prop-briefs {
+    float: left;
+    margin-left: 10px;
+    color: #000;
+}
+
+.np-prop-briefs h4 {
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+.np-prop-briefs p {
+    font-size: 14px;
+}
+
+.gridmap-panel .property-photo-preview h2 {
+margin-bottom: 35px;
+position: relative;
+top: 26px;
+left: 96px;
+font-size: 19px;
+font-weight: 500;
+}
+
+.gridmap-panel .panel-title {
+background: transparent;
+}
+
+.gridmap-panel .property-details .prop-amenities ul li {
+min-width: 100px;
+margin-bottom: 5px;
+padding-right: 15px;
+}
+
+.gridmap-panel .new-row .panel-body.property-desc {
+    max-height: 328px
+}
+
+.gridmap-panel .property-desc p {
+line-height: 17px;
+}
+
+.gridmap-panel .property-details {
+margin-top: 60px;
+}
+
+.prop-brief-details > a{
+display: inline-block;
+height: 100%;
+width: 100%;
+}
+
 
 .property-photo-preview #carousel,
 .property-photo-preview #rent-carousel {
@@ -2891,7 +2974,7 @@ text-decoration: underline;
     background-color: #d5d8df;
     border: 0px solid #ddd;
     border-radius: 0;
-    padding: 14px 12px;
+    padding: 8px 12px;
     border-bottom: 1px solid #99999b;
 }
 
@@ -4696,7 +4779,7 @@ vertical-align: top;
 
 .view-details-holder {
 position: absolute;
-top: 8px;
+top: 12px;
 right: 8px;
 }
 
@@ -4918,6 +5001,7 @@ z-index: 1000;
 top: 4%;
 left: 0%;
 width: 99%;
+min-height: 448px;
 }
 
 .gridmap-panel .preview-overlay {
@@ -5083,8 +5167,9 @@ right: 200px;
 }
 
 #map_view .preview-content .property-details .panel-group .panel-heading+.panel-collapse .panel-body {
-min-height: 356px;
-height: 305px;
+min-height: 326px;
+height: 330px;
+position: relative;
 }
 
 #map_view .property-desc p {
@@ -5093,7 +5178,7 @@ font-family: 'Lato', sans-serif;
 font-size: 15px;
 font-weight: bold;
 margin-bottom: 2px;
-height: 24px;
+height: 22px;
 }
 
 
@@ -8681,7 +8766,15 @@ width: 55px;
     width: 100px;
 }
 
-
+.view-all-resale-detail {
+position: absolute;
+bottom: 4px;
+right: 10px;
+font-size: 14px;
+font-weight: 500;
+text-decoration: underline;
+color: #000;
+}
 
 .single-row.washing-machine-status {
 display: inline-block;
