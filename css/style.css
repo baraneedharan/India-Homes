@@ -2526,10 +2526,16 @@ input[type=file].hidden-input {
 }
 
 .builup-area input, .plot-area input {
-    background: red;
+    margin-right: 10px;
     height: 35px;
     width: 70%;
 }
+
+.builup-area span, .plot-area span {
+    font-size: 16px;
+    color: #fff;
+}
+
 .builup-area, .plot-area {
     margin: 14px 0;
 }
