@@ -1421,7 +1421,7 @@
           $(".additional-filters").fadeIn();
         });
 
-        $(".additional-filters .close-popup").click(function(){
+        $(".additional-filters .filter-buttons a").click(function(){
           $(".additional-filters").fadeOut();
         });
 
