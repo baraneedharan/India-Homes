@@ -3331,10 +3331,16 @@ padding: 0;
 }
 
 .floor_plan_box {
-width: 476px;
+width: auto;
 padding: 5px;
 float: left;
 margin: 10px 0 0 0;
+}
+
+.resale-prop-detail .groupname-prop-loc {
+width: 300px;
+margin-right: 55px;
+margin-left: 25px;
 }
 
 .developer-grid-view .col-md-4 {
@@ -3373,8 +3379,8 @@ font-weight: 500;
 font-size: 12px;
 }
 
-.developer-grid-view .prop-rank-but p {
-    font-size: 10px;
+.dev-prop-brief-details .prop-rank-but p {
+    font-size: 11px !important;
 }
 
 
@@ -6178,6 +6184,7 @@ width: 62px;
 /*****************************
 ARCHIT CODE - NEWS.HTML
 ******************************/
+.pad40{padding-top: 40px;}
 .pbottom40{
     padding-bottom: 40px;
 }
@@ -6196,19 +6203,18 @@ ARCHIT CODE - NEWS.HTML
     color: rgb(162, 162, 162);
     font-weight: bold;
 }
-.news-head ul li a.active, .news-head ul li a:hover{
+.news-head ul li a:active, .news-head ul li a:hover{
+    color: #fff;
+}
+.news-head ul li .active{
     color: #fff;
 }
 
-
 /*Mediahead section starts*/
-.mediahead{
-    background: #f4f9ff;
-    padding-bottom: 10px;
-}
+.mediahead{}
 .mediahead h2{
     font-size: 40px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 .mediahead hr{
   border-top: 1px solid rgb(214, 214, 214);
@@ -6217,14 +6223,12 @@ ARCHIT CODE - NEWS.HTML
 /*media section starts*/
 .media{
     padding: 0px 0px 40px 0px;
-    background: #f4f9ff;
-    margin: 0;
 }
 .media .section-headers {
-background: #c9ced3;
-padding: 10px 15px;
-/* margin: 0 0 20px 0; */
-font-size: 20px;
+    background: #c9ced3;
+    padding: 10px 15px;
+    /* margin: 0 0 20px 0; */
+    font-size: 20px;
 }
 .media .bgray{
     border: 1px solid rgb(214, 214, 214);
@@ -6273,17 +6277,17 @@ font-size: 20px;
 
 .media .btn-nav:hover{
     border: 1px solid #df5400;
-text-decoration: none;
-display: inline-block;
-color: #FFFFFF;
-background-color: #ff9103;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9103), to(#ff6e23));
-background-image: -webkit-linear-gradient(top, #ff9103, #ff6e23);
-background-image: -moz-linear-gradient(top, #ff9103, #ff6e23);
-background-image: -ms-linear-gradient(top, #ff9103, #ff6e23);
-background-image: -o-linear-gradient(top, #ff9103, #ff6e23);
-background-image: linear-gradient(to bottom, #ff9103, #ff6e23);
-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ff9103, endColorstr=#ff6e23);
+    text-decoration: none;
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #ff9103;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9103), to(#ff6e23));
+    background-image: -webkit-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -moz-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -ms-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -o-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: linear-gradient(to bottom, #ff9103, #ff6e23);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ff9103, endColorstr=#ff6e23);
 }
 
 .media .news-video{
@@ -6316,6 +6320,506 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
   width: 100%;
   height: auto;
 }
+
+.more-video .owl-prev {
+background: url('images/left-simple.png') no-repeat;
+display: inline-block;
+width: 40px;
+height: 40px;
+text-indent: -99999px;
+position: absolute;
+left: -5%;
+top: -104px;
+}
+.more-video .owl-next {
+background: url('images/right-simple.png') no-repeat;
+display: inline-block;
+width: 40px;
+height: 40px;
+text-indent: -99999px;
+position: absolute;
+right: -53px;
+top: -104px;
+}
+
+.more-video .owl-carousel .owl-wrapper, .owl-carousel .owl-item {
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-ms-backface-visibility: hidden;
+-webkit-transform: translate3d(0,0,0);
+-moz-transform: translate3d(0,0,0);
+-ms-transform: translate3d(0,0,0);
+padding-left: 10px;
+}
+
+/*****************************
+ARCHIT CODE - AWARDS.HTML
+******************************/
+.centered{margin: 0 auto;}
+.awards{}
+.awards article{
+    height: 420px;
+    margin-bottom: 20px;
+}
+.awards article img{
+    border: 1px solid rgb(216, 216, 216);
+    padding: 5px;
+}
+.awards article .detail{
+    font-size: 16px;
+    line-height: 22px;
+}
+.awards article .date{
+    color: #b71133;
+    font-size: 16px;
+    font-style: italic;
+    padding: 2px 0px 0px 0px;
+}
+
+
+/*****************************
+ARCHIT CODE - MANAGEMENT.HTML
+******************************/
+.lightblue{
+    background: #f4f9ff!important;
+}
+.mtop70{
+    margin-top: 70px;
+}
+.pbottom80{
+    padding-bottom: 80px!important;
+}
+.management{
+    padding: 45px 0px 5px 0px;
+    background: #e2e2e2;
+}
+.management .col-md-3{
+    width: 18%;
+}
+.management .board {
+    text-align: center;
+    background: #d9d9d9;
+    padding: 24px;
+}
+.management .bright1{
+    border-right:1px solid #d9d9d9; 
+}
+.management .board h2{
+    font-size: 24px;
+}
+
+.management .members{
+    padding-left: 30px;
+}
+.management .members .item{
+    text-align: center;
+}
+
+.management .members h3{
+    color: #333333;
+    font-size: 18px;
+    margin-top: 10px;
+}
+#board-member .owl-prev,#mgmt-member .owl-prev {
+    background: url('images/left-simple.png') no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-indent: -99999px;
+    position: absolute;
+    left: -6%;
+    top: -117px;
+}
+
+#board-member .owl-next,#mgmt-member .owl-next {
+    background: url('images/right-simple.png') no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    float: right;
+    text-indent: -99999px;
+    position: relative;
+    top: -109px;
+    right: -9%;
+}
+
+.mgmt-desc{
+    background: #f4f9ff;
+    padding: 20px 0px 50px 0px;
+}
+.mgmt-desc .info{
+    background: #fff;
+    padding: 25px 0px;
+    border: 1px solid #e2e2e2;
+}
+
+.mgmt-desc .info h2{
+    margin: 0 auto;
+    font-size: 24px;
+}
+.mgmt-desc .info h5{
+    margin-top: 5px;
+}
+
+.mgmt-desc .topimge, .mgmt-desc .topimge-mgmt{
+background: url('images/management-arrow.png') no-repeat;
+width: 30px;
+height: 30px;
+position: absolute;
+top: 0;
+left: 25.9%;
+margin-top: -12px;
+}
+
+
+/*.info:after, 
+.info:before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.info:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 15px;
+    left: 46%;
+    margin-left: 1px;
+}
+.info:before {
+    border-color: rgba(113, 158, 206, 0);
+    border-bottom-color: #CCCCCC;
+    border-width: 16px;
+    left: 46%;
+}
+*/
+
+
+
+
+/*****************************
+ARCHIT CODE - DEVELOPER.HTML
+******************************/
+.developer-head{
+    display: inline;
+position: relative;
+top: 4px;
+}
+
+.developer-page .dev-prop-details .left-prop-detail {
+width: 100px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.developer-page .prop-brief-details .gym-icon,.developer-page .prop-brief-details .swimpool-icon,.developer-page .prop-brief-details .lift-icon,.developer-page .prop-brief-details .tennis-icon,.developer-page .prop-brief-details .servent-icon,.developer-page .prop-brief-details .pipedgas-icon {
+
+height: 24px;
+width: 26px;
+}
+
+.developer-page .dev-prop-details p {
+color: #2c2c2c;
+font-family: 'Lato', sans-serif;
+font-weight: 500;
+font-size: 16px;
+margin-left: 5px;
+margin-bottom: 0;
+padding: 0px 0 2px 0px;
+position: relative;
+display: inline-block;
+margin-top: 5px;
+}
+
+.footer-links li {
+display: inline;
+padding: 0 5px;
+}
+
+.more-video #owl-demo .item{
+  margin: 3px;
+}
+.more-video #owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+/*****************************
+ARCHIT CODE - ACCOUNT-PROFILE.HTML
+******************************/
+.ptop35{
+    padding-top: 35px;
+}
+.account-sec{}
+ .headline{
+    padding: 5px 0px 25px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+.account-sec .btn-nav{
+   font: 14px/20px Arial, Helvetica, sans-serif;
+    color: #3D3C3C;
+    text-align: center;
+    background: #F8F8F8;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #B5B5B5;
+    margin: -57px 5px 0 0;
+    float: left;
+    display: block;
+    width: 95px;
+    left: -10px;
+    position: relative;
+    float: right;
+}
+
+.account-sec .btn-nav:hover{
+    border: 1px solid #df5400;
+    text-decoration: none;
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #ff9103;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9103), to(#ff6e23));
+    background-image: -webkit-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -moz-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -ms-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -o-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: linear-gradient(to bottom, #ff9103, #ff6e23);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ff9103, endColorstr=#ff6e23);
+}
+.account-sec .info-bar{
+    padding: 5px 0px;
+position: relative;
+font-size: 16px;
+}
+.account-sec .info-title{
+    text-align: right;
+    width: 52%;
+    float: left;
+    padding-right: 3px;
+}
+.pad40{padding-top :40px!important;}
+.account-sec .info-desc{
+    position: relative;
+    float: right;
+    text-align: left;
+    width: 44%;
+}
+
+.basic-details{
+    padding: 0px 0px 90px 0px;
+}
+.basic-details .headline{
+padding: 0px 30px 30px 30px;
+text-align: center;
+font-weight: bold;
+color: rgb(218, 22, 22);
+line-height: 30px;
+}
+
+.basic-details h4{
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+.basic-details .list-buttons{
+    margin-bottom: 90px;
+}
+.basic-details .btn-nav{
+   font: 14px/20px Arial, Helvetica, sans-serif;
+    color: #3D3C3C;
+    text-align: center;
+    background: #E6E3E3;
+    border-radius: 2px;
+    padding: 5px;
+    border: 1px solid #B5B5B5;
+    float: left;
+    display: block;
+    width: 150px;
+    left: -10px;
+    position: relative;
+    margin: 0px 12px;
+}
+
+.basic-details .btn-nav:hover{
+    border: 1px solid #df5400;
+    text-decoration: none;
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #ff9103;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9103), to(#ff6e23));
+    background-image: -webkit-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -moz-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -ms-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -o-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: linear-gradient(to bottom, #ff9103, #ff6e23);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ff9103, endColorstr=#ff6e23);
+}
+
+
+/*****************************
+ARCHIT CODE - PROFILE-SUMMARY.HTML
+******************************/
+.right{
+    float: right;
+}
+.pbottom60{
+    padding-bottom: 60px;
+}
+.profile-sec h4{
+    font-size: 16px;
+}
+.profile-sec .list-buttons{
+    padding: 50px 0px 61px 0px;
+}
+.btn-nav{
+   font: 14px/20px Arial, Helvetica, sans-serif;
+    color: #3D3C3C;
+    text-align: center;
+    background: #E6E3E3;
+    border-radius: 2px;
+    padding: 5px;
+    border: 1px solid #B5B5B5;
+    display: block;
+    width: 150px;
+    left: -10px;
+    position: relative;
+   
+}
+ .btn-nav:hover{
+    border: 1px solid #df5400;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #ff9103;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9103), to(#ff6e23));
+    background-image: -webkit-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -moz-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -ms-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: -o-linear-gradient(top, #ff9103, #ff6e23);
+    background-image: linear-gradient(to bottom, #ff9103, #ff6e23);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ff9103, endColorstr=#ff6e23);
+}
+
+
+/*****************************
+ARCHIT CODE - PROFILE.HTML
+******************************/
+.complete-profile{}
+.complete-profile label{
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 5px;
+    text-align: right;
+    position: relative;
+}
+.city-span{
+    font-style: italic;
+color: rgb(114, 114, 114);
+position: relative;
+top: 5px;
+font-size: 12px;
+}
+.complete-profile .form-inline .form-group {
+display: inline-block;
+margin-bottom: 0;
+vertical-align: middle;
+width: 100%;
+padding: 30px 0px;
+}
+.complete-profile .form-control{
+    width: 100%!important;
+}
+.pleft0{
+    padding-left: 0px;
+}
+.complete-profile .read-more-btn {
+border: 1px solid #df5400;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+font-size: 14px;
+float: right;
+text-decoration: none;
+display: inline-block;
+color: #FFFFFF;
+background-color: #ff9103;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9103), to(#ff6e23));
+background-image: -webkit-linear-gradient(top, #ff9103, #ff6e23);
+background-image: -moz-linear-gradient(top, #ff9103, #ff6e23);
+background-image: -ms-linear-gradient(top, #ff9103, #ff6e23);
+background-image: -o-linear-gradient(top, #ff9103, #ff6e23);
+background-image: linear-gradient(to bottom, #ff9103, #ff6e23);
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ff9103, endColorstr=#ff6e23);
+display: inline-block;
+margin-top: 130px;
+padding: 6px 49px;
+margin-right: 23%;
+}
+
+/*****************************
+ARCHIT CODE - MY-PROPERTIES.HTML
+******************************/
+.my-prop{}
+.my-individual-prop {
+    box-shadow: 4px 4px 12px #E2E2E2;
+    padding: 0;
+    margin: 0 2% 2% 0;
+    width: 78.6%;
+}
+.my-individual-left{
+    box-shadow: 4px 4px 12px #E2E2E2;
+    margin: 0px 0px 20px 0px;
+    padding: 0;
+}
+
+.my-individual-right{
+    padding: 5px;
+    background: #F0F0F0;
+    box-shadow: 4px 4px 12px #e2e2e2;
+    margin-top: 1px;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+.my-individual-right hr{
+    border-top: 1px solid #D3D3D3;
+}
+.dummy-detail-list{
+   background: white;
+    padding: 24% 0%;
+    position: relative;
+    margin: 58px 0px 15px 0px;
+    box-shadow: 0px 0px 4px rgb(168, 168, 168);
+}
+.my-prop .prop-info{
+    background: #ffffff;
+    padding: 4px 10px 0px 10px;
+    border: 1px solid rgb(221, 221, 221);
+}
+.prop-info .prop-name{
+    font-weight: bold;
+}
+.prop-info .price{
+    font-weight: bold;
+    float: right;
+    font-size: 16px;
+}
+.prop-info .prop-list-date{
+    position: relative;
+    top: -10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(107, 107, 107);
+}
+/********************************/
 
 
 #sell_login_user {
@@ -8166,13 +8670,38 @@ text-decoration: underline;
 
 
 
+.additional-filters .select-bhk .btn-custom {
+width: 55px;
+}
+
+.additional-filters .furnishing-state .btn-custom {
+    width: 100px;
+}
 
 
 
+.single-row.washing-machine-status {
+display: inline-block;
+width: 292px;
+}
+
+.single-row {
+display: inline-block;
+width: 232px;
+}
 
 
+.additional-filters .single-row label.br-label {
+    width: 100px;
+}
 
+.additional-filters .single-row.washing-machine-status label.br-label {
+    width: 132px;
+}
 
+.additional-filters .predefined-aminities {
+height: 72px;
+}
 
 
 @media (min-width: 992px) {
