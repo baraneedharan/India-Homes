@@ -3337,7 +3337,8 @@ float: left;
 margin: 10px 0 0 0;
 }
 
-.resale-prop-detail .groupname-prop-loc {
+.resale-prop-detail .groupname-prop-loc,
+.rental-prop-detail .groupname-prop-loc {
 width: 300px;
 margin-right: 55px;
 margin-left: 25px;
@@ -3390,7 +3391,9 @@ font-size: 12px;
 }
 
 
-
+.review-content .other-aminity-text {
+    margin-bottom: 30px !important;
+}
 
 
 
