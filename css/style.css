@@ -4466,6 +4466,7 @@ color: #fff;
 
 .view-buttons-holder {
     margin-right: 20px;
+    vertical-align: top;
 }
 
 .sl-properties-counts p {
@@ -4505,6 +4506,11 @@ p.avg-prop {
 
 .gridmap-panel .property-details .panel-default>.panel-heading {
 padding: 4px 12px 7px;
+}
+
+.sl-properties-counts {
+    position: relative;
+    top: 10px;
 }
 
 .sl-properties-counts p b {
@@ -4734,6 +4740,7 @@ background-position: 0px -14px;
 
 .prop-bed-price-details p.right-prop-price {
 float: right;
+padding-left: 0;
 }
 
 .prop-brief-details,
@@ -5647,6 +5654,7 @@ width: 55px;
      background-image: linear-gradient(to bottom, #ff9103, #ff6e23);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ff9103, endColorstr=#ff6e23);
      display: inline-block;
      margin-right: 10px;
+     position: relative;
 }
 
 .social-icon {
@@ -8238,16 +8246,16 @@ margin-right: 20px;
     }
     .groupname-prop-loc {
         margin: 0 auto 25px;
-        width: 200px;
-        min-width: 200px;
-        padding-right: 15px;
+/*        width: 200px;*/
+        min-width: 150px;
+        padding-right: 28px;
     }
     .prop-other-detail {
         margin: 0 auto 25px;
         width: 120px;
     }
     .btn-wrap {
-        width: 247px;
+        /*width: 247px;*/
         margin: 0 15px 15px 0;
         padding: 7px 0 0 0;
     }
@@ -8499,8 +8507,8 @@ z-index: 999;
 .active.contact-ih-btn:after {
 content: url('images/contact-btn-arrow.png');
 position: absolute;
-top: 6px;
-left: 83px;
+top: 5px;
+left: 68px;
 font-size: 44px;
 }
 
@@ -8853,8 +8861,8 @@ padding-top: 14px;
 */
 
 .btn-wrap {
-width: 278px;
-display: inline-flex;
+/*width: 278px;*/
+display: inline-block;
 padding-top: 0;
 margin-top: 2px;
 margin-bottom: 2px;
@@ -9006,7 +9014,7 @@ width: 78%;
 
 
 
-@media (min-width:900px) and (max-width: 1050px){
+@media (min-width:900px) and (max-width: 1100px){
     #prop_filters .bootstrap-select.proptype-select {
         width: 125px;
     }
@@ -9023,8 +9031,11 @@ padding: 7px 0 0px 30px;
 
 
 .sl-properties-counts {
-width: 100%;
+width: 54%;
 text-align: center;
+position: relative;
+left: -25px;
+top: -8px;
 }
 
 .prop-bed-price-details p.great-prop {
@@ -9054,7 +9065,11 @@ padding: 10px 10px 0;
 }
 
 .active.contact-ih-btn:after {
-top: 13px;
+top: 5px;
+}
+
+.sl-properties-counts p.total-sl-propcount {
+    display: block;
 }
 
 }
