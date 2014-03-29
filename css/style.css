@@ -2960,12 +2960,6 @@ display: inline-block;
 top: -6px;
 }
 
-.open_overlay_link {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-}
-
 .contact-in-overlay {
 margin-top: 5px;
 position: relative;
@@ -3492,10 +3486,32 @@ margin: 10px 0 0 0;
 
 .resale-prop-detail .groupname-prop-loc,
 .rental-prop-detail .groupname-prop-loc {
-width: 300px;
-margin-right: 55px;
+/*width: 300px;
+margin-right: 55px;*/
 margin-left: 25px;
 }
+
+.resale-prop-detail .prop-detail-header-left {
+width: 45%;
+}
+
+.resale-prop-detail .prop-detail-header-right {
+width: 54%;
+text-align: right;
+}
+
+.resale-prop-detail .rop-social {
+    display: inline-block;
+margin-top: 0px;
+margin-right: 10px;    
+}
+
+.resale-prop-detail .social-icon {
+    position: relative;
+    top: 10px;
+}
+
+
 
 .developer-grid-view .col-md-4 {
     width: 235px !important;
@@ -4475,18 +4491,15 @@ font-size: 14px;
 width: 212px;
 }
 
-.sl-properties-counts p.great-prop,
-.panel-title p.great-prop {
+p.great-prop {
     background: url('images/prop-house-icon.png') no-repeat 0 2px transparent;
 }
 
-.sl-properties-counts p.good-prop,
- .panel-title p.good-prop {
+p.good-prop {
     background: url('images/prop-house-icon.png') no-repeat 0 -78px transparent;
 }
 
-.sl-properties-counts p.avg-prop,
-.panel-title p.avg-prop {
+p.avg-prop {
     background: url('images/prop-house-icon.png') no-repeat 0 -158px transparent;
 }
 
@@ -4894,6 +4907,7 @@ font-weight: 500;
     padding: 0;
     margin: 0 2% 2% 0;
     width: 32%;
+    display: inline-block;
 }
 
 .gridmap-panel {
@@ -5202,7 +5216,22 @@ display: none;
     right: 62px;
 }
 
+.proj-feature-desc .project-ranking {
+margin-top: 0;
+margin-bottom: 10px;
+}
 
+
+.collapse-block .project-ranking p {
+color: #333333;
+font-family: 'Lato', sans-serif;
+font-size: 16px !important;
+margin-left: 0px;
+margin-bottom: 0;
+padding: 5px 0 2px 30px;
+position: relative;
+display: inline-block;
+}
 
 .abt-sub-nav {
     position: absolute;
@@ -5516,7 +5545,7 @@ vertical-align: middle;
     position: relative;
     padding: 0px 0;
     margin-right: 30px;
-    width: 260px;
+    min-width: 260px;
 display: inline-block;
 }
 
@@ -5547,6 +5576,7 @@ display: inline-block;
     position: relative;
     display: inline-block;
     padding: 0px 0;
+    vertical-align: top;
 }
 
 .prop-other-line {
@@ -5721,7 +5751,8 @@ width: 55px;
 /* Property Details */
 
 .prop-detail-content {
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    padding-left: 10px;
 }
 
 .owl-controls {
@@ -8129,7 +8160,7 @@ margin-right: 20px;
     }
 }
 
-@media (min-width:1024) {
+@media (min-width:1024px) {
     .prop-details-wrapper {
         width: 23%;
     }
@@ -8139,15 +8170,22 @@ margin-right: 20px;
     }
 }
 
+@media (max-width: 992px) {
+    .prop-details-wrapper {
+        display: none;
+    }
+}
+
+
 @media (max-width: 1023px) {
     .container {
         width: 100%;
     }
-    .prop-details-wrapper {
+/*    .prop-details-wrapper {
         display: none;
-    }
+    }*/
     .col-md-9 {
-        width: 100%;
+/*        width: 100%;*/
     }
     .col-md-offset-3 {
         margin-left: 0;
@@ -8192,6 +8230,8 @@ margin-right: 20px;
     }
 }
 
+
+
 @media (max-width: 1178px) {
     .logo {
         margin-left: 15px!important;
@@ -8199,6 +8239,7 @@ margin-right: 20px;
     .groupname-prop-loc {
         margin: 0 auto 25px;
         width: 200px;
+        min-width: 200px;
         padding-right: 15px;
     }
     .prop-other-detail {
@@ -8206,7 +8247,7 @@ margin-right: 20px;
         width: 120px;
     }
     .btn-wrap {
-        width: 220px;
+        width: 247px;
         margin: 0 15px 15px 0;
         padding: 7px 0 0 0;
     }
@@ -8231,9 +8272,9 @@ margin-right: 20px;
     .header {
         margin-bottom: 1px;
     }
-    .owl-controls {
+/*    .owl-controls {
         display: none!important;
-    }
+    }*/
     .prop-other-line:after {
         right: 14px;
     }
@@ -8811,6 +8852,14 @@ padding-top: 14px;
 }
 */
 
+.btn-wrap {
+width: 278px;
+display: inline-flex;
+padding-top: 0;
+margin-top: 2px;
+margin-bottom: 2px;
+vertical-align: top;
+}
 
 .contact-finished {
 position: absolute;
@@ -8889,6 +8938,9 @@ display: inline-block;
 width: 232px;
 }
 
+.has-left-pad {
+    padding-left: 5px;
+}
 
 .additional-filters .single-row label.br-label {
     width: 100px;
@@ -8900,6 +8952,21 @@ width: 232px;
 
 .additional-filters .predefined-aminities {
 height: 72px;
+}
+
+.gridmap-panel .big-contact-btn {
+position: relative;
+left: 20px;
+}
+
+.gridmap-panel .preview-content {
+min-height: 476px;
+}
+
+#map_view.rental-map .preview-content .property-details .panel-group .panel-heading+.panel-collapse .panel-body {
+min-height: 310px;
+height: 310px;
+position: relative;
 }
 
 
@@ -8939,7 +9006,58 @@ width: 78%;
 
 
 
+@media (min-width:900px) and (max-width: 1050px){
+    #prop_filters .bootstrap-select.proptype-select {
+        width: 125px;
+    }
 
+.contact-ih a {
+position: absolute;
+top: 10px;
+right: 12px;
+}
+
+.sl-properties-counts p {
+padding: 7px 0 0px 30px;
+}
+
+
+.sl-properties-counts {
+width: 100%;
+text-align: center;
+}
+
+.prop-bed-price-details p.great-prop {
+max-width: 144px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.gridmap-panel .property-photo-preview h2 a {
+font-size: 16px;
+}
+
+.other-label {
+    display: none;
+}
+
+.view-all-resale-detail {
+top: 8px;
+}
+.gridmap-panel .preview-content {
+min-height: 488px;
+}
+
+.prop-brief {
+padding: 10px 10px 0;
+}
+
+.active.contact-ih-btn:after {
+top: 13px;
+}
+
+}
 
 
 

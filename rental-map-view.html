@@ -565,37 +565,8 @@
             </div>
             
 
-            <div class="col-md-9" id="map_view">
-                <div class="row"> 
-
-
-                      <!-- Popup -->
-                      <section class="contact-finished">
-                          <a href="#" class="close-popup"></a>
-                          <div class="calling-div" id="calling_div">
-                            <div class="view-similar-prop">
-                              <h2>View  more properties similar to Experion Heartsong</h2>
-                              <div class="prop-img">
-                                <img src="css/images/about-img1.jpg">
-                              </div>
-                              <div class="prop-detai clearfix">
-                                <p class="prop-addr-left">Spaze Privy, The Address</p>
-                                <p class="prop-addr-right">Sector 93</p>
-                              </div>
-
-                              <a href="Javascript:void(0)" class="see-more-opt">See more option</a>
-
-                            </div>
-                            <div class="register-for-ih">
-                              <h2>Want the latest updates and news on your favourite properties or areas?</h2>
-
-                              <a href="#" class="read-more-btn">Register for IndiaHomes Analytics</a>
-
-                              <a href="Javascript:void(0)" class="see-more-opt">Know More</a>
-
-                            </div>
-                          </div>
-                      </section>                                                                    
+            <div class="col-md-9 rental-map" id="map_view">
+                <div class="row">                                                                   
 
                     <div id="map-canvas"></div>
 
@@ -603,7 +574,29 @@
                     <div class="preview-content clearfix">
                         <a href="#" class="close-popup"></a>
                       <div class="property-photo-preview">
-                        <h2> <a href="rental-prop-detail.html"> 2 BHK apartment at HSR layout, Bangalore</a></h2>
+
+                        <div class="previous-prop">
+                          <a href="#" class="clearfix">
+                            <img src="css/images/small-thumb-prop.png">
+                            <div class="np-prop-briefs">
+                              <h4>2 Beds, 17th main</h4>
+                              <p>30 Lakhs</p>
+                            </div>
+                          </a>
+                        </div>
+
+                        <div class="next-prop">
+                          <a href="#" class="clearfix">
+                            <img src="css/images/small-thumb-prop.png">
+                            <div class="np-prop-briefs">
+                              <h4>2 Beds, 17th main</h4>
+                              <p>30 Lakhs</p>
+                            </div>
+                          </a>
+                        </div>
+
+
+                        <h2>  <a href="rental-prop-detail.html" class=""> 2 Bedrooms, HSR layout, Bangalore</a></h2>
                         <section class="slider">
                           <div id="slider" class="flexslider">
                             
@@ -645,8 +638,8 @@
                           <div class="panel panel-default">
                             <div class="panel-heading">
                               <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#prop_accordion" href="#photoanddetails">
-                                  Photos and Details
+                                <a data-toggle="" data-parent="#prop_accordion" href="#">
+                                  <p class="great-prop left-prop-detail">Great property</p>
                                 </a>
                               </h4>
                             </div>
@@ -654,11 +647,12 @@
                               <div class="panel-body property-desc">
                                 <div class="prop-details">
 
-                                     <p> <label>Price: </label> 35 Lakhs</p>
+                                     <p> <label>Rent: </label> 35,000</p>
+                                     <p> <label>Lease Type:</label> Apartment</p>
                                      <p> <label>Property Type:</label> Apartment</p>
-                                     <p> <label>Bedrooms: </label> 3</p>
-                                     <p> <label>Bathrooms: </label> 3</p>
+                                     <p> <label>Bedrooms: </label> 3<label class="has-left-pad">Bathrooms: </label> 3</p>
                                      <p> <label>Size</label> 1400 Sq.Ft</p>
+                                     <p> <label>Furnishng state</label> Semi-furnished</p>
 
 
                                 </div>
@@ -668,16 +662,17 @@
                                   <p> <label>Parking: </label> 2 </p>
                                   <p> <label>Power backup: </label> Partial</p>
                                   <p> <label>Security: </label> Yes</p>
-
+                                  <label class="other-label">Other: </label>
                                   <ul>
-                                    <li><span class="gym-icon">Gym</span></li>
-                                    <li><span class="swimpool-icon">Swimming Pool</span></li>
-                                    <li><span class="lift-icon">Elevator</span></li>
-                                    <li><span class="servent-icon">Servent room</span></li>
-                                    <li><span class="tennis-icon">Tennis court</span></li>
+                                    <li><span class="gym-icon"></span></li>
+                                    <li><span class="swimpool-icon"></span></li>
+                                    <li><span class="lift-icon"></span></li>
+                                    <li><span class="servent-icon"></span></li>
+                                    <li><span class="tennis-icon"></span></li>
                                   </ul>
-                                  <a href="rental-prop-detail.html" class="resale-view-all">view all details</a>
                                 </div>
+                                <a href="rental-prop-detail.html" class="view-all-resale-detail">View full details</a>
+
                               </div>
                             </div>
                           </div>
@@ -685,7 +680,7 @@
                           
                           
                         </div>
-
+                        <a href="Javascript:void(0)" class="big-contact-btn contact-ih-btn contact-in-overlay">Contact IndiaHomes for this property</a>
                       </div>
                   </div>
 

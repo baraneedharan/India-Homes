@@ -134,7 +134,7 @@
                   <a href="#"><img src="css/images/indiahomes-small-logo.png"></a>
                 </div>
                 <div class="groupname-prop-loc">
-                  <h2>2 Bedroom, Apartment</h2>
+                  <h2>2 Bedroom, Independant floor</h2>
                   <h4>Sector 108, Gurgaon</h4>
                 </div>
                 <div class="prop-other-detail">
@@ -148,7 +148,7 @@
             </div>
 
             <div class="prop-detail-header-right">
-                  <div class="col-xs-12 col-sm-6 col-md-8 btn-wrap">
+                  <div class="btn-wrap">
                     <a href="Javascript:void(0)" class="read-more-btn contact-ih-btn">Contact IndiaHomes</a>
                     <a href="#" class="read-more-btn">Shortlist</a>
 
@@ -164,7 +164,7 @@
                     </div>
 
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 prop-social">
+                  <div class="rop-social">
                     <label>Share this on</label>
                     <a href="#" class="social-icon fb"></a>
                     <a href="#" class="social-icon tw"></a>
@@ -218,7 +218,7 @@
               <div class="col-md-3 prop-details-wrapper">
                   <div class="prop-details-nav">
                     <ul class="prop-navigation">
-                      <li class="active"><a href="#propert_details" class="prop-solo-details-links">Property Detail</a></li>
+                      <li class="active"><a href="#propert_details" class="prop-solo-details-links">Property Details</a></li>
                       <li><a class="prop-solo-details-links" href="#prop_features">Photos</a></li>
                       <li><a class="prop-solo-details-links" href="#neighbourhood">Neighbourhood</a></li>
                       <li><a class="prop-solo-details-links" href="#prop_amenities">Amenities</a></li>
@@ -264,7 +264,7 @@
 
                 <div class="prop-details prop-detail-content" id="propert_details">
 
-                  <h3 class="section-headers"><i class="glyphicon glyphicon-chevron-down"></i>Project Detail</h3>
+                  <h3 class="section-headers"><i class="glyphicon glyphicon-chevron-down"></i>Property Details</h3>
 
                   <div class="collapse-block row">
 
@@ -277,19 +277,28 @@
                           <div class="item"><img src="css/images/sample.jpg" class="img-responsive" /></div>
                           <div class="item"><img src="css/images/sample.jpg" class="img-responsive" /></div>
                         </div>
+                        
                       </div>
 
                       <div class="col-xs-12 col-sm-4 col-md-4 ropert-desc">
                         <div class="proj-feature-desc">
-
-                          <p> <label>Property Type: </label> Apartment</p>
-                          <p> <label>Bedrooms: </label> 3</p>
-                          <p> <label>Bathrooms: </label> 3</p>
-                          <p> <label>Size :</label> 1200 Sq.ft</p>
-                          <p> <label>Possession Status :</label> 6 - 12 months </p>
-                          <p> <label>Rate per sq ft:</label> 2k - 4k </p>
-
-                         
+                          <div class="project-ranking">
+                            <p class="great-prop left-prop-detail">Great Property</p>
+                          </div>                          
+                           <p> <label>Property Type:</label> Villa</p>
+                           <p> <label>Dev Project Name:</label> The Heartsong</p>
+                           <p> <label>Locality:</label> Sector 108</p>
+                           <p> <label>Bedrooms:</label> 3</p>
+                           <p> <label>Bathrooms:</label> 3</p>
+                           <p> <label>Size:</label> 2000 sq. ft. </p>
+                           <p> <label>Plot Size:</label> 1200 sq. ft. </p>
+                           <p> <label>Possession status:</label> Under construction</p>
+                           <p> <label>Possession Timeframe:</label> 6-12 months</p>
+                           <p> <label>Price:</label> &#8377; 90 Lacs</p>
+                           <p> <label>Rate per sq. ft. : </label>&#8377; 7000 / sq. ft.</p>
+                           <p> <label>Listing by:</label> Owner</p>
+                           <p> <label>Added:</label> 20 days back</p>
+                        
                         </div>                        
     
                       </div>
@@ -626,7 +635,7 @@
 
                           <div class="contact-form">
                             <input type="text" class="form-control contact-input" id="mobilenum" placeholder="Enter you mobile No. here">
-                            <a href="#" class="contact-button">Call me now</a>
+                            <a href="#" class="contact-button contact-btn">Call me now</a>
                           </div>
 
                       </div>
@@ -837,7 +846,8 @@
             $(this).addClass("active");
           });
             
-            $(".call-me-btn").click(function(){
+            $(".call-me-btn, .contact-btn").click(function(){
+              $(".contact-popup").fadeIn();
               $(".cont-popup-content").hide();
               $("#thanks_initialize").fadeIn("slow");
               //$(".contact-popup").animateAuto("height", 100);
