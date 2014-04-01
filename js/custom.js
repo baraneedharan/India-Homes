@@ -214,7 +214,7 @@
 
 
       $(".close-popup, .listing-requsted").click(function(){
-         $(".buying-phases, .popup-content, .selling-phases, .renting-phases").fadeOut();
+         $(".buying-phases, .popup-content, .selling-phases, .renting-phases, .signup-phases").fadeOut();
          $(".user-selections").hide();
          $(".banner-text, .orange-buttons-holder").fadeIn();
       });
@@ -1454,6 +1454,15 @@
 
         $(".additional-filters .filter-buttons a").click(function(){
           $(".additional-filters").fadeOut();
+        });
+
+
+        //
+
+        $(".sign-up-btn").click(function(){
+          $(".banner-text").fadeOut();
+          $(".login-container, .orange-buttons-holder").hide();
+          $(".signup-phases, #agent_login").fadeIn();
         });
 
 

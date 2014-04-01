@@ -484,9 +484,10 @@ margin-right: 6px;
 }
 
 .buying-phases,
- .selling-phases,
- .renting-phases,
-  .loan-phases {
+.selling-phases,
+.renting-phases,
+.loan-phases,
+.signup-phases {
     min-width: 622px;
     min-height: 183px;
     left: 50%;
@@ -496,6 +497,25 @@ margin-right: 6px;
     display: none;
     z-index: 9999;
 }
+
+#agent_login h3 {
+    color: #fff;
+font-size: 15px;
+margin: 0;
+}
+
+.btn-center {
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.btn-center a {
+    width: 150px;
+}
+/*
+.signup-phases {
+display: block;
+}*/
 
 .popup {
     background: rgba(22, 28, 33, 0.8);
