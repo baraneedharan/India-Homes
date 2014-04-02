@@ -1136,7 +1136,22 @@
             function(){
                 $(this).parents(".popup-content").find(".next-link").fadeIn();  
             }
-        );     
+        );   
+        $("#prop_rentout_amount .lease-type input:radio").change(
+            function(){
+                $(this).parents(".popup-content").find(".next-link").fadeIn();  
+            }
+        );  
+
+
+
+
+        $("#rent_property_size input:text").keypress(
+            function(){
+                $(this).parents(".popup-content").find(".next-link").fadeIn();  
+            }
+        ); 
+
 
 
         $("#rent_furnishing_status .next-link").click(function() {
@@ -1169,6 +1184,7 @@
 
 
        $(".rent-in-btn").click(function(){
+        $(".renting-phases .next-link").removeAttr("style");
         $("#rent_prop_city h2").text("Select the city in which you are searching a property to rent");
         $("#rent_prop_location h2").text("Where do you want to rent property in Bangalore?");
         $("#rent_prop_location .location-form").hide();
@@ -1185,11 +1201,12 @@
 
         $("#rent_furnishing_status .next-link").attr("go-to","prop_rent_amount");
 
-        $(".renting-phases").addClass("rent-in");
+        $(".renting-phases").removeClass("rent-out").addClass("rent-in");
        })
 
 
        $(".rent-out-btn").click(function(){
+        $(".renting-phases .next-link").removeAttr("style");
 
         $("#rent_prop_city .next-link").attr("go-to","rent_prop_owner");
 
@@ -1210,7 +1227,7 @@
 
         $("#rent_furnishing_status .next-link").attr("go-to","prop_rentout_amount");
 
-        $(".renting-phases").addClass("rent-out");
+        $(".renting-phases").removeClass("rent-in").addClass("rent-out");
        });
 
 

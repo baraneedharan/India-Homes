@@ -7131,15 +7131,20 @@ display: none;
     display: none;
 }
 
-/*#rent_prop_city .next-link,*/
-/*#rent_prop_location .next-link,*/
-/*#rentingprop_type .next-link,*/
-/*#rent_property_bedbath .next-link,
-#prop_rent_amount .next-link*/
-/*#rent_property_size .next-link,*/
-/*#rentprop_posession_status .next-link,*/
-/*#rent_furnishing_status .next-link*/ {
+#prop_rentout_amount .next-link,
+#rent_prop_location .next-link,
+#rentingprop_type .next-link,
+#rent_property_bedbath .next-link,
+#prop_rent_amount .next-link,
+#rent_property_size .next-link,
+#rentprop_posession_status .next-link,
+#rent_furnishing_status .next-link {
     display: none;
+}
+
+
+.rent-in .next-link {
+    display: inline-block !important;
 }
 
 
