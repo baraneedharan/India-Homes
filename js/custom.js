@@ -498,60 +498,6 @@
           },50);
         });
         
-        $("#rent_property_preference .btn").click(function(){
-          setTimeout(function() {
-            if($("#rent_parking_status .btn.active").length && $("#rent_power_backup_status .btn.active").length && $("#rent_security_status .btn.active").length == 1) {
-              $("#rent_property_preference .next-link").fadeIn();  
-              console.log("true");
-            } else {
-              console.log("false");
-            }
-          },50);
-        });
-
-
-        $("#rent_furnishing_status .select-furnished .btn").click(function(){
-          setTimeout(function() {
-            if($("#rent_tvs .btn.active").length && $("#rent_acs .btn.active").length && $("#rent_wm .btn.active").length == 1 && $("#rent_refg .btn.active").length == 1) {
-              $("#rent_furnishing_status .next-link").fadeIn();  
-              console.log("true");
-            } else {
-              console.log("false");
-            }
-          },50);
-        });
-
-
-        $("#rent_prop_owner :input").keyup(function() {
-              var $emptyFields = $('#rent_prop_owner :input').filter(function() {
-                  return $.trim(this.value) === "";
-              });
-
-              if (!$emptyFields.length) {
-                  $("#rent_prop_owner .next-link").fadeIn();
-              }
-          });
-
-        $("#rent_prop_location :input").keyup(function() {
-              var $emptyFields = $('#rent_prop_location :input').filter(function() {
-                  return $.trim(this.value) === "";
-              });
-
-              if (!$emptyFields.length) {
-                  $("#rent_prop_location .next-link").fadeIn();
-              }
-          });  
-
-        $("#rent_property_size :input").keyup(function() {
-              var $emptyFields = $('#rent_property_size :input').filter(function() {
-                  return $.trim(this.value) === "";
-              });
-
-              if (!$emptyFields.length) {
-                  $("#rent_property_size .next-link").fadeIn();
-              }
-          });   
-
 
 
         $("#select_developer_budjet input:checkbox").change(function(){
@@ -1122,6 +1068,61 @@
 
 
 
+        $("#rent_property_preference .btn").click(function(){
+          setTimeout(function() {
+            if($("#rent_parking_status .btn.active").length && $("#rent_power_backup_status .btn.active").length && $("#rent_security_status .btn.active").length == 1) {
+              $("#rent_property_preference .next-link").fadeIn();  
+              console.log("true");
+            } else {
+              console.log("false");
+            }
+          },50);
+        });
+
+
+        $("#rent_furnishing_status .select-furnished .btn").click(function(){
+          setTimeout(function() {
+            if($("#rent_tvs .btn.active").length && $("#rent_acs .btn.active").length && $("#rent_wm .btn.active").length == 1 && $("#rent_refg .btn.active").length == 1) {
+              $("#rent_furnishing_status .next-link").fadeIn();  
+              console.log("true");
+            } else {
+              console.log("false");
+            }
+          },50);
+        });
+
+
+        $("#rent_prop_owner :input").keyup(function() {
+              var $emptyFields = $('#rent_prop_owner :input').filter(function() {
+                  return $.trim(this.value) === "";
+              });
+
+              if (!$emptyFields.length) {
+                  $("#rent_prop_owner .next-link").fadeIn();
+              }
+          });
+
+        $("#rent_prop_location :input").keyup(function() {
+              var $emptyFields = $('#rent_prop_location :input').filter(function() {
+                  return $.trim(this.value) === "";
+              });
+
+              if (!$emptyFields.length) {
+                  $("#rent_prop_location .next-link").fadeIn();
+              }
+          });  
+
+        $("#rent_property_size :input").keyup(function() {
+              var $emptyFields = $('#rent_property_size :input').filter(function() {
+                  return $.trim(this.value) === "";
+              });
+
+              if (!$emptyFields.length) {
+                  $("#rent_property_size .next-link").fadeIn();
+              }
+          });   
+
+
 
        //Rent Location
 
@@ -1201,16 +1202,6 @@
                 $(this).parents(".popup-content").find(".next-link").fadeIn();  
             }
         );  
-
-
-
-
-        // $("#rent_property_size input:text").keypress(
-        //     function(){
-        //         $(this).parents(".popup-content").find(".next-link").fadeIn();  
-        //     }
-        // ); 
-
 
 
         $("#rent_furnishing_status .next-link").click(function() {
@@ -1533,13 +1524,34 @@
         });
 
 
-        //
+        // Sign up click
 
         $(".sign-up-btn").click(function(){
           $(".banner-text").fadeOut();
-          $(".login-container, .orange-buttons-holder").hide();
+          $(".login-container, .orange-buttons-holder, .popup-content").hide();
           $(".signup-phases, #agent_login").fadeIn();
         });
+
+        $(".fgt-password").click(function(){
+          $(".banner-text").fadeOut();
+          $(".login-container, .orange-buttons-holder, .popup-content").hide();
+          $(".signup-phases, #forgot_password").fadeIn();
+        });
+
+        $(".reset-confirmation").click(function(){
+          $("#forgot_password").hide();
+          $(".signup-phases, #reset_confirmation").fadeIn();
+        });
+
+        $(".sign-close-pop-up").click(function(){
+          $(".banner-text").fadeIn();
+          $(".orange-buttons-holder").show();
+          $(".signup-phases, #forgot_password").fadeOut();
+          $(".popup-content").hide();
+        });
+
+        
+        
 
 
     });

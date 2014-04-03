@@ -111,7 +111,7 @@
                   <a href="#" class="orange-button">Login</a>
                 </div>
                 <div class="clearfix login-options">
-                  <a href="#" class="left">Forgot your password</a>
+                  <a href="Jacascript:void(0)" class="left fgt-password">Forgot your password</a>
                   <p class="right">Don't have a login , <a href="Javascrpt:void(0)" class="sign-up-btn">Sign up here</a></p>
                 </div>
               </div>
@@ -148,7 +148,8 @@
 <div class="signup-phases">
   <a href="#" class="close-popup"></a>
   <div class="popup">
-    <div class="popup-content about-owner" id="agent_login" style="display: block;">
+    <!-- Agent register -->
+    <div class="popup-content about-owner" id="agent_login">
       <h2>Register on IndiaHomes to list properties or get leads for buyers, tenants</h2>
       <h3>Enter your contact information</h3>
 
@@ -176,6 +177,38 @@
         <a href="Javascript:void(0)" class="orange-button">Submit</a>
       </div>
     </div>
+
+    <!-- forgot password -->
+    <div class="popup-content about-owner" id="forgot_password">
+      <h2>Please provide your registered mobile number and email id to reset your password</h2>
+
+      <p class="error-msg special-error">Provided email id and mobile number does not match our record. Please correct and retry.</p>
+
+      <fieldset class="user-form clearfix">
+        <input type="text" class="big-box" placeholder="Mobile"> 
+        <p class="error-msg">Please provide your mobile number</p>
+        <input type="text" class="big-box" placeholder="Email">
+        <p class="error-msg">Please provide your Email</p>
+        
+      </fieldset>
+      <div class="btn-center">
+        <a href="Javascript:void(0)" class="orange-button reset-confirmation">Reset Password</a>
+
+        <a href="Javascript:void(0)" class="orange-button">Cancel</a>
+      </div>
+    </div>
+
+    <!-- Reset Confirmation-->
+    <div class="popup-content about-owner" id="reset_confirmation">
+      <h2>your password has been reset and a sms has been sent to your mobile number</h2>
+
+      <div class="btn-center">
+        <a href="Javascript:void(0)" class="orange-button sign-close-pop-up">Close</a>
+      </div>
+    </div>
+
+
+
   </div>
 </div>
 

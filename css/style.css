@@ -7374,9 +7374,21 @@ margin: 3em 2em 1em;
     float: left;
 }
 
+.has-site-letters {
+position: relative;
+top: 50px;
+}
+
+.site-ltr {
+    position: absolute;
+    top: -80px;
+}
 
 
-
+.video-holder {
+background: #fff;
+padding: 5px;
+}
 
 
 .site-section-anim{
@@ -7384,7 +7396,7 @@ margin: 3em 2em 1em;
 }
 
 .site-txt{
-    padding: 10em 0 0 0;
+    padding: 8em 0 0 0;
 }
 
 .site-txt #typed-cursor{
@@ -7399,23 +7411,44 @@ margin: 3em 2em 1em;
     height: 2em;
     padding: 0.4em;
     color: #fff;
-
+    opacity: 0;
+    z-index: 999;
 }
 
 .site-ltr-s{
     background: #e74c3c;
+    left: 25%;
 }
 
 .site-ltr-i{
     background: #3498db;
+    left: 40%;
 }
 
 .site-ltr-t{
     background: #9b59b6;
+    left: 55%;
 }
 
 .site-ltr-e{
     background: #2c3e50;
+    left: 70%;    
+}
+
+.hidden-fields div {
+    width: 32px;
+    height: 32px;
+    background: #f4f9ff;
+    display: inline-block;
+    margin: 0px 10px;
+    opacity: 0;
+    z-index: 0;
+}
+
+.hidden-fields {
+    position: absolute;
+    bottom: 210px;
+    left: 94px;
 }
 
 
@@ -7427,11 +7460,31 @@ margin: 3em 2em 1em;
 .site-title,.site-value{
     display: inline-block;
     font-size: 3em;
+    font-style: normal;
+}
+
+h1.site-actual-title {
+letter-spacing: 40px;
+margin-left: 65px;
+margin-top: 0;
+}
+
+h1.site-visit-title,
+.site-txt .site-visit-div #typed-cursor {
+    font-size: 18px;
+    display: inline-block;
+}
+
+h1.site-actual-title,
+h1.site-visit-title,
+h1.site-title,
+h1.site-value {
+    display: inline-block;
 }
 
 .site-circle{
-    width: 9em;
-    height: 9em;
+    width: 11em;
+    height: 11em;
     padding: 3.5em 0 0 0;
     text-align: center;
     color: #fff;
@@ -7439,13 +7492,10 @@ margin: 3em 2em 1em;
     -moz-border-radius: 50%;
     border-radius: 50%;
     background: #b74255;
-}
-.site-circle{
+    -webkit-transform: scale(0);
     position: absolute;
     top: 0%;
     left: 0%;
-    opacity: 0;
-
 }
 
 .site-line-l{
@@ -7487,33 +7537,28 @@ margin: 3em 2em 1em;
 }
 
 .site-top{
-    
-    top: -190%;
-    left: -26%;
-    opacity: 0;
-    background: #e74c3c;
+top: -168%;
+left: -16%;
+background: #e74c3c;
 }
 
 .site-left{    
-    top: -26%;
-    left: -190%;
-    opacity: 0;
+    top: -14%;
+    left: -170%;
     background: #2c3e50;
 
 }
 
 
 .site-right{    
-    top: -26%;
-    left: 140%;
-    opacity: 0;
+    top: -15%;
+    left: 143%;
     background: #3498db;
 }
 
 .site-bottom{    
-    top: 140%;
-    left: -25%;
-    opacity: 0;
+    top: 142%;
+    left: -14%;
     background: #9b59b6;
 }
 
@@ -7544,14 +7589,77 @@ margin: 3em 2em 1em;
 
 
 
+.bg-img {
+background: url('images/prop-about-bg.png') no-repeat center bottom;
+position: absolute;
+width: 100%;
+background-size: cover;
+height: 602px;
+bottom: 0;
+z-index: 1;
+}
+
+.bottom-section-hasbg {
+    position: relative;
+}
+
+.bottom-section-hasbg .container {
+z-index: 9999;
+margin-bottom: 200px;
+position: relative;
+}
 
 
 
 
+.darkbg-img {
+background: url('images/corperate-bg.jpg') no-repeat center bottom;
+position: absolute;
+width: 100%;
+background-size: cover;
+height: 602px;
+bottom: 0;
+z-index: 1;
+}
+
+.bottom-section-hasdarkbg {
+    position: relative;
+}
+
+.bottom-section-hasdarkbg .container {
+z-index: 9999;
+margin-bottom: 200px;
+position: relative;
+}
 
 
+#forgot_password,
+#agent_login,
+#reset_confirmation {
+    display: none;
+}
+
+#forgot_password .orange-button{
+    margin-right: 10px;
+}
 
 
+#forgot_password .user-form {
+margin-top: 10px;
+position: relative;
+}
+
+#forgot_password .error-msg {
+margin: 4px 0px;
+display: none; 
+margin-top: -10px;
+}
+
+#forgot_password input[type=text].big-box {
+height: 36px;
+line-height: 32px;
+width: 100%;
+}
 
 
 
