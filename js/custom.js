@@ -496,9 +496,17 @@
               console.log("false");
             }
           },50);
-
-
-
+        });
+        
+        $("#rent_property_preference .btn").click(function(){
+          setTimeout(function() {
+            if($("#rent_parking_status .btn.active").length && $("#rent_power_backup_status .btn.active").length && $("#rent_security_status .btn.active").length == 1) {
+              $("#rent_property_preference .next-link").fadeIn();  
+              console.log("true");
+            } else {
+              console.log("false");
+            }
+          },50);
         });
         
 
