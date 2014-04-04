@@ -6810,7 +6810,7 @@ ARCHIT CODE - MANAGEMENT.HTML
 .mgmt-desc .info{
     background: #fff;
     padding: 25px 0px;
-    border: 1px solid #e2e2e2;
+    /*border: 1px solid #e2e2e2;*/
 }
 
 .mgmt-desc .info h2{
@@ -6824,9 +6824,9 @@ ARCHIT CODE - MANAGEMENT.HTML
 .mgmt-desc .topimge, .mgmt-desc .topimge-mgmt{
 background: url('images/management-arrow.png') no-repeat;
 width: 30px;
-height: 30px;
+height: 12px;
 position: absolute;
-top: 0;
+top: 2px;
 left: 25.9%;
 margin-top: -12px;
 }
@@ -7499,7 +7499,7 @@ padding: 5px;
 
 .site-ltr{
     display: inline-block;
-    font-style: italic;
+    font-style: normal;
     border-radius: 50%;
     width: 2em;
     height: 2em;
@@ -7565,6 +7565,7 @@ h1.site-actual-title {
 letter-spacing: 40px;
 margin-left: 65px;
 margin-top: 0;
+font-style: normal;
 }
 
 h1.site-visit-title,
@@ -7674,11 +7675,16 @@ background: #e74c3c;
     -moz-border-radius: 50%;
     border-radius: 50%;
     z-index: 999;
-
 }
 
-.site-circle h5{
+.site-circle-str h4 {
+    font-style: normal;
+    font-size: 19px;
+}
+
+.site-circle h5 {
     font-weight: 100;
+    font-style: normal;
 }
 
 .opacity0{
