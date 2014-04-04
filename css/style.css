@@ -4488,11 +4488,6 @@ color: #fff;
 background: #30353a;
 }
 
-.career {
-padding: 45px 0px 5px 0px;
-min-height: 500px;
-}
-
 .arrow-down-header {
 width: 0;
 height: 0;
@@ -5655,6 +5650,18 @@ width: 55px;
     float: left;
 }
 
+.prop-detail-header-left.develoer-page{
+	width: 100%;
+}
+
+.prop-detail-header-left div{
+	float:left;
+}
+
+.prop-detail-header-left div.right{
+	float:right;
+}
+
 .prop-detail-header-right {
     width: 40%;
     display: inline-block;
@@ -6483,6 +6490,7 @@ ARCHIT CODE - NEWS.HTML
 .mediahead h2{
     font-size: 40px;
     margin-bottom: 20px;
+    margin-top: 36px;
 }
 .mediahead hr{
   border-top: 1px solid rgb(214, 214, 214);
@@ -6490,37 +6498,38 @@ ARCHIT CODE - NEWS.HTML
 }
 /*media section starts*/
 .media{
-    padding: 0px 0px 40px 0px;
+    padding: 0px 0px 240px 0px;
+    color: #fff;
 }
 .media .section-headers {
-    background: #c9ced3;
+    background: rgba(0,0,0,0.7);
     padding: 10px 15px;
     /* margin: 0 0 20px 0; */
     font-size: 20px;
 }
 .media .bgray{
-    border: 1px solid rgb(214, 214, 214);
     padding: 10px;
     width: 95%;
+    background: rgba(0,0,0,0.7);
 }
 .media h4{
     font-size: 16px;
     font-weight: 600;
     text-align: center;
-    background: #c9ced3;
+     background: rgba(94, 94, 94, 0.7);
     padding: 16px 0px;
     margin-top: 0px;
 }
 .media article h5{
     font-size: 14px;
     line-height: 18px;
-    color: rgb(85, 84, 84);
+    color: #fff;
     margin-bottom: 2px;
     font-weight: 600;
 }
 .media article p{
    margin: 0px 0px 0px 0px;
-    color: rgb(126, 126, 126);
+    color: #ACACAC;
 }
 .media article{
     border-bottom: 1px solid rgb(214, 214, 214);
@@ -6568,7 +6577,6 @@ ARCHIT CODE - NEWS.HTML
     padding-bottom: 20px;
 }
 .media .prop-needs h5{
-    color: #024496;
     display: block;
     font-style: italic;
     margin-bottom: 8px;
@@ -6578,6 +6586,12 @@ ARCHIT CODE - NEWS.HTML
 
 .media .prop-needs span a{
     color: red;
+    background: rgba(0,0,0,.7);
+    padding: 5px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 4px;
 }
 
 .more-video #owl-demo .item{
@@ -6624,26 +6638,93 @@ padding-left: 10px;
 ARCHIT CODE - AWARDS.HTML
 ******************************/
 .centered{margin: 0 auto;}
-.awards{}
+.awards{
+    padding-bottom: 120px;
+}
 .awards article{
     height: 420px;
     margin-bottom: 20px;
 }
 .awards article img{
-    border: 1px solid rgb(216, 216, 216);
-    padding: 5px;
+    border: none;
+    padding: 8px;
+    background: rgba(0,0,0,0.7);
 }
 .awards article .detail{
     font-size: 16px;
     line-height: 22px;
+    color: #fff;
 }
 .awards article .date{
     color: #b71133;
     font-size: 16px;
     font-style: italic;
     padding: 2px 0px 0px 0px;
+    background: rgba(0,0,0,0.7);
+    padding: 8px;
+    width: 89px;
+    text-align: center;
+    position: relative;
+    left: 23px;
 }
 
+
+
+/*****************************
+Barani CODE - Careers.HTML
+******************************/
+.centered{margin: 0 auto;}
+
+.career {
+padding: 0px 0px 5px 0px;
+min-height: 500px;
+}
+
+.career_wrap {
+    color: #fff;
+    background: rgba(0,0,0,.7);
+padding: 20px;
+}
+
+.job_profile_box h3 a {
+float: right;
+display: block;
+}
+
+.job-apply-btn {
+    line-height: 25px;
+text-align: center;
+border-radius: 4px;
+border: 1px solid #df5400;
+color: #fff;
+font-size: 16px;
+height: 30px;
+width: 100px;
+text-decoration: none;
+display: inline-block;
+color: #FFFFFF;
+background-color: #ff9103;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9103), to(#ff6e23));
+background-image: -webkit-linear-gradient(top, #ff9103, #ff6e23);
+background-image: -moz-linear-gradient(top, #ff9103, #ff6e23);
+background-image: -ms-linear-gradient(top, #ff9103, #ff6e23);
+background-image: -o-linear-gradient(top, #ff9103, #ff6e23);
+background-image: linear-gradient(to bottom, #ff9103, #ff6e23);
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ff9103, endColorstr=#ff6e23); 
+}
+
+.job_profile_box {
+    padding: 15px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.job_profile_box:last-child {
+    border-bottom: 0px solid #fff;
+}
+
+.bigpadding-bottom {
+    padding-bottom: 500px;
+}
 
 /*****************************
 ARCHIT CODE - MANAGEMENT.HTML
@@ -6659,21 +6740,26 @@ ARCHIT CODE - MANAGEMENT.HTML
 }
 .management{
     padding: 45px 0px 5px 0px;
-    background: #e2e2e2;
+    background: none;
+    position: relative;
+    z-index: 99;
 }
 .management .col-md-3{
     width: 18%;
 }
 .management .board {
     text-align: center;
-    background: #d9d9d9;
-    padding: 24px;
+    background: #002E5F;
+    padding: 57px 0 57px 0;
+    
 }
 .management .bright1{
     border-right:1px solid #d9d9d9; 
 }
 .management .board h2{
     font-size: 24px;
+    line-height: 32px;
+    color: #fff;
 }
 
 .management .members{
@@ -6681,6 +6767,12 @@ ARCHIT CODE - MANAGEMENT.HTML
 }
 .management .members .item{
     text-align: center;
+    text-align: center;
+	padding: 20px;
+	background: #fff;
+	/* border: 2px solid #f2f2f2; */
+	box-shadow: 1px 1px 2px #333;
+	margin: 3px;
 }
 
 .management .members h3{
@@ -6775,7 +6867,8 @@ ARCHIT CODE - DEVELOPER.HTML
 .developer-head{
     display: inline;
 position: relative;
-top: 4px;
+top: 6px;
+margin: 0 0 0 10px;
 }
 
 .developer-page .dev-prop-details .left-prop-detail {
@@ -7331,11 +7424,10 @@ margin-right: 20px;
 
 
 .ih-vision {
-    background: #e8e8e8;
     min-height: 390px;
     padding: 9em 0;
+    color: #fff;
 }
-
 
 .ih-vision .left {
     float: left;
@@ -7350,7 +7442,6 @@ margin-left: 2em;
 .ih-vision p {
 font-size: 28px;
 font-style: italic;
-color: #000;
 padding: 45px 0;
 margin-bottom: 0;
 margin-left: 5em;
@@ -7362,12 +7453,15 @@ margin-left: 5em;
     min-height: 390px;
     padding: 2em 0;  
     margin-top: 50px;
+    color: #fff;
+    padding-bottom: 120px;
 }
 
 .ih-advantages h3 {
 font-size: 3em;
 text-align: center;
 margin: 3em 2em 1em;
+color: #000;
 }
 
 .ih-advantages .left {
@@ -7392,7 +7486,7 @@ padding: 5px;
 
 
 .site-section-anim{
-    margin: 5em 0 0 0;
+    margin: 2em 0 0 0;
 }
 
 .site-txt{
@@ -7452,9 +7546,13 @@ padding: 5px;
 }
 
 
-.site-visit{
-    font-style: italic;
-    padding: 0 0 0 5px;
+.site-visit {
+font-style: italic;
+padding: 0 0 0 5px;
+background: #f4f9ff!important;
+position: relative;
+z-index: 999;
+padding-bottom: 40px;
 }
 
 .site-title,.site-value{
@@ -7485,7 +7583,7 @@ h1.site-value {
 .site-circle{
     width: 11em;
     height: 11em;
-    padding: 3.5em 0 0 0;
+    padding: 2.9em 0 0 0;
     text-align: center;
     color: #fff;
     -webkit-border-radius: 50%;
@@ -7587,6 +7685,10 @@ background: #e74c3c;
     opacity: 0;
 }
 
+.members .img-responsive {
+display: inline-block;
+}
+
 
 
 .bg-img {
@@ -7611,6 +7713,30 @@ position: relative;
 
 
 
+.lightblue.hasdarkbg {
+    background: #014d8b !important;
+}
+
+.lightblue.hasdarkbg .mgmt-desc {
+    background: #014d8b;
+}
+
+.lightblue.hasdarkbg  .mediahead h2 {
+color: #fff;
+}
+
+.mediahead .team-subtext{
+	color: #ddd;
+	font-size: 14px;
+	font-weight: 100;
+	padding: 0 0 0 5px;
+	/* text-align: center; */
+}
+
+.hasdarkbg hr {
+    display: none;
+}
+
 
 .darkbg-img {
 background: url('images/corperate-bg.jpg') no-repeat center bottom;
@@ -7618,7 +7744,7 @@ position: absolute;
 width: 100%;
 background-size: cover;
 height: 602px;
-bottom: 0;
+bottom: 0px;
 z-index: 1;
 }
 
@@ -7628,7 +7754,7 @@ z-index: 1;
 
 .bottom-section-hasdarkbg .container {
 z-index: 9999;
-margin-bottom: 200px;
+margin-bottom: 0px;
 position: relative;
 }
 
