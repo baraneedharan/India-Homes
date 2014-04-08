@@ -146,10 +146,12 @@ color: #fff;
         <div class="row">
           <div class="col-md-12 col-xs-12 col-sm-12">
             <h2>Our world class team</h2>
+            <div class="world-class-team ">
             <p class="team-subtext">
             IndiaHomes is a professionally managed company and its key members are drawn from diverse industries directly and indirectly related to the sector. The company maintains the highest level of management and financial integrity and the entire IndiaHomes Management Team is committed to building a professional company keeping with international best practices in the property services business.
             The Professional Management Team of IndiaHomes is guided by the Board of Directors and Board of Advisors of IndiaHomes who are renowned business professionals of India and International corporate world.
             </p>
+            </div>
           </div>
         </div>
       </div>
@@ -206,7 +208,7 @@ color: #fff;
    <section class="mgmt-desc pbottom80 bottom-section-hasdarkbg">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-md-offset-1 info ">
+        <div class="info ">
           <span class="topimge-mgmt"></span>
            <div id="mgmt-desc" >
                 <div class="item">
@@ -246,7 +248,7 @@ color: #fff;
         </div>
       </div>
     </div>
-    <div class="darkbg-img"></div>
+    <div class="darkbg-img fixed-bg"></div>
    </section>
 
 
@@ -372,12 +374,12 @@ color: #fff;
      // });
 
      $(document).on("click", "#board-member .owl-item",  function(){
-     var left_val = $(this).position().left+ 252;
+     var left_val = $(this).position().left+ 342;
      $(".topimge").css("left", left_val +"px");
     });
 
      $(document).on("click", "#mgmt-member .owl-item",  function(){
-     var left_val = $(this).position().left+ 252;
+     var left_val = $(this).position().left+ 342;
      $(".topimge-mgmt").css("left", left_val +"px");
     });
 

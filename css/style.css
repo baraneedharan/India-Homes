@@ -4054,6 +4054,8 @@ font-size: 12px;
 .ih-footer {
     background: #1e252d;
     padding: 5px 0;
+    position: relative;
+    z-index: 9999 ;
 }
 
 
@@ -4159,7 +4161,7 @@ padding-right: 0px;
 
 .section-second {
     background: #1b2025;
-    padding: 8px 12px;
+    padding: 2px 12px;
 }
 
 .section-breadcrumb {
@@ -4484,6 +4486,11 @@ color: #fff;
     left: 0;
 }
 
+.section-fourth .sub-header,
+.section-second .sub-header {
+    padding: 0px 5px 0px;
+}
+
 .section-fourth {
 background: #30353a;
 }
@@ -4496,7 +4503,7 @@ border-right: 12px solid transparent;
 border-top: 12px solid #1b2025;
 position: absolute;
 right: 308px;
-top: -10px;
+top: -4px;
 }
 
 .view-buttons-holder {
@@ -6498,7 +6505,7 @@ ARCHIT CODE - NEWS.HTML
 }
 /*media section starts*/
 .media{
-    padding: 0px 0px 240px 0px;
+    padding: 0px 0px 70px 0px;
     color: #fff;
 }
 .media .section-headers {
@@ -6642,8 +6649,8 @@ ARCHIT CODE - AWARDS.HTML
     padding-bottom: 120px;
 }
 .awards article{
-    height: 420px;
-    margin-bottom: 20px;
+/*    height: 420px;
+    margin-bottom: 20px;*/
 }
 .awards article img{
     border: none;
@@ -6668,7 +6675,22 @@ ARCHIT CODE - AWARDS.HTML
     left: 23px;
 }
 
+.awards-info-container {
+background: rgba(0,0,0,0.7);
+width: 84%;
+margin: 20px auto;
+padding: 15px;
+}
 
+.awards-info {
+    width: 49%;
+    display: inline-block;
+}
+
+.hasdarkbg .header {
+    position: relative;
+    z-index: 99;
+}
 
 /*****************************
 Barani CODE - Careers.HTML
@@ -6749,7 +6771,7 @@ ARCHIT CODE - MANAGEMENT.HTML
 }
 .management .board {
     text-align: center;
-    background: #002E5F;
+    background: rgba(0,0,0,0.7);
     padding: 57px 0 57px 0;
     
 }
@@ -6760,6 +6782,17 @@ ARCHIT CODE - MANAGEMENT.HTML
     font-size: 24px;
     line-height: 32px;
     color: #fff;
+}
+
+.world-class-team {
+    background: rgba(0,0,0,0.7);
+    padding: 12px;
+    width: 93%;
+
+}
+
+.world-class-team p  {
+    font-family: 'Lato', sans-serif;
 }
 
 .management .members{
@@ -6810,6 +6843,8 @@ ARCHIT CODE - MANAGEMENT.HTML
 .mgmt-desc .info{
     background: #fff;
     padding: 25px 0px;
+    width: 90.5%;
+    margin-left: 15px;
     /*border: 1px solid #e2e2e2;*/
 }
 
@@ -6827,7 +6862,7 @@ width: 30px;
 height: 12px;
 position: absolute;
 top: 2px;
-left: 25.9%;
+left: 30%;
 margin-top: -12px;
 }
 
@@ -7427,6 +7462,8 @@ margin-right: 20px;
     min-height: 390px;
     padding: 9em 0;
     color: #fff;
+    position: relative;
+z-index: 999;
 }
 
 .ih-vision .left {
@@ -7449,7 +7486,6 @@ margin-left: 5em;
 
 
 .ih-advantages {
-      background: #e8e8e8;
     min-height: 390px;
     padding: 2em 0;  
     margin-top: 50px;
@@ -7733,9 +7769,9 @@ color: #fff;
 
 .mediahead .team-subtext{
 	color: #ddd;
-	font-size: 14px;
-	font-weight: 100;
-	padding: 0 0 0 5px;
+font-size: 14px;
+font-weight: 500;
+padding: 0 0 0 5px;
 	/* text-align: center; */
 }
 
@@ -7752,6 +7788,11 @@ background-size: cover;
 height: 602px;
 bottom: 0px;
 z-index: 1;
+}
+
+.darkbg-img.fixed-bg {
+    position: fixed;
+    bottom: -90px;
 }
 
 .bottom-section-hasdarkbg {
