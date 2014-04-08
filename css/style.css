@@ -7795,6 +7795,72 @@ width: 100%;
 
 
 
+
+
+
+
+/* Styles added on 8th april for sitemap */
+
+.mediahead {
+    position: relative;
+    z-index: 999;
+} 
+
+
+.sitemap-cont {
+    color: #fff;
+background: rgba(0,0,0,.7);
+padding: 20px;
+}
+
+.sitemap-cont a {
+    color: #ccc;
+}
+
+.sitemap-cont h3 a {
+    color: #fff;
+}
+
+
+.sitemap_linkbox_one_inner {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+}
+
+.sitemap-cont ul {
+    list-style: none;
+}
+
+.accordion-content {
+    display: none;
+}
+
+.sitemap_linkbox_three {
+    padding: 10px 0;
+    margin: 10px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.inactive-header {
+background: url(images/inactive-header.gif);
+background-repeat: no-repeat;
+background-position: left 50%;
+}
+
+.active-header {
+background: url(images/active-header.gif);
+background-repeat: no-repeat;
+background-position: left 50%;
+}
+.accordion-header {
+margin: 0;
+padding: 5px 20px;
+cursor: pointer;
+}
+
+
+
 /*Animations */
 .animated {
     -webkit-animation-duration: 1s;
