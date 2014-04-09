@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Property Details</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <style type="text/css">
+
+.wizardClass1 {
+    /*-moz-box-shadow: 5px 5px 5px #999999;
+  -webkit-box-shadow: 5px 5px 5px #999999;
+  box-shadow: 5px 5px 5px #999999;*/
+    margin: 10px auto 0;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    width: 972px;
+}
+
+.wizardClass1 .items {
+    clear: both;
+    position: absolute;
+    width: 20000em;
+}
+
+.wizardClass1 .page {
+    float: left;
+    width: 965px;
+}
+
+.wizardClass2 {
+     margin: 10px auto 0;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    width: 972px;
+}
+
+.wizardClass2 .items {
+    clear: both;
+    position: absolute;
+    width: 20000em;
+}
+
+.wizardClass2 .page {
+    float: left;
+    width: 965px;
+}
+
+
+#bankmain-form1,#bankmain-form2,#bankmain-form3 {
+  /*background-image: url(css/images/wizard-bg.png);
+  background-repeat: repeat-x;*/
+  background-color: #F9F9F9;
+  border: 1px solid #d7d7d7;
+  width: 945px;
+  height: auto;
+  float: left;
+  margin: 0 8px;
+}
+
+#bankmain-header {
+    color: #000000;
+    float: left;
+    width: 515px;
+}
+
+.bankmain-headertext {
+  width: 435px;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  left: 0px;
+  top: 18px;
+}
+
+#bankmain-form-body1,#bankmain-form-body2,#bankmain-form-body3 {
+    color: #4A4C4F;
+    float: left;
+    width: 945px;
+    padding-top: 95px;
+}
+
+#statusbar{ position: relative; height: 50px; }
+
+#statusbar-left {
+    background: url("css/images/statusbar-left.png") no-repeat scroll 0 0 transparent;
+    height: 71px;
+    left: 1px;
+    position: absolute;
+    top: 15px;
+    width: 7px;
+    z-index: 2;
+}
+  
+#statusbar-right {
+    background: url("css/images/statusbar-right.png") no-repeat scroll 0 0 transparent;
+    height: 69px;
+    left: 955px;
+    position: absolute;
+    top: 15px;
+    width: 8px;
+    z-index: 2;
+}
+
+#status {
+    background: url(css/images/statusbar_bg.png);
+    background-repeat: repeat-x;
+    height: 66px;
+    left: 8px;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    top: 15px;
+    width: 947px;
+    z-index: 1;
+}
+
+#status li {
+    color: #FFFFFF;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    list-style-image: none;
+    list-style-type: none;
+    padding: 24px 2px 0 30px;
+    position: relative;
+    text-transform: uppercase;
+    width: 110px;
+}
+/*
+#status li.first {
+    float: left !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    height: 30px !important;
+    list-style-image: none !important;
+    list-style-type: none !important;
+    padding: 5px 8px 0 !important;
+    position: relative !important;
+    text-transform: uppercase !important;
+    width: 75px !important;
+}
+*/
+#status li.active {
+  color: #fdc265;
+}
+
+#wizardtxt {
+    background-image: url("css/images/homeloan-intro.png");
+    background-position: 25px 50%;
+    background-repeat: no-repeat;
+    height: 260px;
+}
+
+#wizardtxt p {
+    color: #5F5E5E;
+    font-size: 17px;
+    left: 430px;
+    line-height: 25px;
+    padding: 0 15px;
+    position: relative;
+    width: 459px;
+}
+
+#wizardtxt p.hm_header {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    width: 330px;
+}
+
+#wizardtxt p span {
+    color: #5F5E5E;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.q1 {
+    background-image: url("css/images/q1.png");
+    background-repeat: no-repeat;
+    height: 24px;
+    left: 410px;
+    position: relative;
+    top: 65px;
+    width: 26px;
+}
+
+.q2 {
+    background-image: url("css/images/q2.png");
+    background-repeat: no-repeat;
+    height: 25px;
+    left: 590px;
+    position: relative;
+    top: -17px;
+    width: 26px;
+}
+
+#bankmain-banner {
+  position: relative;
+  border-bottom: 1px solid #8fb0d8;
+  height: 109px;
+}
+
+#bankmain-banner p.textline{
+  color: #060606;
+    font-size: 13px;
+    left: 175px;
+    line-height: 15px;
+    position: absolute;
+    top: 30px;
+    width: 295px;
+}
+
+#bankmain-banner .q1 {
+  background-image: url("css/images/q1.png");
+  background-repeat: no-repeat;
+  height: 24px;
+  left: 155px;
+  position: absolute;
+  top: 25px;
+  width: 26px;
+}
+
+#bankmain-banner .q2 {
+  background-image: url("css/images/q2.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  left: 435px;
+  position: absolute;
+  top: 50px;
+  width: 26px;
+}
+
+#bankmain-tbl p.info-heading {
+    background-color: #EDEDED;
+    color: #656565;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#bankmainform-footer1,#bankmainform-footer2,#bankmainform-footer3 {
+    background-color: #E8ECEF;
+    border-top: 1px solid #d7d7d7;
+    color: #FFFFFF;
+    float: left;
+    height: 45px;
+    width: 945px;
+}
+
+.loan_hide {
+display: none;
+}
+
+.btnnext, .btnnext:hover {
+    background-color: #FF9C00;
+    color: #FFFFFF;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    height: 45px;
+    padding: 5px 10px;
+    width: 185px;
+    cursor: pointer;
+    border: none;
+}
+
+.btnprev, .btnprev:hover {
+    background-color: #FF9C00;
+    color: #FFFFFF;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    height: 45px;
+    padding: 5px 10px;
+    width: 185px;
+    border: none;
+    cursor: pointer;
+}
+
+.btnsubtxt, .btnsubtxt:hover {
+  text-transform: none;
+  font-size: 11px;
+  font-weight: normal;
+  color: #FFFFFF !important;
+}
+
+#bankmain-tbl{width: auto; }
+#bankmain-tbl table {
+    border-collapse: collapse;
+    color: #656565;
+    margin: 20px 0 30px 85px;
+    width: 80%;
+}
+#bankmain-tbl td {
+    color: #656565;
+    font-size: 13px;
+    padding: 10px 0 10px 12px;
+    width: 19%;
+    border: none;
+}
+#bankmain-tbl td.label{ width: 20%; }
+#bankmain-tbl td.left{ width: 40%; }
+#bankmain-tbl td.last{ border-bottom: none; }
+#bankmain-tbl td span{ color: #f40707; }
+#bankmain-tbl td input, #bankmain-tbl td select {
+    background-color: #EDEDED;
+    border: 1px solid #CCCCCC;
+  border-bottom: none;
+    box-shadow: 0 2px 1px #535354 inset;
+    border-radius: 4px;
+    font-size: 12px;
+    height: 23px;
+    width: 195px;
+}
+#bankmain-tbl td input.error, #bankmain-tbl td select.error{ border: 1px solid #ee8a14; }
+#homeloan_date{
+  border: 1px solid #91adce;
+    font-size: 11px;
+    width: 36px;
+} 
+#homeloan_month{
+  border: 1px solid #91adce;
+    font-size: 11px;
+    width: 42px;
+} 
+#homeloan_year{
+    border: 1px solid #91adce;
+    font-size: 11px;
+    width: 50px;
+}
+#purpose, #homeloan_city, #durationofloan, #typeofemp{ width: 134px; }
+
+#error_msg{
+    color: #EE8A14;
+    margin: -25px 0 0;
+    padding: 10px;
+}
+
+#eligibility{
+  background-image: url(css/images/eligibility_bg.png);
+  background-repeat: no-repeat;
+  width: 478px;
+  height: 73px;
+  margin: 20px auto;
+  position: relative;
+}
+
+#eligibility p.eligibility-text{
+  color: #1F67AD;
+  float: left;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  left: 165px;
+  position: absolute;
+  top: 40px;
+  width: auto;
+}
+
+#eligibility2 {
+    background-image: url("css/images/emi_top_bg.png");
+    background-repeat: no-repeat;
+    height: 73px;
+    margin: 35px auto 20px;
+    position: relative;
+    width: 478px;
+}
+
+#eligibility2 .q1 {
+  background-image: url("css/images/q1.png");
+  background-repeat: no-repeat;
+  height: 15px;
+  left: 120px;
+  position: absolute;
+  top: 10px;
+  width: 17px;
+}
+
+#eligibility2 .q2 {
+  background-image: url("css/images/q2.png");
+  background-repeat: no-repeat;
+  height: 15px;
+  left: 375px;
+  position: absolute;
+  top: 50px;
+  width: 17px;
+}
+
+#bankmain-contant1{
+  width: 50%;
+  color: #494747;
+  font-size: 12px;
+  border-right: 1px dotted #494747;
+  margin-bottom: 10px;
+  float: left;
+}
+#bankmain-contant1 p.label{ padding: 5px 0; }
+#bankmain-contant1 p span{ font-weight: bold; }
+
+#bankmain-contant2{
+  width: 45%;
+  margin-bottom: 10px;
+  float: right;
+}
+#bankmain-contant2 p {
+    line-height: 25px;
+}
+
+.calci_table{ width: 100%; }
+.calci_table th, .calci_table td{ width: 174px; height: 16px; border: 1px solid #868686; }
+
+#mp, #tip, #tp {
+    border-bottom: 1px dotted #000000;
+    color: #000000;
+    font-size: 18px;
+    line-height: 40px;
+    margin: 0 25px 10px;
+}
+
+#mp span, #tip span, #tp span {
+  font-weight: bold;
+}
+
+/*-----------------------------------------------------------*/
+/* root element for accordion. decorated with rounded borders and gradient background image */
+#accordion {
+  width: 195px;
+}
+
+/* accordion header */
+#accordion h2 {
+  background-image: url(css/images/accordian_bg.png);
+  background-repeat: repeat-x;
+  margin: 0 0 2px 0;
+  width: auto;
+  height: 17px;
+  padding: 5px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* currently active header */
+#accordion h2.current {
+  cursor: default;
+  background-image: url(css/images/accordian_hover_bg.png);
+  background-repeat: repeat-x;
+  border: 1px solid #073c6e;
+}
+
+/* accordion pane */
+#accordion .pane {
+  display: none;
+  height: auto;
+  font-size: 12px;
+}
+
+#accordion .pane ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto;
+}
+
+#accordion .pane li{
+  padding: 5px 10px;
+  list-style-image: url(css/images/arrow1.png);
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #BABABA;
+  list-style-position: inside;
+}
+
+#bankmainform-footer2 {
+  margin-left: 10px;
+}
+
+/*====homeloan_data_box===*/
+.homeloan_data_box{ width:871px; float:left; background:#f9f9f9;}
+.data_box_one{font-size: 13px; text-align: center; background-color: #F3F3F3; border: 3px solid #B6B6B6; margin-bottom: 50px; border-radius: 8px 8px 8px 8px; float: left; height: 225px; padding-top: 25px; margin-left: 36px; overflow: hidden; width: 35%;}
+.data_box_two{float: right; margin-right: 38px; margin-bottom: 50px; width: 45%; height: 250px; overflow: hidden; border-radius: 8px 8px 8px 8px; background-color: #F3F3F3; border: 3px solid #B6B6B6;}
+.data_box_two p{font-size: 18px; font-weight: bold; color: #000000; position: relative; z-index: 1; left: 25px; top: 20px;}
+.calci_table { width: 100%; }
+.calci_table th, .calci_table td { border: 1px solid #868686; height: 21px; width: 174px; text-align:center; padding: 0; }
+.calci_table tr{ }
+th.heading_text{ color:#4A4C4F; font-weight:bold; height:22px;}
+.calci_table_head{overflow: hidden; margin:0px 0px 0px 30px; width: 853px; float:left;}
+.calci_table_data_box{
+overflow: auto;
+height: 270px;
+width: 853px;
+margin: -16px 0 20px 30px;
+float: left;
+
+}
+
+
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--> 
+
+</head>
+
+<body class="lightblue hasdarkbg">
+  
+  <!-- Header -->    
+  <header class="header">
+
+    <div class="section-first">
+
+      <div class="container">
+          <!-- Main Header -->
+          <div class="inner-main-header clearfix">
+            <div class="header-left">
+              <div class="logo">
+                <a href="#" class="logo-link">
+                  <img src="css/images/logo-main.png" class="img-responsive" alt="India Homes">
+                </a>
+              </div>
+              <div class="prop-buttons">
+                <a href="index.html#buy" class="">Buy</a>
+                <a href="index.html#sell" class="">Rent</a>
+                <a href="index.html#rent" class="">Sell</a>
+                <a href="index.html#loan" class="">Loan</a>
+              </div>
+            </div>
+            <div class="header-right">
+              <nav>
+                <ul class="nav navbar-nav">
+                    
+                    <li><a href="#" class="s">About IndiaHomes</a></li> 
+                    <li class="seperator">&nbsp;&nbsp; | &nbsp;&nbsp;</li>
+                    <li><a href="#" class="">Login</a></li>
+
+                </ul>
+              </nav>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="section-second">
+      <div class="container">
+            <div class="row">
+                <div class="sub-header clearfix">
+                  <div class="news-head">
+                      <ul>
+                        <li><a href="Javascript:void(0)" class="active">Calculate your EMI</a></li>
+                        <li><a href="awards.html">Loan Offers</a></li>
+                      </ul>  
+                  </div>                                
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <!-- <div class="section-fourth">
+      <div class="container">
+            <div class="row">
+                <div class="sub-header clearfix">
+                  <div class="news-head">
+                    <div class="arrow-down-header"></div>
+                      <ul>
+                        <li><a href="the-india-homes-board.html">IndiaHomes Board</a></li>
+                        <li><a href="the-india-homes-management-team.html">IndiaHomes Management</a></li>
+                        <li><a href="careers.html" class="active">Career Opportunities</a></li>
+                      </ul>  
+                  </div>                                
+                </div>
+            </div>
+        </div>
+      </div> -->
+
+
+    </header>
+
+
+    <!-- mediahead section starts -->
+    <section class="mediahead">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-xs-12 col-sm-12">
+            <h2>Calculate your EMI </h2>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- BOARD SECTION STARTS -->
+   <section class="career pbottom80 bottom-section-hasdarkbg">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12 col-xs-12 col-sm-12">
+        <!-- home-loan content should go here -->
+
+<div id="wizard" class="wizardClass1">
+        <div id="statusbar-left"></div>
+        <ul id="status">
+            <li class="active" id="status1">Overview<img src="http://d3qgwy36289xzc.cloudfront.net/images/homeloan-arrow.png" style="position: absolute; top: 18px; left: 126px;"></li>
+            <li style="width: 125px; margin-left: 15px; margin-top: -8px; line-height: 18px;" id="status2">Your<br>Information <img src="http://d3qgwy36289xzc.cloudfront.net/images/homeloan-arrow.png" style="position: absolute; top: 26px; left: 155px;"></li>
+            <li id="status3" style="margin-left: 30px;">Your EMI</li>
+        </ul>
+        <div id="statusbar-right"></div>
+        <div id="overlay_homeloan"></div>
+        <div class="items">
+            <!-- page1 -->
+            <div class="page" id="page1">
+                <div id="bankmain-form1">
+                    <div id="bankmain-form-body1">
+                        <div id="wizardtxt">
+                            <div class="q1"></div>
+                            <p class="hm_header">Calculate Your EMIs Now!!</p>
+                            <p><br></p>
+                            <p><span>K</span>now exactly how much you need to spend every month on your home loan with IndiaHomes EMI Calculator.</p>
+                            <p>Getting a home is a life time decision, so make this decision all the more precise with the best possible EMI figures that suits your pocket.</p>
+                            <div class="q2"></div>
+                        </div>
+                    </div>
+                    <div id="bankmainform-footer1">
+                        <p style="float: right;">
+                            <button type="button" class="btnnext right" id="btpage1">Get Started <img align="absmiddle" src="http://d3qgwy36289xzc.cloudfront.net/images/arrow2-nxt.png"></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- page2 -->
+            <div class="page" id="page2">
+                <div id="bankmain-form2">
+                    <form id="loanform" action="/util.html?action=homeLoanProspect" method="post">
+                        <input name="projectId" id="projectId" value="" type="hidden">
+                        <input name="cityId" id="cityId" value="" type="hidden">
+                        <div id="bankmain-form-body2">
+                            <div id="bankmain-tbl">
+                                <p class="info-heading">Personal Information</p>
+                                <table>
+                                    <tbody><tr>
+                                        <td class="label">Name : <span>*</span></td>
+                                        <td class="left"><input tabindex="1" name="name" id="name" value="" type="text"></td>
+                                        <td class="label">Mobile : <span>*</span></td>
+                                        <td><input tabindex="2" name="mobile" id="mobile" value="" type="text"></td>
+                                    </tr>
+                                </tbody></table>
+                                <p class="info-heading">Loan Information</p>
+                                <table>
+                                    <tbody><tr>
+                                        <td colspan="3"><em>Fill in the values and submit to calculate EMI</em></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">Loan Amount : <span>*</span></td>
+                                        <td class="left"><input style="background-image: url('css/images/rs.jpg'); background-repeat: no-repeat; background-position: 7px 7px; padding-left: 22px; width: 173px; font-size: 13px;" tabindex="3" name="loanAmoutRequired" id="loanAmoutRequired" value="" type="text"></td>
+                                        <td class="label" style="width: 13%;">Interest Rate : <span>*</span></td>
+                                        <td class="left"><input style="background-repeat: no-repeat; background-image: url('../images/percent.jpg'); background-position: 170px 7px; padding-right: 25px; width: 170px; font-size: 13px;" tabindex="4" name="rateOfInterest" id="rateOfInterest" value="" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label last">Duration of Loan : <span>*</span></td>
+                                        <td class="left last">
+                                            <select tabindex="5" name="durationOfLoan" id="durationOfLoan">
+                                                <option value="">Select</option>
+                                                <option value="1">1 Year</option>
+                                                <option value="2">2 Year</option>
+                                                <option value="3">3 Year</option>
+                                                <option value="4">4 Year</option>
+                                                <option value="5">5 Year</option>
+                                                <option value="6">6 Year</option>
+                                                <option value="7">7 Year</option>
+                                                <option value="8">8 Year</option>
+                                                <option value="9">9 Year</option>
+                                                <option value="10">10 Year</option>
+                                                <option value="11">11 Year</option>
+                                                <option value="12">12 Year</option>
+                                                <option value="13">13 Year</option>
+                                                <option value="14">14 Year</option>
+                                                <option value="15">15 Year</option>
+                                                <option value="16">16 Year</option>
+                                                <option value="17">17 Year</option>
+                                                <option value="18">18 Year</option>
+                                                <option value="19">19 Year</option>
+                                                <option value="20">20 Year</option>
+                                                <option value="21">21 Year</option>
+                                                <option value="22">22 Year</option>
+                                                <option value="23">23 Year</option>
+                                                <option value="24">24 Year</option>
+                                                <option value="25">25 Year</option>
+                                            </select>
+                                        </td>
+                                        <td class="label">Purpose of Loan? : <span>*</span></td>
+                                        <td class="left">
+                                            <select tabindex="6" name="purposeOfLoan" id="purposeOfLoan">
+                                                <option value="">Select</option>
+                                                <option value="1">Purchase/construct on identified property</option>
+                                                <option value="2">Transfer your existing home loan</option>
+                                                <option value="3">Purchase not yet identified property</option>
+                                            </select>
+
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+
+                                <span id="loan_username" class="loan_hide">*Name field cannot be blank</span>
+                                <span id="loan_string_username" class="loan_hide">*Name field only in character</span>
+                                <span id="loan_empty_usermobile" class="loan_hide">*Mobile Field cannot be blank</span>
+                                <span id="loan_valid_usermobile" class="loan_hide">*Please enter valid number</span>
+                                <span id="loan_correct_usermobile" class="loan_hide">*Sorry, this is a Wrong Number in our database. In case it's a right number please call our toll free number 1-800-1022-224</span>
+                                <span id="loan_empty_amount" class="loan_hide">*Loan Amount field cannot be blank</span>
+                                <span id="loan_numeric_amount" class="loan_hide">*Loan amount must be in numeric value</span>
+                                <span id="loan_float_amount" class="loan_hide">*Loan amount cannot be float</span>
+                                <span id="loan_min_amount" class="loan_hide">*Loan amount must be greater than 10 Lac</span>
+                                <span id="loan_max_amount" class="loan_hide">*Loan amount must be smaller than 100 Cr</span>
+                                <span id="loan_empty_rate" class="loan_hide">*Rate of Interest field cannot be blank</span>
+                                <span id="loan_numeric_rate" class="loan_hide">*Please enter only numeric value</span>
+                                <span id="loan_min_rate" class="loan_hide">*Interest rate must be greater than 1</span>
+                                <span id="loan_max_allowed_rate" class="loan_hide">*Interest rate must be smaller than 100 %</span>
+                                <span id="loan_max_valid_rate" class="loan_hide">*Interest rate only in 4 digit</span>
+                                <span id="loan_duration" class="loan_hide">*Please select Duration of Loan</span>
+                                <span id="loan_purpose" class="loan_hide">*Please select Purpose of Loan</span>
+
+                            </div>
+
+                            </div>
+                        </div>
+                        <div id="bankmainform-footer2">
+                            <p style="float: right;">
+                                <button type="button" class="btnnext right" id="btpage2" onclick="return validateForm()">Next&nbsp;&nbsp; <img align="absmiddle" src="http://d3qgwy36289xzc.cloudfront.net/images/arrow2-nxt.png"></button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- page3 -->
+            <div class="page" id="page3">
+                <div id="bankmain-form3">
+                    <div id="bankmain-form-body3" class="homeloan_data_box">
+                        <div id="chartinfo" class="data_box_one">
+                            <p>Monthly Payment (EMI)</p>
+                            <p id="mp"></p>
+                            <p>Total Interest Payable</p>
+                            <p id="tip"></p>
+                            <p>Total payment<br>(Principal + Interest)</p>
+                            <p id="tp" style="border: none;"></p>
+                        </div>
+                        <div id="chartdiv" class="data_box_two">
+
+                        </div>
+                        <div class="calci_table_head">
+                            <table width="100%" cellspacing="0" cellpadding="3" border="0" class="calci_table">
+                                <tbody><tr bgcolor="#bfbebe" align="center" class="heading">
+                                    <th class="overview_border">Month</th>
+                                    <th class="overview_border">EMI</th>
+                                    <th class="overview_border">Principal</th>
+                                    <th class="overview_border">Interest</th>
+                                    <th class="overview_border">Loan Balance</th>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                        <div class="calci_table_data_box" id="disp">
+                            <table width="100%" cellspacing="0" cellpadding="3" border="0" class="calci_table" id="loanCalculationTable">
+                                <tbody>
+                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div id="bankmainform-footer3">
+                        <p style="float: left">
+                            <button type="button" class="btnprev" id="btpage3"><img align="absmiddle" src="http://d3qgwy36289xzc.cloudfront.net/images/arrow2-prev.png">&nbsp;&nbsp; Back</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--items-->
+    </div>
+
+
+
+      </div>
+    </div>
+    </div>
+    <div class="darkbg-img fixed-bg"></div>
+   </section>
+
+   
+
+
+
+    <footer class="ih-footer">
+      <div class="container">
+        <ul class="footer-links muted">
+          <li><a href="#">Home</a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>
+          <li><a href="#">About Us </a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>  
+          <li><a href="#">Sitemap </a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>  
+          <li><a href="#">Terms of use </a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>   
+          <li><a href="#">Privacy policy</a> &nbsp;&nbsp;|&nbsp;&nbsp; </li> 
+          <li><a href="#">Blog</a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="sub-footer-links">
+          <div class="footer-prop-links has-divider">
+            <h3>Developer Property</h3>
+            <ul>
+              <li> <a href="#">Property in Delhi</a> </li>
+              <li> <a href="#">Property in Gurgoan</a> </li>
+              <li> <a href="#">Property in Noida</a> </li>
+              <li> <a href="#">Property in Bangalore</a> </li>
+              <li> <a href="#">Property in Kolkata</a> </li>
+              <li> <a href="#">Property in Mumbai</a> </li>
+            </ul>
+          </div>
+          <div class="footer-prop-links has-divider">
+            <h3>Resale Property</h3>
+            <ul>
+              <li> <a href="#">Apartment for sale in Delhi</a> </li>
+              <li> <a href="#">Apartment for sale in Gurgoan</a> </li>
+              <li> <a href="#">Apartment for sale in Noida</a> </li>
+              <li> <a href="#">Apartment for sale in Bangalore</a> </li>
+              <li> <a href="#">Apartment for sale in Kolkata</a> </li>
+              <li> <a href="#">Apartment for sale in Mumbai</a> </li>
+            </ul>
+          </div>
+          <div class="footer-prop-links has-divider">
+            <h3>Rental Property</h3>
+            <ul>
+              <li> <a href="#">Flat for rent in Delhi</a> </li>
+              <li> <a href="#">Flat for rent in Gurgoan</a> </li>
+              <li> <a href="#">Flat for rent in Noida</a> </li>
+              <li> <a href="#">Flat for rent in Bangalore</a> </li>
+              <li> <a href="#">Flat for rent in Kolkata</a> </li>
+              <li> <a href="#">Flat for rent in Mumbai</a> </li>
+            </ul>
+          </div>
+          <div class="footer-prop-links">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>Toll free : <a href="#"> <b>1800-1022-224</b> </a> </li>
+              <li>Email:  <a href="mailto:info@indiahomes.com"> <b>info@indiahomes.com</b> </a> </li>
+            </ul>
+            <div class="prop-social">
+              <label>Connect with IndiaHomes</label>
+              <a href="#" class="social-icon fb"></a>
+              <a href="#" class="social-icon tw"></a>
+              <a href="#" class="social-icon gplus"></a>
+              <a href="#" class="social-icon mail"></a>
+            </div>
+          </div>          
+        </div>
+        <p class="copyright">Copyright © 2014 IndiaHomes.com | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/waypoints.js"></script>
+    <script src="js/waypoints-sticky.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/amcharts.js"></script>
+    <script src="js/ihc.js"></script>
+
+
+    <script type="text/javascript">
+
+//homeloan
+$(document).ready(function() {
+
+    $('#btpage1').click(function() {
+        $('#page1').hide("slow");
+        $('#status1').removeClass('active');
+        $('#status2').addClass('active');
+        $('#wizard').height(484);
+
+    });
+
+    $('#btpage3').click(function() {
+        $('#status3').removeClass('active');
+        $('#status2').removeClass('active');
+        $('#status1').addClass('active')
+        $('#page3').hide("slow");
+        $('#page2').show("slow");
+        $('#page3').show("slow");
+        $('#wizard').height(500);
+    });
+});
+
+    </script>
+
+    
+    <script>
+    </script>
+
+</body>
+
+</html>
