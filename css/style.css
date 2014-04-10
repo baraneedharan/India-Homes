@@ -6496,8 +6496,8 @@ ARCHIT CODE - NEWS.HTML
 .mediahead{}
 .mediahead h2{
     font-size: 40px;
-    margin-bottom: 20px;
-    margin-top: 36px;
+    margin-bottom: 6px;
+    margin-top: 17px;
 }
 .mediahead hr{
   border-top: 1px solid rgb(214, 214, 214);
@@ -7243,6 +7243,20 @@ ARCHIT CODE - MY-PROPERTIES.HTML
     font-size: 12px;
     font-weight: bold;
     color: rgb(107, 107, 107);
+}
+
+/*****************************
+ARCHIT CODE - CUSTOMER-TESTIMONIAL.HTML
+******************************/
+.cust-testi{}
+.cust-testi .item h2{
+    font-size: 22px;
+}
+.cust-testi .item h5{
+    font-size: 16px;
+}
+.testi-head-title{
+    font-size: 16px!important;
 }
 /********************************/
 
