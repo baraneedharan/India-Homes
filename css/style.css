@@ -7570,6 +7570,7 @@ padding: 5px;
 
 .site-txt{
     padding: 8em 0 0 0;
+    color: #fff;
 }
 
 .site-txt #typed-cursor{
@@ -7624,14 +7625,19 @@ padding: 5px;
     left: 94px;
 }
 
+.ih-vision #typed-cursor {
+    display: none;
+}
+
 
 .site-visit {
 font-style: italic;
 padding: 0 0 0 5px;
-background: #f4f9ff!important;
+/*background: #f4f9ff!important;*/
 position: relative;
 z-index: 999;
 padding-bottom: 40px;
+display: none;
 }
 
 .site-title,.site-value{
@@ -7743,7 +7749,7 @@ background: #e74c3c;
 
 
 .site-circle-str{
-    background: url("images/logo-site.png") no-repeat 54% 39%;
+    background: url("images/logo-site.png") no-repeat 54% 39% #f4f9ff;
     color: #000;
     border: 2px solid #b74255;
     width: 9em;

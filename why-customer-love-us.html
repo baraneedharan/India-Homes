@@ -123,10 +123,13 @@
     <div class="container">
       <div class="row clearfix">
         <div class="left">
-          <h3>IndiaHomes <br /> Vision</h3>
+          <h3 class="">
+            <span class="vision-title-1"></span><br/>
+            <span class="vision-title-2"></span>
+          </h3>
         </div>
         <div class="left">
-          <p>"Empowering home buyers with choice & voice "</p>
+          <p class="vision-desc"></p>
         </div>
       </div>
     </div>
@@ -270,8 +273,34 @@
   <script type="text/javascript">
 
       $('.ih-vision h3').waypoint(function(direction) {
-        start_type();
+        
       });
+
+
+$('.vision-title-1').typed({
+  strings: ["IndiaHomes"],
+  typeSpeed: 100,
+  callback:function(){
+    $('.vision-title-2').typed({
+      strings: ["Vision"],
+      typeSpeed: 100,
+      callback:function(){
+        $('.vision-desc').typed({
+          strings: ['"Empowering home buyers with choice & voice "'],
+          typeSpeed: 50,
+            callback:function(){
+                setTimeout(function() {
+                      $(".ih-vision").fadeOut();
+                      $(".site-visit").fadeIn();
+                      start_type();
+                }, 1000);
+            }
+        });   
+      }
+    });   
+  }
+});   
+
 
       function start_type() {
         $('.site-actual-title').typed({
