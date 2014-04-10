@@ -314,21 +314,18 @@ display: none;
     color: #656565;
     font-size: 13px;
     padding: 10px 0 10px 12px;
-    width: 19%;
     border: none;
 }
-#bankmain-tbl td.label{ width: 20%; }
+#bankmain-tbl td.label{ width: 20%; position: relative; top: 10px;}
 #bankmain-tbl td.left{ width: 40%; }
 #bankmain-tbl td.last{ border-bottom: none; }
 #bankmain-tbl td span{ color: #f40707; }
 #bankmain-tbl td input, #bankmain-tbl td select {
     background-color: #EDEDED;
     border: 1px solid #CCCCCC;
-  border-bottom: none;
-    box-shadow: 0 2px 1px #535354 inset;
     border-radius: 4px;
     font-size: 12px;
-    height: 23px;
+    height: 28px;
     width: 195px;
 }
 #bankmain-tbl td input.error, #bankmain-tbl td select.error{ border: 1px solid #ee8a14; }
@@ -677,9 +674,9 @@ float: left;
                                     </tr>
                                     <tr>
                                         <td class="label">Loan Amount : <span>*</span></td>
-                                        <td class="left"><input style="background-image: url('css/images/rs.jpg'); background-repeat: no-repeat; background-position: 7px 7px; padding-left: 22px; width: 173px; font-size: 13px;" tabindex="3" name="loanAmoutRequired" id="loanAmoutRequired" value="" type="text"></td>
+                                        <td class="left"><input style="background-image: url('css/images/rs.jpg'); background-repeat: no-repeat; background-position: 7px 7px; padding-left: 22px; width: 194px; font-size: 13px;" tabindex="3" name="loanAmoutRequired" id="loanAmoutRequired" value="" type="text"></td>
                                         <td class="label" style="width: 13%;">Interest Rate : <span>*</span></td>
-                                        <td class="left"><input style="background-repeat: no-repeat; background-image: url('../images/percent.jpg'); background-position: 170px 7px; padding-right: 25px; width: 170px; font-size: 13px;" tabindex="4" name="rateOfInterest" id="rateOfInterest" value="" type="text"></td>
+                                        <td class="left"><input style="background-repeat: no-repeat; background-image: url('../images/percent.jpg'); background-position: 170px 7px; padding-right: 25px; width: 194px; font-size: 13px;" tabindex="4" name="rateOfInterest" id="rateOfInterest" value="" type="text"></td>
                                     </tr>
                                     <tr>
                                         <td class="label last">Duration of Loan : <span>*</span></td>
@@ -755,7 +752,7 @@ float: left;
                         </div>
                     </form>
                 </div>
-            </div>
+            
 
             <!-- page3 -->
             <div class="page" id="page3">
@@ -905,14 +902,13 @@ $(document).ready(function() {
         $('#page1').hide("slow");
         $('#status1').removeClass('active');
         $('#status2').addClass('active');
-        $('#wizard').height(484);
-
+        $('#wizard').height(498);
     });
 
     $('#btpage3').click(function() {
         $('#status3').removeClass('active');
-        $('#status2').removeClass('active');
-        $('#status1').addClass('active')
+        $('#status1').removeClass('active');
+        $('#status2').addClass('active')
         $('#page3').hide("slow");
         $('#page2').show("slow");
         $('#page3').show("slow");
