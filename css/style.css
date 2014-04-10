@@ -6761,10 +6761,11 @@ ARCHIT CODE - MANAGEMENT.HTML
     padding-bottom: 80px!important;
 }
 .management{
-    padding: 45px 0px 5px 0px;
+    padding: 15px 0px 5px 0px;
     background: none;
     position: relative;
     z-index: 99;
+
 }
 .management .col-md-3{
     width: 18%;
@@ -6772,11 +6773,13 @@ ARCHIT CODE - MANAGEMENT.HTML
 .management .board {
     text-align: center;
     background: rgba(0,0,0,0.7);
-    padding: 57px 0 57px 0;
-    
+    padding: 56px 0 56px 0;
 }
 .management .bright1{
     border-right:1px solid #d9d9d9; 
+    cursor: pointer;
+        position: relative;
+    top: 2px;
 }
 .management .board h2{
     font-size: 24px;
@@ -6796,8 +6799,13 @@ ARCHIT CODE - MANAGEMENT.HTML
 }
 
 .management .members{
-    padding-left: 30px;
+    margin-left: -10px;
 }
+
+.management-container {
+    max-width: 1088px;
+}
+
 .management .members .item{
     text-align: center;
     text-align: center;
@@ -6843,7 +6851,8 @@ ARCHIT CODE - MANAGEMENT.HTML
 .mgmt-desc .info{
     background: #fff;
     padding: 25px 0px;
-    width: 90.5%;
+    width: 97%;
+    max-width: 1058px;
     margin-left: 15px;
     /*border: 1px solid #e2e2e2;*/
 }
@@ -6866,6 +6875,26 @@ left: 30%;
 margin-top: -12px;
 }
 
+.mgmt-desc .topimge-mgmt{
+left: 102px;
+}
+
+.mgmt-desc .owl-controls.clickable {
+    display: none;
+}
+
+.management .bright2 {
+border-right: 1px solid #000000;
+width: 19%;
+float: left;
+margin-left: 15px;
+position: relative;
+top: 2px;
+}
+
+.only-four-items.mgmt-desc .topimge-mgmt {
+    left: 320px;
+}
 
 /*.info:after, 
 .info:before {
