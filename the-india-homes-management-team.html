@@ -109,7 +109,7 @@ color: #fff;
                         <li><a href="awards.html">Awards</a></li>
                         <li><a href="why-customer-love-us.html">Why Customers Love us</a></li>
                         <li><a href="the-india-homes-board.html" class="active">Our world class team</a></li>
-                        <li><a href="#">Must watch videos</a></li>
+                        <li><a href="must-watch-videos.html">Must watch videos</a></li>
                         <li><a href="news.html">In the media</a></li>
                       </ul>  
                   </div>                                
@@ -230,7 +230,7 @@ color: #fff;
                   <a href="#">
                     <div class="item">
                        <img src="css/images/balbir.jpg" class="img-responsive">
-                      <h3 class="text-center">Balbir</h3>
+                      <h3 class="text-center">Balbir Tanwar</h3>
                     </div>
                   </a>                       
                 </div>
@@ -334,9 +334,9 @@ color: #fff;
 
                 <div class="item">
                     <div class="col-md-12">
-                      <h2>Balbir</h2>
-                      <h5></h5>
-                      <p>Balbir has over 16 years of experience in management of Technology Programs. Prior to joining IndiaHomes, Balbir worked with IBM, Aztec Software (now MindTree), Trilogy, and Sapient Consulting, where he successfully managed delivery of many large-scale programs for a variety of solutions like Customer self-service applications, eCommerce applications, and Online portals. Academically, Balbir holds an engineering degree from NIT Surathkal, and a PGSEM diploma from IIM Bangalore.</p>
+                      <h2>Balbir Tanwar</h2>
+                      <h5>Head of Program Management</h5>
+                      <p>Balbir Tanwar has over 16 years of experience in management of Technology Programs. Prior to joining IndiaHomes, Balbir worked with IBM, Aztec Software (now MindTree), Trilogy, and Sapient Consulting, where he successfully managed delivery of many large-scale programs for a variety of solutions like Customer self-service applications, eCommerce applications, and Online portals. Academically, Balbir Tanwar holds an engineering degree from NIT Surathkal, and a PGSEM diploma from IIM Bangalore.</p>
                     </div>
                 </div>                                                                                                
 
@@ -354,13 +354,12 @@ color: #fff;
     <footer class="ih-footer">
       <div class="container">
         <ul class="footer-links muted">
-          <li><a href="#">Home</a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>
-          <li><a href="#">About Us </a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>  
-          <li><a href="#">Sitemap </a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>  
-          <li><a href="#">Terms of use </a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>   
-          <li><a href="#">Privacy policy</a> &nbsp;&nbsp;|&nbsp;&nbsp; </li> 
-          <li><a href="#">Blog</a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="index.html">Home</a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>
+          <li><a href="awards.html">About Us </a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>  
+          <li><a href="sitemap.html">Sitemap </a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>  
+          <li><a href="disclaimer.html">Terms of use </a> &nbsp;&nbsp;|&nbsp;&nbsp; </li>   
+          <li><a href="privacy-policy.html">Privacy policy</a> &nbsp;&nbsp;|&nbsp;&nbsp; </li> 
+          <li><a href="http://blog.indiahomes.com/" target="_blank">Blog</a> </li>
         </ul>
         <div class="sub-footer-links">
           <div class="footer-prop-links has-divider">
@@ -428,14 +427,7 @@ color: #fff;
  
 
 
-     $(document).on("click", "#mgmt-member .owl-item",  function(){
-      var _this = $(this);
-      setTimeout(function() {
-         var left_val = _this.offset().left+ 52;
-         $(".topimge-mgmt").css("left", left_val +"px");
-      }, 200);
-      
-    });
+
 
   // Management Carousel code starts
 
@@ -475,7 +467,7 @@ color: #fff;
       .eq(current)
       .addClass("synced")
     if($("#mgmt-desc").data("owlCarousel") !== undefined){
-      center(current)
+      //center(current)
     }
   }
  
@@ -484,6 +476,31 @@ color: #fff;
     var number = $(this).data("owlItem");
     sync3.trigger("owl.goTo",number);
   });
+
+
+  $("#mgmt-member .owl-page").click(function(){
+    var clicked_index = $(this).index();
+    if(clicked_index == "0") {
+      sync3.trigger("owl.goTo", 0 );
+    } else if(clicked_index == "1") {
+      sync3.trigger("owl.goTo", 4 );
+    } else {
+      sync3.trigger("owl.goTo", 7 );
+    }    
+    $(".only-four-items.mgmt-desc .topimge-mgmt").css("left","320px");
+  });
+
+
+     $(document).on("click", "#mgmt-member .owl-item",  function(){
+      var _this = $(this);
+      setTimeout(function() {
+         var left_val = _this.offset().left+ 52;
+         $(".topimge-mgmt").css("left", left_val +"px");
+      }, 200);
+      
+    });
+
+
  
   function center(number){
     var sync4visible = sync4.data("owlCarousel").owl.visibleItems;
