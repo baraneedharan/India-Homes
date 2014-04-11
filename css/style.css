@@ -7502,7 +7502,7 @@ margin-right: 20px;
 
 
 .ih-vision {
-    min-height: 390px;
+    min-height: 590px;
     padding: 9em 0;
     color: #fff;
     position: relative;
@@ -7625,7 +7625,8 @@ padding: 5px;
     left: 94px;
 }
 
-.ih-vision #typed-cursor {
+.ih-vision #typed-cursor,
+.site-title-letters #typed-cursor {
     display: none;
 }
 
@@ -9753,5 +9754,48 @@ top: 5px;
 }
 
 
+
+.site-title1,
+.site-title2,
+.site-title3,
+.site-title4 {
+    display: inline-block;
+    margin: 0 13px;
+}
+
+.site-title1.active,
+.site-title2.active,
+.site-title3.active,
+.site-title4.active {
+display: inline-block;
+font-style: normal;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+color: #fff;
+/* opacity: 0; */
+z-index: 999;
+line-height: 51px;
+}
+
+
+
+
+.site-title1.active {
+background: #e74c3c;
+}
+
+.site-title2.active{
+background: #3498db;
+}
+
+
+.site-title3.active {
+background: #9b59b6;
+}
+
+.site-title4.active {
+background: #2c3e50;
+}
 
 

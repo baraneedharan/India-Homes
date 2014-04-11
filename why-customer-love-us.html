@@ -146,7 +146,12 @@
                    <h3 class="site-ltr site-ltr-e">E</h3>
                 </div>
                 <div>
-                    <div><h1 class="site-actual-title"></h1></div>
+                    <div class="site-title-letters">
+                      <h1 class="site-title1"></h1>
+                      <h1 class="site-title2"></h1>
+                      <h1 class="site-title3"></h1>
+                      <h1 class="site-title4"></h1>
+                    </div>
                     <div class="hidden-fields">
                       <div class="s-hidden"></div>
                       <div class="i-hidden"></div>
@@ -154,7 +159,9 @@
                       <div class="e-hidden"></div>
                     </div>
                     <div class="site-visit-div"><h1 class="site-visit-title"></h1></div>
-                    <div><h1 class="site-title"></h1></div>
+                    <div>
+                      <h1 class="site-title"></h1>
+                    </div>
                     <div><h1 class="site-value"></h1></div>
                 </div>
             </div>
@@ -268,13 +275,9 @@
     <script src="js/waypoints-sticky.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/typed.js"></script>
-    <script type="text/javascript" src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="js/jquery.transit.min.js"></script>
     
   <script type="text/javascript">
-
-      $('.ih-vision h3').waypoint(function(direction) {
-        
-      });
 
 
 $('.vision-title-1').typed({
@@ -293,7 +296,7 @@ $('.vision-title-1').typed({
                       $(".ih-vision").fadeOut();
                       $(".site-visit").fadeIn();
                       start_type();
-                }, 1000);
+                }, 500);
             }
         });   
       }
@@ -301,88 +304,130 @@ $('.vision-title-1').typed({
   }
 });   
 
-
-      function start_type() {
-        $('.site-actual-title').typed({
-            strings: ["SITE"],
+function start_type() {
+  $('.site-title1').typed({
+    strings: ["S"],
+    typeSpeed: 100,
+    callback:function(){
+      $('.site-title2').typed({
+        strings: ["I"],
+        typeSpeed: 100,
+        callback:function(){
+          $('.site-title3').typed({
+            strings: ["T"],
             typeSpeed: 100,
             callback:function(){
-              $(" #typed-cursor ").fadeOut();
-              $('.site-visit-title').typed({
-                strings: ["Visit of"],
+              $('.site-title4').typed({
+                strings: ["E"],
                 typeSpeed: 100,
                 callback:function(){
-                  $(" #typed-cursor ").fadeOut();
-                  $('.site-title').typed({
-                    strings: ["IndiaHomes"],
-                    typeSpeed: 100,
-                    callback:function(){
-                      $(" #typed-cursor ").fadeOut();
-                      $('.site-value').typed({
-                      strings: ["Values"],
+                  $('.site-visit-title').typed({
+                      strings: ["Visit of"],
                       typeSpeed: 100,
-                        callback:function(){
-                          $(" #typed-cursor ").fadeOut();
-                          s_animate();
-                        }
-                      });
-                    }
-                  });
+                      callback:function(){
+                        $(" #typed-cursor ").fadeOut();
+                        $('.site-title').typed({
+                          strings: ["IndiaHomes"],
+                          typeSpeed: 100,
+                          callback:function(){
+                            $(" #typed-cursor ").fadeOut();
+                            $('.site-value').typed({
+                            strings: ["Values"],
+                            typeSpeed: 100,
+                              callback:function(){
+                                $(" #typed-cursor ").fadeOut();
+                                s_animate();
+                              }
+                            });
+                          }
+                        });
+                      }
+                    });
                 }
               });
-              
             }
-        });
-      }
+          });
+        }
+      });
+    }
+  });
+}
+
+
+
+
+      // function start_type() {
+      //   $('.site-actual-title1').typed({
+      //       strings: ["S"],
+      //       typeSpeed: 100,
+      //       callback:function(){
+      //         $(" #typed-cursor ").fadeOut();
+      //         $('.site-visit-title').typed({
+      //           strings: ["Visit of"],
+      //           typeSpeed: 100,
+      //           callback:function(){
+      //             $(" #typed-cursor ").fadeOut();
+      //             $('.site-title').typed({
+      //               strings: ["IndiaHomes"],
+      //               typeSpeed: 100,
+      //               callback:function(){
+      //                 $(" #typed-cursor ").fadeOut();
+      //                 $('.site-value').typed({
+      //                 strings: ["Values"],
+      //                 typeSpeed: 100,
+      //                   callback:function(){
+      //                     $(" #typed-cursor ").fadeOut();
+      //                     s_animate();
+      //                   }
+      //                 });
+      //               }
+      //             });
+      //           }
+      //         });
+              
+      //       }
+      //   });
+      // }
 
       function s_animate(){
         $(".site-visit-div").css("visibility","hidden");
-        $(".s-hidden").transition({opacity: 1},1000, function(){
-           $(".site-ltr-s").transition({opacity: 1},1000, function() {
-              $(".site-line-t").animate({"opacity":"1"},1000);
-              $(".site-ltr-s").transition({x:636,y:-34}, 1000, function(){
-                $(".site-top").transition({ scale: [1] }, 1000, function(){
-                  i_animate();
-                });  
-              });
-           });
+        $(".site-title1").addClass("active");
+        $(".site-title1").transition({x:636,y:-34}, 1000, function(){
+          $(".site-line-t").animate({"opacity":"1"},1000);
+          $(".site-top").transition({ scale: [1] }, 1000, function(){
+            i_animate();
+          });  
         });
       }
 
       function i_animate(){
-        $(".i-hidden").transition({opacity: 1},1000, function(){
-           $(".site-ltr-i").transition({opacity: 1},1000, function() {
-              $(".site-line-r").animate({"opacity":"1"},1000);
-              $(".site-ltr-i").transition({x:776,y:154}, 1000, function(){
-                $(".site-right").transition({ scale: [1] }, 1000, function(){
-                  t_animate();
-                });  
-              });
-           });
+        $(".site-title2").addClass("active");
+        $(".site-title2").transition({x:776,y:154}, 1000, function(){
+          $(".site-line-r").animate({"opacity":"1"},1000);
+          $(".site-right").transition({ scale: [1] }, 1000, function(){
+            t_animate();
+          });  
         });
       }
 
       function t_animate(){
-        $(".t-hidden").transition({opacity: 1},1000, function(){
-           $(".site-ltr-t").transition({opacity: 1},1000, function() {
-              $(".site-line-b").animate({"opacity":"1"},1000);
-              $(".site-ltr-t").transition({x:525,y:345}, 1000, function(){
-                $(".site-bottom").transition({ scale: [1] }, 1000, function(){
-                  e_animate();
-                });  
-              });
-           });
+
+        $(".site-title3").addClass("active");
+        $(".site-title3").transition({x:525,y:345}, 1000, function(){
+          $(".site-line-b").animate({"opacity":"1"},1000);
+          $(".site-bottom").transition({ scale: [1] }, 1000, function(){
+            e_animate();
+          });  
         });
+
       }
 
       function e_animate(){
-        $(".e-hidden").transition({opacity: 1},1000, function(){
-           $(".site-ltr-e").transition({opacity: 1},1000, function() {
-              $(".site-line-l").animate({"opacity":"1"},1000);
-              $(".site-ltr-e").transition({x:276,y:156}, 1000, function(){
-                $(".site-left").transition({ scale: [1] }, 1000);  
-              });
-           });
+
+        $(".site-title4").addClass("active");
+        $(".site-title4").transition({x:276,y:156}, 1000, function(){
+          $(".site-line-l").animate({"opacity":"1"},1000);
+          $(".site-left").transition({ scale: [1] }); 
         });
       }
 
