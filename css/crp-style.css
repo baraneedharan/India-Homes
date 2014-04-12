@@ -6791,6 +6791,31 @@ text-overflow: ellipsis;
 /*****************************
 Barani CODE - Careers.HTML
 ******************************/
+
+
+.must-watch-video-holder {
+    width: 25%;
+    display: inline-block;
+    margin-right: 4%;
+    border-bottom: none !important;
+    vertical-align: top;
+}
+
+.must-watch-video-holder h5 {
+    color: #ff9c00 !important;
+}
+
+
+.must-watch-video-holder .award-text p {
+    white-space: normal;
+    width: 100%;
+}
+
+.must-watch-video-holder .award-text {
+height: 125px;
+padding: 10px;
+}
+
 .centered{margin: 0 auto;}
 
 .career {
