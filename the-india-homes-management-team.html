@@ -106,7 +106,7 @@ color: #fff;
                 <div class="sub-header clearfix">
                   <div class="news-head">
                       <ul>
-                        <li><a href="awards.html">Awards</a></li>
+                        <li><a href="awards.html">Our Awards</a></li>
                         <li><a href="why-customer-love-us.html">Why Customers Love us</a></li>
                         <li><a href="the-india-homes-board.html" class="active">Our world class team</a></li>
                         <li><a href="must-watch-videos.html">Must watch videos</a></li>
@@ -232,8 +232,12 @@ color: #fff;
                        <img src="css/images/balbir.jpg" class="img-responsive">
                       <h3 class="text-center">Balbir Tanwar</h3>
                     </div>
-                  </a>                       
+                  </a> 
                 </div>
+
+                  <div class="management-arrows">
+<div class="owl-prev">prev</div><div class="owl-next">next</div>
+                  </div>
               </div> 
           </div>
         </div>
@@ -453,6 +457,8 @@ color: #fff;
     itemsMobile       : [479,4],
     pagination:true,
     autoHeight: true,
+    navigation: false,
+    scrollPerPage: true,
     responsiveRefreshRate : 100,
     afterInit : function(el){
       el.find(".owl-item").eq(0).addClass("synced");
@@ -490,6 +496,49 @@ color: #fff;
     $(".only-four-items.mgmt-desc .topimge-mgmt").css("left","320px");
   });
 
+  $(".management-arrows .owl-next").click(function(){
+    var index = $("#mgmt-member .owl-page.active").index();
+    if(index <= 2) {
+      $("#mgmt-member .owl-page.active").removeClass("active").next().addClass("active").trigger("click");
+      var clicked_index = $("#mgmt-member .owl-page.active").index();
+      if(clicked_index == "0") {
+        sync4.trigger("owl.goTo", 0 );
+      } else if(clicked_index == "1") {
+        sync4.trigger("owl.goTo", 4 );
+      } else {
+        sync4.trigger("owl.goTo", 7 );
+      }    
+      $(".only-four-items.mgmt-desc .topimge-mgmt").css("left","320px");
+      $(".management-arrows .owl-prev").show();
+    } 
+
+    if(index == 1)  {
+      $(".management-arrows .owl-next").hide();
+    }
+  });  
+
+
+  $(".management-arrows .owl-prev").click(function(){
+    var index = $("#mgmt-member .owl-page.active").index();
+    if(index <= 2) {
+      $("#mgmt-member .owl-page.active").removeClass("active").prev().addClass("active").trigger("click");
+      var clicked_index = $("#mgmt-member .owl-page.active").index();
+      if(clicked_index == "0") {
+        sync4.trigger("owl.goTo", 0 );
+      } else if(clicked_index == "1") {
+        sync4.trigger("owl.goTo", 4 );
+      } else {
+        sync4.trigger("owl.goTo", 7 );
+      }    
+      $(".only-four-items.mgmt-desc .topimge-mgmt").css("left","320px");
+      $(".management-arrows .owl-next").show();
+    }
+    if(index == 1)  {
+      $(".management-arrows .owl-prev").hide();
+    }
+  });  
+
+
 
      $(document).on("click", "#mgmt-member .owl-item",  function(){
       var _this = $(this);
@@ -502,32 +551,32 @@ color: #fff;
 
 
  
-  function center(number){
-    var sync4visible = sync4.data("owlCarousel").owl.visibleItems;
-    var num = number;
-    var found = false;
-    for(var i in sync4visible){
-      if(num === sync4visible[i]){
-        var found = true;
-      }
-    }
+  // function center(number){
+  //   var sync4visible = sync4.data("owlCarousel").owl.visibleItems;
+  //   var num = number;
+  //   var found = false;
+  //   for(var i in sync4visible){
+  //     if(num === sync4visible[i]){
+  //       var found = true;
+  //     }
+  //   }
  
-    if(found===false){
-      if(num>sync4visible[sync4visible.length-1]){
-        sync4.trigger("owl.goTo", num - sync4visible.length+2)
-      }else{
-        if(num - 1 === -1){
-          num = 0;
-        }
-        sync4.trigger("owl.goTo", num);
-      }
-    } else if(num === sync4visible[sync4visible.length-1]){
-      sync4.trigger("owl.goTo", sync4visible[1])
-    } else if(num === sync4visible[0]){
-      sync4.trigger("owl.goTo", num-1)
-    }
+  //   if(found===false){
+  //     if(num>sync4visible[sync4visible.length-1]){
+  //       sync4.trigger("owl.goTo", num - sync4visible.length+2)
+  //     }else{
+  //       if(num - 1 === -1){
+  //         num = 0;
+  //       }
+  //       sync4.trigger("owl.goTo", num);
+  //     }
+  //   } else if(num === sync4visible[sync4visible.length-1]){
+  //     sync4.trigger("owl.goTo", sync4visible[1])
+  //   } else if(num === sync4visible[0]){
+  //     sync4.trigger("owl.goTo", num-1)
+  //   }
     
-  }
+  // }
 
   });
     </script>

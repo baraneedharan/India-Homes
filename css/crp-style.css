@@ -6532,6 +6532,7 @@ ARCHIT CODE - NEWS.HTML
 .mediahead h2{
     font-size: 40px;
     margin-bottom: 6px;
+    font-family: 'PT Sans', sans-serif;
     margin-top: 17px;
 }
 .mediahead hr{
@@ -6702,16 +6703,16 @@ ARCHIT CODE - AWARDS.HTML
 }
 
 .awards article .detail{
-line-height: 22px;
+line-height: 15px;
 margin: 2px 0;
 width: 100%;
-white-space: nowrap;
+white-space: normal;
 overflow: hidden;
 text-overflow: ellipsis;
     font-family: "Lato";
     color: #ff9c00;
     font-weight: bold;
-font-size: 14px;
+font-size: 13px;
 }
 .awards article .date{
     color: #b71133;
@@ -6752,13 +6753,26 @@ margin-right: 3%;
     padding: 10px;
 }
 
+.award-img h2 {
+font-size: 16px;
+position: relative;
+top: -10px;
+color: #f71624;
+}
+/*
+
+.award-img h2 span {
+color: #fed2c9;
+}
+*/
+
 
 .award-text p {
 color: #fff;
 font-family: "Lato";
 font-weight: normal;
 font-size: 12px;
-width: 76%;
+width: 75%;
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
@@ -6772,7 +6786,7 @@ text-overflow: ellipsis;
 
     right: 4px;
 
-    bottom: 9px;
+    bottom: 17px;
     font-size: 12px;
 }
 
@@ -6942,7 +6956,8 @@ ARCHIT CODE - MANAGEMENT.HTML
     font-size: 18px;
     margin-top: 10px;
 }
-#board-member .owl-prev,#mgmt-member .owl-prev {
+#board-member .owl-prev,#mgmt-member .owl-prev,
+.members .owl-prev {
     background: url('images/left-simple.png') no-repeat;
     display: inline-block;
     width: 40px;
@@ -6951,9 +6966,19 @@ ARCHIT CODE - MANAGEMENT.HTML
     position: absolute;
 left: -37px;
 top: -132px;
+cursor: pointer;
 }
 
-#board-member .owl-next,#mgmt-member .owl-next {
+.management-arrows {
+position: absolute;
+width: 104%;
+top: 81px;
+left: -16px;
+}
+
+
+#board-member .owl-next,#mgmt-member .owl-next,
+.members .owl-next {
     background: url('images/right-simple.png') no-repeat;
     display: inline-block;
     width: 40px;
@@ -6963,6 +6988,24 @@ top: -132px;
     position: relative;
 top: -160px;
 right: -8%;
+cursor: pointer;
+}
+
+#mgmt-member {
+    position: relative;
+    z-index: 999;
+}
+
+.members .owl-prev {
+left: 0;
+top: 0;
+display: none;
+z-index: 9999;
+}
+
+.members .owl-next {
+right: 0;
+top: 0;
 }
 
 .mgmt-desc{
