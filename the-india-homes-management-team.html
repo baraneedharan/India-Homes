@@ -232,7 +232,14 @@ color: #fff;
                        <img src="css/images/balbir.jpg" class="img-responsive">
                       <h3 class="text-center">Balbir Tanwar</h3>
                     </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                       <img src="css/images/manish-goel.png" class="img-responsive">
+                      <h3 class="text-center">Manish Goel</h3>
+                    </div>
                   </a> 
+
                 </div>
 
                   <div class="management-arrows">
@@ -344,6 +351,13 @@ color: #fff;
                     </div>
                 </div>                                                                                                
 
+                <div class="item">
+                    <div class="col-md-12">
+                      <h2>Manish Goel</h2>
+                      <h5>AVP, Finance & Accounts</h5>
+                      <p>Manish Goel is a qualified Cost & Management Accountant and Company Secretary with around 20 years of rich experience in various fields of Accounts , Finance and Taxation . He has experience of working in industries like FMCG, Agri Business , Retail and Power generation . Prior to Indiahomes , Manish has served corporate group like Videocon , Reliance and  Lanco</p>
+                    </div>
+                </div>  
 
           
               </div>           
@@ -488,10 +502,16 @@ color: #fff;
     var clicked_index = $(this).index();
     if(clicked_index == "0") {
       sync3.trigger("owl.goTo", 0 );
+      $(".management-arrows .owl-prev").hide();
+      $(".management-arrows .owl-next").show();
     } else if(clicked_index == "1") {
       sync3.trigger("owl.goTo", 4 );
+      $(".management-arrows .owl-prev").show();
+      $(".management-arrows .owl-next").show();
     } else {
-      sync3.trigger("owl.goTo", 7 );
+      sync3.trigger("owl.goTo", 8 );
+       $(".management-arrows .owl-prev").show();
+      $(".management-arrows .owl-next").hide();
     }    
     $(".only-four-items.mgmt-desc .topimge-mgmt").css("left","320px");
   });
@@ -506,7 +526,7 @@ color: #fff;
       } else if(clicked_index == "1") {
         sync4.trigger("owl.goTo", 4 );
       } else {
-        sync4.trigger("owl.goTo", 7 );
+        sync4.trigger("owl.goTo", 8 );
       }    
       $(".only-four-items.mgmt-desc .topimge-mgmt").css("left","320px");
       $(".management-arrows .owl-prev").show();
@@ -528,7 +548,7 @@ color: #fff;
       } else if(clicked_index == "1") {
         sync4.trigger("owl.goTo", 4 );
       } else {
-        sync4.trigger("owl.goTo", 7 );
+        sync4.trigger("owl.goTo", 8 );
       }    
       $(".only-four-items.mgmt-desc .topimge-mgmt").css("left","320px");
       $(".management-arrows .owl-next").show();
